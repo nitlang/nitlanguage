@@ -1,4 +1,4 @@
-## [[download24.png]]Download
+## [[download24.png]][[Download]]
 Source is freely available. You can browse the [[git repository|http://nitlanguage.org/nit.git]] or download the latest [[snapshot|http://nitlanguage.org/nit.git/snapshot/HEAD.tar.gz]] (tar.gz).
 
 ## [[doc24.png]][[Documentation|doc]]
@@ -8,10 +8,10 @@ The [[standard library|http://nitlanguage.org/doc/stdlib]] references built-ins 
 
 Most frequent questions may have answers in the [[FAQ]].
 
-## [[users24.png]]Get Involved
+## [[users24.png]][[Get Involved]]
 Nit is a target framework for novel compilation techniques and object-oriented research. Currently, the compiler and others tools are actively developed in order to reach fully usable state.
 
-The Nit project has a [[mailing list|nitlanguage-discussion@lists.nitlanguage.org]] where users and developers can discuss various issues and help each other. Archive and instricption is availlable at the [[list page|http://lists.nitlanguage.org/listinfo/nitlanguage-discussion]].
+The Nit project has a [[mailing list|nitlanguage-discussion@lists.nitlanguage.org]] where users and developers can discuss various issues and help each other. Archive and instricption is available at the [[list page|http://lists.nitlanguage.org/listinfo/nitlanguage-discussion]].
 
 If you wish to get involved in the project or use Nit as a framework for research, please contact the mailing list.
 
