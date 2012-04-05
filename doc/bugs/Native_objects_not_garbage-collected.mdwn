@@ -1,0 +1,8 @@
+Each time an intern or extern object is allocated, the native representation is left as it (memory leak) when the Nit part of the object is garbage collected.
+
+Example:
+
+    for i in [0..10000000[ do
+        var s = i.to_s
+    end
+    stdin.read_line # pause and look at the mem footprint (with top for instance)
