@@ -18,7 +18,6 @@ body {
 
 #pagebody {
 	margin:                         0;
-	width:                          550px;
 	padding-left:                   15px;
 	padding-right:                  15px;
 }
@@ -41,6 +40,11 @@ pre {
 	border-left:			2px solid #7ac127;
 	margin-left:			15px;
 	padding-left:			15px;
+	font-family:			Monospace;
+	color:				#2d5003;
+}
+
+code {
 	font-family:			Monospace;
 	color:				#2d5003;
 }
