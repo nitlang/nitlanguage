@@ -50,14 +50,8 @@ pre {
 }
 
 .pageheader {
-	border-bottom:                  1px solid black;
-	margin:                         0;
 	padding:                        3px;
-	height:                         4em;
-	display:                        block;
-	text-decoration:                none;
-	color:                          black;
-	background-color:               inherit;
+	height:                         80px;
 }
 
 .pageheader .parentlinks > a:first-child {
