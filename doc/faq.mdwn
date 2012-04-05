@@ -29,7 +29,7 @@ and maps:
 
 But the `for in` structure can be used on all collections and all classes that provide an `iterate` method.
 
-# Is there some `friend` or `package` visibility?
+### Is there some `friend` or `package` visibility?
 
 Short answer: use `private`.
 
