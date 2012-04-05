@@ -1,0 +1,11 @@
+# Download
+
+Nit is still in heavy development.
+
+The main way to get to get it from its [[git repository|http://nitlanguage.org/nit.git]]
+
+    $ git clone clone http://nitlanguage.org/nit.git
+
+or to download the latest [[snapshot|http://nitlanguage.org/nit.git/snapshot/HEAD.tar.gz]] (tar.gz)
+
+A [[github mirror|http://github.com/privat/nit]] is also available.
