@@ -8,7 +8,7 @@ The [[standard library|http://nitlanguage.org/doc/stdlib]] references built-ins 
 You can also look at some [[examples of programs|examples]] written in Nit.
 
 For more details about Nit theoretical foundations, see [[publications and technical reports|research]].
-<!--Most frequent questions may have answers in the [[FAQ]].-->
+Most frequent questions may have answers in the [[FAQ]].
 
 ## [[users24.png]]Get Involved
 Nit is a target framework for novel compilation techniques and object-oriented research. Currently, the compiler and others tools are actively developed in order to reach fully usable state.
