@@ -49,8 +49,19 @@ code {
 	color:				#2d5003;
 }
 
+.toptitle {
+	display:			block;
+	font-size:                      24px;
+	font-weight:			bold;
+	color:                          black;
+	letter-spacing:                 0.05cm;
+	text-decoration:		none;
+}
+
 .header {
 	line-height:			normal;
+	font-size:			inherit;
+	font-weight:			normal;
 }
 
 .pageheader {
@@ -58,19 +69,8 @@ code {
 	height:                         80px;
 }
 
-.pageheader .parentlinks > a:first-child {
-	display: 			block;
-	font-size:                      24px;
-	color:                          black;
-	letter-spacing:                 0.05cm;
-	text-decoration:		none;
-}
-
-.title {
-	font-size:                      24px;
-	color:                          black;
-	letter-spacing:                 0.05cm;
-	text-decoration:		none;
+.actions {
+	text-align: right;
 }
 
 .sidebar {
