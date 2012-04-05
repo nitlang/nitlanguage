@@ -9,7 +9,7 @@ It means :
     foo(4)    # -> I am 4, the Int
     foo(true) # -> I am true, the Bool
 
-### Their classes can be [[refinement|refined]]
+### Their classes can be [[refined|refinement]]
 
     redef class Int
         fun double: Int do return self * 2
