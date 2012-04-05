@@ -1,0 +1,25 @@
+# Documentation
+
+### Manuals
+
+The [[Nit language reference|nitreference.pdf]](PDF) is about language syntax, classes and modules.
+
+[[Développez en Nit|nit.pdf]](PDF, in French) is a programmer manual.
+
+### Standard Library 
+
+The <a href="stdlib">standard library</a> references built-ins and standard classes.
+
+### Miscellaneous
+
+You can also look at some [[examples of programs|examples]] written in Nit.
+
+Most frequent questions may have answers in the [[FAQ]].
+
+### For Contributors
+
+The <a href="nitc">internal tools documentation</a> contains the autodocumentation of the main nit tools.
+
+### For Scientists
+
+For more details about Nit theoretical foundations, see [[publications and technical reports|research]].
