@@ -29,10 +29,10 @@ Nit will helps you to write bug-free programms
 
 Nit's guideline is to follow the most powerful OO principles
 
-* Everything is an object
-* Multiple inheritance
-* Open classes
-* Virtual types
+* [[Everything is an object]]
+* [[Multiple inheritance]]
+* [[Open classes|refinement]]
+* [[Virtual types]]
 
 # [[ |run24.png]] Getting Started
 
