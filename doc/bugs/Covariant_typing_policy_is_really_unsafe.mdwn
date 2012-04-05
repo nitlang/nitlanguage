@@ -1,0 +1,8 @@
+The following program will behave in an unspecified way
+
+    var a = new Array[Int]
+    var b: Array[Object] = a
+    b.add("Hello")
+    print a.first + 1
+
+The problem is that there is no runtime test on the dynamic type of `b` on the line `b.add`.
