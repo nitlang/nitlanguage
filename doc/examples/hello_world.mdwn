@@ -1,0 +1,2 @@
+<pre><tt>print <font color="#FF0000">"hello world"</font>
+</tt></pre>

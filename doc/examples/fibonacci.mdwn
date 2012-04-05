@@ -1,0 +1,44 @@
+<pre><tt><i><font color="#9A1900"># This file is part of NIT ( http://www.nitlanguage.org ).</font></i>
+<i><font color="#9A1900">#</font></i>
+<i><font color="#9A1900"># Copyright 2004-2008 Jean Privat &lt;jean@pryen.org&gt;</font></i>
+<i><font color="#9A1900">#</font></i>
+<i><font color="#9A1900"># Licensed under the Apache License, Version 2.0 (the "License");</font></i>
+<i><font color="#9A1900"># you may not use this file except in compliance with the License.</font></i>
+<i><font color="#9A1900"># You may obtain a copy of the License at</font></i>
+<i><font color="#9A1900">#</font></i>
+<i><font color="#9A1900">#     http://www.apache.org/licenses/LICENSE-2.0</font></i>
+<i><font color="#9A1900">#</font></i>
+<i><font color="#9A1900"># Unless required by applicable law or agreed to in writing, software</font></i>
+<i><font color="#9A1900"># distributed under the License is distributed on an "AS IS" BASIS,</font></i>
+<i><font color="#9A1900"># WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.</font></i>
+<i><font color="#9A1900"># See the License for the specific language governing permissions and</font></i>
+<i><font color="#9A1900"># limitations under the License.</font></i>
+
+<i><font color="#9A1900"># A simple exemple of refinement where a method is added to the integer class.</font></i>
+<b><font color="#0000FF">module</font></b> fibonacci
+
+<b><font color="#0000FF">redef</font></b> <b><font color="#0000FF">class</font></b> <font color="#009900">Int</font>
+	<i><font color="#9A1900"># Calculate the self-th element of the fibonacci sequence.</font></i>
+	<b><font color="#0000FF">fun</font></b> fibonacci<font color="#990000">:</font> <font color="#009900">Int</font>
+	<b><font color="#0000FF">do</font></b>
+		<b><font color="#0000FF">if</font></b> <b><font color="#0000FF">self</font></b> <font color="#990000">&lt;</font> <font color="#993399">2</font> <b><font color="#0000FF">then</font></b>
+			<b><font color="#0000FF">return</font></b> <font color="#993399">1</font>
+		<b><font color="#0000FF">else</font></b>
+			<b><font color="#0000FF">return</font></b> <font color="#990000">(</font><b><font color="#0000FF">self</font></b><font color="#990000">-</font><font color="#993399">2</font><font color="#990000">).</font>fibonacci <font color="#990000">+</font> <font color="#990000">(</font><b><font color="#0000FF">self</font></b><font color="#990000">-</font><font color="#993399">1</font><font color="#990000">).</font>fibonacci
+		<b><font color="#0000FF">end</font></b>
+	<b><font color="#0000FF">end</font></b> 
+<b><font color="#0000FF">end</font></b>
+
+<i><font color="#9A1900"># Print usage and exit.</font></i>
+<b><font color="#0000FF">fun</font></b> usage
+<b><font color="#0000FF">do</font></b>
+	print <font color="#FF0000">"Usage: fibonnaci &lt;integer&gt;"</font> 
+	exit <font color="#993399">0</font> 
+<b><font color="#0000FF">end</font></b>
+
+<i><font color="#9A1900"># Main part</font></i>
+<b><font color="#0000FF">if</font></b> args<font color="#990000">.</font>length <font color="#990000">!=</font> <font color="#993399">1</font> <b><font color="#0000FF">then</font></b>
+	usage
+<b><font color="#0000FF">end</font></b>
+print args<font color="#990000">.</font>first<font color="#990000">.</font>to_i<font color="#990000">.</font>fibonacci
+</tt></pre>

@@ -1,0 +1,172 @@
+<pre><tt><i><font color="#9A1900"># This file is part of NIT ( http://www.nitlanguage.org ).</font></i>
+<i><font color="#9A1900">#</font></i>
+<i><font color="#9A1900"># Licensed under the Apache License, Version 2.0 (the "License");</font></i>
+<i><font color="#9A1900"># you may not use this file except in compliance with the License.</font></i>
+<i><font color="#9A1900"># You may obtain a copy of the License at</font></i>
+<i><font color="#9A1900">#</font></i>
+<i><font color="#9A1900">#     http://www.apache.org/licenses/LICENSE-2.0</font></i>
+<i><font color="#9A1900">#</font></i>
+<i><font color="#9A1900"># Unless required by applicable law or agreed to in writing, software</font></i>
+<i><font color="#9A1900"># distributed under the License is distributed on an "AS IS" BASIS,</font></i>
+<i><font color="#9A1900"># WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.</font></i>
+<i><font color="#9A1900"># See the License for the specific language governing permissions and</font></i>
+<i><font color="#9A1900"># limitations under the License.</font></i>
+
+<i><font color="#9A1900"># Implementation of circular lists</font></i>
+<i><font color="#9A1900"># This example shows the usage of generics and somewhat a specialisation of collections.</font></i>
+<b><font color="#0000FF">module</font></b> circular_list
+
+<i><font color="#9A1900"># Sequences of elements implemented with a double-linked circular list</font></i>
+<b><font color="#0000FF">class</font></b> <font color="#009900">CircularList</font><font color="#990000">[</font><font color="#009900">E</font><font color="#990000">]</font>
+	<i><font color="#9A1900"># Like standard Array or LinkedList, CircularList is a Sequence.</font></i>
+	<b><font color="#0000FF">super</font></b> <font color="#009900">Sequence</font><font color="#990000">[</font><font color="#009900">E</font><font color="#990000">]</font>
+
+	<i><font color="#9A1900"># NaiveCollection contains working (but inefficient) implementation of</font></i>
+	<i><font color="#9A1900"># the methods of Collection.</font></i>
+	<b><font color="#0000FF">super</font></b> <font color="#009900">NaiveCollection</font><font color="#990000">[</font><font color="#009900">E</font><font color="#990000">]</font>
+	
+	<i><font color="#9A1900"># The first node of the list if any</font></i>
+	<i><font color="#9A1900"># The special case of an empty list is handled by a null node</font></i>
+	<b><font color="#0000FF">private</font></b> <b><font color="#0000FF">var</font></b> node<font color="#990000">:</font> <b><font color="#0000FF">nullable</font></b> <font color="#009900">CLNode</font><font color="#990000">[</font><font color="#009900">E</font><font color="#990000">]</font> <font color="#990000">=</font> <b><font color="#0000FF">null</font></b>
+
+	<b><font color="#0000FF">redef</font></b> <b><font color="#0000FF">fun</font></b> iterator <b><font color="#0000FF">do</font></b> <b><font color="#0000FF">return</font></b> <b><font color="#0000FF">new</font></b> <font color="#009900">CircularListIterator</font><font color="#990000">[</font><font color="#009900">E</font><font color="#990000">](</font><b><font color="#0000FF">self</font></b><font color="#990000">)</font>
+
+	<b><font color="#0000FF">redef</font></b> <b><font color="#0000FF">fun</font></b> first <b><font color="#0000FF">do</font></b> <b><font color="#0000FF">return</font></b> <b><font color="#0000FF">self</font></b><font color="#990000">.</font>node<font color="#990000">.</font>item
+
+	<b><font color="#0000FF">redef</font></b> <b><font color="#0000FF">fun</font></b> push<font color="#990000">(</font>e<font color="#990000">)</font>
+	<b><font color="#0000FF">do</font></b>
+		<b><font color="#0000FF">var</font></b> new_node <font color="#990000">=</font> <b><font color="#0000FF">new</font></b> <font color="#009900">CLNode</font><font color="#990000">[</font><font color="#009900">E</font><font color="#990000">](</font>e<font color="#990000">)</font>
+		<b><font color="#0000FF">var</font></b> n <font color="#990000">=</font> <b><font color="#0000FF">self</font></b><font color="#990000">.</font>node
+		<b><font color="#0000FF">if</font></b> n <font color="#990000">==</font> <b><font color="#0000FF">null</font></b> <b><font color="#0000FF">then</font></b>
+			<i><font color="#9A1900"># the first node</font></i>
+			<b><font color="#0000FF">self</font></b><font color="#990000">.</font>node <font color="#990000">=</font> new_node
+		<b><font color="#0000FF">else</font></b>
+			<i><font color="#9A1900"># not the first one, so attach nodes correctly.</font></i>
+			<b><font color="#0000FF">var</font></b> old_last_node <font color="#990000">=</font> n<font color="#990000">.</font>prev
+			new_node<font color="#990000">.</font>next <font color="#990000">=</font> n
+			new_node<font color="#990000">.</font>prev <font color="#990000">=</font> old_last_node
+			old_last_node<font color="#990000">.</font>next <font color="#990000">=</font> new_node
+			n<font color="#990000">.</font>prev <font color="#990000">=</font> new_node
+		<b><font color="#0000FF">end</font></b>
+	<b><font color="#0000FF">end</font></b>
+
+	<b><font color="#0000FF">redef</font></b> <b><font color="#0000FF">fun</font></b> pop
+	<b><font color="#0000FF">do</font></b>
+		<b><font color="#0000FF">var</font></b> n <font color="#990000">=</font> <b><font color="#0000FF">self</font></b><font color="#990000">.</font>node
+		<b><font color="#0000FF">assert</font></b> n <font color="#990000">!=</font> <b><font color="#0000FF">null</font></b>
+		<b><font color="#0000FF">var</font></b> prev <font color="#990000">=</font> n<font color="#990000">.</font>prev
+		<b><font color="#0000FF">if</font></b> prev <font color="#990000">==</font> n <b><font color="#0000FF">then</font></b>
+			<i><font color="#9A1900"># the only node</font></i>
+			<b><font color="#0000FF">self</font></b><font color="#990000">.</font>node <font color="#990000">=</font> <b><font color="#0000FF">null</font></b>
+			<b><font color="#0000FF">return</font></b> n<font color="#990000">.</font>item
+		<b><font color="#0000FF">end</font></b>
+		<i><font color="#9A1900"># not the only one do detach nodes correctly.</font></i>
+		<b><font color="#0000FF">var</font></b> prev_prev <font color="#990000">=</font> prev<font color="#990000">.</font>prev
+		n<font color="#990000">.</font>prev <font color="#990000">=</font> prev_prev
+		prev_prev<font color="#990000">.</font>next <font color="#990000">=</font> n
+		<b><font color="#0000FF">return</font></b> prev<font color="#990000">.</font>item
+	<b><font color="#0000FF">end</font></b>
+
+	<b><font color="#0000FF">redef</font></b> <b><font color="#0000FF">fun</font></b> unshift<font color="#990000">(</font>e<font color="#990000">)</font>
+	<b><font color="#0000FF">do</font></b>
+		<i><font color="#9A1900"># Circularity has benefits.</font></i>
+		push<font color="#990000">(</font>e<font color="#990000">)</font>
+		<b><font color="#0000FF">self</font></b><font color="#990000">.</font>node <font color="#990000">=</font> <b><font color="#0000FF">self</font></b><font color="#990000">.</font>node<font color="#990000">.</font>prev
+	<b><font color="#0000FF">end</font></b>
+
+	<b><font color="#0000FF">redef</font></b> <b><font color="#0000FF">fun</font></b> shift
+	<b><font color="#0000FF">do</font></b>
+		<i><font color="#9A1900"># Circularity has benefits.</font></i>
+		<b><font color="#0000FF">self</font></b><font color="#990000">.</font>node <font color="#990000">=</font> <b><font color="#0000FF">self</font></b><font color="#990000">.</font>node<font color="#990000">.</font>next
+		<b><font color="#0000FF">return</font></b> <b><font color="#0000FF">self</font></b><font color="#990000">.</font>pop
+	<b><font color="#0000FF">end</font></b>
+
+	<i><font color="#9A1900"># Move the first at the last position, the second at the first, etc.</font></i>
+	<b><font color="#0000FF">fun</font></b> rotate
+	<b><font color="#0000FF">do</font></b>
+		<b><font color="#0000FF">var</font></b> n <font color="#990000">=</font> <b><font color="#0000FF">self</font></b><font color="#990000">.</font>node
+		<b><font color="#0000FF">if</font></b> n <font color="#990000">==</font> <b><font color="#0000FF">null</font></b> <b><font color="#0000FF">then</font></b> <b><font color="#0000FF">return</font></b>
+		<b><font color="#0000FF">self</font></b><font color="#990000">.</font>node <font color="#990000">=</font> n<font color="#990000">.</font>next
+	<b><font color="#0000FF">end</font></b>
+
+	<i><font color="#9A1900"># Sort the list using the Josephus algorithm.</font></i>
+	<b><font color="#0000FF">fun</font></b> josephus<font color="#990000">(</font>step<font color="#990000">:</font> <font color="#009900">Int</font><font color="#990000">)</font>
+	<b><font color="#0000FF">do</font></b>
+		<b><font color="#0000FF">var</font></b> res <font color="#990000">=</font> <b><font color="#0000FF">new</font></b> <font color="#009900">CircularList</font><font color="#990000">[</font><font color="#009900">E</font><font color="#990000">]</font>
+		<b><font color="#0000FF">while</font></b> <b><font color="#0000FF">not</font></b> <b><font color="#0000FF">self</font></b><font color="#990000">.</font>is_empty <b><font color="#0000FF">do</font></b>
+			<i><font color="#9A1900"># count 'step'</font></i>
+			<b><font color="#0000FF">for</font></b> i <b><font color="#0000FF">in</font></b> <font color="#990000">[</font><font color="#993399">1</font><font color="#990000">..</font>step<font color="#990000">[</font> <b><font color="#0000FF">do</font></b> <b><font color="#0000FF">self</font></b><font color="#990000">.</font>rotate
+			<i><font color="#9A1900"># kill</font></i>
+			<b><font color="#0000FF">var</font></b> x <font color="#990000">=</font> <b><font color="#0000FF">self</font></b><font color="#990000">.</font>shift
+			res<font color="#990000">.</font>add<font color="#990000">(</font>x<font color="#990000">)</font>
+		<b><font color="#0000FF">end</font></b>
+		<b><font color="#0000FF">self</font></b><font color="#990000">.</font>node <font color="#990000">=</font> res<font color="#990000">.</font>node
+	<b><font color="#0000FF">end</font></b>
+<b><font color="#0000FF">end</font></b>
+
+<i><font color="#9A1900"># Nodes of a CircularList</font></i>
+<b><font color="#0000FF">private</font></b> <b><font color="#0000FF">class</font></b> <font color="#009900">CLNode</font><font color="#990000">[</font><font color="#009900">E</font><font color="#990000">]</font>
+	<i><font color="#9A1900"># The current item</font></i>
+	<b><font color="#0000FF">var</font></b> item<font color="#990000">:</font> <font color="#009900">E</font>
+
+	<i><font color="#9A1900"># The next item in the circular list.</font></i>
+	<i><font color="#9A1900"># Because of circularity, there is always a next;</font></i>
+	<i><font color="#9A1900"># so by default let it be self</font></i>
+	<b><font color="#0000FF">var</font></b> next<font color="#990000">:</font> <font color="#009900">CLNode</font><font color="#990000">[</font><font color="#009900">E</font><font color="#990000">]</font> <font color="#990000">=</font> <b><font color="#0000FF">self</font></b>
+
+	<i><font color="#9A1900"># The previous item in the circular list.</font></i>
+	<i><font color="#9A1900"># Coherence between next and previous nodes has to be maintained by the</font></i>
+	<i><font color="#9A1900"># circular list.</font></i>
+	<b><font color="#0000FF">var</font></b> prev<font color="#990000">:</font> <font color="#009900">CLNode</font><font color="#990000">[</font><font color="#009900">E</font><font color="#990000">]</font> <font color="#990000">=</font> <b><font color="#0000FF">self</font></b>
+<b><font color="#0000FF">end</font></b>
+
+<i><font color="#9A1900"># An iterator of a CircularList.</font></i>
+<b><font color="#0000FF">private</font></b> <b><font color="#0000FF">class</font></b> <font color="#009900">CircularListIterator</font><font color="#990000">[</font><font color="#009900">E</font><font color="#990000">]</font>
+	<b><font color="#0000FF">super</font></b> <font color="#009900">IndexedIterator</font><font color="#990000">[</font><font color="#009900">E</font><font color="#990000">]</font>
+
+	<b><font color="#0000FF">redef</font></b> <b><font color="#0000FF">var</font></b> key<font color="#990000">:</font> <font color="#009900">Int</font>
+
+	<i><font color="#9A1900"># The current node pointed.</font></i>
+	<i><font color="#9A1900"># Is null if the list is empty.</font></i>
+	<b><font color="#0000FF">var</font></b> node<font color="#990000">:</font> <b><font color="#0000FF">nullable</font></b> <font color="#009900">CLNode</font><font color="#990000">[</font><font color="#009900">E</font><font color="#990000">]</font>
+
+	<i><font color="#9A1900"># The list iterated.</font></i>
+	<b><font color="#0000FF">var</font></b> list<font color="#990000">:</font> <font color="#009900">CircularList</font><font color="#990000">[</font><font color="#009900">E</font><font color="#990000">]</font>
+
+	<b><font color="#0000FF">redef</font></b> <b><font color="#0000FF">fun</font></b> is_ok
+	<b><font color="#0000FF">do</font></b>
+		<i><font color="#9A1900"># Empty lists are not OK.</font></i>
+		<i><font color="#9A1900"># Pointing again the first node is not OK.</font></i>
+		<b><font color="#0000FF">return</font></b> <b><font color="#0000FF">self</font></b><font color="#990000">.</font>node <font color="#990000">!=</font> <b><font color="#0000FF">null</font></b> <b><font color="#0000FF">and</font></b> <font color="#990000">(</font><b><font color="#0000FF">self</font></b><font color="#990000">.</font>key <font color="#990000">==</font> <font color="#993399">0</font> <b><font color="#0000FF">or</font></b> <b><font color="#0000FF">self</font></b><font color="#990000">.</font>node <font color="#990000">!=</font> <b><font color="#0000FF">self</font></b><font color="#990000">.</font>list<font color="#990000">.</font>node<font color="#990000">)</font>
+	<b><font color="#0000FF">end</font></b>
+
+	<b><font color="#0000FF">redef</font></b> <b><font color="#0000FF">fun</font></b> next
+	<b><font color="#0000FF">do</font></b>
+		<b><font color="#0000FF">self</font></b><font color="#990000">.</font>node <font color="#990000">=</font> <b><font color="#0000FF">self</font></b><font color="#990000">.</font>node<font color="#990000">.</font>next
+		<b><font color="#0000FF">self</font></b><font color="#990000">.</font>key <font color="#990000">+=</font> <font color="#993399">1</font>
+	<b><font color="#0000FF">end</font></b>
+
+	<b><font color="#0000FF">redef</font></b> <b><font color="#0000FF">fun</font></b> item <b><font color="#0000FF">do</font></b> <b><font color="#0000FF">return</font></b> <b><font color="#0000FF">self</font></b><font color="#990000">.</font>node<font color="#990000">.</font>item
+
+	<b><font color="#0000FF">init</font></b><font color="#990000">(</font>list<font color="#990000">:</font> <font color="#009900">CircularList</font><font color="#990000">[</font><font color="#009900">E</font><font color="#990000">])</font>
+	<b><font color="#0000FF">do</font></b>
+		<b><font color="#0000FF">self</font></b><font color="#990000">.</font>node <font color="#990000">=</font> list<font color="#990000">.</font>node
+		<b><font color="#0000FF">self</font></b><font color="#990000">.</font>list <font color="#990000">=</font> list
+		<b><font color="#0000FF">self</font></b><font color="#990000">.</font>key <font color="#990000">=</font> <font color="#993399">0</font>
+	<b><font color="#0000FF">end</font></b>
+<b><font color="#0000FF">end</font></b>
+
+<b><font color="#0000FF">var</font></b> i <font color="#990000">=</font> <b><font color="#0000FF">new</font></b> <font color="#009900">CircularList</font><font color="#990000">[</font><font color="#009900">Int</font><font color="#990000">]</font>
+i<font color="#990000">.</font>add_all<font color="#990000">([</font><font color="#993399">1</font><font color="#990000">,</font> <font color="#993399">2</font><font color="#990000">,</font> <font color="#993399">3</font><font color="#990000">,</font> <font color="#993399">4</font><font color="#990000">,</font> <font color="#993399">5</font><font color="#990000">,</font> <font color="#993399">6</font><font color="#990000">,</font> <font color="#993399">7</font><font color="#990000">])</font>
+print i<font color="#990000">.</font>first
+print i<font color="#990000">.</font>join<font color="#990000">(</font><font color="#FF0000">":"</font><font color="#990000">)</font>
+
+i<font color="#990000">.</font>push<font color="#990000">(</font><font color="#993399">8</font><font color="#990000">)</font>
+print i<font color="#990000">.</font>shift
+print i<font color="#990000">.</font>pop
+i<font color="#990000">.</font>unshift<font color="#990000">(</font><font color="#993399">0</font><font color="#990000">)</font>
+print i<font color="#990000">.</font>join<font color="#990000">(</font><font color="#FF0000">":"</font><font color="#990000">)</font>
+
+i<font color="#990000">.</font>josephus<font color="#990000">(</font><font color="#993399">3</font><font color="#990000">)</font>
+print i<font color="#990000">.</font>join<font color="#990000">(</font><font color="#FF0000">":"</font><font color="#990000">)</font>
+</tt></pre>
