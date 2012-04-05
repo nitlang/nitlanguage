@@ -1,13 +1,11 @@
 ## [[download24.png]]Download
 Source is freely available. You can browse the [[git repository|http://nitlanguage.org/nit.git]] or download the latest [[snapshot|http://nitlanguage.org/nit.git/snapshot/HEAD.tar.gz]] (tar.gz).
 
-## [[doc24.png]]Documentation
+## [[doc24.png]][[Documentation|doc]]
 The [[Nit language reference|http://nitlanguage.org/doc/nitreference.pdf]](PDF) is about language syntax, classes and modules.
 [[Développez en Nit|http://nitlanguage.org/doc/developpez.pdf]](PDF, in French) is a programmer manual.
 The [[standard library|http://nitlanguage.org/doc/stdlib]] references built-ins and standard classes.
-You can also look at some [[examples of programs|examples]] written in Nit.
 
-For more details about Nit theoretical foundations, see [[publications and technical reports|research]].
 Most frequent questions may have answers in the [[FAQ]].
 
 ## [[users24.png]]Get Involved
