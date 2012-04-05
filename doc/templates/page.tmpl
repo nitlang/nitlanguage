@@ -34,6 +34,9 @@
 
 <TMPL_IF HTML5><section class="pageheader"><TMPL_ELSE><div class="pageheader"></TMPL_IF>
 <a class="toptitle" href="<TMPL_VAR BASEURL>">The Nit Programming Language</a>
+<TMPL_IF SEARCHFORM>
+<TMPL_VAR SEARCHFORM>
+</TMPL_IF>
 <TMPL_IF HTML5><header class="header"><TMPL_ELSE><div class="header"></TMPL_IF>
 <span>
 <TMPL_IF PARENTLINKS>
@@ -52,44 +55,7 @@
 <span class="topsubtitle">A Fun Language for Serious Programming</span>
 </TMPL_IF>
 </span>
-<TMPL_IF SEARCHFORM>
-<TMPL_VAR SEARCHFORM>
-</TMPL_IF>
 <TMPL_IF HTML5></header><TMPL_ELSE></div></TMPL_IF>
-
-<TMPL_IF HAVE_ACTIONS>
-<TMPL_IF HTML5><nav class="actions"><TMPL_ELSE><div class="actions"></TMPL_IF>
-<ul>
-<TMPL_IF EDITURL>
-<li><a href="<TMPL_VAR EDITURL>" rel="nofollow">Edit</a></li>
-</TMPL_IF>
-<TMPL_IF RECENTCHANGESURL>
-<li><a href="<TMPL_VAR RECENTCHANGESURL>">RecentChanges</a></li>
-</TMPL_IF>
-<TMPL_IF HISTORYURL>
-<li><a href="<TMPL_VAR HISTORYURL>">History</a></li>
-</TMPL_IF>
-<TMPL_IF GETSOURCEURL>
-<li><a href="<TMPL_VAR GETSOURCEURL>">Source</a></li>
-</TMPL_IF>
-<TMPL_IF PREFSURL>
-<li><a href="<TMPL_VAR PREFSURL>">Preferences</a></li>
-</TMPL_IF>
-<TMPL_IF ACTIONS>
-<TMPL_LOOP ACTIONS>
-<li><TMPL_VAR ACTION></li>
-</TMPL_LOOP>
-</TMPL_IF>
-<TMPL_IF COMMENTSLINK>
-<li><TMPL_VAR COMMENTSLINK></li>
-<TMPL_ELSE>
-<TMPL_IF DISCUSSIONLINK>
-<li><TMPL_VAR DISCUSSIONLINK></li>
-</TMPL_IF>
-</TMPL_IF>
-</ul>
-<TMPL_IF HTML5></nav><TMPL_ELSE></div></TMPL_IF>
-</TMPL_IF>
 
 <TMPL_IF OTHERLANGUAGES>
 <TMPL_IF HTML5><nav id="otherlanguages"><TMPL_ELSE><div id="otherlanguages"></TMPL_IF>
@@ -188,6 +154,46 @@ License: <TMPL_VAR LICENSE>
 Last edited <TMPL_VAR MTIME>
 <!-- Created <TMPL_VAR CTIME> -->
 </div>
+
+<div class="footnav">
+<a href="<TMPL_VAR BASEURL>map/">Sitemap</a>
+<a href="<TMPL_VAR BASEURL>contribution_policy/">Policy</a>
+<a href="<TMPL_VAR BASEURL>ikiwiki/">Ikiwiki</a>
+</div>
+<TMPL_IF HAVE_ACTIONS>
+<TMPL_IF HTML5><nav class="actions"><TMPL_ELSE><div class="actions"></TMPL_IF>
+<ul>
+<TMPL_IF EDITURL>
+<li><a href="<TMPL_VAR EDITURL>" rel="nofollow">Edit</a></li>
+</TMPL_IF>
+<TMPL_IF RECENTCHANGESURL>
+<li><a href="<TMPL_VAR RECENTCHANGESURL>">RecentChanges</a></li>
+</TMPL_IF>
+<TMPL_IF HISTORYURL>
+<li><a href="<TMPL_VAR HISTORYURL>">History</a></li>
+</TMPL_IF>
+<TMPL_IF GETSOURCEURL>
+<li><a href="<TMPL_VAR GETSOURCEURL>">Source</a></li>
+</TMPL_IF>
+<TMPL_IF PREFSURL>
+<li><a href="<TMPL_VAR PREFSURL>">Preferences</a></li>
+</TMPL_IF>
+<TMPL_IF ACTIONS>
+<TMPL_LOOP ACTIONS>
+<li><TMPL_VAR ACTION></li>
+</TMPL_LOOP>
+</TMPL_IF>
+<TMPL_IF COMMENTSLINK>
+<li><TMPL_VAR COMMENTSLINK></li>
+<TMPL_ELSE>
+<TMPL_IF DISCUSSIONLINK>
+<li><TMPL_VAR DISCUSSIONLINK></li>
+</TMPL_IF>
+</TMPL_IF>
+</ul>
+<TMPL_IF HTML5></nav><TMPL_ELSE></div></TMPL_IF>
+</TMPL_IF>
+
 
 <TMPL_IF HTML5></nav><TMPL_ELSE></div></TMPL_IF>
 <TMPL_IF EXTRAFOOTER><TMPL_VAR EXTRAFOOTER></TMPL_IF>
