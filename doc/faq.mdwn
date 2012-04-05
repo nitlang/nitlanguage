@@ -27,7 +27,7 @@ It is this part that takes the most time in the whole compilation process.
 
 The best way to improve the recompilation time is to install [[ccache|http://ccache.samba.org/]] (`apt-get install ccache`). Nit will then automatically use it.
 
-## Using the Nit Language
+## Developing with the Nit Language
 
 ### How to iterate on collection/array/list/maps/etc.
 
