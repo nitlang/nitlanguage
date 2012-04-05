@@ -96,3 +96,7 @@ code {
 	font-size:                      90%;
 	text-align:                     center;
 }
+
+.actions ul {
+	padding:			0;
+}
