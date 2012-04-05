@@ -1,0 +1,21 @@
+## [[download24.png]]Download
+Source is freely available. You can browse the [[git repository||http://nitlanguage.org/nit.git]] or download the latest [[snapshot|http://nitlanguage.org/nit.git/snapshot/HEAD.tar.gz]] (tar.gz).
+
+## [[doc24.png]]Documentation
+The [[Nit language reference|http://nitlanguage.org/doc/nitreference.pdf]](PDF) is about language syntax, classes and modules.
+[[Développez en Nit|http://nitlanguage.org/doc/developpez.pdf]](PDF, in French) is a programmer manual.
+The [[standard library|http://nitlanguage.org/doc/stdlib]] references built-ins and standard classes.
+You can also look at some [[examples of programs|examples]] written in Nit.
+
+For more details about Nit theoretical foundations, see [[publications and technical reports|research]].
+<!--Most frequent questions may have answers in the [[FAQ]].-->
+
+## [[users24.png]]Get Involved
+Nit is a target framework for novel compilation techniques and object-oriented research. Currently, the compiler and others tools are actively developed in order to reach fully usable state.
+
+The Nit project has a [[mailing list|nitlanguage-discussion@lists.nitlanguage.org]] where users and developers can discuss various issues and help each other. Archive and instricption is availlable at the [[list page|http://lists.nitlanguage.org/listinfo/nitlanguage-discussion]].
+
+If you wish to get involved in the project or use Nit as a framework for research, please contact the mailing list.
+
+## [[support24.png]]Sponsors
+Nit is supported by [[Grésil|http://gresil.org]], [[NSERC|http://www.nserc.ca]], [[UQAM|http://www.uqam.ca]], [[LIRMM|http://www.lirmm.fr]], [[Université Montpellier II|http://www.univ-montp2.fr/]], [[CNRS|http://www.cnrs.fr]], [[Région Languedoc-Roussillon|http://www.cr-languedocroussillon.fr]].

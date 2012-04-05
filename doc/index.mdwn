@@ -1,0 +1,57 @@
+# [[ |info24.png]] What is Nit?
+
+Nit is an object-oriented programming language. The goal of Nit is to propose a robust statically typed programming language where structure is not a pain.
+
+So, what does the famous hello world program look like, in Nit?
+
+    print "Hello, World!"
+ 
+# [[ |features24.png]] Feature Highlights
+
+## Usability
+Nit's goal is to be usable by real programmers for real projects
+
+* [[KISS|http://en.wikipedia.org/wiki/KISS_principle]] principle
+* Script-like language without verbosity nor cryptic statements
+* Painless static types: static typing should help programmers
+* Efficient development, efficient execution, efficient evolution.
+
+## Robustness
+
+Nit will helps you to write bug-free programms
+
+* Strong static typing
+* No more NullPointerException
+
+## Object-Oriented
+
+Nit's guideline is to follow the most powerful OO principles
+
+* Everything is an object
+* Multiple inheritance
+* Open classes
+* Virtual types
+
+# [[ |run24.png]] Getting Started
+
+Get Nit from its Git repository:
+
+    $ git clone git://nitlanguage.org/nit.git
+
+or
+
+    $ git clone http://nitlanguage.org/nit.git
+
+Build the compiler (may be long):
+
+    $ cd nit
+    $ make
+
+Compile a program:
+
+    $ bin/nitc examples/hello_world.nit
+
+Execute the program:
+
+    $ ./hello_world
+

@@ -1,0 +1,103 @@
+body {
+	margin:                         0;
+	padding:                        0;
+	background-color:               rgb(109,109,109);
+	font-family:                    'DejaVu Sans', 'Bitstream Vera Sans', sans-serif;
+	font-size:                      12px;
+}
+
+.page {
+	margin:                         auto;
+	margin-top:                     0;
+	width:                          850px;
+	background-color:               rgb(255,255,255);
+	border-right:                   2px outset rgb(0,0,0);
+	border-bottom:                  2px outset rgb(0,0,0);
+	border-left:                    2px inset  rgb(0,0,0);
+}
+
+#pagebody {
+	margin:                         0;
+	width:                          550px;
+	padding-left:                   15px;
+	padding-right:                  15px;
+}
+
+h1 {
+	color:                          #7cbe31;
+}
+
+h2 {
+	color:                          #7cbe31;
+	margin:                         0;
+	margin-top:                     3px;
+}
+
+h3 {
+	margin-left:                    3px;
+}
+
+pre {
+	border-left:			2px solid #7ac127;
+	margin-left:			15px;
+	padding-left:			15px;
+	font-family:			Monospace;
+	color:				#2d5003;
+}
+
+.header {
+	line-height:			normal;
+}
+
+.pageheader {
+	border-bottom:                  1px solid black;
+	margin:                         0;
+	padding:                        3px;
+	height:                         4em;
+	display:                        block;
+	text-decoration:                none;
+	color:                          black;
+	background-color:               inherit;
+}
+
+.pageheader .parentlinks > a:first-child {
+	display: 			block;
+	font-size:                      24px;
+	color:                          black;
+	letter-spacing:                 0.05cm;
+	text-decoration:		none;
+}
+
+.title {
+	font-size:                      24px;
+	color:                          black;
+	letter-spacing:                 0.05cm;
+	text-decoration:		none;
+}
+
+.sidebar {
+	width:                          250px;
+	margin-top:                     10px;
+        margin-right:                   15px;
+	background-color:               #efffbc;
+	color:                          #4b503b;
+	border:                         1px solid #7ac127;
+	padding:			5px;
+}
+
+.sidebar h2 {
+	color:                          #3e601e;
+	font-weight:                    normal;
+	padding
+}
+
+.sidebar h2 img {
+	float:                          right;
+}
+
+#pageinfo {
+	border: none;
+	margin:                         10px;
+	font-size:                      90%;
+	text-align:                     center;
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name="GENERATOR" content="GNU source-highlight 3.1.4
+by Lorenzo Bettini
+http://www.lorenzobettini.it
+http://www.gnu.org/software/src-highlite">
+<title>nit-source/examples/clock_more.nit</title>
+</head>
+<body bgcolor="white">
+<pre><tt><i><font color="#9A1900"># This file is part of NIT ( http://www.nitlanguage.org ).</font></i>
+<i><font color="#9A1900">#</font></i>
+<i><font color="#9A1900"># Licensed under the Apache License, Version 2.0 (the "License");</font></i>
+<i><font color="#9A1900"># you may not use this file except in compliance with the License.</font></i>
+<i><font color="#9A1900"># You may obtain a copy of the License at</font></i>
+<i><font color="#9A1900">#</font></i>
+<i><font color="#9A1900">#     http://www.apache.org/licenses/LICENSE-2.0</font></i>
+<i><font color="#9A1900">#</font></i>
+<i><font color="#9A1900"># Unless required by applicable law or agreed to in writing, software</font></i>
+<i><font color="#9A1900"># distributed under the License is distributed on an "AS IS" BASIS,</font></i>
+<i><font color="#9A1900"># WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.</font></i>
+<i><font color="#9A1900"># See the License for the specific language governing permissions and</font></i>
+<i><font color="#9A1900"># limitations under the License.</font></i>
+
+<i><font color="#9A1900"># This module beef up the clock module by allowing a clock to be comparable.</font></i>
+<i><font color="#9A1900"># It show the usage of class refinement</font></i>
+<b><font color="#0000FF">module</font></b> clock_more
+
+<b><font color="#0000FF">import</font></b> clock
+
+<b><font color="#0000FF">redef</font></b> <b><font color="#0000FF">class</font></b> <font color="#009900">Clock</font>
+	<i><font color="#9A1900"># Clock are now comparable</font></i>
+	<b><font color="#0000FF">super</font></b> <font color="#009900">Comparable</font>
+
+	<i><font color="#9A1900"># Comparaison of a clock make only sense with an other clock</font></i>
+	<b><font color="#0000FF">redef</font></b> <b><font color="#0000FF">type</font></b> <font color="#009900">OTHER</font><font color="#990000">:</font> <font color="#009900">Clock</font>
+
+	<b><font color="#0000FF">redef</font></b> <b><font color="#0000FF">fun</font></b> <font color="#990000">&lt;(</font>o<font color="#990000">)</font>
+	<b><font color="#0000FF">do</font></b>
+		<i><font color="#9A1900"># Note: &lt; is the only abstract method of Comparable.</font></i>
+		<i><font color="#9A1900">#       All other operators and methods rely on &lt; and ==.</font></i>
+		<b><font color="#0000FF">return</font></b> <b><font color="#0000FF">self</font></b><font color="#990000">.</font>total_minutes <font color="#990000">&lt;</font> o<font color="#990000">.</font>total_minutes
+	<b><font color="#0000FF">end</font></b>
+<b><font color="#0000FF">end</font></b>
+
+<b><font color="#0000FF">var</font></b> c1 <font color="#990000">=</font> <b><font color="#0000FF">new</font></b> <font color="#009900">Clock</font><font color="#990000">(</font><font color="#993399">8</font><font color="#990000">,</font> <font color="#993399">12</font><font color="#990000">)</font>
+<b><font color="#0000FF">var</font></b> c2 <font color="#990000">=</font> <b><font color="#0000FF">new</font></b> <font color="#009900">Clock</font><font color="#990000">(</font><font color="#993399">8</font><font color="#990000">,</font> <font color="#993399">13</font><font color="#990000">)</font>
+<b><font color="#0000FF">var</font></b> c3 <font color="#990000">=</font> <b><font color="#0000FF">new</font></b> <font color="#009900">Clock</font><font color="#990000">(</font><font color="#993399">9</font><font color="#990000">,</font> <font color="#993399">13</font><font color="#990000">)</font>
+
+print <font color="#FF0000">"{c1}&lt;{c2}? {c1&lt;c2}"</font>
+print <font color="#FF0000">"{c1}&lt;={c2}? {c1&lt;=c2}"</font>
+print <font color="#FF0000">"{c1}&gt;{c2}? {c1&gt;c2}"</font>
+print <font color="#FF0000">"{c1}&gt;={c2}? {c1&gt;=c2}"</font>
+print <font color="#FF0000">"{c1}&lt;=&gt;{c2}? {c1&lt;=&gt;c2}"</font>
+print <font color="#FF0000">"{c1},{c2}? max={c1.max(c2)} min={c1.min(c2)}"</font>
+print <font color="#FF0000">"{c1}.is_between({c2}, {c3})? {c1.is_between(c2, c3)}"</font>
+print <font color="#FF0000">"{c2}.is_between({c1}, {c3})? {c2.is_between(c1, c3)}"</font>
+
+print <font color="#FF0000">"-"</font>
+
+c1<font color="#990000">.</font>minutes <font color="#990000">+=</font> <font color="#993399">1</font>
+
+print <font color="#FF0000">"{c1}&lt;{c2}? {c1&lt;c2}"</font>
+print <font color="#FF0000">"{c1}&lt;={c2}? {c1&lt;=c2}"</font>
+print <font color="#FF0000">"{c1}&gt;{c2}? {c1&gt;c2}"</font>
+print <font color="#FF0000">"{c1}&gt;={c2}? {c1&gt;=c2}"</font>
+print <font color="#FF0000">"{c1}&lt;=&gt;{c2}? {c1&lt;=&gt;c2}"</font>
+print <font color="#FF0000">"{c1},{c2}? max={c1.max(c2)} min={c1.min(c2)}"</font>
+print <font color="#FF0000">"{c1}.is_between({c2}, {c3})? {c1.is_between(c2, c3)}"</font>
+print <font color="#FF0000">"{c2}.is_between({c1}, {c3})? {c2.is_between(c1, c3)}"</font>
+</tt></pre>
+</body>
+</html>
