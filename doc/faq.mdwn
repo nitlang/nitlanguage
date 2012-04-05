@@ -27,4 +27,4 @@ and maps:
     for k, v in mymap do print "{k}={v}"
     # outputs "one=1 two=2 three=3"
 
-But the `for in` structure can be used on all colletions and all classes that provide an `iterate` method.
+But the `for in` structure can be used on all collections and all classes that provide an `iterate` method.
