@@ -1,5 +1,5 @@
 ## [[download24.png]]Download
-Source is freely available. You can browse the [[git repository||http://nitlanguage.org/nit.git]] or download the latest [[snapshot|http://nitlanguage.org/nit.git/snapshot/HEAD.tar.gz]] (tar.gz).
+Source is freely available. You can browse the [[git repository|http://nitlanguage.org/nit.git]] or download the latest [[snapshot|http://nitlanguage.org/nit.git/snapshot/HEAD.tar.gz]] (tar.gz).
 
 ## [[doc24.png]]Documentation
 The [[Nit language reference|http://nitlanguage.org/doc/nitreference.pdf]](PDF) is about language syntax, classes and modules.
