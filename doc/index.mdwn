@@ -38,10 +38,6 @@ Nit's guideline is to follow the most powerful OO principles
 
 Get Nit from its Git repository:
 
-    $ git clone git://nitlanguage.org/nit.git
-
-or
-
     $ git clone http://nitlanguage.org/nit.git
 
 Build the compiler (may be long):
