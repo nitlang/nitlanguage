@@ -23,8 +23,8 @@ The source code off all Nit tools are freely [[available|download]].
 
 ### Starting and Bootstrapping
 
-Get nit
-
+    $ git clone http://nitlanguage.org/nit.git
+    $ cd nit
     $ make
     $ cd src
     $ ./ncall.sh
@@ -62,3 +62,8 @@ Each time some feature are added by a developer, he should:
 * bootstrap the compiler is src/ : `cd src/ ; ./ncall.sh`
 * run the full regression test-suite : `cd tests/ ; make`
 * add new tests to prevent future breakage of the new shiny feature
+
+### Sending Code Contributions
+
+* Sign-off all you patches. By the signed-off-by tag, you sate that you agree with the [[contribution policy]]
+* You can communicate patches by the way you prefer including: merge request on some Git repository by email, merge request to the [[nit githup repository|https://github.com/privat/nit]], or patches by email.
