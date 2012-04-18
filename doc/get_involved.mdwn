@@ -16,3 +16,49 @@ Try to use Nit and [[report problems|bugs]] with the language, the libraries or 
 
 The source code off all Nit tools are freely [[available|download]].
 
+### Basic documentation
+
+* The [[auto-generated documentation|http://nitlanguage.org/doc/nitc/]]
+* The [[README|http://nitlanguage.org/nit.git/blob/wip:/README]]
+
+### Starting and Bootstrapping
+
+Get nit
+
+    $ make
+    $ cd src
+    $ ./ncall.sh
+
+ncall.sh starts a full bootstrap of the compiler.
+More specifically, it does :
+
+* `./nc nitc` that compiles nitc.nit with the compiler `../c_src/src` so we get `src/nitc`
+* `./nc2 nitc` that compiles nitc.nit with `src/nitc` and we get `src/nitc2`
+* `./nc3 nitc` that compiles nitc.nit with `src/nitc2` and we get `src/nitc3`
+* `./nc4 ../examples/hello_world.nit` and `./hello_world_4`the verify that `src/nitc3` is minimally functionnal.
+
+Note that the Nit code of the compiler is writtent with some legagy Nit: all modern functionnality of Not are not always usable since it is the primitive compiler (`c_src/nitc`) that is used.
+
+On of the standard error of the nitc developper is to break the bootstrap, it means that the Nit compiler is written in an incompatible way with the primitive compiler.
+Regulary executing `./ncall.sh` helps to check that the bootstrap is not broken.
+
+### Regression Tests
+
+The directory `tests` contains various small Nit programs used to check that the compiler is not broken.
+
+* [[README|http://nitlanguage.org/nit.git/blob/wip:/tests/README]]
+
+To run the full regression test-suite, run:
+
+    cd tests
+    make
+
+Individual tests can also be run independently:
+
+    ./tests.sh some_nit_programs.nit...
+
+Each time some feature are added by a developer, he should:
+
+* bootstrap the compiler is src/ : `cd src/ ; ./ncall.sh`
+* run the full regression test-suite : `cd tests/ ; make`
+* add new tests to prevent future breakage of the new shiny feature
