@@ -1,6 +1,6 @@
 # Get Involved
 
-Nit is a target framework for novel compilation techniques and object-oriented research. Currently, the compiler and others tools are actively developed in order to reach fully usable state.
+Nit is a target framework for novel compilation techniques and object-oriented research. Currently, the compiler and others tools are actively developed.
 
 ## Discuss
 
@@ -14,19 +14,22 @@ Try to use Nit and [[report problems|bugs]] with the language, the libraries or 
 
 ## Code
 
-The source code off all Nit tools are freely [[available|download]].
+The source code of all Nit tools are freely available, see the [[download]] page.
 
-### Basic documentation
+* The [[NOTICE|http://nitlanguage.org/nit.git/blob/wip:/NOTICE]] file that states authorship and licences.
 
-* The [[auto-generated documentation|http://nitlanguage.org/doc/nitc/]]
-* The main [[README|http://nitlanguage.org/nit.git/blob/wip:/README]]
+### Basic Documentation About the Nit Tools
+
+* The [[documentation|http://nitlanguage.org/doc/nitc/]] of the source-code (generated with nitdoc).
+* The main [[README|http://nitlanguage.org/nit.git/blob/wip:/README]] of the source-code.
+* See the [[documentation|doc]] page for more general information about the Nit language or the usage of the Nit tools.
 
 ### Sending Code Contributions
 
-* Sign-off all you patches. By the signed-off-by tag, you state that you agree with the [[contribution policy]]
+* Sign-off all you patches by including the line "`signed-off-by: Your Name <your.email@example.com>`" at the end of each patch description. By the signed-off-by tag, you state that you agree with the [[contribution policy]]
 * You can communicate patches by the way you prefer including: merge request on some Git repository by email, merge request to the [[nit githup repository|https://github.com/privat/nit]], or patches by email.
 
-### Starting and Bootstrapping
+### Starting and Re-Bootstrapping
 
     $ git clone http://nitlanguage.org/nit.git
     $ cd nit
@@ -34,8 +37,8 @@ The source code off all Nit tools are freely [[available|download]].
     $ cd src
     $ ./ncall.sh
 
-ncall.sh starts a full bootstrap of the compiler.
-More specifically, it does :
+`ncall.sh` performs a full bootstrap of the compiler (the original `make` does only two passes).
+More specifically, `ncall.sh` does :
 
 * `./nc nitc` that compiles nitc.nit with the compiler `../c_src/src` so we get `src/nitc`
 * `./nc2 nitc` that compiles nitc.nit with `src/nitc` and we get `src/nitc2`
