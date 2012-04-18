@@ -18,7 +18,7 @@ Most frequent questions may have answers in the [[FAQ]].
 
 ### For Contributors
 
-The <a href="nitc">internal tools documentation</a> contains the autodocumentation of the main nit tools.
+The page [[get involved]] includes documentations and other resources.
 
 ### For Scientists
 
