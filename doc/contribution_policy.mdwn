@@ -1,9 +1,9 @@
 # Contribution Policy
 
-By creating an account on the SableCC site, or by registering to a lists.sablecc.org mailing list, you indicate your agreement to the following:
+By creating an account on the nitlanguage site, by sending a patch with a "signed-off-by" tag, or by registering to a lists.nitlanguage.org mailing list, you indicate your agreement to the following:
 
 1. You own the copyright on all your contributions.
 2. You license all your contributions under the terms of the Apache License 2.0 open source license.
 3. You give Etienne M. Gagnon and Jean Privat, the main author of Nit, permission to relicense your contributions under the terms of any other open source license.
 
-A contribution is anything you submit to the SableCC site or to any *.nitlanguage.org site (wiki content, ticket content, source code, patch, etc.) or to a lists.nitlanguage.org mailing list (message, attachment, etc.). 
+A contribution is anything you submit to the nitlanguage site or to any *.nitlanguage.org site (wiki content, ticket content, source code, patch, etc.) or to a lists.nitlanguage.org mailing list (message, attachment, etc.). 
