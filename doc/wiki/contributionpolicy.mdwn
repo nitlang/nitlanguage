@@ -1,1 +1,1 @@
-[[!meta redir="contribution policy"]]
+[[!meta redir="contribution_policy"]]
