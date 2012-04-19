@@ -45,9 +45,9 @@ More specifically, `ncall.sh` does :
 * `./nc3 nitc` that compiles nitc.nit with `src/nitc2` and we get `src/nitc3`
 * `./nc4 ../examples/hello_world.nit` and `./hello_world_4`the verify that `src/nitc3` is minimally functionnal.
 
-Note that the Nit code of the compiler is writtent with some legagy Nit: all modern functionnality of Nit are not always usable since it is the primitive compiler (`c_src/nitc`) that is used.
+Note that the Nit code of the compiler is written with some legagy Nit: all modern functionnalities of Nit are not always usable since it is the primitive compiler (`c_src/nitc`) that is used.
 
-On of the standard error of the nitc developper is to break the bootstrap, it means that the Nit compiler is written in an incompatible way with the primitive compiler.
+One of the standard error of the nitc developper is to break the bootstrap, it means that the Nit compiler is written in an incompatible way with the primitive compiler.
 Regulary executing `./ncall.sh` helps to check that the bootstrap is not broken.
 
 ### Regression Tests
