@@ -69,6 +69,18 @@ code {
 .pageheader {
 }
 
+#searchform {
+	display:			block;
+	float:				none;
+	position:			absolute;
+	top:				5px;
+	width:				845px;
+}
+
+#searchform div {
+	float:				right;
+}
+
 .site-links {
 	height:				1em;
 	background:			#efffbc;
