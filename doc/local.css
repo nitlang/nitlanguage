@@ -75,6 +75,7 @@ code {
 	position:			absolute;
 	top:				5px;
 	width:				845px;
+	height:				0; /* used to avoid the div to be over the title */
 }
 
 #searchform div {
