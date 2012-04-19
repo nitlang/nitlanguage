@@ -56,17 +56,40 @@ code {
 	color:                          black;
 	letter-spacing:                 0.05cm;
 	text-decoration:		none;
+	padding:                        3px;
 }
 
 .header {
 	line-height:			normal;
 	font-size:			inherit;
 	font-weight:			normal;
+	padding:                        3px;
 }
 
 .pageheader {
-	padding:                        3px;
-	/*height:                         80px;*/
+}
+
+.site-links {
+	height:				1em;
+	background:			#efffbc;
+	padding:			5px 0;
+	border-top:                     1px solid #7ac127;
+	border-bottom:                  1px solid #7ac127;
+	text-align:			right;
+}
+
+.site-links a {
+	margin:				6px 8px;
+	color:                          #3e601e;
+	font-weight:                    bold;
+	text-decoration:		none;
+}
+.site-links a:hover {
+	text-decoration:		underline;
+}
+
+.site-links .separator {
+	display:			none;
 }
 
 .sidebar {
