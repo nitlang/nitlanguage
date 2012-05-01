@@ -1,0 +1,19 @@
+# Nit Tools
+
+### The Compiler `nitc`
+
+usage:
+
+    nitc [options] file...
+
+Important options:
+
+    -q, --quiet                     Do not show warnings
+    -v, --verbose                   Verbose
+    -I, --path                      Set include path for loaders (may be used more than once)
+    --only-metamodel                Stop after meta-model processing
+    --global                        Use global compilation
+    -o, --output                    Output file
+    -O, --boost                     Optimize compilation
+    --no-cc                         Do not invoke C compiler
+
