@@ -6,6 +6,10 @@ The [[Nit language reference|nitreference.pdf]](PDF) is about language syntax, c
 
 [[Développez en Nit|nit.pdf]](PDF, in French) is a programmer manual.
 
+### Nit Compiler and Other Tools
+
+The [[tools]] page documents the compiler and the other tools of Nit.
+
 ### Standard Library 
 
 The <a href="stdlib">standard library</a> references built-ins and standard classes.
