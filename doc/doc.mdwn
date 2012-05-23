@@ -1,5 +1,7 @@
 # Documentation
 
+## Developing with Nit
+
 ### Manuals
 
 The [[Nit language reference|nitreference.pdf]](PDF) is about language syntax, classes and modules.
@@ -20,10 +22,12 @@ You can also look at some [[examples of programs|examples]] written in Nit.
 
 Most frequent questions may have answers in the [[FAQ]].
 
-### For Contributors
+Using the [[native interface]] and binding Nit programs with existing libraries.
+
+## For Contributors
 
 The page [[get involved]] includes documentations and other resources.
 
-### For Scientists
+## For Scientists
 
 For more details about Nit theoretical foundations, see [[publications and technical reports|research]].
