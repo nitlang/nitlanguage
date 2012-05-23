@@ -1,0 +1,8 @@
+# Native Interface
+
+The example extern_methods.nit illustrate the native interface mechanism of Nit
+
+* [[examples/extern_methods.nit|http://nitlanguage.org/nit.git/blob/HEAD:/examples/extern_methods.nit]]
+* [[examples/extern_methods.nit.c|http://nitlanguage.org/nit.git/blob/HEAD:/examples/extern_methods.nit.c]]
+* [[examples/extern_methods.nit.h|http://nitlanguage.org/nit.git/blob/HEAD:/examples/extern_methods.nit.h]]
+
