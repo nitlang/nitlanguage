@@ -16,7 +16,7 @@ For Eclipse Indigo
 
 * Syntax highlighting on *.nit source files
 * Background compiler to spot errors and warnings (require a working Nit installation)
-* Nit perspective (FIXME: what does that bring)
+* Nit perspective
 * Nit project wizard
 * Basic completion (ctrl+space)
 
@@ -40,6 +40,8 @@ For Eclipse Indigo
 
 1. In the main menu, go to `Windows > Open Perspective > Other...`
 2. Choose `Nit Development`
+
+NOTE: Currently there is no real Nit specific stuff in the Nit Perspective.
 
 ### Compiling and Running
 
