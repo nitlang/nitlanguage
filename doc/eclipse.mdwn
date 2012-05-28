@@ -22,12 +22,6 @@ For Eclipse Indigo
 
 ## Using
 
-### Creating a new Nit Project
-
-1. In the main menu, go to `File > New > Other...`
-2. Select wizard `OTHER/Nit Project`
-3. Click Next.
-
 ### Configuring the Nit Environment
 
 1. In the main menu, go to `Windows > Preference`
@@ -36,12 +30,16 @@ For Eclipse Indigo
 4. The other directories should then be automatically set
 5. Click OK.
 
+### Creating a new Nit Project
+
+1. In the main menu, go to `File > New > Other...`
+2. Select wizard `OTHER/Nit Project`
+3. Click Next.
+
 ### Using the Nit Development Perspective
 
 1. In the main menu, go to `Windows > Open Perspective > Other...`
 2. Choose `Nit Development`
-
-
 
 ### Compiling and Running
 
