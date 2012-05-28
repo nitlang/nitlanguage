@@ -4,7 +4,7 @@
 
 For Eclipse Indigo
 
-1. In the main menu, go to "Help" then "Install New Software..."
+1. In the main menu, go to `Help > Install New Software...`
 2. In the "Work with" fields, enter `http://nitlanguage.org/eclipse`
 3. Select the feature "Nit Developer Tools"
 4. The next window is a list of the tools to be downloaded. Click Next.
@@ -15,16 +15,34 @@ For Eclipse Indigo
 ## Features
 
 * Syntax highlighting on *.nit source files
-* Background compiler to spot errors and warnings (require a working Nit environment)
+* Background compiler to spot errors and warnings (require a working Nit installation)
 * Nit perspective (FIXME: what does that bring)
 * Nit project wizard
+* Basic completion (ctrl+space)
 
 ## Using
 
+### Creating a new Nit Project
+
+1. In the main menu, go to `File > New > Other...`
+2. Select wizard `OTHER/Nit Project`
+3. Click Next.
+
+### Configuring the Nit Environment
+
+1. In the main menu, go to `Windows > Preference`
+2. Select `Nit`
+3. Set the `Nit Folder Location` to the root of your Nit installation
+4. The other directories should then be automatically set
+5. Click OK.
+
+### Using the Nit Development Perspective
+
+1. In the main menu, go to `Windows > Open Perspective > Other...`
+2. Choose `Nit Development`
+
+
+
+### Compiling and Running
+
 TODO
-
-### Creating a new Nit project
-
-### Configuring the Nit environment
-
-### Compiling and executing
