@@ -1,0 +1,61 @@
+# Nit for Vim
+
+Nit comes with a support for the editor [[vim|http://www.vim.org/]] in the directory [[misc/vim|http://nitlanguage.org/nit.git/tree/HEAD:/misc/vim]].
+
+The support features:
+
+ * syntax highlighting
+ * indentation
+ * syntax checker (require [[Syntastic|https://github.com/scrooloose/syntastic]]).
+
+## How to install
+
+### Pathogen
+
+Both Nit and Syntastic rely on pathogen.
+
+Install [[pathogen|https://github.com/tpope/vim-pathogen]] with
+
+    mkdir -p ~/.vim/autoload ~/.vim/bundle; \
+    curl -so ~/.vim/autoload/pathogen.vim \
+    https://raw.github.com/tpope/vim-pathogen/master/autoload/pathogen.vim
+
+Modify you `.virmrc` to activate pathogen
+
+    call pathogen#infect()
+
+If you're brand new to Vim and lacking a `.vimrc`, `vim ~/.vimrc` and paste in the following super-minimal example:
+
+    call pathogen#infect()
+    syntax on
+    filetype plugin indent on
+
+### Nit support
+
+Install the Nit support bundle in vim with
+
+     cd ~/.vim/bundle
+     ln -s /full/path/to/nit/misc/vim nit
+
+Note: replace `/full/path/to/nit` with the real path.
+
+Now you should have syntax highlighting and indentation on `.nit` files.
+
+### Syntax checker with Syntastic
+
+Install the [[Syntastic|https://github.com/scrooloose/syntastic]] bundle with
+
+    cd ~/.vim/bundle
+    git clone https://github.com/scrooloose/syntastic.git
+
+Check that your `$PATH` contains `nitc`.
+If not, the simpliest way is to create a dummy `nitc` script in you personnal `bin` directory:
+
+    echo 'exec /full/path/to/nit/bin/nitc "$@"' > ~/bin/nitc
+    chmod +x ~/bin/nitc
+
+Note: replace `/full/path/to/nit` with the real path.  
+Note2: you may require to open a new shell (or update your path, or source your `.profile`, etc.)  
+Note3: do not use a symbolic link to the real `nitc` executable instead of a dummy script.
+
+Now you should have syntax checking on saving `.nit` files.
