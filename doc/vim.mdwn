@@ -2,6 +2,8 @@
 
 Nit comes with a support for the editor [[vim|http://www.vim.org/]] in the directory [[misc/vim|http://nitlanguage.org/nit.git/tree/HEAD:/misc/vim]].
 
+[[!img screenshot.png]]
+
 The support features:
 
  * syntax highlighting
