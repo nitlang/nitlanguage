@@ -15,7 +15,7 @@ Extern methods are declared like so in the Nit code:
 
 The same methods are implemented in the C code under a similar signature:
 
-    void A_foo___impl( A recv, void ) {
+    void A_foo___impl( A recv ) {
         printf( "in method A::foo, from C\n" );
     }
     int A_bar___impl( A recv, n : char ) {
