@@ -25,7 +25,17 @@ The same methods are implemented in the C code under a similar signature:
 
 The name of the C implementation functions is composed of the class name and method name followed by "___impl". The Nit types primitives to C are converted in the C signature (as for Char and Bool) whereas Nit types unknown to C are kept opaque (as for the receiver of type A).
 
-## Primitives types for C
+## Primitive Nit types in C
+
+For easier exchanges between Nit and C, Nit types that are primitive to C are converted automatically between languages. This conversion works both ways.
+
+A Nit __Char__ is converted to the C __char__.
+
+A Nit __Bool__ is converted to the C __int__ where 0 is true and everything else is false.
+
+A Nit __Int__ is converted to the C __bigint__, _bigint_ is usually the size of _long long - 1 bit_.
+
+A Nit __NativeString__ is converted to the C __char*__. Instances of _String_ must be converted to a _NativeString_ using the _String::to_cstring_ function.
 
 ## Callbacks
 
