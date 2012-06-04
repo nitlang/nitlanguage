@@ -2,6 +2,8 @@
 
 The Nit native interface allows the creation of modules partially written in Nit and C. In such a module, the Nit code defines or redefines classes (normally) and methods (normal Nit methods or extern methods). The C code can implement an extern method, link to an existing C library, callback to the Nit code. The module is represented by three files on disk (.nit, .nit.h and .nit.c).
 
+On this page, we present the different aspects of the Nit native interface. We do not present all the details of the C code, but it follows a standard structure and syntax and can be understood by taking a look at the example or by using the _nits_ tool.
+
 ## Extern methods
 
 An extern method in a Nit method implemented in C code. Except for its implementation, it behaves like any other Nit method. It is a method with a receiver that can redefine or specialize an existing property, be redefined itself and even have virtual types in its signature.
