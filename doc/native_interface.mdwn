@@ -107,7 +107,7 @@ You _must_ free any resources you allocated in C code, the Nit system do not man
 
 ## A tool!
 
-The tool _nits_ is available with the current Nit distribution to simplify writing modules using the native interface. It does three things:
+The tool _nits_ is available with the current Nit distribution to simplify writing modules using the native interface. It does four things:
 
 * It generates stub files for a module with the basic C file structure and C imports
 * It generates the C implementation functions signature for extern Nit methods
