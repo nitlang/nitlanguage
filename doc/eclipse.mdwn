@@ -45,4 +45,7 @@ NOTE: Currently there is no real Nit specific stuff in the Nit Perspective.
 
 ### Compiling and Running
 
-TODO
+1. In the Run As... menu, go to `Run Configurations`
+2. Create a new Nit Program configuration (double click)
+3. Choose where to save the output for the compiler and the file to compile, you can also set the arguments for compiling and executing the program
+4. If you want to reuse this config, just select `Run As... > Your configuration`
