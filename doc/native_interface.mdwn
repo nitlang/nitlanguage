@@ -37,7 +37,36 @@ A Nit __Int__ is converted to the C __bigint__, _bigint_ is usually the size of 
 
 A Nit __NativeString__ is converted to the C __char*__. Instances of _String_ must be converted to a _NativeString_ using the _String::to_cstring_ function.
 
-## Callbacks
+## Nit types and callbacks
+
+All Nit types that are not primitive to C are represented by an opaque C type. This C type is generated for each module with a name specific to the represented Nit type. Usually the C type will have the same name as its Nit equivalent, with the exception of nullable types (in which the type name is prefixed with _nullable\__) and generic types (not yet fully implemented). C structures of this type can be used to call Nit methods from C code.
+
+First of all, callbacks from the C code must be declared in the Nit code. This allows the compiled to further optimize your program and statically check for errors in your C code. Using a similar example as before:
+
+    class A
+        fun baz( msg : String ) is extern import String::length, String::to_cstring
+    end
+
+In the C implementation, 
+    void A_baz___impl( A recv, msg : String ) {
+        char *c_msg;
+        int msg_len;
+
+        c_msg = String_to_cstring( msg ); /* msg.to_cstring */ 
+        msg_len = String_length( msg ); /* msg.length */
+        
+        printf( "received msg: %s, of length = %d\n", c_msg, msg_len );
+    }
+
+As you may have noticed, the callback functions in C use a similar name to the equivalent Nit method and the implementation functions. This pattern can be used to predict the name of the C function to called a given Nit method.
+
+It is also possible to callback te the Nit language for more than methods:
+
+Declaring an import of __super__ in Nit will allow to call super from C using a function similar to _A_baz___super( recv )_.
+
+Declaring an import a constructor will allow it to be called from C as _A new_A()_ for anonymous constructors or _A new\_A\_name()_ for a named constructor.
+
+Casts can de declared as an import in Nit with three forms; __A as(B)__, __String as nullable__, __String as not nullable__. The first form is used to cast from any to any type. The second and third forms are used to cast between nullables and non-nullables. In the C code, those imports allows to use two set of funtions, one for the type check and one for the cast itself. With these examples we would get _int A\_is\_a\_B( A )_ and _B A\_as\_B( A )_ for the first form; _nullable\_String String\_as\_nullable( String )_ for the second form (no check is necessary) as well as _int String\_is\_null( nullable\_String )_ and _String String\_as\_not\_null_ for the third form.
 
 ## Extern classes
 
