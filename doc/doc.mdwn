@@ -22,7 +22,7 @@ You can also look at some [[examples of programs|examples]] written in Nit.
 
 Most frequent questions may have answers in the [[FAQ]].
 
-Using the [[native interface]] and binding Nit programs with existing libraries.
+Using the [[native interface]] and binding Nit programs with existing C libraries.
 
 ## For Contributors
 
