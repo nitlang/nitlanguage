@@ -105,9 +105,16 @@ These constructors are implemented like an extern method but with a different si
 
 You _must_ free any resources you allocated in C code, the Nit system do not manage these.
 
-## Tools!
+## A tool!
 
-The tool _nits_ is available with the current Nit distribution to simplify writing modules using the native interface. To use _nits_, follow these steps:
+The tool _nits_ is available with the current Nit distribution to simplify writing modules using the native interface. It does three things:
+
+* It generates stub files for a module with the basic C file structure and C imports
+* It generates the C implementation functions signature for extern Nit methods
+* It generates helper documentation for each extern methods with the signatures of declared callbacks to Nit
+* It generates the basic C equivalent for extern classes
+
+To use _nits_, follow these steps:
 
 * Write the Nit part of your module (including extern methods declaration and extern classes)
 * Call _nits_ with _nits -i my\_module.nit_ to generate the _my\_module.nit.c_ and _my\_module.nit.h_ files. Be careful, the _-i_ option overwrites your custom C code in those files.
