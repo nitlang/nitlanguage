@@ -1,8 +1,20 @@
 # Native Interface
 
+The Nit native interface allows the creation of modules partially written in Nit and C. In such a module, the Nit code defines or redefines classes (normally) and methods (normal Nit methods or extern methods). The C code can implement an extern method, link to an existing C library, callback to the Nit code. The module is represented by three files on disk (.nit, .nit.h and .nit.c).
+
+## Extern methods
+
+## Primitives types for C
+
+## Callbacks
+
+## Extern classes
+
+## Compiling and linking
+
+## Example
 The example extern_methods.nit illustrate the native interface mechanism of Nit
 
 * [[examples/extern_methods.nit|http://nitlanguage.org/nit.git/blob/HEAD:/examples/extern_methods.nit]]
 * [[examples/extern_methods.nit.c|http://nitlanguage.org/nit.git/blob/HEAD:/examples/extern_methods.nit.c]]
 * [[examples/extern_methods.nit.h|http://nitlanguage.org/nit.git/blob/HEAD:/examples/extern_methods.nit.h]]
-
