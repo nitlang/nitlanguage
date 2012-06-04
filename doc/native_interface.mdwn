@@ -47,7 +47,8 @@ First of all, callbacks from the C code must be declared in the Nit code. This a
         fun baz( msg : String ) is extern import String::length, String::to_cstring
     end
 
-In the C implementation, 
+In the C implementation, these methods can be called using a the class name and method name seperated by an underscore:
+
     void A_baz___impl( A recv, msg : String ) {
         char *c_msg;
         int msg_len;
@@ -77,7 +78,7 @@ An extern class is declared in Nit by replacing the _class_ keyword with _extern
     end
 
 Its C type equivalent is defined in the C code, usually the header .nit.h, like so:
-#define A my_struct*
+    #define A my_struct*
 
 The equivalent C type _must_ be a pointer and the Nit class can only be sublass to other extern classes or interfaces.
 
@@ -86,7 +87,20 @@ The single value of an instance of an extern class is its value in C, because of
 Extern constructors are declared similarly to extern methods, for example:
     extern A
         new is extern
+        new named is extern
+    end
 
+These constructors are implemented like an extern method but with a different signature:
+    A new_A___impl() {
+        return malloc( sizeof( my_struct) );
+    }
+    A new_A_named___impl() {
+        A a = malloc( sizeof( my_struct) );
+        a->naming = 1;
+        return a;
+    }
+
+You _must_ free any resources you allocated in C code, the Nit system do not manage these.
 
 ## Compiling and linking
 
