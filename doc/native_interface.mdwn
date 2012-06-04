@@ -115,6 +115,14 @@ The tool _nits_ is available with the current Nit distribution to simplify writi
 
 ## Compiling and linking
 
+Compiling a Nit program using the most basic functionality is simple:
+
+    nitc my_module.nit
+
+However, to link with an external library you can use more options. Let's say the C code of your module uses the SDL graphic library, you must specify the library name for linking and you can specify where to fing the header files:
+
+    nitc my_module.nit --cc-lib-name SDL --cc-header-path /usr/include/SDL
+
 ## Example
 The example extern_methods.nit illustrate the native interface mechanism of Nit
 
