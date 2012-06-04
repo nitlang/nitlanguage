@@ -64,11 +64,29 @@ It is also possible to callback te the Nit language for more than methods:
 
 Declaring an import of __super__ in Nit will allow to call super from C using a function similar to _A_baz___super( recv )_.
 
-Declaring an import a constructor will allow it to be called from C as _A new_A()_ for anonymous constructors or _A new\_A\_name()_ for a named constructor.
+Declaring an import a constructor will allow it to be called from C as _A new_A()_ for the anonymous constructor of the class A or _A new\_A\_name()_ for a named constructor.
 
 Casts can de declared as an import in Nit with three forms; __A as(B)__, __String as nullable__, __String as not nullable__. The first form is used to cast from any to any type. The second and third forms are used to cast between nullables and non-nullables. In the C code, those imports allows to use two set of funtions, one for the type check and one for the cast itself. With these examples we would get _int A\_is\_a\_B( A )_ and _B A\_as\_B( A )_ for the first form; _nullable\_String String\_as\_nullable( String )_ for the second form (no check is necessary) as well as _int String\_is\_null( nullable\_String )_ and _String String\_as\_not\_null_ for the third form.
 
 ## Extern classes
+
+An extern Nit class associates directly a C type to a Nit class. An instance of this class can then be used like other primitives types to C and will have and equivalent representation in both languages.
+
+An extern class is declared in Nit by replacing the _class_ keyword with _extern_:
+    extern A
+    end
+
+Its C type equivalent is defined in the C code, usually the header .nit.h, like so:
+#define A my_struct*
+
+The equivalent C type _must_ be a pointer and the Nit class can only be sublass to other extern classes or interfaces.
+
+The single value of an instance of an extern class is its value in C, because of that it cannot have any attributes. An extern Nit classes still can have methods (normal and extern) but only extern constructors.
+
+Extern constructors are declared similarly to extern methods, for example:
+    extern A
+        new is extern
+
 
 ## Compiling and linking
 
