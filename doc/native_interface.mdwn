@@ -2,7 +2,9 @@
 
 The Nit native interface allows the creation of modules partially written in Nit and C. In such a module, the Nit code defines or redefines classes (normally) and methods (normal Nit methods or extern methods). The C code can implement an extern method, link to an existing C library, callback to the Nit code. The module is represented by three files on disk (.nit, .nit.h and .nit.c).
 
-On this page, we present the different aspects of the Nit native interface. We do not present all the details of the C code, but it follows a standard structure and syntax and can be understood by taking a look at the example or by using the _nits_ tool.
+To use all the features of the native interface, the C code must import a file generated specifically for the module. This file, _<my\_module.\_nitni.h>_, is usually included in the _.nit.h_ file.
+
+On this page, we present the different aspects of the Nit native interface. We do not present all the details of the C code, but it follows a standard structure and syntax and can be understood by taking a look at the example or by using the _nits_ tool. 
 
 ## Extern methods
 
@@ -71,10 +73,12 @@ It is also possible to callback te the Nit language for more than methods:
 An extern Nit class associates directly a C type to a Nit class. An instance of this class can then be used like other primitives types to C and will have and equivalent representation in both languages.
 
 An extern class is declared in Nit by replacing the _class_ keyword with _extern_:
+
     extern A
     end
 
-Its C type equivalent is defined in the C code, usually the header .nit.h, like so:
+Its C type equivalent is defined in the C code, usually in the header .nit.h before including the generated file (_._nitni.h_), like so:
+
     #define A my_struct*
 
 The equivalent C type _must_ be a pointer and the Nit class can only be sublass to other extern classes or interfaces.
