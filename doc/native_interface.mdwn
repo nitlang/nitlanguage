@@ -85,12 +85,14 @@ The equivalent C type _must_ be a pointer and the Nit class can only be sublass 
 The single value of an instance of an extern class is its value in C, because of that it cannot have any attributes. An extern Nit classes still can have methods (normal and extern) but only extern constructors.
 
 Extern constructors are declared similarly to extern methods, for example:
+
     extern A
         new is extern
         new named is extern
     end
 
 These constructors are implemented like an extern method but with a different signature:
+
     A new_A___impl() {
         return malloc( sizeof( my_struct) );
     }
@@ -101,6 +103,15 @@ These constructors are implemented like an extern method but with a different si
     }
 
 You _must_ free any resources you allocated in C code, the Nit system do not manage these.
+
+## Tools!
+
+The tool _nits_ is available with the current Nit distribution to simplify writing modules using the native interface. To use _nits_, follow these steps:
+
+* Write the Nit part of your module (including extern methods declaration and extern classes)
+* Call _nits_ with _nits -i my\_module.nit_ to generate the _my\_module.nit.c_ and _my\_module.nit.h_ files. Be careful, the _-i_ option overwrites your custom C code in those files.
+* Customize the generated C files.
+* If necessary, modify the Nit file and rerun _nits my\_module.nit_ (without _-i_!) to generate stub files (_my\_module.sub.nit.c_, etc) with all of the C code for the latest version of the Nit code.
 
 ## Compiling and linking
 
