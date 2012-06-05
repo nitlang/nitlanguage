@@ -42,7 +42,7 @@ For easier exchanges between Nit and C, Nit types that are primitive to C are co
 
 All Nit types that are not primitive to C are represented by an opaque C type. This C type is generated for each module with a name specific to the represented Nit type. Usually the C type will have the same name as its Nit equivalent, with the exception of nullable types (in which the type name is prefixed with _nullable\__) and generic types (not yet fully implemented). C structures of this type can be used to call Nit methods from C code.
 
-First of all, callbacks from the C code must be declared in the Nit code. This allows the compiled to further optimize your program and statically check for errors in your C code. Using a similar example as before:
+First of all, callbacks from the C code must be declared in the Nit code. This allows the compiler to further optimize your program and statically check for errors in your C code. Using a similar example as before:
 
     class A
         fun baz( msg : String ) is extern import String::length, String::to_cstring
