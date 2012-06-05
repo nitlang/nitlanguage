@@ -62,7 +62,7 @@ In the C implementation, these methods can be called using the class name and me
 
 As you may have noticed, the callback functions in C use a similar name to the equivalent Nit method and the implementation functions. This pattern can be used to predict the name of the C function to called a given Nit method.
 
-It is also possible to callback te the Nit language for more than methods:
+It is also possible to callback the Nit language for more than methods:
 
 * Declaring an import of __super__ in Nit will allow to call super from C using a function similar to _A_baz___super( recv )_.
 * Declaring an import a constructor will allow it to be called from C as _A new_A()_ for the anonymous constructor of the class A or _A new\_A\_name()_ for a named constructor.
