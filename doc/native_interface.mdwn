@@ -48,7 +48,7 @@ First of all, callbacks from the C code must be declared in the Nit code. This a
         fun baz( msg : String ) is extern import String::length, String::to_cstring
     end
 
-In the C implementation, these methods can be called using a the class name and method name seperated by an underscore:
+In the C implementation, these methods can be called using the class name and method name seperated by an underscore:
 
     void A_baz___impl( A recv, msg : String ) {
         char *c_msg;
