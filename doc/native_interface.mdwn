@@ -17,7 +17,7 @@ Extern methods are declared like so in the Nit code:
         fun bar( n : Char ) : Bool is extern
     end
 
-The same methods are implemented in the C code under a similar signature:
+The same methods are implemented as C functions code under a similar signature:
 
     void A_foo___impl( A recv ) {
         printf( "in method A::foo, from C\n" );
