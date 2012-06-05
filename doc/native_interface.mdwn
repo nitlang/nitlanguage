@@ -143,3 +143,6 @@ The example extern_methods.nit illustrates a normal use of the Nit native interf
 * [[examples/extern_methods.nit|http://nitlanguage.org/nit.git/blob/HEAD:/examples/extern_methods.nit]]
 * [[examples/extern_methods.nit.c|http://nitlanguage.org/nit.git/blob/HEAD:/examples/extern_methods.nit.c]]
 * [[examples/extern_methods.nit.h|http://nitlanguage.org/nit.git/blob/HEAD:/examples/extern_methods.nit.h]]
+
+## References
+* [[L'interface native de Nit, un langage de programmation à objets; Alexis Laferrière; Mémoire; UQAM |http://xymus.net/alaferriere-memoire.pdf]]
