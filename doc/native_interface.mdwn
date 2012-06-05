@@ -105,6 +105,12 @@ These constructors are implemented like an extern method but with a different si
 
 You _must_ free any resources you allocated in C code, the Nit system do not manage these.
 
+## Global C references
+
+Nit objects passed as argument to a C implementation function are guaranteed to be valid until the function return. So it is for Nit objects returned from callbacks to Nit code. However, if you need to keep a Nit object between functions, in a global C variable, you have to notify the native interface for it to stay valid.
+
+For example, before saving an instance of the class A in a global variable, you must call _A\_incr\_ref( A )_ on the instance. From then on, the Nit system will update this reference at each garbage collection so it stays valid, even after the current extern method returns. To free such a reference, call _A\_derc\_ref( A )_.
+
 ## A tool!
 
 The tool _nits_ is available with the current Nit distribution to simplify writing modules using the native interface. It does four things:
