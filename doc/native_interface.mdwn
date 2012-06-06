@@ -137,6 +137,16 @@ However, to link with an external library you can use more options. Let's say th
 
     nitc my_module.nit --cc-lib-name SDL --cc-header-path /usr/include/SDL
 
+## .nit.args files
+
+The compilation options passed to nitc can be directly associatied with the module with .nit.args files. 
+
+To continue with the previous example, the module my\_module needs to be linked with the SDL library. The needed compilation options can be declared in the my\_module.nit.args file as so:
+
+    --cc-lib-name SDL --cc-header-path /usr/include/SDL
+
+The options specified in this file will be used to compile all Nit program importing the module my\_module.
+
 ## Example
 The example extern_methods.nit illustrates a normal use of the Nit native interface.
 
