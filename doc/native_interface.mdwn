@@ -145,7 +145,7 @@ To continue with the previous example, the module my\_module needs to be linked 
 
     --cc-lib-name SDL --cc-header-path /usr/include/SDL
 
-The options specified in this file will be used to compile all Nit program importing the module my\_module.
+The options specified in this file will be used to compile all Nit program importing the module my\_module. Only options related to C compilation are supported by .nit.args files as of now.
 
 ## Example
 The example extern_methods.nit illustrates a normal use of the Nit native interface.
