@@ -12,6 +12,8 @@ The [[Nit language reference|nitreference.pdf]](PDF) is about language syntax, c
 
 The [[tools]] page documents the compiler and the other tools of Nit.
 
+There is also a [[plugin for eclipse|eclipse]] and a [[bundle for vim|vim]].
+
 ### Standard Library 
 
 The <a href="stdlib">standard library</a> references built-ins and standard classes.
