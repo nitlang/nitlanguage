@@ -26,7 +26,9 @@ The source code of all Nit tools are freely available, see the [[download]] page
 
 ### Sending Code Contributions
 
-* Sign-off all you patches by including the line "`signed-off-by: Your Name <your.email@example.com>`" at the end of each patch description. By the signed-off-by tag, you state that you agree with the [[contribution policy]]
+* Describe your patches with a one-liner summary, a blank line, then an explanation of the problem and the advantages of the solution implemented by the patch.
+* Sign-off all your patches by including the line "`signed-off-by: Your Name <your.email@example.com>`" at the end of each patch description. By the signed-off-by tag, you state that you agree with the [[contribution policy]].
+* Keep patches as clean as possible: have only one concern by patch, do not include unrelated changes in a patch, patch series is not about *how* you developed your solution but about the best way to present your changes.
 * You can communicate patches by the way you prefer including: merge request on some Git repository by email, merge request to the [[nit githup repository|https://github.com/privat/nit]], or patches by email.
 
 ### Starting and Re-Bootstrapping
