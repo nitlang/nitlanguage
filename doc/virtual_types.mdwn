@@ -12,7 +12,7 @@ Virtual types is a good solution when:
 
 Example, we have employees what works in standard office and bosses, that are technically employees, but hat works in boss offices (that are improved offices with a fridge).
 
-One way to achieve the modeling it to use virtual types.
+One way to achieve the modeling is to use virtual types.
 virtual types are defined inside class (like methods and attributes) but with the keyword `type`.
 Inside the class, the virtual type can be used (almost) like any other static type.
 
@@ -29,7 +29,7 @@ The only requirement is that the new bound is a sub-type of the previous bound.
         redef type OFFICE: BossOffice
     end
 
-The redefinition of a virtual type is used by the compile to prevent some type errors.
+The redefinition of a virtual type is used by the compiler to prevent some type errors.
 For example, assuming that boss' offices have a fridge:
 
     var e: Employee = ...
