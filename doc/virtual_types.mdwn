@@ -1,6 +1,8 @@
 # Virtual Types
 
-Virtual type is a way to 
+Virtual type is a way to define in a class a property that is associated with a type.
+This property can be used to type parameters, return of functions, variables, etc.
+Virtual types are inherited by subclasses and can be redefined.
 
 Virtual types is a good solution when:
 
