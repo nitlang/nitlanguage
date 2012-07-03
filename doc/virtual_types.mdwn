@@ -3,9 +3,10 @@
 Virtual type is a way to 
 
 Virtual types is a good solution when:
- * A class need to refer to the real itself
- * Two class hierarchy are somewhat parallel
- * You want [[covariance]]
+
+  * A class need to refer to the real itself
+  * Two class hierarchy are somewhat parallel
+  * You want [[covariance]]
 
 ### Usage
 
@@ -32,7 +33,3 @@ var e: Employee = ...
 e.office.fridge.open # Compilation Error! Office has no method fridge
 var b: Boss = ...
 b.office.fridge.open # OK!
-
-### Covariant typing policy
-
-TODO
