@@ -1,6 +1,6 @@
 # Classes
 
-[class] `interface`, `abstract class`, `class` and `enum` are the four
+`interface`, `abstract class`, `class` and `enum` are the four
 kinds of classes. All these classes can be in multiple inheritance, can
 define new methods and redefine inherited method (yes, even interfaces).
 Here are the differences:
