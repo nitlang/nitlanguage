@@ -1,10 +1,10 @@
-# Basic Syntax fo Nit
+# Basic Syntax of Nit
 
-The syntax of Nit belongs to the Pascal tradition and is
-inspired by various script languages (especially Ruby). Its objective is
+The syntax of Nit follows to the Pascal tradition and is
+inspired by various script languages (especially Ruby). Its main objective is
 readability.
 
-Indentation is not meaningful in Nit; blocks usually starts by a
+Indentation is not meaningful in Nit; blocks usually starts with a
 specific keyword and finish with `end`. Newlines are only meaningful at
 the end of declarations, at the end of statements, and after some
 specific keywords. The philosophy is that the newline is ignored if
@@ -16,7 +16,7 @@ complete Nit grammar for more details.
     print 2 + # the second statement is not yet finished
     2 # the end of the second statement, outputs "4"
 
-Nit tries to achieve some uniformity in its usage of the common
+Nit aims to achieve some uniformity in its usage of the common
 punctuation: equal (`=`) is for assignment, double equal (`==`) is for
 equality test, column (`:`) is for type declaration, dot (`.`) is for
 polymorphism, comma (`,`) separates elements, and quad (`::`) is for
@@ -31,16 +31,15 @@ letters, digits, or underscores. However, the usage of uppercase letters
 words in identifiers is preferred: `some_identifier`.
 
 Identifiers of classes and types must begin with a uppercase letter and
-can be followed by letters, digits, or underscores. However, in classes,
-the usage of camelcase is preferred while formal types should be written
-all in uppercases: `SomeClass` and `SOME_VIRTUAL_TYPE`.
+can be followed by letters, digits, or underscores. However
+the usage of camelcase is preferred for class identifiers while formal types should be written in all uppercase: `SomeClass` and `SOME_VIRTUAL_TYPE`.
 
 ## Style
 
 While Nit does not enforce any kind of source code formatting, the
 following is encouraged:
 
--   indentation is done with the tabulation character and is displayed
+-   indentation uses the tabulation character and is displayed
     as 8 spaces;
 
 -   lines are less than 80 characters long;
@@ -65,7 +64,7 @@ following is encouraged:
 and run up to the end of the line. Currently, there is no
 multiline-comments.
 
-A block of comments that precede any definition of module, class, or
+A comment block right before any definition of module, class, or
 property, is considered as its documentation and will be displayed as
 such by the autodoc. At this point, documentation is displayed verbatim
 (no special formatting or meta-information).
@@ -83,14 +82,14 @@ such by the autodoc. At this point, documentation is displayed verbatim
 
 ## Object
 
-[Object] Nit is a full object language. Each value is the instance of a
+[Object] Nit is a full object language. Every value is an instance of a
 class. Even the basic types described in this section.
 
 `Object` is the root of the class hierarchy. All other classes,
 including the basic ones, are a specialization of `Object`.
 
 Classes, methods and operators presented in this section are defined in
-the standard Nit library that is implicitly imported in every module.
+the standard Nit library that is implicitly imported by every module.
 Many other classes and methods are also defined in the standard library.
 Please look at the specific standard library documentation for all
 details.
@@ -139,8 +138,7 @@ Common comparison operators are available: `==` and `!=` on all objects;
 `<`, `>`, `<=`, `>=` and `<=>` on `Comparable` objects (which include
 `Int`, `String` and others).
 
--   `==`, `<`, `>`, `<=`, `>=` and `<=>` are standard Nit operators (it
-    means they are redefinable).
+-   `==`, `<`, `>`, `<=`, `>=` and `<=>` are standard Nit operators (so they are redefinable).
 
 -   `and`, `or` and `not` are not standard Nit operators: they are not
     redefinable, also they are lazy and have adaptive typing flow
@@ -201,4 +199,3 @@ and retrieve values.
     # h associates strings to integers
     h["six"] = 6
     print h["six"] + 1 # outputs "7"
-
