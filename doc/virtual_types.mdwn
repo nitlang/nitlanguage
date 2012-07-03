@@ -29,7 +29,10 @@ The only requirement is that the new bound is a sub-type of the previous bound.
         redef type OFFICE: BossOffice
     end
 
-var e: Employee = ...
-e.office.fridge.open # Compilation Error! Office has no method fridge
-var b: Boss = ...
-b.office.fridge.open # OK!
+The redefinition of a virtual type is used by the compile to prevent some type errors.
+For example, assuming that boss' offices have a fridge:
+
+    var e: Employee = ...
+    e.office.fridge.open # Compilation Error! Office has no method fridge
+    var b: Boss = ...
+    b.office.fridge.open # OK!
