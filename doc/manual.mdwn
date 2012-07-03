@@ -1,8 +1,8 @@
-# Reference of the Nit Language
+# The Nit Language Reference
 
 This document attempts to be as short as possible while covering all
-features of the language in deepth. It is not a real manual to learn the
-language since concepts are covered when required.
+features of the language in depth. It is not a real manual to learn the
+language since concepts are covered only when required.
 
 * [[!traillink syntax]]
 * [[!traillink structure text="control structures"]]
