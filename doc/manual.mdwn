@@ -5,7 +5,8 @@ features of the language in deepth. It is not a real manual to learn the
 language since concepts are covered when required.
 
 * [[!traillink syntax]]
-* [[!traillink structure]]
+* [[!traillink structure text="control structures"]]
+* [[!traillink variable text="local variables and static typing"]]
 * [[!traillink module]]
 * [[!traillink class]]
 * [[!traillink method]]
