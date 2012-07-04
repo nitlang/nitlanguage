@@ -1,4 +1,4 @@
-# Types, Literals and Operations
+# Basic Types
 
 ## Object
 
