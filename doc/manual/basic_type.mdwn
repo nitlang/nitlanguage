@@ -2,7 +2,7 @@
 
 ## Object
 
-[Object] Nit is a full object language. Every value is an instance of a
+Nit is a full object language. Every value is an instance of a
 class. Even the basic types described in this section.
 
 `Object` is the root of the class hierarchy. All other classes,
@@ -16,7 +16,7 @@ details.
 
 ## Int and Float
 
-[Int][Float] `1`, `-1` are `Int` literals, and `1.0`, `-0.1` are `Float`
+`1`, `-1` are `Int` literals, and `1.0`, `-0.1` are `Float`
 literals. Standard arithmetic operators are available with a common
 precedence rules: `*`, `/`, and `%` (modulo) ; then `+` and `-`. Some
 operators can be composed with the assignment (`=`).
@@ -30,7 +30,7 @@ the `to_f` and `to_i` methods.
 
 ## String
 
-[String] Literal strings are enclosed within quotes (`"`). Common
+Literal strings are enclosed within quotes (`"`). Common
 escaping sequences are available (`\n`, `\t`, etc.) To insert a value
 inside a literal string, include the values inside brackets (`{}`). `+`
 is the concatenation operator but is less efficient than the bracket
@@ -50,7 +50,7 @@ top-level method, `printn`, does not add the newline.
 
 ## Bool
 
-[Bool][is] `true` and `false` are the only two `Bool` values. Standard
+`true` and `false` are the only two `Bool` values. Standard
 Boolean operators are available with the standard precedence rule:
 `not`; then `and`; then `or`.
 
@@ -75,7 +75,7 @@ Common comparison operators are available: `==` and `!=` on all objects;
 
 ## Array
 
-[Array] `Array` is a generic class, thus `Array[Int]` denotes an array
+`Array` is a generic class, thus `Array[Int]` denotes an array
 of integers and `Array[Array[Bool]]` denotes an array of array of
 Booleans. Literal arrays can be declared with the bracket notation
 (`[]`). Empty arrays can also be instantiated with the `new` keyword and
@@ -98,7 +98,7 @@ combination rule.
 
 ## Range
 
-[Range] `Range` is also a generic class but accepts only `Discrete`
+`Range` is also a generic class but accepts only `Discrete`
 types (`Int` is discrete). There are two kinds of literal ranges, the
 open one `[1..5[` that excludes the last element, and the closed one
 `[1..5]` that includes it.
@@ -110,7 +110,7 @@ Ranges are mainly used in `for` loops.
 
 ## HashMap
 
-[HashMap] `HashMap` is a generic class that associates keys with values.
+`HashMap` is a generic class that associates keys with values.
 There is no literal hashmap, therefore the `new` keyword is used to
 create an empty `HashMap` and the bracket operators are used to store
 and retrieve values.
