@@ -5,6 +5,7 @@ features of the language in depth. It is not a real manual to learn the
 language since concepts are covered only when required.
 
 * [[!traillink syntax]]
+* [[!traillink "basic type"]]
 * [[!traillink structure text="control structures"]]
 * [[!traillink variable text="local variables and static typing"]]
 * [[!traillink module]]
