@@ -30,7 +30,8 @@ Here an exemple with the basic implementation of `ComparableSorter[E]` in `stand
 
 `ComparableSorter[E]` can be used in this way :
 
-    var array = ["a", "c", "b"] # An array initialized with unsorted `String` values, `String` is a subtype of `Comparable`
+    var array = ["a", "c", "b"] # An array initialized with unsorted `String` values 
+    # `String` is a subtype of `Comparable`
     var sorter = new ComparableSorter[String]
     sorter.sort(array) # Use the sorter to sort the array
     
