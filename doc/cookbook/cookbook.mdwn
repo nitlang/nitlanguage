@@ -1,3 +1,3 @@
 # Cookbook for Nit
 
-[[!map pages="cookbook/*"]]
+* [[!traillink how_to_iterate_trough_an_array]]
