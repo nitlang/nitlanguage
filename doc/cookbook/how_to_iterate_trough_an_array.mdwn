@@ -15,3 +15,5 @@ If the index is needed, a alternative is to iterate on the ragne of the indexes.
         print "{i}:{a[i]}"
     end
     # print 0:a 1:b 2:c
+
+[[!tag array]]
