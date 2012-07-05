@@ -1,11 +1,11 @@
 # Control Structures
 
-[control] Traditional procedural control structures exist in Nit. They
+Traditional procedural control structures exist in Nit. They
 also often exist in two versions: a one-liner and a block version.
 
 ## Control Flow
 
-[control flow] Control structures dictate the control flow of the
+Control structures dictate the control flow of the
 program. Nit heavily refers to the control flow in its specification:
 
 -   No unreachable statement;
@@ -23,28 +23,20 @@ Note that the control flow is determined only from the position, the
 order and the nesting of the control structures. The real value of the
 expressions used has no effect on the control flow analyses.
 
-2
 
     if true then
         return
     else
         return
     end
-    print 1
-    # Compile error: 
-    # unreachable statement
+    print 1 # Compile error: unreachable statement
 
     if true then
         return
     end
-    print 1
-    # OK, but never executed
+    print 1 # OK, but never executed
 
 ## if
-
-[if]
-
-2
 
     if exp then stm
     if exp then stm else stm
@@ -70,8 +62,6 @@ structure; then an error is signaled since a statement cannot begin with
 
 ## while
 
-[while]
-
     while exp do stm
     while exp do
         stms
@@ -79,8 +69,7 @@ structure; then an error is signaled since a statement cannot begin with
 
 ## for
 
-[for] `for` declares an automatic variable used to iterates on
-`Collection` (`Array` and `Range` are both `Collection`).
+`for` declares an automatic variable used to iterates on `Collection` (`Array` and `Range` are both `Collection`).
 
     for x in [1..5] do print x # outputs 1 2 3 4 5
     for x in [1, 4, 6] do
@@ -91,8 +80,7 @@ In fact, `for` is syntactic sugar for a closure.
 
 ## loop
 
-[loop] Infinite loops are mainly used with breaks. They are useful to
-implement *until* loops or to simulate the *exit when* control of Ada.
+Infinite loops are mainly used with breaks. They are useful to implement *until* loops or to simulate the *exit when* control of Ada.
 
     loop
         stms
@@ -100,13 +88,11 @@ implement *until* loops or to simulate the *exit when* control of Ada.
         stms
     end
 
-Note that `loop` is different from `while true` because the control flow
-does not consider the values of expression.
+Note that `loop` is different from `while true` because the control flow does not consider the values of expression.
 
 ## do
 
-[do] Single `do` are used to create scope for variables or to be
-attached with labeled breaks.
+Single `do` are used to create scope for variables or to be attached with labeled breaks.
 
     do
         var x = 5
@@ -116,14 +102,9 @@ attached with labeled breaks.
 
 ## break, continue and label
 
-[break][continue][label] Unlabeled `break` exits the current `for`,
-`while`, `loop`, or closure. Unlabeled `continue` skips the current
-`for`, `while`, `loop`, or closure.
+Unlabeled `break` exits the current `for`, `while`, `loop`, or closure. Unlabeled `continue` skips the current `for`, `while`, `loop`, or closure.
 
-`label` can be used with `break` or `continue` to act on a specific
-control structure (not necessary the current one). The corresponding
-`label` must be defined after the `end` keyword of the designated
-control structure.
+`label` can be used with `break` or `continue` to act on a specific control structure (not necessary the current one). The corresponding `label` must be defined after the `end` keyword of the designated control structure.
 
     for i in [0..width[ do
         for j in [0..height[ do
@@ -144,16 +125,11 @@ In closures, `break` and `continue` can return values.
 
 ## abort
 
-[abort] `abort` stops the program with a fatal error and prints a stack
-trace. Since there is currently no exception nor run-time-errors, abort
-is somewhat used to simulate them.
+`abort` stops the program with a fatal error and prints a stack trace. Since there is currently no exception nor run-time-errors, abort is somewhat used to simulate them.
 
 ## assert
 
-[assert] `assert` verifies that a given Boolean expression is true, or
-else it aborts. An optional label can be precised, it will be displayed
-on the error message. An optional `else` can also be added and will be
-executed before the abort.
+`assert` verifies that a given Boolean expression is true, or else it aborts. An optional label can be precised, it will be displayed on the error message. An optional `else` can also be added and will be executed before the abort.
 
     assert bla: whatever else
         # "bla" is the label
