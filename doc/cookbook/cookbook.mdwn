@@ -1,0 +1,3 @@
+# Cookbook for Nit
+
+[[!map pages="cookbook/*"]]
