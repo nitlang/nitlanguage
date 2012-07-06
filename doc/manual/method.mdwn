@@ -102,7 +102,7 @@ definition of the method but also by the dynamic type of `self`.
 The principle it to produce a strict order of the redefinitions of a
 method (the linearization). Each call to `super` call the next method
 definition in the linearization. From a technical point of view, the
-linearization algorithm used is based on C4. It ensures that:
+linearization algorithm used is based on C3. It ensures that:
 
 -   A definition comes after its redefinition.
 
