@@ -76,7 +76,7 @@ structure; then an error is signaled since a statement cannot begin with
         print x # outputs 1 4 6
     end
 
-In fact, `for` is syntactic sugar for a closure.
+In fact, `for` is syntactic sugar for a [[closure]].
 
 ## loop
 
