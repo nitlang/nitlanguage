@@ -1,13 +1,9 @@
 # Local Variables and Static Typing
 
-[var][static type] `var` declares local variables. In fact there is no
-global variable in Nit, so in this document *variable* always refers to
-a local variable. A variable is visible up to the end of the current
-control structure. Two variables with the same name cannot coexist: no
-nesting nor masking.
+`var` declares local variables. In fact there is no global variable in Nit, so in this document *variable* always refers to a local variable. A variable is visible up to the end of the current
+control structure. Two variables with the same name cannot coexist: no nesting nor masking.
 
-Variables are bound to values. A variable cannot be used unless it has a
-value in all control flow paths (à la Java).
+Variables are bound to values. A variable cannot be used unless it has a value in all control flow paths (à la Java).
 
     var x
     var y
@@ -22,12 +18,8 @@ value in all control flow paths (à la Java).
 
 ## Adaptive Typing
 
-[adaptive typing] Nit features adaptive typing, which means that the
-static type of a variable can change according to: the assignments of
-variables, the control flow, and some special operators (`and`, `or`,
+Nit features adaptive typing, which means that the static type of a variable can change according to: the assignments of variables, the control flow, and some special operators (`and`, `or`,
 `or else`, `==`, `!=`, and `isa`).
-
-2
 
     var x # a variable
     x = 5
@@ -47,12 +39,7 @@ variables, the control flow, and some special operators (`and`, `or`,
 
 ## Variable Upper Bound
 
-[upper bound] An optional type information can be added to a variable
-declaration. This type is used as an upper bound of the type of the
-variable. When a initial value is given in a variable declaration
-without a specific type information, the static type of the initial
-value is used as an upper bound. If no type and no initial value are
-given, the upper bound is set to `nullable Object`.
+An optional type information can be added to a variable declaration. This type is used as an upper bound of the type of the variable. When a initial value is given in a variable declaration without a specific type information, the static type of the initial value is used as an upper bound. If no type and no initial value are given, the upper bound is set to `nullable Object`.
 
     var x: Int # Upper bound is Int
     x = "Hello" # Compile error: expected Int
@@ -63,10 +50,7 @@ given, the upper bound is set to `nullable Object`.
     var t: Object = 5 # Upper bound is Object
     t = "Hello" # OK
 
-The adaptive typing flow is straightforward, therefore loops (`for`,
-`while`, `loop`) and closures have a special requirement: on entry, the
-upper bound is set to the current static type; on exit, the upper bound
-is reset to its previous value.
+The adaptive typing flow is straightforward, therefore loops (`for`, `while`, `loop`) and closures have a special requirement: on entry, the upper bound is set to the current static type; on exit, the upper bound is reset to its previous value.
 
     var x: Object = ...
     # static type is Object, upper bound is Object
@@ -82,9 +66,7 @@ is reset to its previous value.
 
 ## Type Checks
 
-[isa] `isa` tests if an object is an instance of a given type. If the
-expression used in an `isa` is a variable, then its static type is
-automatically adapted, therefore avoiding the need of a specific cast.
+`isa` tests if an object is an instance of a given type. If the expression used in an `isa` is a variable, then its static type is automatically adapted, therefore avoiding the need of a specific cast.
 
     var x: Object = whatever
     if x isa Int then
@@ -92,8 +74,7 @@ automatically adapted, therefore avoiding the need of a specific cast.
         print x * 10 # OK
     end
 
-Remember that adaptive typing follows the control flow, including the
-Boolean operators.
+Remember that adaptive typing follows the control flow, including the Boolean operators.
 
     var a: Array[Object] = ...
     for i in a do
@@ -112,8 +93,7 @@ An interesting example:
         # of the "and", the static type of i is Int
     end
 
-Note that type adaptation occurs only in an `isa` if the target type is
-more specific that the current type.
+Note that type adaptation occurs only in an `isa` if the target type is more specific that the current type.
 
     var a: Collection[Int] = ...
     if a isa Comparable then
@@ -125,12 +105,9 @@ more specific that the current type.
 
 ## Nullable Types
 
-[null][nullable][or else][not null] `null` is a literal value that is
-only accepted by some specific static types. However, thanks to adaptive
-typing, the static type management can be mainly automatic.
+`null` is a literal value that is only accepted by some specific static types. However, thanks to adaptive typing, the static type management can be mainly automatic.
 
-`nullable` annotates types that can accept `null` or an expression of a
-compatible nullable static type.
+`nullable` annotates types that can accept `null` or an expression of a compatible nullable static type.
 
     var x: nullable Int
     var y: Int
@@ -151,8 +128,7 @@ Adaptive typing works well with nullable types.
     end
     # The static type of x is nullable Int
 
-Moreover, like the `isa` keyword, the `==` and `!=` operators can adapt
-the static type of a variable when compared to `null`.
+Moreover, like the `isa` keyword, the `==` and `!=` operators can adapt the static type of a variable when compared to `null`.
 
     var x: nullable Int = whatever
     if x != null then
@@ -169,23 +145,17 @@ And another example:
         # The static type of x is Int
     end
 
-`or else` can be used to compose a nullable expression with any other
-expression. The value of `x or else y` is `x` if `x` is not `null` and
-is `y` if `x` is null. The static type of `x or else y` is the
-combination of the type of `y` and the not null version of the type of
-`x`.
+`or else` can be used to compose a nullable expression with any other expression. The value of `x or else y` is `x` if `x` is not `null` and is `y` if `x` is null. The static type of `x or else y` is the combination of the type of `y` and the not null version of the type of `x`.
 
     var i: nullable Int = ...
     var j = i or else 0
     # the static type of j is Int (without nullable)
 
-Note that nullable types require a special management for attributes and
-constructors.
+Note that nullable types require a special management for attributes and constructors.
 
 ## Explicit Cast
 
-[as] `as` casts an expression to a type. The expression is either casted
-successfully or there is an `abort`.
+`as` casts an expression to a type. The expression is either casted successfully or there is an `abort`.
 
     var x: Object = 5 # static type of x is Object
     print x.as(Int) * 10 # outputs 50
@@ -197,17 +167,14 @@ Note that `as` does not change the object nor does perform conversion.
     print x.as(Int) + 10 # outputs "15"
     print x.to_s + "10" # outputs "510"
 
-Because of type adaptation, `as` is rarely used on variables. `isa`
-(sometime coupled with `assert`) is preferred.
+Because of type adaptation, `as` is rarely used on variables. `isa` (sometime coupled with `assert`) is preferred.
 
     var x: Object = 5 # static type of x is Object
     assert x isa Int
     # static type of x is now Int
     print x * 10 # outputs 50
 
-`as(not null)` can be used to cast an expression typed by a nullable
-type to its non nullable version. This form keeps the programmer from
-writing explicit static types.
+`as(not null)` can be used to cast an expression typed by a nullable type to its non nullable version. This form keeps the programmer from writing explicit static types.
 
     var x: nullable Int = 5 # static type of x is nullable Int
     print x.as(not null) * 10 # cast, outputs 50
@@ -217,21 +184,13 @@ writing explicit static types.
 
 ## Static Type Combination Rule
 
-[combination] Adaptive typing, literal arrays, `or else`, and valued
-`break` in closure need to determine a static type by combining other
-static types. This is done by using the following rule:
+Adaptive typing, literal arrays, `or else`, and valued `break` in closure need to determine a static type by combining other static types. This is done by using the following rule:
 
--   The final type is `nullable` if at least one of the types is
-    `nullable`.
+-   The final type is `nullable` if at least one of the types is `nullable`.
 
--   The final type is the static type that is more general than all the
-    other types.
+-   The final type is the static type that is more general than all the other types.
 
--   If there is no such a type, and the thing typed is a variable, then
-    the final type is the upper bound type of the variable; else there
-    is a compilation error.
-
-<!-- -->
+-   If there is no such a type, and the thing typed is a variable, then the final type is the upper bound type of the variable; else there is a compilation error.
 
     var d: Discrete = ...
     # Note: Int < Discrete < Object
