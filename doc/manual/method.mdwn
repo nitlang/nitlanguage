@@ -1,15 +1,10 @@
 # Methods
 
-[fun][self][return] `fun` declares methods. Methods must have a name,
-may have parameters, and may have a return type. Parameters are typed;
-however, a single type can be used for multiple parameters.
+`fun` declares methods. Methods must have a name, may have parameters, and may have a return type. Parameters are typed; however, a single type can be used for multiple parameters.
 
     fun foo(x, y: Int, s: String): Bool ...
 
-`do` declares the body of methods. Alike control structures, a one-liner
-version is available. Moreover, a shorter version using the `=` symbol
-is also available for functional methods. Therefore, the three following
-methods are equivalent.
+`do` declares the body of methods. Alike control structures, a one-liner version is available. Moreover, a shorter version using the `=` symbol is also available for functional methods. Therefore, the three following methods are equivalent.
 
     fun next1(i: Int): Int
     do
@@ -20,46 +15,34 @@ methods are equivalent.
 
     fun next3(i: Int): Int = i + 1
 
-Inside the method body, parameters are considered as variables. They can
-be assigned and are subject to adaptive typing.
+Inside the method body, parameters are considered as variables. They can be assigned and are subject to adaptive typing.
 
-`self`, the current receiver, is a special parameter. It is not
-assignable but is subject to adaptive typing.
+`self`, the current receiver, is a special parameter. It is not assignable but is subject to adaptive typing.
 
-`return` exits the method and returns to the caller. In a function, the
-return value must be provided with a return in all control flow paths.
+`return` exits the method and returns to the caller. In a function, the return value must be provided with a return in all control flow paths.
 
 ## Method Call
 
-[call] Calling a method is usually done with the dotted notation
-`x.foo(y, z)`. The dotted notation can be chained.
+Calling a method is usually done with the dotted notation `x.foo(y, z)`. The dotted notation can be chained.
 
-A method call with no argument does not need parentheses. Moreover, even
-with arguments, the parentheses are not required in the principal method
-of a statement.
+A method call with no argument does not need parentheses. Moreover, even with arguments, the parentheses are not required in the principal method of a statement.
 
     var a = [1]
     a.add 5 # no () for add
     print a.length # no () for length, no () for print
 
-However, this last facility requires that the first argument does not
-start with a parenthesis or a bracket.
+However, this last facility requires that the first argument does not start with a parenthesis or a bracket.
 
     foo (x).bar # will be interpreted as (foo(x)).bar
     foo [x].bar # will be interpreted as (foo[x]).bar
 
 ## Method Redefinition
 
-[redef] `redef` denotes methods that are redefined in subclasses or in
-class refinements. The number and the types of the parameters must be
-invariant. Thus, there is no need to reprecise the types of the
-parameters, only names are mandatory.
+`redef` denotes methods that are redefined in subclasses or in class refinements. The number and the types of the parameters must be invariant. Thus, there is no need to reprecise the types of the parameters, only names are mandatory.
 
-The return type can be redefined to be a more precise type. If same type
-is returned, there is no need to reprecise it.
+The return type can be redefined to be a more precise type. If same type is returned, there is no need to reprecise it.
 
-The visibility, also, cannot be changed, thus there is also no need to
-reprecise it.
+The visibility, also, cannot be changed, thus there is also no need to reprecise it.
 
     class Foo
         # implicitly an Object
@@ -71,9 +54,7 @@ reprecise it.
 
 ## Abstract Methods
 
-[abstract] `is abstract` indicates methods defined without a body.
-Subclasses and refinements can then redefine it (the `redef` is still
-mandatory) with a proper body.
+`is abstract` indicates methods defined without a body. Subclasses and refinements can then redefine it (the `redef` is still mandatory) with a proper body.
 
     interface Foo
         fun derp(x: Int): Int is abstract
@@ -83,26 +64,16 @@ mandatory) with a proper body.
         redef derp(x) do return x + 1
     end
 
-Concrete classes may have abstract methods. It is up to a refinement to
-provide a body.
+Concrete classes may have abstract methods. It is up to a refinement to provide a body.
 
 ## Call to Super
 
-[super] `super` calls the “previous” definition of the method. It is
-used in a redefinition of a method in a subclass or in a refinement, It
-can be used with or without arguments; in the latter case, the original
-arguments are implicitly used.
+`super` calls the “previous” definition of the method. It is used in a redefinition of a method in a subclass or in a refinement, It can be used with or without arguments; in the latter case, the original arguments are implicitly used.
 
-The `super` of Nit behave more like the `call-next-method` of CLOS that
-the `super` of Java or Smalltalk. It permits the traversal of complex
-class hierarchies and refinement. Basically, `super` is polymorphic: the
-method called by `super` is not only determined by the class of
+The `super` of Nit behave more like the `call-next-method` of CLOS that the `super` of Java or Smalltalk. It permits the traversal of complex class hierarchies and refinement. Basically, `super` is polymorphic: the method called by `super` is not only determined by the class of
 definition of the method but also by the dynamic type of `self`.
 
-The principle it to produce a strict order of the redefinitions of a
-method (the linearization). Each call to `super` call the next method
-definition in the linearization. From a technical point of view, the
-linearization algorithm used is based on C3. It ensures that:
+The principle it to produce a strict order of the redefinitions of a method (the linearization). Each call to `super` call the next method definition in the linearization. From a technical point of view, the linearization algorithm used is based on C3. It ensures that:
 
 -   A definition comes after its redefinition.
 
@@ -110,8 +81,6 @@ linearization algorithm used is based on C3. It ensures that:
 
 -   The order of the declaration of the superclasses is used as the
     ultimate deabiguization.
-
-<!-- -->
 
     class A
         fun derp: String do return "A"
@@ -142,38 +111,17 @@ linearization algorithm used is based on C3. It ensures that:
 
 ## Operators and Setters
 
-[operator] Operators and setters are methods that require a special
-syntax for their definition and their invocation.
+Operators and setters are methods that require a special syntax for their definition and their invocation.
 
--   binary operators: `+`, `-`, `*`, `/`, `\%`, `==`, `<`, `>`, `<=`,
-    `>=`, `<<`, `>>` and `<=>`. Their definitions require exactly one
-    parameter and a return value. Their invocation is done with `x + y`
-    where `x` is the receiver, `+` is the operator, and `y` is the
-    argument.
+-   binary operators: `+`, `-`, `*`, `/`, `\%`, `==`, `<`, `>`, `<=`,`>=`, `<<`, `>>` and `<=>`. Their definitions require exactly one     parameter and a return value. Their invocation is done with `x + y` where `x` is the receiver, `+` is the operator, and `y` is the argument.
 
--   unary operator: `-`. Its definition requires a return value but no
-    parameter. Its invocation is done with `-x` where `x` is the
-    receiver.
+-   unary operator: `-`. Its definition requires a return value but no parameter. Its invocation is done with `-x` where `x` is the receiver.
 
--   bracket operator: `[]`. Its definition requires one parameter or
-    more and a return value. Its invocation is done with `x[y, z]` where
-    `x` is the receiver, `y` the first argument and `z` the second
-    argument.
+-   bracket operator: `[]`. Its definition requires one parameter or more and a return value. Its invocation is done with `x[y, z]` where `x` is the receiver, `y` the first argument and `z` the second argument.
 
--   setters: `something=` where `something` can be any valid method
-    identifier. Their definitions require one parameter or more and no
-    return value. If there is only one parameter, the invocation is done
-    with `x.something = y` where `x` is the receiver and y the argument.
-    If there is more that one parameter, the invocation is done with
-    `x.something(y, z) = t` where `x` is the receiver, `y` the first
-    argument, `z` the second argument and `t` the last argument.
+-   setters: `something=` where `something` can be any valid method identifier. Their definitions require one parameter or more and no return value. If there is only one parameter, the invocation is done with `x.something = y` where `x` is the receiver and y the argument. If there is more that one parameter, the invocation is done with `x.something(y, z) = t` where `x` is the receiver, `y` the first argument, `z` the second argument and `t` the last argument.
 
--   bracket setter: `[]=`. Its definition requires two parameters or
-    more and no return value. Its invocation is done with `x[y, z] = t`
-    where `x` is the receiver, `y` the first argument, `z` the second
-    argument and `t` the last argument.
-
-<!-- -->
+-   bracket setter: `[]=`. Its definition requires two parameters or more and no return value. Its invocation is done with `x[y, z] = t` where `x` is the receiver, `y` the first argument, `z` the second argument and `t` the last argument.
 
     class Foo
         fun +(a: Bar): Baz do ...
@@ -193,11 +141,8 @@ syntax for their definition and their invocation.
     a.derp(b) = c # A setter 'derp='
     a[b] = c # The bracket setter '[]='
 
-`+=` and `-=` are combinations of the assignment (`=`) and a binary
-operator. These feature are extended to setters where a single `+=` is
-in fact three method calls: a function call, the operator call, then a
-setter call.
-
+`+=` and `-=` are combinations of the assignment (`=`) and a binary operator. These feature are extended to setters where a single `+=` is in fact three method calls: a function call, the operator call, then a setter call.
+ 
     a += c # equiv. a = a + c
     a[b] += c # equiv. a[b] = a[b] + c
     a.foo += c # equiv. a.foo = a.foo + c
@@ -205,11 +150,7 @@ setter call.
 
 ## Variable Number of Arguments
 
-[vararg] A method can accept a variable number of arguments using
-ellipsis (`...`). The definition use `x: Foo...` where `x` is the name
-of the parameter and `Foo` a type. Inside the body, the static type of
-`x` is `Array[Foo]`. The caller can use 0, 1, or more arguments for the
-parameter `x`. Only one ellipsis is allowed in a signature.
+A method can accept a variable number of arguments using ellipsis (`...`). The definition use `x: Foo...` where `x` is the name of the parameter and `Foo` a type. Inside the body, the static type of `x` is `Array[Foo]`. The caller can use 0, 1, or more arguments for the parameter `x`. Only one ellipsis is allowed in a signature.
 
     fun foo(x: Int, y: Int..., z: Int)
     do
@@ -220,25 +161,13 @@ parameter `x`. Only one ellipsis is allowed in a signature.
 
 ## Top-level Methods and Main Body
 
-[toplevel] Some functions, like `print`, are usable everywhere simply
-without using a specific receiver. Such methods are just defined outside
-any classes. In fact, these methods are implicitly defined in the
-`Object` interface, therefore inherited by all classes, therefore usable
-everywhere. However, this principle may change in a future version.
+Some functions, like `print`, are usable everywhere simply without using a specific receiver. Such methods are just defined outside any classes. In fact, these methods are implicitly defined in the
+`Object` interface, therefore inherited by all classes, therefore usable everywhere. However, this principle may change in a future version.
 
-In a module, the main body is a bunch of statements at the end of a
-file. The main body of the main module is the program entry point. In
-fact, the main method of a program is implicitly defined as the
-redefinition of the method `main` of the `Sys` class; and the start of
-the program is the implicit statement `(Sys.new).main`. Note that
-because it is a redefinition, the main part can use `super` to call the
-“previous” main part in the imported modules. If there is no main part
+In a module, the main body is a bunch of statements at the end of a file. The main body of the main module is the program entry point. In fact, the main method of a program is implicitly defined as the redefinition of the method `main` of the `Sys` class; and the start of the program is the implicit statement `(Sys.new).main`. Note that because it is a redefinition, the main part can use `super` to call the “previous” main part in the imported modules. If there is no main part
 in a module, it is inherited from imported modules.
 
-Top-level methods coupled with the main body can be used to program in a
-pseudo-procedural way. Therefore, the following programs are valid:
-
-2
+Top-level methods coupled with the main body can be used to program in a pseudo-procedural way. Therefore, the following programs are valid:
 
     print "Hello World!"
 
@@ -250,14 +179,9 @@ pseudo-procedural way. Therefore, the following programs are valid:
 
 ## Intern and Extern Methods
 
-[intern][extern] `intern` and `extern` indicate concrete methods whose
-body is not written in Nit.
+`intern` and `extern` indicate concrete methods whose body is not written in Nit.
 
-The body of `intern` methods is provided by the compiler itself for
-performance or bootstrap reasons. For the same reasons, some intern
-methods, like `+` in `Int` are not redefinable.
+The body of `intern` methods is provided by the compiler itself for performance or bootstrap reasons. For the same reasons, some intern methods, like `+` in `Int` are not redefinable.
 
-The body of `extern` methods is provided by libraries written in C; for
-instance, the system libraries required for input/output. Extern methods
-are always redefinable.
+The body of `extern` methods is provided by libraries written in C; for instance, the system libraries required for input/output. Extern methods are always redefinable.
 
