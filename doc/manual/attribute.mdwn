@@ -1,8 +1,6 @@
 # Attributes
 
-[attribute][writable] `var`, used inside concrete and abstract classes,
-declares attributes. Attributes require a static type and can possibly
-have an initial value (it may be any kind of expression, even including
+`var`, used inside concrete and abstract classes, declares attributes. Attributes require a static type and can possibly have an initial value (it may be any kind of expression, even including
 `self`)
 
     class Foo
@@ -14,11 +12,7 @@ have an initial value (it may be any kind of expression, even including
         end
     end
 
-Note that from an API point of view, there is no way to distinguish the
-read access of an attribute with a normal method neither to distinguish
-a write access of an attribute with a setter. Therefore, the read access
-of an attribute is called a getter while the write access is called a
-setter.
+Note that from an API point of view, there is no way to distinguish the read access of an attribute with a normal method neither to distinguish a write access of an attribute with a setter. Therefore, the read access of an attribute is called a getter while the write access is called a setter.
 
     var x = foo.bar # Is bar an attribute or a method?
     foo.bar = y # Is bar an attribute or a setter?
@@ -26,9 +20,7 @@ setter.
 
 ## Visibility of Attributes
 
-[attribute visibility] By default, a getter is public and a setter is
-private. The visibility of getters can be precised with the `private` or
-`protected` keywords. The visibility of setters can be specified with an
+By default, a getter is public and a setter is private. The visibility of getters can be precised with the `private` or `protected` keywords. The visibility of setters can be specified with an
 additional `writable` keyword.
 
     class Foo
@@ -41,11 +33,8 @@ additional `writable` keyword.
 
 ## Redefinition of Attributes
 
-[redef var] Getters and setters of attributes behave like genuine
-methods that can be inherited and redefined. Getters and setters can
-also redefine inherited methods. `redef var` declares that the getter is
-a redefinition while `redef writable` declares that the setter is a
-redefinition.
+Getters and setters of attributes behave like genuine methods that can be inherited and redefined. Getters and setters can also redefine inherited methods. `redef var` declares that the getter is
+a redefinition while `redef writable` declares that the setter is a redefinition.
 
     interface Foo
         fun derp: Int is abstract
