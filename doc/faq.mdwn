@@ -9,5 +9,7 @@
 ## Developing with the Nit Language
 
 * [[!traillink iterations text="How to iterate on collection/array/list/maps/etc."]]
+* [[!traillink how_to_iterate_trough_an_array]]
+* [[!traillink how_to_sort_an_array]]
 * [[!traillink private_visibility text="Is there some `friend` or `package` visibility?"]]
 * [[!traillink combined_assignment text="How can I redefine the `+=` operator ?"]]

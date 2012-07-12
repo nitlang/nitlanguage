@@ -1,4 +1,0 @@
-# Cookbook for Nit
-
-* [[!traillink how_to_iterate_trough_an_array]]
-* [[!traillink how_to_sort_an_array]]

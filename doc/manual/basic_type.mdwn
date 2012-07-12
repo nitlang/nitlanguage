@@ -100,8 +100,8 @@ stored with the bracket operator.
 Note that the type of literal arrays is deduced using the static type
 combination rule.
 
-Cookbooks related to array:
-[[!map pages="cookbook/* and tagged(array)"]]
+FAQ related to array:
+[[!map pages="faq/* and tagged(array)"]]
 
 ## Range
 
