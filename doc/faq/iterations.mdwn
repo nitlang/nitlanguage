@@ -1,0 +1,24 @@
+# How to iterate on collection/array/list/maps/etc.
+
+The `for in` construction is used to iterate on many structures.
+
+Common usages are arrays:
+
+    for x in [1, 2, 3] do print x*2
+    # outputs 2 4 6
+
+ranges:
+
+    for x in [1..3] do print x*2
+    # outputs 2 4 6
+
+and maps:
+
+    var mymap = new HashMap[String, Int]
+    mymap["one"] = 1
+    mymap["two"] = 2
+    mymap["three"] = 3
+    for k, v in mymap do print "{k}={v}"
+    # outputs "one=1 two=2 three=3"
+
+But the `for in` structure can be used on all collections and all classes that provide an `iterate` method.

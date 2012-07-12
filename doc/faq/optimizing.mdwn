@@ -1,0 +1,8 @@
+# Executables are really big and really slow!
+
+Use the `-O` option to produce more efficient code.
+For better result, use `--global` to activate aggressive global optimizations.
+
+If size matters, you can also [[strip|http://linux.die.net/man/1/strip]] the executable.
+
+However, since there is currently no shared libraries for Nit, each executable must enclose all used libraries.
