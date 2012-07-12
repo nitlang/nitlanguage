@@ -1,4 +1,4 @@
-### The compiler is slow to compile
+# The compiler is slow to compile
 
 The current Nit compiler generates C code then invoke a C compiler to produce the final executable.
 It is this part that takes the most time in the whole compilation process.
