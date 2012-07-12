@@ -3,6 +3,7 @@
 ## Installing, Configuring and Using Nit
 
 * [[!traillink operating_systems text="On what operating systems Nit is available?"]]
+* [[!traillink ide text="Support for common IDE"]]
 * [[!traillink optimizing text="Executables are really big and really slow!"]]
 * [[!traillink fast_compilation text="The compiler is slow to compile"]]
 
