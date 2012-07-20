@@ -51,6 +51,8 @@ Visibility of attributes is more specific and is detailed in its own section.
     x.pro
     y.pri2
 
+<!-- -->
+
     module m2
     import m1
     class Baz
