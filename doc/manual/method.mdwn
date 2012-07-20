@@ -82,6 +82,8 @@ The principle it to produce a strict order of the redefinitions of a method (the
 -   The order of the declaration of the superclasses is used as the
     ultimate deabiguization.
 
+<!-- -->
+
     class A
         fun derp: String do return "A"
     end
@@ -122,6 +124,8 @@ Operators and setters are methods that require a special syntax for their defini
 -   setters: `something=` where `something` can be any valid method identifier. Their definitions require one parameter or more and no return value. If there is only one parameter, the invocation is done with `x.something = y` where `x` is the receiver and y the argument. If there is more that one parameter, the invocation is done with `x.something(y, z) = t` where `x` is the receiver, `y` the first argument, `z` the second argument and `t` the last argument.
 
 -   bracket setter: `[]=`. Its definition requires two parameters or more and no return value. Its invocation is done with `x[y, z] = t` where `x` is the receiver, `y` the first argument, `z` the second argument and `t` the last argument.
+
+<!-- -->
 
     class Foo
         fun +(a: Bar): Baz do ...
