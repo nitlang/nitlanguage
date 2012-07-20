@@ -192,6 +192,8 @@ Adaptive typing, literal arrays, `or else`, and valued `break` in closure need t
 
 -   If there is no such a type, and the thing typed is a variable, then the final type is the upper bound type of the variable; else there is a compilation error.
 
+<!-- -->
+
     var d: Discrete = ...
     # Note: Int < Discrete < Object
     var x
