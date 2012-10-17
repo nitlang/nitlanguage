@@ -45,7 +45,9 @@ NOTE: Currently there is no real Nit specific stuff in the Nit Perspective.
 
 ### Creating a new Nit module
 
-TO DOCUMENT
+1. In the main menu, go to File > New > File
+2. Type your file name followed by ".nit"
+Finish.
 
 ### Compiling and Running
 
