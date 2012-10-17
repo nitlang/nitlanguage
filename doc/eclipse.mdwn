@@ -43,6 +43,10 @@ For Eclipse Indigo
 
 NOTE: Currently there is no real Nit specific stuff in the Nit Perspective.
 
+### Creating a new Nit module
+
+TO DOCUMENT
+
 ### Compiling and Running
 
 0. Ensure that your perspective is "Java" (to be FIXED)
