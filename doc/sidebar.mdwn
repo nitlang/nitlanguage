@@ -16,4 +16,4 @@ The Nit project has a [[mailing list|nitlanguage-discussion@lists.nitlanguage.or
 If you wish to get involved in the project or use Nit as a framework for research, please contact the mailing list.
 
 ## [[support24.png]]Sponsors
-Nit is supported by [[Grésil|http://gresil.org]], [[NSERC|http://www.nserc.ca]], [[UQAM|http://www.uqam.ca]], [[LIRMM|http://www.lirmm.fr]], [[Université Montpellier II|http://www.univ-montp2.fr/]], [[CNRS|http://www.cnrs.fr]], [[Région Languedoc-Roussillon|http://www.cr-languedocroussillon.fr]].
+Nit is supported by [[Grésil|http://gresil.org]], [[LATECE|http://www.latece.uqam.ca]], [[NSERC|http://www.nserc.ca]], [[UQAM|http://www.uqam.ca]], [[LIRMM|http://www.lirmm.fr]], [[Université Montpellier II|http://www.univ-montp2.fr/]], [[CNRS|http://www.cnrs.fr]], [[Région Languedoc-Roussillon|http://www.cr-languedocroussillon.fr]].
