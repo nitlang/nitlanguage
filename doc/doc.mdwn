@@ -2,11 +2,13 @@
 
 ## Developing with Nit
 
-### Manuals
+### Learning the language
 
-The [[Nit language reference|nitreference.pdf]](PDF) is about language syntax, classes and modules.
+The [[manual]] describe the specification of the language.
 
-[[Développez en Nit|nit.pdf]](PDF, in French) is a programmer manual.
+The [[FAQ]] contains some cook-book recipes and answers to some other frequent questions.
+
+You can also look at some [[examples of programs|examples]] written in Nit.
 
 ### Nit Compiler and Other Tools
 
@@ -20,9 +22,6 @@ The <a href="stdlib">standard library</a> references built-ins and standard clas
 
 ### Miscellaneous
 
-You can also look at some [[examples of programs|examples]] written in Nit.
-
-Most frequent questions may have answers in the [[FAQ]].
 
 Using the [[native interface]] and binding Nit programs with existing C libraries.
 
