@@ -4,7 +4,7 @@ Nit is a target framework for novel compilation techniques and object-oriented r
 
 ## Discuss
 
-The Nit project has a [[mailing list|nitlanguage-discussion@lists.nitlanguage.org]] where users and developers can discuss various issues and help each other. Archive and instricption is available at the [[list page|http://lists.nitlanguage.org/listinfo/nitlanguage-discussion]].
+The Nit project has a [[mailing list|nitlanguage@googlegroups.com]] where users and developers can discuss various issues and help each other. Archive and instricption is available at the [[list page|https://groups.google.com/d/forum/nitlanguage]].
 
 If you wish to get involved in the project or use Nit as a framework for research, please contact the mailing list.
 
