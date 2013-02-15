@@ -1,18 +1,31 @@
-## [[download24.png]][[Download]]
-Source is freely available. You can browse the [[git repository|http://nitlanguage.org/nit.git]] or download the latest [[snapshot|http://nitlanguage.org/nit.git/snapshot/HEAD.tar.gz]] (tar.gz).
+<nav><h3>[[Download]]</h3>
+<ul><li>[[Git repository|http://nitlanguage.org/nit.git]]</li>
+<li>[[Snapshot (tar.gz)|http://nitlanguage.org/nit.git/snapshot/HEAD.tar.gz]]</li>
+<li>[[All download...|download]]</li>
+<ul></nav>
 
-## [[doc24.png]][[Documentation|doc]]
-The [[manual]] is about language syntax, semantic, classes and modules.
-The [[standard library|http://nitlanguage.org/doc/stdlib]] references built-ins and standard classes.
+<nav><h3>[[Documentation|doc]]</h3>
+<ul><li>[[Language manual|manual]]</li>
+<li>[[Standard library|http://nitlanguage.org/doc/stdlib]]</li>
+<li>[[FAQ]]</li>
+<li>[[All documentation...|doc]]</li>
+<ul></nav>
 
-Most frequent questions may have answers in the [[FAQ]].
+<nav><h3>[[Get Involved]]</h3>
+<ul><li>[[Mailing list|nitlanguage@googlegroups.com]]</li>
+<li>[[Mailing list archive|https://groups.google.com/d/forum/nitlanguage]]</li>
+<li>[[Github community|https://github.com/privat/nit/network/members]]</li>
+<li>[[Bugs]]</li>
+<li>[[Other things...|get_involved]]</li>
+<ul></nav>
 
-## [[users24.png]][[Get Involved]]
-Nit is a target framework for novel compilation techniques and object-oriented research. Currently, the compiler and others tools are actively developed in order to reach fully usable state.
-
-The Nit project has a [[mailing list|nitlanguage@googlegroups.com]] where users and developers can discuss various issues and help each other. Archive and inscription is available at the [[list page|https://groups.google.com/d/forum/nitlanguage]].
-
-If you wish to get involved in the project or use Nit as a framework for research, please contact the mailing list.
-
-## [[support24.png]]Sponsors
-Nit is supported by [[Grésil|http://gresil.org]], [[LATECE|http://www.latece.uqam.ca]], [[NSERC|http://www.nserc.ca]], [[UQAM|http://www.uqam.ca]], [[LIRMM|http://www.lirmm.fr]], [[Université Montpellier II|http://www.univ-montp2.fr/]], [[CNRS|http://www.cnrs.fr]], [[Région Languedoc-Roussillon|http://www.cr-languedocroussillon.fr]].
+<nav><h3>Sponsors</h3>
+<ul><li>[[Grésil|http://gresil.org]]</li>
+<li>[[LATECE|http://www.latece.uqam.ca]]</li>
+<li>[[NSERC|http://www.nserc.ca]]</li>
+<li>[[UQAM|http://www.uqam.ca]]</li>
+<li>[[LIRMM|http://www.lirmm.fr]]</li>
+<li>[[Université Montpellier II|http://www.univ-montp2.fr/]]</li>
+<li>[[CNRS|http://www.cnrs.fr]]</li>
+<li>[[Région Languedoc-Roussillon|http://www.cr-languedocroussillon.fr]]</li>
+<ul></nav>

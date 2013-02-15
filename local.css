@@ -33,7 +33,6 @@ h2 {
 h3 {
 	margin-left:                    3px;
 	color:				#6C6C6C;
-	text-decoration:		underline;
 	font-size:			14px;
 }
 
@@ -158,48 +157,48 @@ code {
 	color: 				#fff;
 }
 
+/* SIDEBAR */
+
 .sidebar {
 	width:                          250px;
 	margin-top:                     10px;
 	margin-left:			15px;
 	background-color:               #f8f8f8;
-	border:                         1px solid #dcdcd1;
+	/*border:                         1px solid #dcdcd1;*/
+	border: none;
 	padding:			5px;
 	clear:				both; /* Clear the search form */
 }
 
-.sidebar h2 {
-	color:                          #6c6c6c;
-	font-weight:                    normal;
-	margin-top:			10px;
+.sidebar nav {
+	margin: 20px;
+	width: 208px;
+	border: 1px solid #CCC;
 }
 
-.sidebar h2 a {
-	color:				inherit;
+.sidebar h3 {
+	margin: 0;
+	padding: 5px;
+	background: #CCC;
+	font-size: 1em;
+}
+
+.sidebar li {
 }
 
 .sidebar a {
+	display: block;
 	color:				#0D8921;
 	text-decoration:		none;
 }
 
-.sidebar h2 {
-	margin-top:			10px;
-}
-
 .sidebar a:hover {
-	color: 				#333;
+	color:				#333;
 	text-decoration:		none;
 }
 
-.sidebar h2 img {
-	float:                          right;
-	width:				30px;
-}
 
-.sidebar p {
-	text-align : 			justify;
-}
+
 
 #pageinfo {
 	border: none;
@@ -252,3 +251,4 @@ code {
 .trail a {
 	color:				#2d5003;
 }
+
