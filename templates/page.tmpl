@@ -49,21 +49,9 @@
 		</TMPL_IF>
 		
 		<span>
-			<TMPL_IF PARENTLINKS>
-				<div class="topsubtitle">				
-					<span class="parentlinks">
-						<TMPL_LOOP PARENTLINKS><a href="<TMPL_VAR URL>"><TMPL_VAR PAGE></a>/</TMPL_LOOP>
-					</span>
-					<span class="title">
-						<TMPL_VAR TITLE>
-						<TMPL_IF ISTRANSLATION>&nbsp;(<TMPL_VAR PERCENTTRANSLATED>%)</TMPL_IF>
-					</span>
-				</div>
-			<TMPL_ELSE>
-				<div class="topsubtitle">
-					<p>A Fun Language for Serious Programming</p>
-				</div>
-			</TMPL_IF>
+			<div class="topsubtitle">
+				<p>A Fun Language for Serious Programming</p>
+			</div>
 		</span>
 
 		<TMPL_IF HTML5></header><TMPL_ELSE></div></TMPL_IF>
@@ -82,15 +70,15 @@
 			</ul>
 			<TMPL_IF HTML5></nav><TMPL_ELSE></div></TMPL_IF>
 		</TMPL_IF>
-		<!--<div class="site-links">-->	
+		<TMPL_IF PARENTLINKS>
 		<ul class="site-links">
-			<li><a href="<TMPL_VAR BASEURL>">Home</a></li>
-			<li><a href="<TMPL_VAR BASEURL>download/">Download</a></li>
-			<li><a href="<TMPL_VAR BASEURL>doc/">Documentation</a></li>
-			<li><a href="<TMPL_VAR BASEURL>get_involved/">Get Involved</a></li>
-			<li><a href="<TMPL_VAR BASEURL>nit.git">Code Repository</a></li>
+			<TMPL_LOOP PARENTLINKS><li><a href="<TMPL_VAR URL>"><TMPL_VAR PAGE></a></li></TMPL_LOOP>
+			<li class="current">
+			<TMPL_VAR TITLE>
+			<TMPL_IF ISTRANSLATION>&nbsp;(<TMPL_VAR PERCENTTRANSLATED>%)</TMPL_IF>
+			</li>
 		</ul>
-		<!--</div>-->
+		</TMPL_IF>
 		<TMPL_VAR TRAILS>
 		<TMPL_IF HTML5></section><TMPL_ELSE></div></TMPL_IF>
 
