@@ -151,6 +151,7 @@ code {
 
 .site-links li.current {
 	background-color:		#0D8921;
+	color: #fff;
 }
 
 .site-links li.current a {
