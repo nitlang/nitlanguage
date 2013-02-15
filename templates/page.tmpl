@@ -109,7 +109,6 @@
 		</div>
 
 		<TMPL_IF HTML5><footer id="footer" class="pagefooter"><TMPL_ELSE><div id="footer" class="pagefooter"></TMPL_IF>
-		<TMPL_UNLESS DYNAMIC>
 			<TMPL_VAR TRAILS>
 			<TMPL_IF HTML5><nav id="pageinfo"><TMPL_ELSE><div id="pageinfo"></TMPL_IF>
 			<TMPL_IF TAGS>
@@ -162,7 +161,6 @@
 
 			<TMPL_IF HTML5></nav><TMPL_ELSE></div></TMPL_IF>
 			<TMPL_IF EXTRAFOOTER><TMPL_VAR EXTRAFOOTER></TMPL_IF>
-		</TMPL_UNLESS>
 		<!-- from <TMPL_VAR WIKINAME> -->
 		<TMPL_IF HTML5></footer><TMPL_ELSE></div></TMPL_IF>
 		<TMPL_IF HTML5></article><TMPL_ELSE></div></TMPL_IF>
