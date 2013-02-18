@@ -109,16 +109,16 @@ code {
 }
 
 #searchform {
-	display:			block;
 	float:				none;
-	position:			absolute;
-	top:				5px;
-	width:				845px;
-	height:				0; /* used to avoid the div to be over the title */
 }
 
-#searchform div {
-	float:				right;
+#searchform input{
+	background-position:		100%;
+	padding-left:			5px;
+	width:				186px;
+	padding-right:			17px;
+	height:				25px;
+	border: 			0px;
 }
 
 .site-links {

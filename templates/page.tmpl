@@ -41,8 +41,6 @@
 		<a id="toptitle_first" class="toptitle">the</a>
 		<a id="toptitle_second" class="toptitle" href="<TMPL_VAR BASEURL>">Nit</a>
 		<a id="toptitle_third" class="toptitle" href="<TMPL_VAR BASEURL>">Programming Language</a>
-
-		<TMPL_IF SEARCHFORM><TMPL_VAR SEARCHFORM></TMPL_IF>
 		
 		<TMPL_IF HTML5><header class="header">
 		<TMPL_ELSE><div class="header">
@@ -84,6 +82,7 @@
 
 		<TMPL_IF SIDEBAR>
 			<TMPL_IF HTML5><aside class="sidebar"><TMPL_ELSE><div class="sidebar"></TMPL_IF>
+			<TMPL_IF SEARCHFORM><nav><TMPL_VAR SEARCHFORM></nav></TMPL_IF>
 			<TMPL_VAR SIDEBAR>
 			<TMPL_IF HTML5></aside><TMPL_ELSE></div></TMPL_IF>
 		</TMPL_IF>
