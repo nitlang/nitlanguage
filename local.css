@@ -113,6 +113,7 @@ code {
 }
 
 #searchform input{
+	background:			url("wikiicons/search-bg.png") transparent no-repeat;
 	background-position:		100%;
 	padding-left:			5px;
 	width:				186px;
