@@ -1,15 +1,16 @@
+<div>
 <nav><h3>[[Download]]</h3>
 <ul><li>[[Git repository|http://nitlanguage.org/nit.git]]</li>
 <li>[[Snapshot (tar.gz)|http://nitlanguage.org/nit.git/snapshot/HEAD.tar.gz]]</li>
 <li>[[All download...|download]]</li>
-<ul></nav>
+</ul></nav>
 
 <nav><h3>[[Documentation|doc]]</h3>
 <ul><li>[[Language manual|manual]]</li>
 <li>[[Standard library|http://nitlanguage.org/doc/stdlib]]</li>
 <li>[[FAQ]]</li>
 <li>[[All documentation...|doc]]</li>
-<ul></nav>
+</ul></nav>
 
 <nav><h3>[[Get Involved]]</h3>
 <ul><li>[[Mailing list|nitlanguage@googlegroups.com]]</li>
@@ -17,7 +18,7 @@
 <li>[[Github community|https://github.com/privat/nit/network/members]]</li>
 <li>[[Bugs]]</li>
 <li>[[Other things...|get_involved]]</li>
-<ul></nav>
+</ul></nav>
 
 <nav><h3>Sponsors</h3>
 <ul><li>[[Grésil|http://gresil.org]]</li>
@@ -28,4 +29,5 @@
 <li>[[Université Montpellier II|http://www.univ-montp2.fr/]]</li>
 <li>[[CNRS|http://www.cnrs.fr]]</li>
 <li>[[Région Languedoc-Roussillon|http://www.cr-languedocroussillon.fr]]</li>
-<ul></nav>
+</ul></nav>
+</div>
