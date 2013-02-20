@@ -41,7 +41,9 @@ Brackets has to be escaped.
 
 Common escaping sequences are available (`\"`, `\n`, `\t`, etc.) plus the escaped brackets `\{`.
 
-    print "hel\"lo\nwo\{rld" # outputs `hel"lo` on a first line and `wo{rld` on a second line
+    print "hel\"lo\nwo\{rld"
+    # outputs `hel"lo` on a first line
+    # and `wo{rld` on a second line
 
 All objects have a `to_s` method that converts the object to a String.
 `print` is a top-level method that takes any number of arguments and
