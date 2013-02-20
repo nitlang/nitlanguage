@@ -151,7 +151,7 @@ And another example:
     var j = i or else 0
     # the static type of j is Int (without nullable)
 
-Note that nullable types require a special management for [attributes](../attribute) and [constructors](constructor).
+Note that nullable types require a special management for [[attributes|attribute]] and [[constructors|constructor]].
 
 ## Explicit Cast
 
