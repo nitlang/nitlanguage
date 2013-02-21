@@ -1,4 +1,4 @@
-TOTO common use cases
+TODO common use cases
 
 # FFI
 
@@ -34,7 +34,7 @@ The abstraction layer aims to offer a Nity API to access the feature of the wrap
 
 The most important aspect of the abstraction layer when wrapping a C library is to hide unusual Nit classes and types from the user. For instance, a normal Nit user unfamilliar with the FFI might attempt to specialize an extern class to extend it with a new attribute, which is not possible. This user will b surprised to manipulate a class from The API without being able to adapt it to its needs. For this reason, the abstraction layer often provides normal Nit classes acting as a thin wrapper around an extern class. This allows the user to manipulate classes from the API as any other classes and, as a bonus, often helps with complex uses of the FFI.
 
-The abstraction layer can be more or less abstract and even offer different levels of abstraction. It is common to have a total of three layers: the interface layer, the specific Nity API and the high-level abstraction layer.
+The abstraction layer can be more or less abstract and even offer different levels of abstraction. It is common to have a total of three layers: the interface layer, the specific Nity API and the high-level abstraction layer. Each of these can be made accessible to the user, there is no need for only one to be public, then the user might choose the most appropriate layer/API according to her needs.
 
 ## A practical example
 
