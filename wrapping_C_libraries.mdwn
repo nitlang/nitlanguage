@@ -1,0 +1,51 @@
+TOTO common use cases
+
+# FFI
+
+Wrapping a C library relies mostly on the Nit FFI and for this reason understand this page requires a basic knowledge of the FFI. You can refer to [[the manual of the FFI|FFI]] to learn the features and terminology of the Nit FFI.
+
+# Wrapping C Functions
+
+TODO
+
+# Wrapping C Structures
+
+TODO
+
+# Deal with C enums
+
+TODO
+
+# Deal with callbacks
+
+TODO
+
+# General architecture
+
+As general architecture of a wrapper we recommend to use two layers. The first layer, we will refer to it as the interface layer, uses the FFI to connect Nit to C. The second layer, the abstraction layer, provides an object oriented API that hides partially the interface layer from the user.
+
+## The interface layer
+
+The interface layer uses extern methods, extern classes and all other features of the FFI to bridgge Nit and C. We won't discuss much more of the interface layer in this section as the rest of this manual describes every aspects and tricks of this layer.
+
+##  The abstraction layer
+
+The abstraction layer aims to offer a Nity API to access the feature of the wrapped library. The idea of abstraction is applicable to any libraries, not only wrapped C libraries, so in this section we discuss only of the aspects relevant to a wrapped C library.
+
+The most important aspect of the abstraction layer when wrapping a C library is to hide unusual Nit classes and types from the user. For instance, a normal Nit user unfamilliar with the FFI might attempt to specialize an extern class to extend it with a new attribute, which is not possible. This user will b surprised to manipulate a class from The API without being able to adapt it to its needs. For this reason, the abstraction layer often provides normal Nit classes acting as a thin wrapper around an extern class. This allows the user to manipulate classes from the API as any other classes and, as a bonus, often helps with complex uses of the FFI.
+
+The abstraction layer can be more or less abstract and even offer different levels of abstraction. It is common to have a total of three layers: the interface layer, the specific Nity API and the high-level abstraction layer.
+
+## A practical example
+
+Let's take as example a wrapper for the cURL library (libcURL). Note that it may not represent that actual structure of the Nit _curl_ module. It could be using the three layers:
+
+* The interface layer wraps every libcURL data structure in an extern class and create a mostly one-to-one mapping of the C function as Nit methods. It is not Nity but can still be used by users familliar with the FFI and the wrapped libcURL.
+
+* The specific Nity API encapsulates properties of the interface layer if logicial Nit classes. It offers the HTTPRequest class which manages most of the basic resquest building and requires the user parameters as argument to its constructor. The HTTPRequest provides services to execute the request, store the results and identify possible errors. Using the three layer idea, this class would remain very linked to the underlying interface layer and libcURL. For instance, its error codes are those of libcURL and the format of parameters  is the same as libcURL.
+
+* The high-level abstraction layer is to be used in a script or a prototype program. The user does not care about the underlying implementation and want only minimal error management. This layer will mostly define functions in existing classes to integrate seamlessly in the existing library. For example, the _curl_ module might add `String::dowload_to(path : String) : nullable String` which downloads the file identifier by the URI of the receiver String and returns the error message in case of error.
+
+There is an additionnali layer, or an alternative to the high-level abstraction, possible using the same example of libcURL.
+
+* The pure abstraction layer would offer an implementation agnostic API, or reuse an existing one, and implement it with the specifict Nity API. The advantages of such an interface is that the implementation may change (due to a difference in architecture and the evolution of the underlying layers and library) without modifying the user code. A good example of such a layer is the C/Java library ODBC.
