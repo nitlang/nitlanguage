@@ -23,7 +23,9 @@ The <a href="stdlib">standard library</a> references built-ins and standard clas
 ### Miscellaneous
 
 
-Using the [[native interface]] and binding Nit programs with existing C libraries.
+Using the [[native interface]] to use C code within a Nit program.
+
+Developing Nit [[wrappers for existing C libraries|wrapping C libraries]] to access their features through normal Nit modules.
 
 ## For Contributors
 
