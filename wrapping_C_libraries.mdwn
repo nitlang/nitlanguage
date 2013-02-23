@@ -24,7 +24,29 @@ Besides the primitive types of the FFI, we often need to use the `String` type. 
 
 # Wrapping C Structures
 
-TODO
+Extern classes define a Nit class which only value is available in C. These can be used to wrap a C structure in a C class.
+
+We recommend to use an extern class to wrap all interesting C structures, even the small ones. It allows to correctly classify the wrapped functions and manipulate them from Nit.
+
+The main C structures that are the most important for the library are often strongly linked to some functions. In this case, we define the extern class to represent the structure in Nit, and use it to encapsulate all the strongly linked wrapped functions. You can often identify such cases in C when a set a functions use the same data structure as the first parameter (or sometimes last parameter). These funtions are also often prefixed with the name of the structure or a common namespace.
+
+When such a structure and function set is identified, we build a an extern class associated to the C structure in multiple steps:
+
+1 Name the extern class in a way that it can be recognized. It is often possible to reuse the name of the structure for the class. You may want to remove the namespace-like prefix from the structure name as those are managed by Nit.
+
+2 Specify the C type equivalent to the extern class. In this case, the C type equivalent would be a pointer to our structure (the equivalent type must be a pointer or compatible with a pointer).
+
+3 For every C function creating this structure, add an extern constructor to the extern class. Extern constructors is the only point where it is possible to et the value of the instances of the class from within the class. Note that, it is "normal" for an extern constructor to fail, in such cases we use an additional method to verify if the instances are valid.
+
+4 Create an extern method for each other C function strongly linked to the structure. As a rule of thumb, these functions can often be identified by their use of a common prefix or the use of the structure as the first parameter.
+
+The result of these step fon an extern class might look like so:
+
+    extern Curl `{ CURL * `}
+        new `{ return curl_easy_init(); `}
+        fun is_ok `{ return recv != NULL; `}
+        fun cleanup `{ curl_easy_cleanup( recv ); `}
+    end
 
 # Deal with C enums
 
