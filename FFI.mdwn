@@ -1,0 +1,126 @@
+# Native Interface
+
+The Nit Foreign Function Interface (FFI) allows to nest C code within a Nit file. It is used to implement Nit methods in C, C types equivalent to Nit classes, and add other supporting C code. This page presents the different aspects of the Nit FFI.
+
+The FFI is commonly used to optimize a method and wrap existing C libraries. In case of a wrapper, the C code manages calls to C library functions and can even callback the Nit code. To know more about wrappers using the FFI see the page [[wrapping C libraries]].
+
+## Extern methods
+
+An extern method is a Nit method implemented with C code. Except for its implementation, it behaves like any other Nit method. It has a receiver, can refine or specialize an existing property, be refined itself and even have virtual types in its signature. 
+
+Extern methods are declared and implemented like so in the Nit code:
+
+    class A
+        fun foo `{
+            printf( "in method A::foo, from C\n" );
+        `}
+        fun bar( n : Char ) : Bool `{
+            printf( "in method A::bar( %d ), from C\n", n );
+            return 1;
+        `}
+
+    end
+
+Notice that the body of the previous methods are implemented in C. This code behaves as a C function with a hidden signature. For the previou methods, the hidden signatures are:
+
+    void A_foo___impl( A recv ) 
+    int A_bar___impl( A recv, char n )
+
+The Nit types considered as primitive to C are converted in the C signature (as for Char and Bool) whereas Nit types unknown to C are kept opaque (as for the receiver of type A).
+
+## Primitive Nit types in C
+
+For easier passage between Nit and C, Nit types that are primitive to C are converted automatically. This conversion works both ways.
+
+* A Nit __Char__ is converted to the C __char__.
+* A Nit __Bool__ is converted to the C __int__ where 0 is true and everything else is false.
+* A Nit __Int__ is converted to the C __bigint__, _bigint_ is usually the size of _long long - 1 bit_ but it varies according to the engine.
+* A Nit __NativeString__ is converted to the C __char*__. Instances of _String_ must be converted to a _NativeString_ using the _String::to_cstring_ method.
+
+## Nit types and callbacks
+
+All Nit types that are not primitive to C are represented by an opaque C type. This C type is generated for each module with a name specific to the represented Nit type. Usually the C type will have the same name as its Nit equivalent, with the exception of nullable types (in which the type name is prefixed with _nullable\__) and generic types (not yet fully implemented). C structures of this type can be used to call Nit methods from C code.
+
+First of all, callbacks from the C code must be declared after the signature of the Nit method. This allows the compiler to further optimize your program and statically check for errors in your C code. In the C implementation, these methods can be called using the class name and method name seperated by an underscore:
+
+    class A
+        fun baz( msg : String ) import String::length, String::to_cstring `{
+            char *c_msg;
+            int msg_len;
+
+            c_msg = String_to_cstring( msg ); /* msg.to_cstring */ 
+            msg_len = String_length( msg ); /* msg.length */
+        
+            printf( "received msg: %s, of length = %d\n", c_msg, msg_len );
+        `}
+    end
+
+As you may have noticed, the callback functions in C use a similar name to the equivalent Nit method and the implementation functions. This pattern can be used to predict the name of the C function to called a given Nit method.
+
+It is also possible to callback the Nit language for more than methods:
+
+* Declaring an import of `super` in Nit will allow to call super from C using a function similar to `A_baz___super( recv )`.
+* Declaring an import a constructor will allow it to be called from C as `A new_A()` for the anonymous constructor of the class A or `A new\_A\_name()` for a named constructor.
+* Casts can de declared as an import in Nit with three forms; `A as(B)`, `String as nullable`, `String as not nullable`. The first form is used to cast from any to any type. The second and third forms are used to cast between nullables and non-nullables. In the C code, those imports allows to use two set of funtions, one for the type check and one for the cast itself. With these examples we would get `int A\_is\_a\_B( A )` and `B A\_as\_B( A )` for the first form; `nullable\_String String\_as\_nullable( String )` for the second form (no check is necessary) as well as `int String\_is\_null( nullable\_String )` and `String String\_as\_not\_null` for the third form.
+
+## Extern classes
+
+An extern Nit class is associated ta an equivalent C type. An instance of this class can then be used like other primitives types to C and will have an equivalent representation in both languages.
+
+An extern class is declared in Nit by replacing the _class_ keyword with _extern_. The C type equivalent is defined in C rigth after the class name.
+
+    extern A `{ my_struct*  ̀}
+    end
+
+The equivalent C type _must_ be a pointer and the Nit class can only be sublass to other extern classes or interfaces.
+
+The single value of an instance of an extern class is its value in C, because of that it cannot have any attributes. An extern Nit classes still can have methods (normal and extern) but only extern constructors.
+
+Extern constructors are declared similarly to extern methods, for example:
+
+    extern A
+        new {
+            return malloc( sizeof( my_struct) );
+        }
+        new named {
+            A a = malloc( sizeof( my_struct) );
+            a->naming = 1;
+            return a;
+        }
+    end
+
+You _must_ free any resources you allocated in C code, the Nit system do not manage these.
+
+## Global C references
+
+Nit objects passed as argument to a C implementation function are guaranteed to be valid until the function return. So it is for Nit objects returned from callbacks to Nit code. However, if you need to keep a Nit object between functions, in a global C variable, you have to notify the native interface for it to stay valid.
+
+For example, before saving an instance of the class A in a global variable, you must call `A\_incr\_ref( A )` on the instance. From then on, the Nit system will update this reference at each garbage collection so it stays valid, even after the current extern method returns. To free such a reference, call `A\_derc\_ref( A )`.
+
+## Compiling and linking
+
+Compiling a Nit program using the most basic functionality of the FFI is simple:
+
+    nitc my_module.nit
+
+However, to link with an external library you can use more options. Let's say the C code of your module uses the SDL graphic library, you must specify the library name for linking and you can specify where to fing the header files:
+
+    nitc my_module.nit --cc-lib-name SDL --cc-header-path /usr/include/SDL
+
+## .nit.args files
+
+The compilation options passed to nitc can be directly associatied with the module with .nit.args files. 
+
+To continue with the previous example, the module my\_module needs to be linked with the SDL library. The needed compilation options can be declared in the my\_module.nit.args file as so:
+
+    --cc-lib-name SDL --cc-header-path /usr/include/SDL
+
+The options specified in this file will be used to compile all Nit program importing the module my\_module. Only options related to C compilation are supported by .nit.args files as of now.
+
+## Example
+The example extern_methods.nit illustrates a normal use of the Nit FFI.
+
+* [[examples/extern_methods.nit|http://nitlanguage.org/nit.git/blob/HEAD:/examples/extern_methods.nit]] (not yet updated)
+
+## References
+* [[L'interface native de Nit, un langage de programmation à objets; Alexis Laferrière; Mémoire; UQAM |http://xymus.net/alaferriere-memoire.pdf]]
