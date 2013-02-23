@@ -72,7 +72,15 @@ In order to verify the value of an instance of our extern class, we define addit
         fun is_verbose `{ return recv == CURLOPT_VERBOSE; `}
     end
 
-# Deal with callbacks
+# Dealing with callbacks
+
+TODO
+
+# Handling errors
+
+TODO
+
+# Dealing with pseudo inheritance of C structures
 
 TODO
 
