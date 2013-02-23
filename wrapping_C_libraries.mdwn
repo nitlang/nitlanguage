@@ -20,7 +20,7 @@ Since every Nit method has a receiver, it is recommended to use it and attach th
 
 Here we use the Int class, as a FFI primitive, its instances are automatically converted to `int` in the C code. In the next section, we will see how to define our own FFI primitive classes.
 
-Besides the primitive types of the FFI, we often need to use the `String` type. Only the `NativeString` type is converted to `char*`. When writing the low-level layer of the interface wrapper, you can use the `NativeString` to simplify the code. Higher-level layers can often convert from `String` to `NativeString . Otherwise, it is also common to declare the callback to `String::to_cstring` and `String::from_cstring` to manage the conversion from the C code.
+Besides the primitive types of the FFI, we often need to use the `String` type. Only the `NativeString` type is converted to `char*`. When writing the low-level layer of the interface wrapper, you can use the `NativeString` to simplify the code. Higher-level layers can often convert from `String` to `NativeString`. Otherwise, it is also common to declare the callback to `String::to_cstring` and `String::from_cstring` to manage the conversion from the C code.
 
 # Wrapping C Structures
 
