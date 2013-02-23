@@ -1,4 +1,4 @@
-# Native Interface
+# FFI
 
 The Nit Foreign Function Interface (FFI) allows to nest C code within a Nit file. It is used to implement Nit methods in C, C types equivalent to Nit classes, and add other supporting C code. This page presents the different aspects of the Nit FFI.
 
