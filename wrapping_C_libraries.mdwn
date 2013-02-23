@@ -48,9 +48,29 @@ The result of these step fon an extern class might look like so:
         fun cleanup `{ curl_easy_cleanup( recv ); `}
     end
 
-# Deal with C enums
+# Dealing with C enums
 
-TODO
+
+Though not ideal, as of now it is possible to represent a C enumeration in Nit by using an extern class. The extern class is associated to the type, as usual and we can use constructors and extern methods to manipulate the fields of the enumeration.
+
+We will use the libCURL enumeration `CURLoption` as example. In this case, we would declare the header of the extern class as so:
+
+    extern CURLoption `{ CURLoption `}
+
+You may notice in the previous example that the extern type is not a pointer type. In this case, the enumeration type is still compatible so we can use this approach.
+
+To obtain a value of the enumeration from Nit, we define extern constructors. We usually need one constructor per value, all it does is return the C value. In our example, we define the constructor `verbose` to return the value `CURLOPT_VERBOSE`, it can then be obtained using `var x = new CURLoption.verbose`.
+
+    extern CURLoption `{ CURLoption `}
+        new verbose `{ return CURLOPT_VERBOSE; `}
+    end
+
+In order to verify the value of an instance of our extern class, we define additional methods. In our example, to check whether an instance of `CURLoption` is a `CURLOPT_VERBOSE` we add a method to our class:
+
+    extern CURLoption `{ CURLoption `}
+        new verbose `{ return CURLOPT_VERBOSE; `}
+        fun is_verbose `{ return recv == CURLOPT_VERBOSE; `}
+    end
 
 # Deal with callbacks
 
