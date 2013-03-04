@@ -8,7 +8,15 @@ For now, the debugger is a standalone binary file, to use it, launch your progra
 
 # # Features
 
-You can add/remove breakpoints on instructions, so that the execution will stop when encountering the 
+You can add/remove breakpoints on instructions, so that the execution will stop when the execution reaches the specified line of the specified file.
+
+When an error is encountered, the debugger gives you the chance of inputting commands before exiting.
+
+The debugger also gives the possibility of printing the values of the requested variables.
+
+The modification of variables at runtime is possible too, but only if the variables are of primitive types.
+
+Also, you probably won't want to type a long variable name every time you wish to print its value, the debugger has the possibility of setting aliases to hide the awful long and cryptic name of that variable you try to access by a beautiful alias.
 
 # # Commands
 
