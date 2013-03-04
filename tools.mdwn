@@ -60,6 +60,12 @@ Comments are displayed verbatim inside a \<pre> HTML element. Currently there is
 `nit` is the work-in-progress interpreter.
 Currently it is only functional on a subset of the Nit language.
 
+### The debugger
+
+`nit` is the debugger, based on the interpreter, it is a work in progress bound to the same limitations as the latter.
+
+See [[debugger]] for more details
+
 ### The global compiler `nitg`
 
 `nitg` is a work-in-progress global compiler that uses some hard static compilation techniques.
