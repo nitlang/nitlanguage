@@ -21,3 +21,17 @@ You can add/remove breakpoints on instructions, so that the execution will stop 
 `b/break line_number` : Adds a breakpoint on line *line_number* for the current file
 
 `b/break file line_number` : Adds a breakpoint on line *line_number* for the file *file* (Don't forget to add the .nit extension to the command)
+
+`d/delete line_number` : Removes a breakpoint on line *line_number* for the current file
+
+`d/delete file line_number` : Removes a breakpoint on line *line_number* for the file *file*
+
+`kill` : Kills the current program (produces a stack trace)
+
+`variable = value` : Sets the value of *variable* to *value* (Only supports primitive types for now : Bool, Char, Int, Float)
+
+`p/print variable_name` : Prints the value of the variable *variable_name*
+
+`p/print variable_name[index]` : Prints the value of the variable contained at the index *index* of variable *variable_name* (*variable_name* must be a subtype of SequenceRead)
+
+`p/print variable_name[index_from..index_to]` : Prints the values of all the variables contained from index *index_from* up to *index_to* in the variable *variable_name*
