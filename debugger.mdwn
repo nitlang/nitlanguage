@@ -18,6 +18,8 @@ You can add/remove breakpoints on instructions, so that the execution will stop 
 
 `finish` : Steps out of an instruction
 
+`c` : Continues the execution until a breakpoint is encountered or until an error/end of program
+
 `b/break line_number` : Adds a breakpoint on line *line_number* for the current file
 
 `b/break file line_number` : Adds a breakpoint on line *line_number* for the file *file* (Don't forget to add the .nit extension to the command)
@@ -35,3 +37,7 @@ You can add/remove breakpoints on instructions, so that the execution will stop 
 `p/print variable_name[index]` : Prints the value of the variable contained at the index *index* of variable *variable_name* (*variable_name* must be a subtype of SequenceRead)
 
 `p/print variable_name[index_from..index_to]` : Prints the values of all the variables contained from index *index_from* up to *index_to* in the variable *variable_name*
+
+All the print commands also work on any dimension SequenceRead collection.
+
+`variable_name as alias` : Sets an alias *alias* for the variable *variable_name*
