@@ -8,12 +8,12 @@ For now, the debugger is a standalone binary file, to use it, launch your progra
 
 # # Commands
 
-n : Proceeds to the next instruction (step-over)
+`n` : Proceeds to the next instruction (step-over)
 
-s : Steps in an instruction
+`s` : Steps in an instruction
 
-finish : Steps out of an instruction
+`finish` : Steps out of an instruction
 
-b/break line_number : Adds a breakpoint on line *line_number* for the current file
+`b/break line_number` : Adds a breakpoint on line *line_number* for the current file
 
-b/break file line_number : Adds a breakpoint on line *line_number* for the file *file*
+`b/break file line_number` : Adds a breakpoint on line *line_number* for the file *file*
