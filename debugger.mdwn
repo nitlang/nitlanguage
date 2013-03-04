@@ -8,6 +8,8 @@ For now, the debugger is a standalone binary file, to use it, launch your progra
 
 # # Features
 
+When using a debugger, a must-have is the possibility to control execution of your program by stepping over, in and out of a line/snippet of code. The nit debugger allows you to do that.
+
 You can add/remove breakpoints on instructions, so that the execution will stop when the execution reaches the specified line of the specified file.
 
 When an error is encountered, the debugger gives you the chance of inputting commands before exiting.
