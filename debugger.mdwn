@@ -2,7 +2,9 @@
 
 # # Debugger
 
-The Nit standard debugger is a tool based on the Interpreter for Nit, it furnishes basics commands used for debugging a language much like GDB or such.
+The Nit standard debugger is a tool based on the Interpreter for Nit, it supports basics commands used for debugging a program much like GDB or such.
+
+For now, the debugger is a standalone binary file, to use it, launch your program using the nit interpreter *nit* and use the *-d* option. (Later to be included in the Eclipse plugin)
 
 # # Commands
 
