@@ -20,6 +20,8 @@ The modification of variables at runtime is possible too, but only if the variab
 
 Also, you probably won't want to type a long variable name every time you wish to print its value, the debugger has the possibility of setting aliases to replace the awfully long and cryptic name of that variable you try to access by a beautiful alias.
 
+If you want to trace the modifications or uses of a variable of your choice, the trace command will be perfect for you as it will print or break when encountering the variable of your choice.
+
 # # Commands
 
 `n` : Proceeds to the next instruction (step-over)
@@ -51,3 +53,7 @@ Also, you probably won't want to type a long variable name every time you wish t
 All the print commands also work on any dimension SequenceRead collection.
 
 `variable_name as alias` : Sets an alias *alias* for the variable *variable_name*
+
+`trace variable_name [break/print]` : Traces the uses of the variable you chose to trace by printing the statement it appears in or by breaking on each use. (The [break/print] part is not mandatory, by default, the print option will be used)
+
+`untrace variable_name` : Removes the trace on the variable you chose to trace earlier in the program
