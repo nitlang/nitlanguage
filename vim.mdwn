@@ -2,7 +2,9 @@
 
 Nit comes with a support for the editor [[vim|http://www.vim.org/]] in the directory [[misc/vim|http://nitlanguage.org/nit.git/tree/HEAD:/misc/vim]].
 
-<img src="screenshot.png" title="screenshot" width="100%"/>
+<center>
+<img src="screenshot.png" title="screenshot"/>
+</center>
 
 The support features:
 
