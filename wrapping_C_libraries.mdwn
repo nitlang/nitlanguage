@@ -88,6 +88,12 @@ TODO
 
 TODO
 
+# C functions using parameters to return values
+
+TODO
+
+Basically, use the Container class or create your own.
+
 # General architecture
 
 As general architecture of a wrapper we recommend to use two layers. The first layer, we will refer to it as the interface layer, uses the FFI to connect Nit to C. The second layer, the abstraction layer, provides an object oriented API that hides partially the interface layer from the user.
