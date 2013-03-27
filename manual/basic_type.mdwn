@@ -102,8 +102,7 @@ stored with the bracket operator.
 Note that the type of literal arrays is deduced using the static type
 combination rule.
 
-FAQ related to array:
-[[!map pages="faq/* and tagged(array)"]]
+[[!template id=related tag=array]]
 
 ## Range
 
