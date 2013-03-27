@@ -102,7 +102,7 @@ stored with the bracket operator.
 Note that the type of literal arrays is deduced using the static type
 combination rule.
 
-[[!template id=related tag=array]]
+[[!template id=related name=arrays tag=array]]
 
 ## Range
 
