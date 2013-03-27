@@ -1,0 +1,2 @@
+FAQ related to <TMPL_VAR tag>:
+[[!map pages="faq/* and tagged(<TMPL_VAR tag>)"]]
