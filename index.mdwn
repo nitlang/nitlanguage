@@ -52,4 +52,3 @@ Compile a program:
 Execute the program:
 
     $ ./hello_world
-
