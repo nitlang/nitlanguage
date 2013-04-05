@@ -5,11 +5,13 @@ additional arguments. Closures are defined and used with the `!`
 character. The following example shows the use of the `sort` method for
 arrays (defined in the Nit standard library).
 
-    var a = [4, 2, 9, 6]
-    a.sort !cmp(x, y) = x <=> y
-    print a.join(", ") # outputs "2, 4, 6, 9"
-    a.sort !cmp(x, y) = y <=> x
-    print a.join(", ") # outputs "9, 6, 4, 2"
+[[!code language="nit" content="""
+var a = [4, 2, 9, 6]
+a.sort !cmp(x, y) = x <=> y
+print a.join(", ") # outputs "2, 4, 6, 9"
+a.sort !cmp(x, y) = y <=> x
+print a.join(", ") # outputs "9, 6, 4, 2"
+"""]]
 
 `!cmp` indicates the closure parameter of the `sort` method. The
 documentation of the `sort` method says that `!cmp` is used to compare
@@ -22,12 +24,14 @@ argument (“file not found” for instance). If the opening is successful,
 the opened file handler. `file_open` also ensures that the file is
 correctly closed when the `!work` closure returns.
 
-    var fname = "input.txt"
-    file_open(fname) !work(f) do
-        print f.read_line
-    !error(e) do
-        print "Cannot open '{fname}': {e}"
-    end
+[[!code language="nit" content="""
+var fname = "input.txt"
+file_open(fname) !work(f) do
+    print f.read_line
+!error(e) do
+    print "Cannot open '{fname}': {e}"
+end
+"""]]
 
 Note that a method can have multiple closures. Syntactically, a closure
 is ended by the start of another closure or by the `end` keyword that
@@ -40,21 +44,21 @@ element of a `Collection`. In fact, the `for` control structure is a
 call of the `iterate` method. The following two examples are thus
 strictly equivalent.
 
-2
+[[!code language="nit" content="""
+var sum = 0
+var a = [4, 2, 9]
+a.iterate !each(i) do
+    sum += i
+end
+print sum # outputs "15"
 
-    var sum = 0
-    var a = [4, 2, 9]
-    a.iterate !each(i) do
-        sum += i
-    end
-    print sum # outputs "15"
-
-    var sum = 0
-    var a = [4, 2, 9]
-    for i in a do
-        sum += i
-    end
-    print sum # outputs "15"
+var sum = 0
+var a = [4, 2, 9]
+for i in a do
+    sum += i
+end
+print sum # outputs "15"
+"""]]
 
 ## Returning Values and Escaping
 
@@ -81,41 +85,41 @@ call. More than one closure parameter can be declared. Each has to be
 declared on a separate line. The order of the closure definitions does
 not matter.
 
-2
+[[!code language="nit" content="""
+fun twice
+    !work
+do
+    work
+    work
+end
+twice !work do print "One"
+# outputs "One One"
 
-    fun twice
-        !work
-    do
-        work
-        work
-    end
-    twice !work do print "One"
-    # outputs "One One"
+fun foo(i: String): String
+    !f(j: String): String
+do
+    var k = f(i + "B")
+    # k will be "ABC"
+    return k + "D"
+end
+var x = foo("A") !f(y) =
+        y + "C"
+print x # outputs "ABCD"
 
-    fun foo(i: String): String
-        !f(j: String): String
-    do
-        var k = f(i + "B")
-        # k will be "ABC"
-        return k + "D"
-    end
-    var x = foo("A") !f(y) =
-            y + "C"
-    print x # outputs "ABCD"
+fun bar(i: String)
+    !b1(j: String): String
+    !b2(k: String)
+do
+    b2(b1(i))
+end
 
-    fun bar(i: String)
-        !b1(j: String): String
-        !b2(k: String)
-    do
-        b2(b1(i))
-    end
-
-    bar("A") !b1(y) do
-        continue y + "B"
-    !b2(z) do
-        print z
-    end
-    # outputs "AB"
+bar("A") !b1(y) do
+    continue y + "B"
+!b2(z) do
+    print z
+end
+# outputs "AB"
+"""]]
 
 ## Default Closures
 
@@ -124,19 +128,21 @@ declaration in a method. If there is no default closure, then the
 corresponding closure argument is mandatory. Otherwise, if there is a
 default closure, the corresponding closure argument is optional.
 
-    fun are_all_comparable(a: Collection[Int]): Bool
-        !cmp(x, y: Int): Bool = x == y
-    do
-        if a.is_empty then return true
-        var e1 = a.first
-        for e2 in a do if not cmp(e1, e2) then return false
-        return true
-    end
+[[!code language="nit" content="""
+fun are_all_comparable(a: Collection[Int]): Bool
+    !cmp(x, y: Int): Bool = x == y
+do
+    if a.is_empty then return true
+    var e1 = a.first
+    for e2 in a do if not cmp(e1, e2) then return false
+    return true
+end
 
-    var a = [2, 2, 6, 2]
-    print are_all_comparable(a) # outputs "false"
-    var x = are_all_comparable(a) !cmp(i, j) = i%2 == j%2
-    print x # outputs "true"
+var a = [2, 2, 6, 2]
+print are_all_comparable(a) # outputs "false"
+var x = are_all_comparable(a) !cmp(i, j) = i%2 == j%2
+print x # outputs "true"
+"""]]
 
 ## Break Closures
 
@@ -146,21 +152,23 @@ invocation does not return (like a `return` or an `abort`). On method
 invocations, it means that the closure definition must not continue.
 Break closures are usually used to process error or exception handling.
 
-    fun open_file(fname: String)
-        !work(f: File)
-        break !error(e: String) do
-            print "Cannot open {fname}: {e}."
-            abort
-        end
-    do
-        # ...
+[[!code language="nit" content="""
+fun open_file(fname: String)
+   !work(f: File)
+    break !error(e: String) do
+        print "Cannot open {fname}: {e}."
+        abort
     end
+do
+    # ...
+end
 
-    open_file("config.ini") !error(e) do
-        print "Cannot open file (config.ini): {e}."
-    !work(f) do
-        # ...
-    end
+open_file("config.ini") !error(e) do
+    print "Cannot open file (config.ini): {e}."
+!work(f) do
+    # ...
+end
+"""]]
 
 ## Full Closure Example
 
@@ -173,15 +181,16 @@ not found. `!def` is expected to return the item associated with the new
 key so it can be stored in the hashmap then returned. By default, `!def`
 aborts.
 
-    var map = new HashMap[Int, String]
-    map[5] = "five" # associate '5' to "five"
-    var x1 = map[5] # return "five"
-    var x2 = map[6] !def = "six" # associate '6' to "six" 
-                    # and return "six"
-    var x3 = map[6] !def = "?" # return "six" since '6' is
-                    # a known key
-    var x4 = map[7] !def do break "seven" # return "seven" 
-                    # since '7' is not a known key
-    var x5 = map[7] # aborts since '7' was not associated 
-                    # with the previous statement
-
+[[!code language="nit" content="""
+var map = new HashMap[Int, String]
+map[5] = "five" # associate '5' to "five"
+var x1 = map[5] # return "five"
+var x2 = map[6] !def = "six" # associate '6' to "six" 
+                # and return "six"
+var x3 = map[6] !def = "?" # return "six" since '6' is
+                # a known key
+var x4 = map[7] !def do break "seven" # return "seven" 
+                # since '7' is not a known key
+var x5 = map[7] # aborts since '7' was not associated 
+                # with the previous statement
+"""]]
