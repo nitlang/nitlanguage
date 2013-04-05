@@ -14,15 +14,15 @@ class Employee
     type OFFICE: Office
     var office: OFFICE
 end
+
+class Boss
+    super Employee
+    redef type OFFICE: BossOffice
+end
+
+var b: Boss = ...
+var o: Office = ...
+b.office = o # Compilation Error! Expected a BossOffice
 """]]
-
-    class Boss
-        super Employee
-        redef type OFFICE: BossOffice
-    end
-
-    var b: Boss = ...
-    var o: Office = ...
-    b.office = o # Compilation Error! Expected a BossOffice
 
 Invariant languages (eg. Java, C++) have to use unsafe downcasts to achieve the same effects.
