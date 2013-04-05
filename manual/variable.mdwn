@@ -228,13 +228,15 @@ Adaptive typing, literal arrays, `or else`, and valued `break` in closure need t
 
 <!-- -->
 
-    var d: Discrete = ...
-    # Note: Int < Discrete < Object
-    var x
-    if whatever then x = 1 else x = d
-    # static type is Discrete
-    if whatever then x = 1 else x = "1"
-    # static type is nullable Object (upper bound)
-    var a1 = [1, d] # a1 is a Array[Discrete]
-    var a2 = [1, "1"] # Compile error:
-            # incompatible types Int and String 
+[[!code language="nit" content="""
+var d: Discrete = ...
+# Note: Int < Discrete < Object
+var x
+if whatever then x = 1 else x = d
+# static type is Discrete
+if whatever then x = 1 else x = "1"
+# static type is nullable Object (upper bound)
+var a1 = [1, d] # a1 is a Array[Discrete]
+var a2 = [1, "1"] # Compile error:
+        # incompatible types Int and String 
+"""]]
