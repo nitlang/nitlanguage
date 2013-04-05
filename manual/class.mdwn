@@ -36,13 +36,14 @@ Note that the kind or the visibility of a class cannot be changed by a refinemen
 
 In programs, the real instantiated classes are always the combination of all their refinements.
 
-    redef class Int
-        fun fib
-        do
-            if self < 2 then return self
-            return (self-1).fib + (self-2).fib
-        end
+[[!code language="nit" content="""
+redef class Int
+    fun fib
+    do
+        if self < 2 then return self
+        return (self-1).fib + (self-2).fib
     end
-    # Now all integers have the fib method
-    print 15.fib # outputs 610
-
+end
+# Now all integers have the fib method
+print 15.fib # outputs 610
+"""]]
