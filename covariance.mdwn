@@ -9,10 +9,12 @@ Covariance in Nit has two causes:
 
 The main advantage of the covariance is the improved expressiveness to the Nit models.
 
-    class Employee
-        type OFFICE: Office
-        var office: OFFICE
-    end
+[[!code language="nit" content="""
+class Employee
+    type OFFICE: Office
+    var office: OFFICE
+end
+"""]]
 
     class Boss
         super Employee
