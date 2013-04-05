@@ -44,11 +44,10 @@ ul {
 }
 
 pre {
-	border-left:			2px solid #0D8921;
-	margin-left:			15px;
-	padding-left:			15px;
+	border:				1px solid #CCC
 	font-family:			Monospace;
 	color:				#2d5003;
+	background-color: 		rgb(250, 250, 250);
 }
 
 code {
@@ -254,3 +253,95 @@ code {
 	color:				#2d5003;
 }
 
+
+/*****
+Source code formatting
+*****/
+
+/*div.sourcecode*/ pre {
+	border:				1px solid #CCC;
+	padding:			10px 15px 10px 15px;
+	font-family:			Monospace;
+}
+
+.keyword {
+	color: 				#00008b;
+}
+
+.type, .classname {
+	color: 				#2b91af;
+	/*font-style: 			italic;*/
+}
+
+.string {
+	color: 				#800000;
+	font-family: 			monospace;
+}
+
+.regexp {
+	color: 				orange;
+}
+.specialchar {
+	color: 				pink;
+	font-family: 			monospace;
+}
+
+span.comment {
+	border:				0px;
+	color: 				green;
+	font-style: 			italic;
+}
+.number {
+	color: 				purple;
+}
+
+.preproc {
+	color: 				darkblue;
+	font-weight: 			bold;
+}
+
+.symbol {
+	color: darkred;
+}
+
+.function {
+	color: 				black;
+	font-weight: 			bold;
+}
+
+.cbracket {
+	color: 				red;
+}
+
+.todo {
+	font-weight: 			bold;
+	background-color: 		cyan;
+}
+
+/* line numbers */
+.linenum { color: black; font-family: monospace; }
+
+/* Internet related */
+.url { color: blue; text-decoration: underline; font-family: monospace; }
+
+/* for Prolog, Perl */
+.variable { color: darkgreen; }
+.italics { color: darkgreen; font-style: italic; }
+.bold { color: darkgreen; font-weight: bold; }
+
+/* for LaTeX */
+.underline { color: darkgreen; text-decoration: underline; }
+.fixed { color: green; font-family: monospace; }
+.argument, .optionalargument { color: darkgreen; }
+.math { color: orange; }
+.bibtex { color: blue; }
+
+/* for diffs */
+.oldfile { color: orange; }
+.newfile { color: darkgreen; }
+.difflines { color: blue; }
+
+/* for css */
+.selector { color: purple; }
+.property { color: blue; }
+.value { color: darkgreen; font-style: italic; }
