@@ -12,9 +12,11 @@ something (a statement, a declaration, or whatever) obviously needs more
 input; while the newline terminates lines that seems completed. See the
 complete Nit grammar for more details.
 
-    print 1 + 1 # a first complete statement that outputs "2"
-    print 2 + # the second statement is not yet finished
-    2 # the end of the second statement, outputs "4"
+[[!code language="nit" content="""
+print 1 + 1 # a first complete statement that outputs "2"
+print 2 + # the second statement is not yet finished
+2 # the end of the second statement, outputs "4"
+"""]]
 
 Nit aims to achieve some uniformity in its usage of the common
 punctuation: equal (`=`) is for assignment, double equal (`==`) is for
@@ -69,12 +71,13 @@ property, is considered as its documentation and will be displayed as
 such by the autodoc. At this point, documentation is displayed verbatim
 (no special formatting or meta-information).
 
-    # doc. of foo
-    module foo
+[[!code language="nit" content="""
+# doc. of foo
+module foo
 
-    # doc. of Bar
-    class Bar
-        # doc. of baz
-        fun baz ...
-    end
-
+# doc. of Bar
+class Bar
+   # doc. of baz
+   fun baz ...
+end
+"""]]
