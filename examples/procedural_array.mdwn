@@ -1,49 +1,50 @@
-<pre><tt><i><font color="#9A1900"># This file is part of NIT ( http://www.nitlanguage.org ).</font></i>
-<i><font color="#9A1900">#</font></i>
-<i><font color="#9A1900"># Copyright 2004-2008 Jean Privat &lt;jean@pryen.org&gt;</font></i>
-<i><font color="#9A1900">#</font></i>
-<i><font color="#9A1900"># Licensed under the Apache License, Version 2.0 (the "License");</font></i>
-<i><font color="#9A1900"># you may not use this file except in compliance with the License.</font></i>
-<i><font color="#9A1900"># You may obtain a copy of the License at</font></i>
-<i><font color="#9A1900">#</font></i>
-<i><font color="#9A1900">#     http://www.apache.org/licenses/LICENSE-2.0</font></i>
-<i><font color="#9A1900">#</font></i>
-<i><font color="#9A1900"># Unless required by applicable law or agreed to in writing, software</font></i>
-<i><font color="#9A1900"># distributed under the License is distributed on an "AS IS" BASIS,</font></i>
-<i><font color="#9A1900"># WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.</font></i>
-<i><font color="#9A1900"># See the License for the specific language governing permissions and</font></i>
-<i><font color="#9A1900"># limitations under the License.</font></i>
+[[!code language="nit" content="""
+# This file is part of NIT ( http://www.nitlanguage.org ).
+#
+# Copyright 2004-2008 Jean Privat <jean@pryen.org>
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
 
-<i><font color="#9A1900"># A procedural program (without explicit class definition).</font></i>
-<i><font color="#9A1900"># This program manipulates arrays of integers.</font></i>
-<b><font color="#0000FF">module</font></b> procedural_array
+# A procedural program (without explicit class definition).
+# This program manipulates arrays of integers.
+module procedural_array
 
-<i><font color="#9A1900"># The sum of the elements of `a'.</font></i>
-<i><font color="#9A1900"># Uses a 'for' control structure.</font></i>
-<b><font color="#0000FF">fun</font></b> array_sum<font color="#990000">(</font>a<font color="#990000">:</font> <font color="#009900">Array</font><font color="#990000">[</font><font color="#009900">Int</font><font color="#990000">]):</font> <font color="#009900">Int</font>
-<b><font color="#0000FF">do</font></b>
-	<b><font color="#0000FF">var</font></b> sum <font color="#990000">=</font> <font color="#993399">0</font>
-	<b><font color="#0000FF">for</font></b> i <b><font color="#0000FF">in</font></b> a <b><font color="#0000FF">do</font></b>
-		sum <font color="#990000">=</font> sum <font color="#990000">+</font> i
-	<b><font color="#0000FF">end</font></b>
-	<b><font color="#0000FF">return</font></b> sum
-<b><font color="#0000FF">end</font></b>
+# The sum of the elements of `a'.
+# Uses a 'for' control structure.
+fun array_sum(a: Array[Int]): Int
+do
+    var sum = 0
+    for i in a do
+        sum = sum + i
+    end
+    return sum
+end
 
-<i><font color="#9A1900"># The sum of the elements of `a' (alternative version).</font></i>
-<i><font color="#9A1900"># Uses a 'while' control structure.</font></i>
-<b><font color="#0000FF">fun</font></b> array_sum_alt<font color="#990000">(</font>a<font color="#990000">:</font> <font color="#009900">Array</font><font color="#990000">[</font><font color="#009900">Int</font><font color="#990000">]):</font> <font color="#009900">Int</font>
-<b><font color="#0000FF">do</font></b>
-	<b><font color="#0000FF">var</font></b> sum <font color="#990000">=</font> <font color="#993399">0</font>
-	<b><font color="#0000FF">var</font></b> i <font color="#990000">=</font> <font color="#993399">0</font>
-	<b><font color="#0000FF">while</font></b> i <font color="#990000">&lt;</font> a<font color="#990000">.</font>length <b><font color="#0000FF">do</font></b>
-		sum <font color="#990000">=</font> sum <font color="#990000">+</font> a<font color="#990000">[</font>i<font color="#990000">]</font>
-		i <font color="#990000">=</font> i <font color="#990000">+</font> <font color="#993399">1</font>
-	<b><font color="#0000FF">end</font></b>
-	<b><font color="#0000FF">return</font></b> sum
-<b><font color="#0000FF">end</font></b>
+# The sum of the elements of `a' (alternative version).
+# Uses a 'while' control structure.
+fun array_sum_alt(a: Array[Int]): Int
+do
+    var sum = 0
+    var i = 0
+    while i < a.length do
+        sum = sum + a[i]
+        i = i + 1
+    end
+    return sum
+end
 
-<i><font color="#9A1900"># The main part of the program.</font></i>
-<b><font color="#0000FF">var</font></b> a <font color="#990000">=</font> <font color="#990000">[</font><font color="#993399">10</font><font color="#990000">,</font> <font color="#993399">5</font><font color="#990000">,</font> <font color="#993399">8</font><font color="#990000">,</font> <font color="#993399">9</font><font color="#990000">]</font>
-print<font color="#990000">(</font>array_sum<font color="#990000">(</font>a<font color="#990000">))</font>
-print<font color="#990000">(</font>array_sum_alt<font color="#990000">(</font>a<font color="#990000">))</font>
-</tt></pre>
+# The main part of the program.
+var a = [10, 5, 8, 9]
+print(array_sum(a))
+print(array_sum_alt(a))
+"""]]
