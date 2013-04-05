@@ -2,18 +2,22 @@
 
 `fun` declares methods. Methods must have a name, may have parameters, and may have a return type. Parameters are typed; however, a single type can be used for multiple parameters.
 
-    fun foo(x, y: Int, s: String): Bool ...
+[[!code language="nit" content="""
+fun foo(x, y: Int, s: String): Bool ...
+"""]]
 
 `do` declares the body of methods. Alike control structures, a one-liner version is available. Moreover, a shorter version using the `=` symbol is also available for functional methods. Therefore, the three following methods are equivalent.
 
-    fun next1(i: Int): Int
-    do
-        return i + 1
-    end
+[[!code language="nit" content="""
+fun next1(i: Int): Int
+do
+    return i + 1
+end
 
-    fun next2(i: Int): Int do return i + 1
+fun next2(i: Int): Int do return i + 1
 
-    fun next3(i: Int): Int = i + 1
+fun next3(i: Int): Int = i + 1
+"""]]
 
 Inside the method body, parameters are considered as variables. They can be assigned and are subject to adaptive typing.
 
@@ -27,14 +31,18 @@ Calling a method is usually done with the dotted notation `x.foo(y, z)`. The dot
 
 A method call with no argument does not need parentheses. Moreover, even with arguments, the parentheses are not required in the principal method of a statement.
 
-    var a = [1]
-    a.add 5 # no () for add
-    print a.length # no () for length, no () for print
+[[!code language="nit" content="""
+var a = [1]
+a.add 5 # no () for add
+print a.length # no () for length, no () for print
+"""]]
 
 However, this last facility requires that the first argument does not start with a parenthesis or a bracket.
 
-    foo (x).bar # will be interpreted as (foo(x)).bar
-    foo [x].bar # will be interpreted as (foo[x]).bar
+[[!code language="nit" content="""
+foo (x).bar # will be interpreted as (foo(x)).bar
+foo [x].bar # will be interpreted as (foo[x]).bar
+"""]]
 
 ## Method Redefinition
 
@@ -44,25 +52,29 @@ The return type can be redefined to be a more precise type. If same type is retu
 
 The visibility, also, cannot be changed, thus there is also no need to reprecise it.
 
-    class Foo
-        # implicitly an Object
-        # therefore inherit '==' and 'to_s' 
-        var i: Int
-        redef to_s do return "Foo{self.i}"
-        redef ==(f) do return f isa Foo and f.i == self.i
-    end
+[[!code language="nit" content="""
+class Foo
+    # implicitly an Object
+    # therefore inherit '==' and 'to_s' 
+    var i: Int
+    redef to_s do return "Foo{self.i}"
+    redef ==(f) do return f isa Foo and f.i == self.i
+end
+"""]]
 
 ## Abstract Methods
 
 `is abstract` indicates methods defined without a body. Subclasses and refinements can then redefine it (the `redef` is still mandatory) with a proper body.
 
-    interface Foo
-        fun derp(x: Int): Int is abstract
-    end
-    class Bar
-        super Foo
-        redef derp(x) do return x + 1
-    end
+[[!code language="nit" content="""
+interface Foo
+    fun derp(x: Int): Int is abstract
+end
+class Bar
+    super Foo
+    redef derp(x) do return x + 1
+end
+"""]]
 
 Concrete classes may have abstract methods. It is up to a refinement to provide a body.
 
@@ -84,32 +96,34 @@ The principle it to produce a strict order of the redefinitions of a method (the
 
 <!-- -->
 
-    class A
-        fun derp: String do return "A"
-    end
-    class B
-        super A
-        redef fun derp do return "B" + super
-    end
-    class C
-        super A
-        redef fun derp do return "C" + super
-    end
-    class D
-        super B
-        super C
-        redef fun derp do return "D" + super
-        # Here the linearization order of the class D is DBCA
-        # D before B because D specializes B
-        # B before A because B specializes A 
-        # D before C because D specializes C
-        # C before A because C specializes A
-        # B before C because in D 'super B' is before 'super C'  
-    end
-    var b = new B
-    print b.derp # outputs "BA"
-    var d = new D
-    print d.derp # outputs "DBCA"
+[[!code language="nit" content="""
+class A
+    fun derp: String do return "A"
+end
+class B
+    super A
+    redef fun derp do return "B" + super
+end
+class C
+    super A
+    redef fun derp do return "C" + super
+end
+class D
+    super B
+    super C
+    redef fun derp do return "D" + super
+    # Here the linearization order of the class D is DBCA
+    # D before B because D specializes B
+    # B before A because B specializes A 
+    # D before C because D specializes C
+    # C before A because C specializes A
+    # B before C because in D 'super B' is before 'super C'  
+end
+var b = new B
+print b.derp # outputs "BA"
+var d = new D
+print d.derp # outputs "DBCA"
+"""]]
 
 ## Operators and Setters
 
@@ -127,41 +141,46 @@ Operators and setters are methods that require a special syntax for their defini
 
 <!-- -->
 
-    class Foo
-        fun +(a: Bar): Baz do ...
-        fun -: Baz do ...
-        fun [](a: Bar): Baz do ...
-        fun derp(a: Bar): Baz do ...
-        fun derp=(a: Bar, b: Baz) do ...
-        fun []= (a: Bar, b: Baz) do ...
-    end
-    var a: Foo = ...
-    var b: Bar = ...
-    var c: Baz = ...
-    c = a + b
-    c = -b
-    c = a[b] # The bracket operator '[]'
-    c = a.derp(b) # A normal method 'derp'
-    a.derp(b) = c # A setter 'derp='
-    a[b] = c # The bracket setter '[]='
+[[!code language="nit" content="""
+class Foo
+    fun +(a: Bar): Baz do ...
+    fun -: Baz do ...
+    fun [](a: Bar): Baz do ...
+    fun derp(a: Bar): Baz do ...
+    fun derp=(a: Bar, b: Baz) do ...
+    fun []= (a: Bar, b: Baz) do ...
+end
+var a: Foo = ...
+var b: Bar = ...
+var c: Baz = ...
+c = a + b
+c = -b
+c = a[b] # The bracket operator '[]'
+c = a.derp(b) # A normal method 'derp'
+a.derp(b) = c # A setter 'derp='
+a[b] = c # The bracket setter '[]='
+"""]]
 
 `+=` and `-=` are combinations of the assignment (`=`) and a binary operator. These feature are extended to setters where a single `+=` is in fact three method calls: a function call, the operator call, then a setter call.
  
-    a += c # equiv. a = a + c
-    a[b] += c # equiv. a[b] = a[b] + c
-    a.foo += c # equiv. a.foo = a.foo + c
-    a.bar(b) += c # equiv. a.bar(b) = a.bar(b) + c
+[[!code language="nit" content="""
+a += c # equiv. a = a + c
+a[b] += c # equiv. a[b] = a[b] + c
+a.foo += c # equiv. a.foo = a.foo + c
+a.bar(b) += c # equiv. a.bar(b) = a.bar(b) + c
+"""]]
 
 ## Variable Number of Arguments
 
 A method can accept a variable number of arguments using ellipsis (`...`). The definition use `x: Foo...` where `x` is the name of the parameter and `Foo` a type. Inside the body, the static type of `x` is `Array[Foo]`. The caller can use 0, 1, or more arguments for the parameter `x`. Only one ellipsis is allowed in a signature.
 
-    fun foo(x: Int, y: Int..., z: Int)
-    do
-        print "{x};{y.join(",")};{z}"
-    end
-    foo(1, 2, 3, 4, 5) # outputs "1;2,3,4;5"
-    foo(1, 2) # outputs "1;;2"
+[[!code language="nit" content="""
+fun foo(x: Int, y: Int..., z: Int)
+do
+    print "{x};{y.join(",")};{z}"
+end
+foo(1, 2, 3, 4, 5) # outputs "1;2,3,4;5"
+foo(1, 2) # outputs "1;;2"
 
 ## Top-level Methods and Main Body
 
@@ -173,13 +192,15 @@ in a module, it is inherited from imported modules.
 
 Top-level methods coupled with the main body can be used to program in a pseudo-procedural way. Therefore, the following programs are valid:
 
-    print "Hello World!"
+[[!code language="nit" content="""
+print "Hello World!"
 
-    fun sum(i, j: Int): Int
-    do
-        return i + j
-    end
-    print sum(4, 5)
+fun sum(i, j: Int): Int
+do
+    return i + j
+end
+print sum(4, 5)
+"""]]
 
 ## Intern and Extern Methods
 
@@ -188,4 +209,3 @@ Top-level methods coupled with the main body can be used to program in a pseudo-
 The body of `intern` methods is provided by the compiler itself for performance or bootstrap reasons. For the same reasons, some intern methods, like `+` in `Int` are not redefinable.
 
 The body of `extern` methods is provided by libraries written in C; for instance, the system libraries required for input/output. Extern methods are always redefinable. See [[native interface]] for more information on `extern` methods.
-
