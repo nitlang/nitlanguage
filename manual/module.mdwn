@@ -31,47 +31,51 @@ intrude importers), there is still no restriction.
 
 Visibility of attributes is more specific and is detailed in its own section.
 
-    module m1
-    class Foo
-        fun pub do ...
-        protected fun pro
-        do ...
-        private fun pri
-        do ...
-    end
-    private class Bar
-        fun pri2 do ...
-    end
-    var x: Foo = ...
-    var y: Bar = ...
-    # All OK, it is
-    # inside the module
-    x.foo
-    x.pro
-    x.pro
-    y.pri2
+[[!code language="nit" content="""
+module m1
+class Foo
+    fun pub do ...
+    protected fun pro
+    do ...
+    private fun pri
+    do ...
+end
+private class Bar
+    fun pri2 do ...
+end
+var x: Foo = ...
+var y: Bar = ...
+# All OK, it is
+# inside the module
+x.foo
+x.pro
+x.pro
+y.pri2
+"""]]
 
 <!-- -->
 
-    module m2
-    import m1
-    class Baz
-        super Foo
-        fun derp
-        do
-            self.pro # OK
-        end
+[[!code language="nit" content="""
+module m2
+import m1
+class Baz
+    super Foo
+    fun derp
+    do
+        self.pro # OK
     end
-    var x: Foo = ...
-    x.pub # OK
-    x.pro # Compile error:
-          # pro is protected
-    x.pri # Compile error:
-          # unknown method pro
+end
+var x: Foo = ...
+x.pub # OK
+x.pro # Compile error:
+      # pro is protected
+x.pri # Compile error:
+      # unknown method pro
 
-    var y: Bar
-    # Compile error:
-    # unknown class Bar
+var y: Bar
+# Compile error:
+# unknown class Bar
+"""]]
 
 ## Visibility Coherence
 
