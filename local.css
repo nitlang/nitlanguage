@@ -292,7 +292,7 @@ span.comment {
 	font-style: 			italic;
 }
 .number {
-	color: 				purple;
+	color: 				#FF8C00;
 }
 
 .preproc {
@@ -301,7 +301,7 @@ span.comment {
 }
 
 .symbol {
-	color: darkred;
+	color: 				#2d5003;
 }
 
 .function {
