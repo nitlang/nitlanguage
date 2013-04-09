@@ -60,8 +60,8 @@ As you may have noticed, the callback functions in C use a similar name to the e
 It is also possible to callback the Nit language for more than methods:
 
 * Declaring an import of `super` in Nit will allow to call super from C using a function similar to `A_baz___super( recv )`.
-* Declaring an import a constructor will allow it to be called from C as `A new_A()` for the anonymous constructor of the class A or `A new\_A\_name()` for a named constructor.
-* Casts can de declared as an import in Nit with three forms; `A as(B)`, `String as nullable`, `String as not nullable`. The first form is used to cast from any to any type. The second and third forms are used to cast between nullables and non-nullables. In the C code, those imports allows to use two set of funtions, one for the type check and one for the cast itself. With these examples we would get `int A\_is\_a\_B( A )` and `B A\_as\_B( A )` for the first form; `nullable\_String String\_as\_nullable( String )` for the second form (no check is necessary) as well as `int String\_is\_null( nullable\_String )` and `String String\_as\_not\_null` for the third form.
+* Declaring an import a constructor will allow it to be called from C as `A new_A()` for the anonymous constructor of the class A or `A new_A_name()` for a named constructor.
+* Casts can de declared as an import in Nit with three forms; `A as(B)`, `String as nullable`, `String as not nullable`. The first form is used to cast from any to any type. The second and third forms are used to cast between nullables and non-nullables. In the C code, those imports allows to use two set of funtions, one for the type check and one for the cast itself. With these examples we would get `int A_is_a_B( A )` and `B A_as_B( A )` for the first form; `nullable_String String_as_nullable( String )` for the second form (no check is necessary) as well as `int String_is_null( nullable_String )` and `String String_as_not_null` for the third form.
 
 ## Extern classes
 
@@ -95,7 +95,7 @@ You _must_ free any resources you allocated in C code, the Nit system do not man
 
 Nit objects passed as argument to a C implementation function are guaranteed to be valid until the function return. So it is for Nit objects returned from callbacks to Nit code. However, if you need to keep a Nit object between functions, in a global C variable, you have to notify the native interface for it to stay valid.
 
-For example, before saving an instance of the class A in a global variable, you must call `A\_incr\_ref( A )` on the instance. From then on, the Nit system will update this reference at each garbage collection so it stays valid, even after the current extern method returns. To free such a reference, call `A\_derc\_ref( A )`.
+For example, before saving an instance of the class A in a global variable, you must call `A_incr_ref( A )` on the instance. From then on, the Nit system will update this reference at each garbage collection so it stays valid, even after the current extern method returns. To free such a reference, call `A_derc_ref( A )`.
 
 ## Compiling and linking
 
@@ -109,7 +109,7 @@ However, to link with an external library you can use more options. Let's say th
 
 ## .nit.args files
 
-The compilation options passed to nitc can be directly associatied with the module with .nit.args files. 
+The compilation options passed to nitc can be directly associated with the module with .nit.args files. 
 
 To continue with the previous example, the module my\_module needs to be linked with the SDL library. The needed compilation options can be declared in the my\_module.nit.args file as so:
 
