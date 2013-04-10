@@ -95,7 +95,23 @@ TODO
 
 # Import C header files
 
-TODO
+When wrapping a C library, you usually need to import a C header to access its signatures, types and macros. This importation is done in an extern block after the module declaration like so:
+
+    module my_module
+
+    `{
+        #include <curl.h>
+    `}
+     ...
+
+By default, this block is intended for the header of the C body, which covers all C implementation code. However, if you have public extern class in your module, the importation must be declared in the  C header code. For wrappers it is almost always the case.  To do so, the previous declaration would look like so:
+
+    module my_module
+
+    in "C Header" `{
+        #include <curl.h>
+    `}
+     ...
 
 # C functions using parameters to return values
 
