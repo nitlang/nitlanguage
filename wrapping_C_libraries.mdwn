@@ -74,10 +74,19 @@ In order to verify the value of an instance of our extern class, we define addit
 
 # Dealing with callbacks
 
-TODO
+C libraries commonly use function pointers to callback the user code. Some libraries use this to notify the program of available data, execute tasks in the background or react to events. They will usually use function pointers with some sort of user data.
+
+There is no direct equivalent to function pointers in Nit. However there is an object oriented way to achieve the same goals.
+
+Let's reuse the libCURL example, it uses function pointers to notify the user code of data availability. The user code then manages the data, write it to disk or keep it in memory.
+
+In this case, we create a class with a single abstract method. We will name the class `CurlCallable` and the method `curl_callback`. We will also create a C function called `my_module_curl_callback` and use it as target for all function pointers. This function retrieves the real targeted instance of `CurlCallable` stored in the user data and calls its method `curl_callback`.
+
+The user code creates a subclass of `CurlCallable` to receive the calls. It is then passed as the user data when setting the callback. The reference count of the instance must also be incremented to stay valid until the actual callback, with `CurlCallable_incr_ref`.
+
+TODO Review this section when adding an example program using this technique in the example folder.
 
 # Handling errors
-
 TODO
 
 # Dealing with pseudo inheritance of C structures
