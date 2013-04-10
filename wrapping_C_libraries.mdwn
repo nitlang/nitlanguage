@@ -87,7 +87,10 @@ The user code creates a subclass of `CurlCallable` to receive the calls. It is t
 TODO Review this section when adding an example program using this technique in the example folder.
 
 # Handling errors
-TODO
+
+Each C library has a way to reports errors, but there is no standard. It is common to use a global variable to store error code (ex: _errno_) or to directly return a code from each functions.
+
+There is no standard way to manage errors in Nit either. For this reason, it is recommended to reuse the system from the C library in the Nit module. This creates a wrapper without surprise for users familiar with the C library. It is also usually much easier and cleaner to implement!
 
 # Dealing with pseudo inheritance of C structures
 
