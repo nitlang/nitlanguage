@@ -26,8 +26,6 @@ The <a href="stdlib">standard library</a> references built-ins and standard clas
  
 The page [[Foreign Function Interface|FFI]] describes the latest interface between Nit and C. It allows to implement Nit methods directly in C code, and more.
 
-Using the older [[native interface]] to use C code within a Nit program, in separate files.
-
 Developing Nit [[wrappers for existing C libraries|wrapping C libraries]] to access their features through normal Nit modules.
 
 ## For Contributors
