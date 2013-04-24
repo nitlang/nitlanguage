@@ -44,14 +44,18 @@ All Nit types that are not primitive to C are represented by an opaque C type. T
 First of all, callbacks from the C code must be declared after the signature of the Nit method. This allows the compiler to further optimize your program and statically check for errors in your C code. In the C implementation, these methods can be called using the class name and method name seperated by an underscore:
 
     class A
+        var attr = 1234
         fun baz( msg : String ) import String::length, String::to_cstring `{
             char *c_msg;
             int msg_len;
 
-            c_msg = String_to_cstring( msg ); /* msg.to_cstring */ 
-            msg_len = String_length( msg ); /* msg.length */
+            c_msg = String_to_cstring( msg ); /* msg::to_cstring */ 
+            msg_len = String_length( msg ); /* msg::length */
         
             printf( "received msg: %s, of length = %d\n", c_msg, msg_len );
+
+            printf( "old attr %d\n", A_attr(recv) ); /* get A::attr */
+            A_attr__assign( recv, msg_len ); /* set A::attr */
         `}
     end
 
