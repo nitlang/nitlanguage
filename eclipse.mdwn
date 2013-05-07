@@ -20,6 +20,8 @@ For Eclipse Juno
 * Nit project wizard
 * Basic completion (ctrl+space)
 * Parametrizable editor
+* Toggle comment
+* Indentation correction
 
 ## Using
 
