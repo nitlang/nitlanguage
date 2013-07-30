@@ -72,7 +72,7 @@ Individual tests can also be run independently:
 
 Each time some feature are added by a developer, he should:
 
-* bootstrap the compiler is src/ : `cd src/ ; ./ncall.sh`
+* bootstrap the compiler in src/ : `cd src/ ; ./ncall.sh`
 * run the full regression test-suite : `cd tests/ ; make`
 * add new tests to prevent future breakage of the new shiny feature
 
@@ -86,6 +86,6 @@ Nit tools use a rare SableCC3 version to generate the Nit parser.
 Moreover, the Nit language description file extends the standard SableCC3 syntax and includes parametric productions to factorize the description of the language.
 
 * The extended language description of Nit [[nit.sablecc3xx|http://nitlanguage.org/nit.git/blob/master:/src/parser/nit.sablecc3xx]]
-* The script that transforms an extended syntax into a regular SableCC3 syntax [[prescc.sh|http://nitlanguage.org/nit.git/blob/master:/src/parser/prescc.sh]]
+* The script that transforms an extended syntax into a regular SableCC3 syntax [[prescc.pl|http://nitlanguage.org/nit.git/blob/master:/src/parser/prescc.pl]]
 
 In order to simplify the development of the Nit tools, files produced by the parser generator are committed in the repository; therefore Java and SableCC3 is only required for developers that need to alter the Nit syntax.
