@@ -16,6 +16,7 @@
 <ul><li>[[Mailing list|nitlanguage@googlegroups.com]]</li>
 <li>[[Mailing list archive|https://groups.google.com/d/forum/nitlanguage]]</li>
 <li>[[Github community|https://github.com/privat/nit/network/members]]</li>
+<li>[[Continuous integration|http://gresil.org/jenkins]]</li>
 <li>[[Bugs]]</li>
 <li>[[Other things...|get_involved]]</li>
 </ul></nav>
