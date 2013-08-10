@@ -27,5 +27,6 @@ The source code of all Nit tools are freely available, see the [[download]] page
 * [[!traillink patches]]
 * [[!traillink bootstrap]]
 * [[!traillink regression]]
+* [[!traillink continuous_integration]]
 * [[!traillink parser]]
 
