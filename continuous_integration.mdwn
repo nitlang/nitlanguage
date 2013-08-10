@@ -1,0 +1,10 @@
+# Continuous integration
+
+A jenkins instance is running on [[http://gresil.org/jenkins]].
+
+Interesting things are :
+
+* [[Results of the regression tests|http://gresil.org/jenkins/job/nit%20tests/lastCompletedBuild/testReport/]]
+* [[Callgrind traces|http://gresil.org/jenkins/job/nit%20bootstrap/]]
+* [[Git statistics|http://gresil.org/jenkins/job/nit%20stufs/ws/gitstats/index.html]]
+* [[Benchmark results|http://gresil.org/jenkins/job/nit%20bench/ws/benchmarks/index.html]]
