@@ -8,6 +8,10 @@ For now, the debugger is a standalone binary file, to use it, launch your progra
 
 It is also possible to execute the program normally until an error is encountered directly using the *-c* option with the debugger
 
+Since early August 2013, a remote debugger is also available for Nit, it can be used with both server-side executable `netdbg` and client-side executable `dbgcli`.
+
+On the client side, the debugger works like the previous one, input some commands when debugging a program, except you have to launch the server before trying to debug.
+
 # # Features
 
 When using a debugger, a must-have is the possibility to control execution of your program by stepping over, in and out of a line/snippet of code. The nit debugger allows you to do that.
