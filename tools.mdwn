@@ -66,6 +66,12 @@ Currently it is only functional on a subset of the Nit language.
 
 See [[debugger]] for more details
 
+### Network Debugger
+
+`netdbg` and `dbgcli` are the server and client sides for the Nit network debugger, they are based on the same framework as the debugger except that they can be used from a remote location.
+
+See [[debugger]] for more details
+
 ### The global compiler `nitg`
 
 `nitg` is a work-in-progress global compiler that uses some hard static compilation techniques.
