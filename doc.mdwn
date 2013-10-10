@@ -30,7 +30,7 @@ Developing Nit [[wrappers for existing C libraries|wrapping C libraries]] to acc
 
 ## For Contributors
 
-The page [[get involved]] includes documentations and other resources.
+The page [[Get Involved|internal]] includes documentations and other resources.
 
 ## For Scientists
 
