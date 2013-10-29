@@ -85,8 +85,6 @@ for x in [1, 4, 6] do
 end
 """]]
 
-In fact, `for` is syntactic sugar for a [[closure]].
-
 ## loop
 
 Infinite loops are mainly used with breaks. They are useful to implement *until* loops or to simulate the *exit when* control of Ada.
@@ -115,7 +113,7 @@ end
 
 ## break, continue and label
 
-Unlabeled `break` exits the current `for`, `while`, `loop`, or closure. Unlabeled `continue` skips the current `for`, `while`, `loop`, or closure.
+Unlabeled `break` exits the current `for`, `while`, `loop`, Unlabeled `continue` skips the current `for`, `while`, `loop`.
 
 `label` can be used with `break` or `continue` to act on a specific control structure (not necessary the current one). The corresponding `label` must be defined after the `end` keyword of the designated control structure.
 
@@ -137,8 +135,6 @@ do
     stmts
 end label block
 """]]
-
-In closures, `break` and `continue` can return values.
 
 ## abort
 

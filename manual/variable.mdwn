@@ -56,7 +56,7 @@ var t: Object = 5 # Upper bound is Object
 t = "Hello" # OK
 """]]
 
-The adaptive typing flow is straightforward, therefore loops (`for`, `while`, `loop`) and closures have a special requirement: on entry, the upper bound is set to the current static type; on exit, the upper bound is reset to its previous value.
+The adaptive typing flow is straightforward, therefore loops (`for`, `while`, `loop`) have a special requirement: on entry, the upper bound is set to the current static type; on exit, the upper bound is reset to its previous value.
 
 [[!code language="nit" content="""
 var x: Object = ...
@@ -218,7 +218,7 @@ print x * 10 # outputs 50
 
 ## Static Type Combination Rule
 
-Adaptive typing, literal arrays, `or else`, and valued `break` in closure need to determine a static type by combining other static types. This is done by using the following rule:
+Adaptive typing, literal arrays, and `or else` need to determine a static type by combining other static types. This is done by using the following rule:
 
 -   The final type is `nullable` if at least one of the types is `nullable`.
 
