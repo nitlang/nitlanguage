@@ -56,12 +56,12 @@ Values are inserted with a triple braces (`{{{value}}}`).
 The multi-line form thus allows verbatim new-lines, quotes and braces
 
 [[!code language="nit" content='''
-print \"""some text
+print """some text
 with line breaks
 and characters like " and {
-but {{{ 1+2 }}} is redered as 3
-\"""
-''']
+but {{{ 1+2 }}} is rendered as 3
+"""
+''']]
 
 All objects have a `to_s` method that converts the object to a String.
 `print` is a top-level method that takes any number of arguments and
