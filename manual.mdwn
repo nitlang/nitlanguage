@@ -15,4 +15,3 @@ language since concepts are covered only when required.
 * [[!traillink constructor]]
 * [[!traillink genericity]]
 * [[!traillink virtual_type]]
-* [[!traillink closure]]
