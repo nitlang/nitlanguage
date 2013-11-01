@@ -62,7 +62,7 @@ following is encouraged:
 
 ## Comments and Documentation
 
-[comment] As in many script languages, comments begin with a sharp (`#`)
+As in many script languages, comments begin with a sharp (`#`)
 and run up to the end of the line. Currently, there is no
 multiline-comments.
 
