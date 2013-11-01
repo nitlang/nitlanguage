@@ -26,7 +26,7 @@ explicit designation.
 
 ## Identifiers
 
-[identifier] Identifiers of modules, variables, methods, attributes and
+Identifiers of modules, variables, methods, attributes and
 labels must begin with a lowercase letter and can be followed by
 letters, digits, or underscores. However, the usage of uppercase letters
 (and camelcase) is discouraged and the usage of underscore to separate
