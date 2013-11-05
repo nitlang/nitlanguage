@@ -23,7 +23,7 @@ Note that the control flow is determined only from the position, the
 order and the nesting of the control structures. The real value of the
 expressions used has no effect on the control flow analyses.
 
-[[!code language="nit" content="""
+~~~
 if true then
     return
 else
@@ -35,11 +35,11 @@ if true then
     return
 end
 print 1 # OK, but never executed
-"""]]
+~~~
 
 ## if
 
-[[!code language="nit" content="""
+~~~
 if exp then stm
 if exp then stm else stm
 if exp then
@@ -53,49 +53,49 @@ else if exp then
 else
     stms
 end
-"""]]
+~~~
 
 Note that the following example is invalid since the first line is
 syntactically complete thus the newline terminate the whole `if`
 structure; then an error is signaled since a statement cannot begin with
 `else`.
 
-[[!code language="nit" content="""
+~~~
 if exp then stm # OK: complete 'if' structure
 else stm # Syntax error: unexpected 'else'
-"""]]
+~~~
 
 ## while
 
-[[!code language="nit" content="""
+~~~
 while exp do stm
 while exp do
     stms
 end
-"""]]
+~~~
 
 ## for
 
 `for` declares an automatic variable used to iterates on `Collection` (`Array` and `Range` are both `Collection`).
 
-[[!code language="nit" content="""
+~~~
 for x in [1..5] do print x # outputs 1 2 3 4 5
 for x in [1, 4, 6] do
     print x # outputs 1 4 6
 end
-"""]]
+~~~
 
 ## loop
 
 Infinite loops are mainly used with breaks. They are useful to implement *until* loops or to simulate the *exit when* control of Ada.
 
-[[!code language="nit" content="""
+~~~
 loop
     stms
     if exp then break
     stms
 end
-"""]]
+~~~
 
 Note that `loop` is different from `while true` because the control flow does not consider the values of expression.
 
@@ -103,13 +103,13 @@ Note that `loop` is different from `while true` because the control flow does no
 
 Single `do` are used to create scope for variables or to be attached with labeled breaks.
 
-[[!code language="nit" content="""
+~~~
 do
     var x = 5
     print x
 end
 # x is not defined here
-"""]]
+~~~
 
 ## break, continue and label
 
@@ -117,24 +117,24 @@ Unlabeled `break` exits the current `for`, `while`, `loop`, Unlabeled `continue`
 
 `label` can be used with `break` or `continue` to act on a specific control structure (not necessary the current one). The corresponding `label` must be defined after the `end` keyword of the designated control structure.
 
-[[!code language="nit" content="""
+~~~
 for i in [0..width[ do
     for j in [0..height[ do
         if foo(i, j) then break label outer_loop
         # The 'break' breaks the 'for i' loop
     end
 end label outer_loop
-"""]]
+~~~
 
 `label` can also be used with `break` and single `do` structures.
 
-[[!code language="nit" content="""
+~~~
 do
     stmts
     if expr then break label block
     stmts
 end label block
-"""]]
+~~~
 
 ## abort
 
@@ -144,11 +144,11 @@ end label block
 
 `assert` verifies that a given Boolean expression is true, or else it aborts. An optional label can be precised, it will be displayed on the error message. An optional `else` can also be added and will be executed before the abort.
 
-[[!code language="nit" content="""
+~~~
 assert bla: whatever else
     # "bla" is the label
     # "whatever" is the expression to verify
     print "Fatal error in module blablabla."
     print "Please contact the customer service."
 end
-"""]]
+~~~

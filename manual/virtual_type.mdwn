@@ -6,7 +6,7 @@ and its subclasses. Subclasses can also redefine it with a more specific
 bound type. One can see a virtual type as an internal formal generic
 parameter or as a redefinable *typedef*.
 
-[[!code language="nit" content="""
+~~~
 class Foo
     type E: Object
     var derp: E 
@@ -17,4 +17,4 @@ class Bar
 end
 var b = new Bar(5)
 print b.derp + 1 # outputs 6
-"""]]
+~~~

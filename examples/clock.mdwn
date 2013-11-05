@@ -1,4 +1,4 @@
-[[!code language="nit" content="""
+~~~
 # This file is part of NIT ( http://www.nitlanguage.org ).
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -77,4 +77,4 @@ print "The two clocks are synchronized: {c == c2}."
 c2.minutes += 1
 print "It's now {c2} on the second clock."
 print "The two clocks are synchronized: {c == c2}."
-"""]]
+~~~

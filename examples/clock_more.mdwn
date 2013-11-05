@@ -1,4 +1,4 @@
-[[!code language="nit" content="""
+~~~
 # This file is part of NIT ( http://www.nitlanguage.org ).
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -59,4 +59,4 @@ print "{c1}<=>{c2}? {c1<=>c2}"
 print "{c1},{c2}? max={c1.max(c2)} min={c1.min(c2)}"
 print "{c1}.is_between({c2}, {c3})? {c1.is_between(c2, c3)}"
 print "{c2}.is_between({c1}, {c3})? {c2.is_between(c1, c3)}"
-"""]]
+~~~

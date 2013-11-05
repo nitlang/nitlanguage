@@ -38,41 +38,41 @@ inside a literal string, include the values inside braces (`{}`).
 Braces has to be escaped.
 `+` is the concatenation operator but is less efficient than the brace form.
 
-[[!code language="nit" content="""
+~~~
 var i = 5
 print "i={i}; i+1={i+1}" # outputs "i=5; i+1=6"
-"""]]   
+~~~
 
 Common escaping sequences are available (`\"`, `\n`, `\t`, etc.) plus the escaped brace `\{`.
 
-[[!code language="nit" content="""
+~~~
 print "hel\"lo\nwo\{rld"
 # outputs `hel"lo` on a first line
 # and `wo{rld` on a second line
-"""]]
+~~~
 
 Multi-line strings are enclosed with triple quotes (`"""`).
 Values are inserted with a triple braces (`{{{value}}}`).
 The multi-line form thus allows verbatim new-lines, quotes and braces
 
-[[!code language="nit" content='''
+~~~
 print """some text
 with line breaks
 and characters like " and {
 but {{{ 1+2 }}} is rendered as 3
 """
-''']]
+~~~
 
 All objects have a `to_s` method that converts the object to a String.
 `print` is a top-level method that takes any number of arguments and
 prints to the standard output. `print` always add a newline, another
 top-level method, `printn`, does not add the newline.
 
-[[!code language="nit" content="""
+~~~
 var x: String
 x = 5.to_s # -> the String "5"
 print x, 6 # outputs "56"
-"""]]
+~~~
     
 ## Bool
 
@@ -108,7 +108,7 @@ Booleans. Literal arrays can be declared with the bracket notation
 elements added with the `add` method. Elements can be retrieved or
 stored with the bracket operator.
 
-[[!code language="nit" content="""
+~~~
 var a = [1, 2, 3, 4] # A literal array of integers
 print a.join(":") # outputs "1:2:3:4"
 var b = new Array[Int] # A new empty array of integers
@@ -119,7 +119,7 @@ print b[0] # outputs "10"
 print b.length # outputs "6"
 b[1] = 30
 print b.join(", ") # outputs "10, 30, 2, 3, 4, 20"
-"""]]
+~~~
 
 Note that the type of literal arrays is deduced using the static type
 combination rule.
@@ -133,10 +133,10 @@ types (`Int` is discrete). There are two kinds of literal ranges, the
 open one `[1..5[` that excludes the last element, and the closed one
 `[1..5]` that includes it.
 
-[[!code language="nit" content="""
+~~~
 print([1..5[.join(":")) # outputs "1:2:3:4"
 print([1..5].join(":")) # outputs "1:2:3:4:5"
-"""]]
+~~~
 
 Ranges are mainly used in `for` loops.
 
@@ -147,9 +147,9 @@ There is no literal hashmap, therefore the `new` keyword is used to
 create an empty `HashMap` and the bracket operators are used to store
 and retrieve values.
 
-[[!code language="nit" content="""
+~~~
 var h = new HashMap[String, Int] 
 # h associates strings to integers
 h["six"] = 6
 print h["six"] + 1 # outputs "7"
-"""]]
+~~~

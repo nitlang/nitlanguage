@@ -18,7 +18,7 @@ To implements his own sorters the developper can inherit `AbstractSorter[E]`.
 
 Here an exemple with the basic implementation of `ComparableSorter[E]` in `standard::collection` :
 
-[[!code language="nit" content="""
+~~~
 # This class uses the operator <=> to sort arrays.
 # You can also use the `sort' method of the `Array' class.
 class ComparableSorter[E: Comparable]
@@ -27,18 +27,18 @@ class ComparableSorter[E: Comparable]
     redef fun compare(a, b) do return a <=> b
     init do end
 end
-"""]]
+~~~
 
 `ComparableSorter[E]` can be used in this way :
 
-[[!code language="nit" content="""
+~~~
 var array = ["a", "c", "b"] # An array initialized with unsorted `String` values 
 # `String` is a subtype of `Comparable`
 var sorter = new ComparableSorter[String]
 sorter.sort(array) # Use the sorter to sort the array
     
 print array #abc
-"""]]
+~~~
 
 
 [[!tag array]]

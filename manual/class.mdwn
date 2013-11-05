@@ -36,7 +36,7 @@ Note that the kind or the visibility of a class cannot be changed by a refinemen
 
 In programs, the real instantiated classes are always the combination of all their refinements.
 
-[[!code language="nit" content="""
+~~~
 redef class Int
     fun fib
     do
@@ -46,4 +46,4 @@ redef class Int
 end
 # Now all integers have the fib method
 print 15.fib # outputs 610
-"""]]
+~~~

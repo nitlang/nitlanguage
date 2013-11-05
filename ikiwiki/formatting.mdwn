@@ -45,23 +45,23 @@ To quote someone, prefix the quote with ">":
 
 ----
 
-To write a block of code, place it inside the following square brackets form :
+To write a block of code, place it inside fences :
 
-    \[[!code language="nit" content="""
+    ~~~
     class Herp
         init do
             print "Hello, world!"
         end
     end
-    """]]
+    ~~~
 
-[[!code language="nit" content="""
+~~~
 class Herp
     init do
         print "Hello, world!"
     end
 end
-"""]]
+~~~
 
 Each line is indented with a tab or 4 spaces.
 Syntax highlighting is provided by [GNU Source-highlight](http://www.gnu.org/software/src-highlite/source-highlight.html),  thus all languages ​​natively supported by the Source-highlight are supported by this wiki, just replace the language attribute value by your target language, see the [full list](http://www.gnu.org/software/src-highlite/source-highlight.html#Supported-languages) of supported languages.

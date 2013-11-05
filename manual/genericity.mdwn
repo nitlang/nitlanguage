@@ -5,7 +5,7 @@ declared within brackets. Formal generic parameters can then be used as
 a regular type inside the class. Generic classes must always be
 qualified when used.
 
-[[!code language="nit" content="""
+~~~
 class Pair[E]
     var first: E
     var second: E
@@ -20,7 +20,7 @@ print p1.is_same # outputs "false"
 var p2 = new Pair[String]("hello", "world")
 p2.first = "world"
 print p2.is_same # outputs "true"
-"""]]
+~~~
 
 Unlike many object-oriented languages, generic classes in Nit yield a
 kind of sub-typing. For example, `Pair[Int]` is a subtype of

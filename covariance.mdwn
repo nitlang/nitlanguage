@@ -9,7 +9,7 @@ Covariance in Nit has two causes:
 
 The main advantage of the covariance is the improved expressiveness to the Nit models.
 
-[[!code language="nit" content="""
+~~~
 class Employee
     type OFFICE: Office
     var office: OFFICE
@@ -23,6 +23,6 @@ end
 var b: Boss = ...
 var o: Office = ...
 b.office = o # Compilation Error! Expected a BossOffice
-"""]]
+~~~
 
 Invariant languages (eg. Java, C++) have to use unsafe downcasts to achieve the same effects.

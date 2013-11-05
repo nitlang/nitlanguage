@@ -5,13 +5,13 @@ additional arguments. Closures are defined and used with the `!`
 character. The following example shows the use of the `sort` method for
 arrays (defined in the Nit standard library).
 
-[[!code language="nit" content="""
+~~~
 var a = [4, 2, 9, 6]
 a.sort !cmp(x, y) = x <=> y
 print a.join(", ") # outputs "2, 4, 6, 9"
 a.sort !cmp(x, y) = y <=> x
 print a.join(", ") # outputs "9, 6, 4, 2"
-"""]]
+~~~
 
 `!cmp` indicates the closure parameter of the `sort` method. The
 documentation of the `sort` method says that `!cmp` is used to compare
@@ -24,14 +24,14 @@ argument (“file not found” for instance). If the opening is successful,
 the opened file handler. `file_open` also ensures that the file is
 correctly closed when the `!work` closure returns.
 
-[[!code language="nit" content="""
+~~~
 var fname = "input.txt"
 file_open(fname) !work(f) do
     print f.read_line
 !error(e) do
     print "Cannot open '{fname}': {e}"
 end
-"""]]
+~~~
 
 Note that a method can have multiple closures. Syntactically, a closure
 is ended by the start of another closure or by the `end` keyword that
@@ -44,7 +44,7 @@ element of a `Collection`. In fact, the `for` control structure is a
 call of the `iterate` method. The following two examples are thus
 strictly equivalent.
 
-[[!code language="nit" content="""
+~~~
 var sum = 0
 var a = [4, 2, 9]
 a.iterate !each(i) do
@@ -58,7 +58,7 @@ for i in a do
     sum += i
 end
 print sum # outputs "15"
-"""]]
+~~~
 
 ## Returning Values and Escaping
 
@@ -85,7 +85,7 @@ call. More than one closure parameter can be declared. Each has to be
 declared on a separate line. The order of the closure definitions does
 not matter.
 
-[[!code language="nit" content="""
+~~~
 fun twice
     !work
 do
@@ -119,7 +119,7 @@ bar("A") !b1(y) do
     print z
 end
 # outputs "AB"
-"""]]
+~~~
 
 ## Default Closures
 
@@ -128,7 +128,7 @@ declaration in a method. If there is no default closure, then the
 corresponding closure argument is mandatory. Otherwise, if there is a
 default closure, the corresponding closure argument is optional.
 
-[[!code language="nit" content="""
+~~~
 fun are_all_comparable(a: Collection[Int]): Bool
     !cmp(x, y: Int): Bool = x == y
 do
@@ -142,7 +142,7 @@ var a = [2, 2, 6, 2]
 print are_all_comparable(a) # outputs "false"
 var x = are_all_comparable(a) !cmp(i, j) = i%2 == j%2
 print x # outputs "true"
-"""]]
+~~~
 
 ## Break Closures
 
@@ -152,7 +152,7 @@ invocation does not return (like a `return` or an `abort`). On method
 invocations, it means that the closure definition must not continue.
 Break closures are usually used to process error or exception handling.
 
-[[!code language="nit" content="""
+~~~
 fun open_file(fname: String)
    !work(f: File)
     break !error(e: String) do
@@ -168,7 +168,7 @@ open_file("config.ini") !error(e) do
 !work(f) do
     # ...
 end
-"""]]
+~~~
 
 ## Full Closure Example
 
@@ -181,7 +181,7 @@ not found. `!def` is expected to return the item associated with the new
 key so it can be stored in the hashmap then returned. By default, `!def`
 aborts.
 
-[[!code language="nit" content="""
+~~~
 var map = new HashMap[Int, String]
 map[5] = "five" # associate '5' to "five"
 var x1 = map[5] # return "five"
@@ -193,4 +193,4 @@ var x4 = map[7] !def do break "seven" # return "seven"
                 # since '7' is not a known key
 var x5 = map[7] # aborts since '7' was not associated 
                 # with the previous statement
-"""]]
+~~~

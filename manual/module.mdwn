@@ -31,7 +31,7 @@ intrude importers), there is still no restriction.
 
 Visibility of attributes is more specific and is detailed in its own section.
 
-[[!code language="nit" content="""
+~~~
 module m1
 class Foo
     fun pub do ...
@@ -51,11 +51,11 @@ x.foo
 x.pro
 x.pro
 y.pri2
-"""]]
+~~~
 
 <!-- -->
 
-[[!code language="nit" content="""
+~~~
 module m2
 import m1
 class Baz
@@ -75,7 +75,7 @@ x.pri # Compile error:
 var y: Bar
 # Compile error:
 # unknown class Bar
-"""]]
+~~~
 
 ## Visibility Coherence
 

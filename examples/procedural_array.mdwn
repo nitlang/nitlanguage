@@ -1,4 +1,4 @@
-[[!code language="nit" content="""
+~~~
 # This file is part of NIT ( http://www.nitlanguage.org ).
 #
 # Copyright 2004-2008 Jean Privat <jean@pryen.org>
@@ -47,4 +47,4 @@ end
 var a = [10, 5, 8, 9]
 print(array_sum(a))
 print(array_sum_alt(a))
-"""]]
+~~~

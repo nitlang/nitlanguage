@@ -6,9 +6,9 @@ Nit is an object-oriented programming language. The goal of Nit is to propose a 
 
 So, what does the famous hello world program look like, in Nit?
 
-[[!code language="nit" content="""
+~~~
 print "Hello, World!"
-"""]]
+~~~
     
 # # Feature Highlights
 

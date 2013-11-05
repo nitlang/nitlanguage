@@ -1,4 +1,4 @@
-[[!code language="nit" content="""
+~~~
 # This file is part of NIT ( http://www.nitlanguage.org ).
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -170,4 +170,4 @@ print i.join(":")
 
 i.josephus(3)
 print i.join(":")
-"""]]
+~~~

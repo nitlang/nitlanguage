@@ -1,4 +1,4 @@
-[[!code language="nit" content="""
+~~~
 # This file is part of NIT ( http://www.nitlanguage.org ).
 #
 # Copyright 2004-2008 Jean Privat <jean@pryen.org>
@@ -21,4 +21,4 @@ module print_arguments
 for a in args do
     print a
 end
-"""]]
+~~~
