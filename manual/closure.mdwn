@@ -1,6 +1,6 @@
 # Closures
 
-[closure] Closures are pieces of code that are passed to methods as
+Closures are pieces of code that are passed to methods as
 additional arguments. Closures are defined and used with the `!`
 character. The following example shows the use of the `sort` method for
 arrays (defined in the Nit standard library).
@@ -62,7 +62,7 @@ print sum # outputs "15"
 
 ## Returning Values and Escaping
 
-[closure return] `break` and `continue` are extended to closures.
+`break` and `continue` are extended to closures.
 
 `continue` exits the closure. If the closure expects a return value,
 `continue` can also be used to return the correct value. As with method
@@ -146,7 +146,7 @@ print x # outputs "true"
 
 ## Break Closures
 
-[break closure] Some closures, called break closures, cannot be
+Some closures, called break closures, cannot be
 continued. On the method definition, it means that the closure
 invocation does not return (like a `return` or an `abort`). On method
 invocations, it means that the closure definition must not continue.

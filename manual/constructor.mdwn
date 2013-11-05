@@ -1,6 +1,6 @@
 # Constructors and Instantiation
 
-[init] `init` declares constructors in concrete and in abstract classes.
+`init` declares constructors in concrete and in abstract classes.
 The role of constructors is basically to initialize the attributes of
 the class. Constructors can have: a visibility (by default it is
 public), a name (by default, constructors are anonymous) and parameters.
@@ -15,7 +15,7 @@ class Foo
 
 ## Class Instantiation
 
-[new] `new` instantiates a concrete class using a specific constructor.
+`new` instantiates a concrete class using a specific constructor.
 
 ~~~
 var x = new Foo(4) # invoke init
@@ -43,7 +43,7 @@ end
 
 ## Initialization of Attributes
 
-[initialization][isset] The tricky part in constructors is the
+The tricky part in constructors is the
 initialization of attributes since they cannot be initialized in an
 atomic way. The various steps apply in the following order:
 
@@ -90,7 +90,7 @@ var f = new Foo
 
 ## Free and Inherited Constructors
 
-[init inheritance] When there is no constructor defined in a concrete
+When there is no constructor defined in a concrete
 class or in an abstract class that specializes only interfaces (`Object`
 is always a superclass), a free anonymous constructor is implicitly
 declared. This free constructor gathers all attributes without a initial

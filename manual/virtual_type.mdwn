@@ -1,6 +1,6 @@
 # Virtual Types
 
-[type] `type` declares a virtual types in a class. A bound type is
+`type` declares a virtual types in a class. A bound type is
 mandatory. Virtual types can then be used as regular types in the class
 and its subclasses. Subclasses can also redefine it with a more specific
 bound type. One can see a virtual type as an internal formal generic
