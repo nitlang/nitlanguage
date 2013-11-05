@@ -282,7 +282,7 @@ Source code formatting
 	color: 				orange;
 }
 .specialchar {
-	color: 				pink;
+	color: 				darkorange;
 	font-family: 			monospace;
 }
 
@@ -292,7 +292,7 @@ span.comment {
 	font-style: 			italic;
 }
 .number {
-	color: 				#FF8C00;
+	color: 				darkviolet;
 }
 
 .preproc {
