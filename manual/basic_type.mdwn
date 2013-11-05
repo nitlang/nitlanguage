@@ -21,11 +21,11 @@ literals. Standard arithmetic operators are available with a common
 precedence rules: `*`, `/`, and `%` (modulo) ; then `+` and `-`. Some
 operators can be composed with the assignment (`=`).
 
-[[!code language="nit" content="""
+~~~
 var i = 5
 i += 2
 print i # outputs 7
-"""]]
+~~~
 
 Conversion from `Int` to `Float` and `Float` to `Int` must be done with
 the `to_f` and `to_i` methods.
