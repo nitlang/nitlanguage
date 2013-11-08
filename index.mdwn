@@ -42,6 +42,10 @@ Get Nit from its Git repository:
 
     $ git clone http://nitlanguage.org/nit.git
 
+Ensure that dependencies (and recommendations) are installed:
+
+    $ sudo apt-get install build-essential ccache libgc-dev graphviz
+
 Build the compiler (may be long):
 
     $ cd nit
@@ -54,3 +58,9 @@ Compile a program:
 Execute the program:
 
     $ ./hello_world
+
+And now?
+
+* Install plugins for your [[editor or IDE|ide]] to works with Nit
+* Read the language [[manual]]
+* Browse the bundled [[libraries|http://nitlanguage.org/doc/stdlib]]
