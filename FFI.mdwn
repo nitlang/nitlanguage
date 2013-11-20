@@ -82,15 +82,15 @@ The single value of an instance of an extern class is its value in C, because of
 
 Extern constructors are declared similarly to extern methods, for example:
 
-    extern A
-        new {
+    extern A `{ my_struct* `}
+        new `{
             return malloc( sizeof( my_struct) );
-        }
-        new named {
+        `}
+        new named `{
             A a = malloc( sizeof( my_struct) );
             a->naming = 1;
             return a;
-        }
+        `}
     end
 
 You _must_ free any resources you allocated in C code, the Nit system do not manage these.
