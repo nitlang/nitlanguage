@@ -13,9 +13,12 @@ input; while the newline terminates lines that seems completed. See the
 complete Nit grammar for more details.
 
 ~~~
-print 1 + 1 # a first complete statement that outputs "2"
-print 2 + # the second statement is not yet finished
-2 # the end of the second statement, outputs "4"
+# a first complete statement that outputs "2"
+print 1 + 1
+# the second statement is not yet finished
+print 2 +
+# the end of the second statement, outputs "4"
+2
 ~~~
 
 Nit aims to achieve some uniformity in its usage of the common
