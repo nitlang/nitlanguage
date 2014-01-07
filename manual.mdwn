@@ -15,3 +15,5 @@ language since concepts are covered only when required.
 * [[!traillink constructor]]
 * [[!traillink genericity]]
 * [[!traillink virtual_type]]
+
+Also available as a [[pdf document|nitreference.pdf]] and an [[epub document|nitreference.epub]].
