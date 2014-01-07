@@ -121,7 +121,6 @@ code {
 }
 
 .site-links {
-	height:				1em;
 	border-top:			1px solid #dcdcd1;
 	border-bottom:			1px solid #dcdcd1;
 	padding:			13px 0;
@@ -345,3 +344,22 @@ span.comment {
 .selector { color: purple; }
 .property { color: blue; }
 .value { color: darkgreen; font-style: italic; }
+
+
+/* Mobile version, tested on Nexus5 */
+@media only screen and (max-device-width: 480px) {
+	/* force size of things for firefox and chrome mobile (I do not know what I am doing) */
+	body { font-size: 34px; }
+	h1 { font-size: 64px; }
+	h2 { font-size: 54px; }
+	h3 { font-size: 44px; }
+	pre { font-size: 29px; }
+	.footnav { font-size: 34px; }
+	.trails { font-size: 24px; }
+
+	/* hide sidebar, TODO: put sidebar to the bottom of page or similar, or behind menu */
+	.sidebar {
+		float: none;
+		display: none;
+	}
+}
