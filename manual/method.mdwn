@@ -180,7 +180,7 @@ do
     print "{x};{y.join(",")};{z}"
 end
 foo(1, 2, 3, 4, 5) # outputs "1;2,3,4;5"
-foo(1, 2) # outputs "1;;2"
+foo(1, 2, 3) # outputs "1;2;3"
 ~~~
 
 ## Top-level Methods and Main Body
