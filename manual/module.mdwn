@@ -70,7 +70,7 @@ x.pub # OK
 x.pro # Compile error:
       # pro is protected
 x.pri # Compile error:
-      # unknown method pro
+      # unknown method pri
 
 var y: Bar
 # Compile error:
