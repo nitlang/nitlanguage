@@ -63,7 +63,7 @@ $ git clone https://github.com/scrooloose/syntastic.git
 ~~~
 
 Check that your `$PATH` contains `nitc`.
-If not, the simpliest way is to create a dummy `nitc` script in you personnal `bin` directory:
+If not, the simpliest way is to create a dummy `nitc` script in your personnal `bin` directory:
 
 ~~~sh
 $ echo 'exec /full/path/to/nit/bin/nitc "$@"' > ~/bin/nitc
