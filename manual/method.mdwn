@@ -195,7 +195,9 @@ Top-level methods coupled with the main body can be used to program in a pseudo-
 
 ~~~
 print "Hello World!"
+~~~
 
+~~~
 fun sum(i, j: Int): Int
 do
     return i + j
