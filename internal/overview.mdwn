@@ -1,0 +1,66 @@
+# Nit compiler overview
+
+NOTE: This overview is not finished and focuses on the new-model engine and tools.
+
+
+## The parser and the AST
+
+The parser lives in `src/parser` and is used by all tools (new and old model).
+
+Class of nodes of the AST starts with the letter `A` (for most things, eg. `AClassdef`) or `T` (for token eg. `TId`), there is no real reason except historical that might be solved with a new parser.
+
+Variable names of the AST usually starts with `n` (for node). This is also historical but some name with a `a` (to mimic the class name) remains.
+
+The AST represents *What the programmer says*.
+
+## The model
+
+The model lives in `src/model` and is used only by the new tools.
+
+because of the specification of the Nit language, the model is very complex and sometime difficult to understand. But the new model is far more simpler (and robust and correct than the old one).
+
+The model represents *What the programmer means*.
+
+### POSet
+
+There is a lot of classes and relation in the model.
+Most of there relations are based on posets.
+
+posets are *partially-ordered sets*; they are used to modelize hierarchies of things (eg. hierarchies of modules)
+
+the poset is an expressive structure that generalize most services about hierarchies. This avoid the duplication of code and.
+The drawback is that a specific request on the model use an abstract vocabulary.
+
+Example. you want the set of modules directly imported by another module.
+There is no specific method in `MModule` for that, the good way is to use services on the some posets
+
+    var res = mymodule.in_importation.direct_greaters
+
+posets are used in two dual ways :
+
+ - by the whole hierarchy (eg. `MModel::mmodule_importation_hierarchy`). Most are named `something_somerelation_hierarchy`
+ - by the view on en entity in a specific hierarchy (eg. `MModule::in_importation`). Most are named `in_somerelation`
+
+### Classes
+
+Because of refinement, classes (`MClass`) contains nothing by themselves.
+As classes can be refined in modules, most services of the model require the precision of a module.
+
+None can asks what are the super-classes of a class nor what are properties of a class without precising what is the module considered.
+
+For instance, during the typing of a source-file, the module considered is the module of the file. eg. the question *is the method `foo` exists in the class `Bar`?* must be reformulated into *is the method `foo` exists in the class `Bar` in the current module?*
+
+During some global analysis, the module considered may be the main module of the program.
+
+### ClassDefs
+
+Since classes are orthogonal to modules, how can we resonates about classes in a sane way.
+
+Class definitions (`MClassDef`) are concrete piece of class that belong to a specific class, to a specific module and contains declarations like super-classes or properties.
+
+Its the class definitions that are the backbone of most of things in the model.
+
+Classdefs are defined with regard with other classdefs.
+Refinement and specialization are combined to produce a big poset called the `mclassdef_hierarchy`.
+
+Moreover, the extensions and the intention of types is defined by looking at the MClassDefs. (see section Types)
