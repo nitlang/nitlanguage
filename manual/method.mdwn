@@ -57,8 +57,8 @@ class Foo
     # implicitly an Object
     # therefore inherit '==' and 'to_s' 
     var i: Int
-    redef to_s do return "Foo{self.i}"
-    redef ==(f) do return f isa Foo and f.i == self.i
+    redef fun to_s do return "Foo{self.i}"
+    redef fun ==(f) do return f isa Foo and f.i == self.i
 end
 ~~~
 
@@ -72,7 +72,7 @@ interface Foo
 end
 class Bar
     super Foo
-    redef derp(x) do return x + 1
+    redef fun derp(x) do return x + 1
 end
 ~~~
 
