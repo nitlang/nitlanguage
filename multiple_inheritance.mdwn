@@ -15,4 +15,4 @@ In Nit, inheritance (ans especially multiple inheritance) is done right:
 
 * No hidden inheritance: specialization is public, therefore if you can see the classes, you can see their specialization links.
 
-* No static overloading: A method or an attribute introduced in a super-class is always inherited and cannot be mistaken with sometime different.
+* No static overloading: A method or an attribute introduced in a super-class is always inherited and cannot be mistaken with something different.
