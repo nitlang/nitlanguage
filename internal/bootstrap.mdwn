@@ -1,6 +1,6 @@
 # Starting and Re-Bootstrapping
 
-The nits tools are written in Nit, it means you need a Nit compiler in order to compile the Nit compiler.
+The Nit tools are written in Nit, it means you need a Nit compiler in order to compile the Nit compiler.
 
 During the make, the original Nit compiler is compiled from C code (in `/c_src`).
 
@@ -8,20 +8,21 @@ During the make, the original Nit compiler is compiled from C code (in `/c_src`)
     $ cd nit
     $ make
     $ cd src
-    $ ./ncall.sh
+    $ ./ngall.sh
 
-`ncall.sh` performs a full bootstrap of the compiler (the original `make` does only two passes).
-More specifically, `ncall.sh` does :
+`ngall.sh` performs a full bootstrap of the compiler (the original `make` does only two passes).
+More specifically, `ngall.sh`:
 
-* `./nc nitc` that compiles nitc.nit with the compiler `../c_src/src` so we get `src/nitc`
-* `./nc2 nitc` that compiles nitc.nit with `src/nitc` and we get `src/nitc2`
-* `./nc3 nitc` that compiles nitc.nit with `src/nitc2` and we get `src/nitc3`
-* `./nc4 ../examples/hello_world.nit` and `./hello_world_4`the verify that `src/nitc3` is minimally functionnal.
+* compiles nitg.nit with the compiler `c_src/nitg` so we get `src/nitg`
+* compiles nitg.nit with `src/nitg` and we get `src/nitg_2`
+* compiles nitg.nit with `src/nitg_2` and we get `src/nitg_3`
+* compiles nitg.nit with `src/nitg_3` and we get `src/nitg_4`
+* compile `examples/hello_world.nit` with `src/nitg_4` and run it to verify that `src/nitg_4` is minimally functionnal.
 
-Note that the Nit code of the compiler is written with some legagy Nit: all modern functionnalities of Nit are not always usable since it is the primitive compiler (`c_src/nitc`) that is used.
+Note that the Nit code of the compiler is written with some legagy Nit: all modern functionnalities of Nit are not always usable since it is the primitive compiler (`c_src/nitg`) that is used.
 
-One of the standard error of the nitc developper is to break the bootstrap, it means that the Nit compiler is written in an incompatible way with the primitive compiler.
-Regulary executing `./ncall.sh` helps to check that the bootstrap is not broken.
+One of the standard error of the nit tool developper is to break the bootstrap, it means that the Nit compiler is written in an incompatible way with the primitive compiler.
+Regulary executing `./ngall.sh` helps to check that the bootstrap is not broken.
 
 On some occations, the C-code in `c_src` is updated.
-The script `src/mkcsrc` is then used to regenerate a new c_src file from a succesful compilation of nitc.
+The script `src/mkcsrc` is then used to regenerate a new `c_src` file by running a special compilation of nitg.

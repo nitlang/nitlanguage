@@ -1,13 +1,13 @@
 # Nit Tools
 
-### The Compiler `nitc`
+### The Compiler `nitg`
 
-`nitc` is the current official Nit compiler.
+`nitg` is the current official Nit compiler.
 It takes the main module of a Nit program as argument and produce an executable file.
 
 usage:
 
-    nitc [options] file...
+    nitg [options] file...
 
 Important options:
 
@@ -17,10 +17,9 @@ Important options:
     --only-metamodel                Stop after meta-model processing
     --global                        Use global compilation
     -o, --output                    Output file
-    -O, --boost                     Optimize compilation
     --no-cc                         Do not invoke C compiler
 
-Internally, nitc rely on the presence of a C compiler. Usually [[gcc|http://gcc.gnu.org/]] (but nitc was successfully tested with [[clang|http://clang.llvm.org/]] and [[icc|http://software.intel.com/en-us/articles/intel-compilers/]]).
+Internally, nitg rely on the presence of a C compiler. Usually [[gcc|http://gcc.gnu.org/]] (but nitg was successfully tested with [[clang|http://clang.llvm.org/]] and [[icc|http://software.intel.com/en-us/articles/intel-compilers/]]).
 
 
 
@@ -37,7 +36,6 @@ usage:
 important options:
 
     --public                 Generate only the public API
-    --private                Generate the private API
     -d, --dir                Directory where doc is generated
     --source                 What link for source (%f for filename, %l for first line, %L for last line)
     --custom-title           Title displayed in the top of the Overview page and as suffix of all page names
@@ -49,20 +47,12 @@ important options:
 Internally, nitdoc rely on the presence of the `dot' command from the [[graphviz|http://www.graphviz.org]] programs. (if the dot program is not present or not found, no image of hierarchies are generated).
 
 The documentation is extracted from the comments found above the definition of modules, classes, and properties.
-Comments are displayed verbatim inside a \<pre> HTML element. Currently there is no recognized format nor specific annotation.
 
-### The stub generator `nits`
-
-`nits` helps the development of hybrid modules used in the native interface of nit. See [[native interface]] for more details.
-
-### The interpreter `nit`
+### The interpreter and debugger `nit`
 
 `nit` is the work-in-progress interpreter.
-Currently it is only functional on a subset of the Nit language.
 
-### The debugger
-
-`nit` is the debugger, based on the interpreter, it is a work in progress bound to the same limitations as the latter.
+`nit` can be used as a debugger, it is a work in progress.
 
 See [[debugger]] for more details
 
@@ -72,13 +62,8 @@ See [[debugger]] for more details
 
 See [[debugger]] for more details
 
-### The global compiler `nitg`
+### The metrics collector `nitmetrics`
 
-`nitg` is a work-in-progress global compiler that uses some hard static compilation techniques.
-Currently it is only functional on a subset of the Nit language.
-
-### The statistics collector `nitstats`
-
-`nitstats` gathers some statistics about a Nit programs or modules.
+`nitmetrics` gathers some statistics about a Nit programs or modules.
 
 It counts various number of entities and generates some graphs (with graphviz)

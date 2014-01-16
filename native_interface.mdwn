@@ -1,5 +1,7 @@
 # Native Interface
 
+''Warning: the native interface is disabled in the current master branch. use the branch `oldnitc` if you need it.''
+
 The Nit native interface allows the creation of modules partially written in Nit and C. In such a module, the Nit code defines or redefines classes (normally) and methods (normal Nit methods or extern methods). The C code can implement an extern method, link to an existing C library, callback to the Nit code. The module is represented by three files on disk (.nit, .nit.h and .nit.c).
 
 To use all the features of the native interface, the C code must import a file generated specifically for the module. This file, _<my\_module.\_nitni.h>_, is usually included in the _.nit.h_ file.
