@@ -19,7 +19,7 @@ The source code of all Nit tools are freely available, see the [[download]] page
 ### General documentation
 
 * The [[NOTICE|http://nitlanguage.org/nit.git/blob/master:/NOTICE]] file that states authorship and licences.
-* The [[documentation|http://nitlanguage.org/doc/newmodel/]] of the source-code (generated with nitdoc).
+* The [[documentation|http://nitlanguage.org/doc/nitc/]] of the source-code (generated with nitdoc).
 * The main [[README|http://nitlanguage.org/nit.git/blob/master:/README]] of the source-code.
 
 ### How-to and specific documentation
