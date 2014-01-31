@@ -10,7 +10,7 @@ If you wish to get involved in the project or use Nit as a framework for researc
 
 ## Test
 
-Try to use Nit and [[report problems|bugs]] with the language, the libraries or the tools.
+Try to use Nit and [[report problems|https://github.com/privat/nit/issues]] with the language, the libraries or the tools.
 
 ## Code
 
