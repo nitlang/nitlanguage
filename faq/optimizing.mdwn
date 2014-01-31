@@ -1,7 +1,6 @@
 # Executables are really big and really slow!
 
-Use the `-O` option to produce more efficient code.
-For better result, use `--global` to activate aggressive global optimizations.
+Nit tools are still in heavy developement, most well known optimisation technics are not yet implemented.
 
 If size matters, you can also [[strip|http://linux.die.net/man/1/strip]] the executable.
 
