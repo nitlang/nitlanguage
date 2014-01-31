@@ -1,9 +1,1 @@
-If you've found a bug in Nit, post about it here. [[TODO]] items go
-elsewhere. Link items to [[bugs/done]] when done.
-
-There are [[!pagecount pages="bugs/* and !bugs/done and !bugs/discussion and 
-!link(patch) and !link(bugs/done) and !bugs/*/*"]] "open" bugs:
-
-[[!inline pages="bugs/* and !bugs/done and !bugs/discussion and 
-!link(patch) and !link(bugs/done) and !bugs/*/*"
-actions=yes rootpage="bugs" postformtext="Add a new bug titled:" show=0]]
+We moved to [[github issues|https://github.com/privat/nit/issues]] to manage bugs.
