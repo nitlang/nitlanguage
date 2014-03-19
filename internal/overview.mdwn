@@ -1,11 +1,11 @@
 # Nit compiler overview
 
-NOTE: This overview is not finished and focuses on the new-model engine and tools.
+NOTE: This overview is not finished and focuses on the current engine and tools.
 
 
 ## The parser and the AST
 
-The parser lives in `src/parser` and is used by all tools (new and old model).
+The parser lives in `src/parser` and is used by all tools.
 
 Class of nodes of the AST starts with the letter `A` (for most things, eg. `AClassdef`) or `T` (for token eg. `TId`), there is no real reason except historical that might be solved with a new parser.
 
@@ -15,9 +15,9 @@ The AST represents *What the programmer says*.
 
 ## The model
 
-The model lives in `src/model` and is used only by the new tools.
+The model lives in `src/model` and is used by tools that need a higher view than a AST.
 
-because of the specification of the Nit language, the model is very complex and sometime difficult to understand. But the new model is far more simpler (and robust and correct than the old one).
+Because of the specification of the Nit language, the model is very complex and sometime difficult to understand. But the curremy model is far more simpler (and robust and correct than the old ones).
 
 The model represents *What the programmer means*.
 
@@ -28,7 +28,7 @@ Most of there relations are based on posets.
 
 posets are *partially-ordered sets*; they are used to modelize hierarchies of things (eg. hierarchies of modules)
 
-the poset is an expressive structure that generalize most services about hierarchies. This avoid the duplication of code and.
+the poset is an expressive data structure that generalizes most services about hierarchies. This avoid the duplication of code and the over-specialisation of services.
 The drawback is that a specific request on the model use an abstract vocabulary.
 
 Example. you want the set of modules directly imported by another module.
@@ -43,7 +43,7 @@ posets are used in two dual ways :
 
 ### Classes
 
-Because of refinement, classes (`MClass`) contains nothing by themselves.
+Because of refinement, classes (`MClass`) contain almost nothing by themselves.
 As classes can be refined in modules, most services of the model require the precision of a module.
 
 None can asks what are the super-classes of a class nor what are properties of a class without precising what is the module considered.
@@ -58,9 +58,9 @@ Since classes are orthogonal to modules, how can we resonates about classes in a
 
 Class definitions (`MClassDef`) are concrete piece of class that belong to a specific class, to a specific module and contains declarations like super-classes or properties.
 
-Its the class definitions that are the backbone of most of things in the model.
+It is the class definitions that are the backbone of most things in the model.
 
-Classdefs are defined with regard with other classdefs.
+ClassDefs are defined with regard with other classdefs.
 Refinement and specialization are combined to produce a big poset called the `mclassdef_hierarchy`.
 
-Moreover, the extensions and the intention of types is defined by looking at the MClassDefs. (see section Types)
+Moreover, the extension and the intention of types is defined by looking at the MClassDefs. (see section Types)
