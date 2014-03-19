@@ -2,6 +2,12 @@
 
 A jenkins instance is running on [[http://gresil.org/jenkins]].
 
+It is mainly used for 3 things.
+
+* Automatic tests for feature development and proposal of code. Especially trough the integration with github to validate pull requests.
+* Big integration tests run on the merge of new code in the master branch.
+* Deployment of artefacts (eg. nitdoc) when the master branch is updated.
+
 Interesting things are :
 
 * [[Results of the regression tests|http://gresil.org/jenkins/job/nit%20tests/lastCompletedBuild/testReport/]]
