@@ -1,0 +1,14 @@
+# Repositry of Android application
+
+Android users can install the [[http://fdroid.org]] client and add the official Nit-Droid repository and benefit bleeding-edge state of the art.
+
+In the F-Droid client:
+
+1. Manage repository (in the menu)
+2. Add a repository (plus icon)
+3. Enter the address [[http://nitlanguage.org/fdroid]]  
+4. Update (update icon)
+
+The source code of the applications in the F-Droid repository is available in the [[`examples` directory|http://nitlanguage.org/nit.git/tree/HEAD:/examples]].
+
+These applications are compiled by the Nit tools.
