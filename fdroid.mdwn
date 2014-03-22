@@ -9,6 +9,8 @@ In the F-Droid client:
 3. Enter the address [[http://nitlanguage.org/fdroid]]  
 4. Update (update icon)
 
+Note: A new F-Droid category `Nit` contains all the applications.
+
 The source code of the applications in the F-Droid repository is available in the [[`examples` directory|http://nitlanguage.org/nit.git/tree/HEAD:/examples]].
 
 These applications are compiled by the Nit tools.
