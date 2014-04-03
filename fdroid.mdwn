@@ -14,3 +14,5 @@ Note: A new F-Droid category `Nit` contains all the applications.
 The source code of the applications in the F-Droid repository is available in the [[`examples` directory|http://nitlanguage.org/nit.git/tree/HEAD:/examples]].
 
 These applications are compiled by the Nit tools.
+
+Note : if for some reason the fdroid client is not funtionnal, there is the raw [list of downloadable `.apk` files](list.html).
