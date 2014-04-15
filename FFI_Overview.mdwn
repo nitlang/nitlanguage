@@ -1,0 +1,13 @@
+# Supported foreign languages
+
+The Nit language currently support 3 foreign languages: C, C++ and Java. 
+
+|                    | [[C|FFI_with_C]] | C++  | Java |
+|-------------------:|:---:|:----:|:----:|
+| Extern method      | x   | x    | x    |
+| Callback to method | x   | x    | x    |
+| Callback to super  | x   | x    |      |
+| Casts, etc.        | x   | x    |      |
+| Static types       | x   | x    |      |
+
+Table 1: Supported features in each FFI
