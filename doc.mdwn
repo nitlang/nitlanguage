@@ -22,11 +22,13 @@ A Debugger is being developed and can be used with the Interpreter (nit.nit). Se
 
 The <a href="stdlib">standard library</a> references built-ins and standard classes.
 
-### Native interface and FFI
- 
-The page [[Foreign Function Interface|FFI_with_C]] describes the latest interface between Nit and C. It allows to implement Nit methods directly in C code, and more.
+### Foreign Function Interfaces (FFI)
 
-Developing Nit [[wrappers for existing C libraries|wrapping C libraries]] to access their features through normal Nit modules.
+The page [[FFI Overview]] summerize the foreign languages supported by Nit and their implemented features.
+ 
+The page [[FFI with C]] describes the latest interface between Nit and C. Which allows to implement Nit methods directly in C code, and more.
+
+A guide to develop Nit [[wrappers for existing C libraries|wrapping C libraries]] to access their features through normal Nit modules.
 
 ## For Contributors
 
