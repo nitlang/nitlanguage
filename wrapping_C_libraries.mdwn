@@ -2,7 +2,7 @@ TODO common use cases
 
 # FFI
 
-Wrapping a C library relies mostly on the Nit FFI and for this reason understand this page requires a basic knowledge of the FFI. You can refer to [[the manual of the FFI|FFI]] to learn the features and terminology of the Nit FFI.
+Wrapping a C library relies mostly on the Nit FFI and for this reason understand this page requires a basic knowledge of the FFI. You can refer to [[the manual of the FFI|FFI_with_C]] to learn the features and terminology of the Nit FFI.
 
 # Wrapping C Functions
 
