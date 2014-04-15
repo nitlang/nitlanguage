@@ -1,4 +1,4 @@
-# FFI
+# FFI with C
 
 ''Warning: the native interface is disabled in the current master branch. use the branch `oldnitc` if you need it.''
 
