@@ -34,11 +34,27 @@ For easier passage between Nit and C, Nit types that are primitive to C are conv
 * A Nit `Char` is converted to the C `char`.
 * A Nit `Bool` is converted to the C `int__ where 0 is false and everything else is true.
 * A Nit `Int` is converted to the C `long`.
+* A Nit `Pointer` is converted to `void *`.
 * A Nit `NativeString` is converted to the C `char*`. Instances of `String` must be converted to a `NativeString` using the method `String::to_cstring`.
 
-# Nit types and callbacks
+# Nit types in C
 
-All Nit types that are not primitive to C are represented by an opaque C type. This C type is generated for each module with a name specific to the represented Nit type. Usually the C type will have the same name as its Nit equivalent, with the exception of nullable types (in which the type name is prefixed with _nullable\__) and generic types (not yet fully implemented). C structures of this type can be used to call Nit methods from C code.
+All Nit types that are not primitive to C are represented by an opaque C type. _The opaque C type is generated when needed with a name corresponding to the Nit type_. Usually the C type will have the same name as its Nit equivalent, with the exception of nullable types (in which the type name is prefixed with _nullable\__) and generic types (see examples below).
+
+| Nit type    | C type | Note |
+|:------------|:-------|:------------|
+| `Object`    | `Object` | A generated opaque type |
+| `String`    | `String` | A generated opaque type (`NativeString` is more practical in C) |
+| `Int`       | `long`  | The normal primitive type in C |
+| `NativeString` | `char *` | The normal C string |
+| `nullable Object` | `nullable_Object` | Using casts (discussed later on this page) it can be cast to `Object` |
+| `Array[String]` | `Array_of_String` | There is a `_of_` between the class name and it's parameter. |
+| `Map[Int, String]` | `Map_of_Int_String` | The parameters are separated only with a `_` |
+| `nullable Array[String]` | `nullable_Array_of_String` | These can get quite long, but they are precise! |
+
+  : Example of equivalent types between Nit and C
+
+# Callbacks to Nit from C
 
 First of all, callbacks from the C code must be declared after the signature of the Nit method. This allows the compiler to further optimize your program and statically check for errors in your C code. In the C implementation, these methods can be called using the class name and method name seperated by an underscore:
 
