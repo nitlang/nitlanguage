@@ -130,17 +130,38 @@ When using a shared C library you will have to specify more options for the comp
 
 For advanced use of the FFI, you'll often need to pass custom options to the C compiler. The most common are probably: `-l` to link with a shared library and `-I` to specify where to find C header files. 
 
-The Nit FFI offers annotation to use on the modules nesting C code.
+The Nit FFI offers 3 annotations to use on the modules nesting C code: `c_compiler_options`, `c_linker_options` and `pkgconfig`.
 
 ### pkgconfig
 
+The program `pkg-config` knows what options are needed to compile a specific with popular C libraries. The annotation `pkgconfig` call the program in the background to get the options.
+
+Usage examples:
+
+    module glesv2 is pkgconfig # Will use the options for the name module `pkg-config glesv2`
+
+    module gtk3_4 pkgconfig("gtk+-3.0")
+
 ### c_compiler_options
 
-c_compiler_options("-I", "/usr/include/SDL")
+When you need specialized options or a library unsupported by pkg-config, you can use the annotations `c_compiler_options` and `c_linker_options`. They pass options directly the compiler and linker.
+
+You can use a special function call to `exec` which will use the result of a local program.
+
+Usage examples:
+
+     # specify the options manually
+     module sdl is c_compiler_options("-I", "/usr/include/SDL")
+
+     # Use exec instead
+     module sdl is c_compiler_option(exec("sdl-config", "--cflags"))
+
 
 ### c_linker_options
 
-c_linker_options("-l", "SDL")
+
+     c_linker_options("-l", "SDL")
+     c_linker_option(exec("sdl-config", "--libs"), "-lSDL_image -lSDL_ttf")
 
 # Example using the FFI
 
