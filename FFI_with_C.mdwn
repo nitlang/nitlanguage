@@ -120,25 +120,30 @@ For example, before saving an instance of the class A in a global variable, you 
 
 # Compiling and linking
 
-Compiling a Nit program using the most basic functionality of the FFI is simple:
+Compiling a Nit program using the basic FFI is straight forward:
 
     nitc my_module.nit
 
-However, to link with an external library you can use more options. Let's say the C code of your module uses the SDL graphic library, you must specify the library name for linking and you can specify where to fing the header files:
+When using a shared C library you will have to specify more options for the compiler. 
 
-    nitc my_module.nit --cc-lib-name SDL --cc-header-path /usr/include/SDL
+## Passing options to the C compiler
 
-# .nit.args files
+For advanced use of the FFI, you'll often need to pass custom options to the C compiler. The most common are probably: `-l` to link with a shared library and `-I` to specify where to find C header files. 
 
-The compilation options passed to nitc can be directly associated with the module with .nit.args files. 
+The Nit FFI offers annotation to use on the modules nesting C code.
 
-To continue with the previous example, the module my\_module needs to be linked with the SDL library. The needed compilation options can be declared in the my\_module.nit.args file as so:
+### pkgconfig
 
-    --cc-lib-name SDL --cc-header-path /usr/include/SDL
+### c_compiler_options
 
-The options specified in this file will be used to compile all Nit program importing the module my\_module. Only options related to C compilation are supported by .nit.args files as of now.
+c_compiler_options("-I", "/usr/include/SDL")
 
-# Example
+### c_linker_options
+
+c_linker_options("-l", "SDL")
+
+# Example using the FFI
+
 The example extern_methods.nit illustrates a normal use of the Nit FFI.
 
 * [[examples/extern_methods.nit|http://nitlanguage.org/nit.git/blob/HEAD:/examples/extern_methods.nit]] (not yet updated)
