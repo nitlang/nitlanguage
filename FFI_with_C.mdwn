@@ -41,6 +41,10 @@ For easier passage between Nit and C, Nit types that are primitive to C are conv
 
 All Nit types that are not primitive to C are represented by an opaque C type. _The opaque C type is generated when needed with a name corresponding to the Nit type_. Usually the C type will have the same name as its Nit equivalent, with the exception of nullable types (in which the type name is prefixed with _nullable\__) and generic types (see examples below).
 
+     
+## Example of equivalent types between Nit and C
+
+
 | Nit type    | C type | Note |
 |:------------|:-------|:------------|
 | `Object`    | `Object` | A generated opaque type |
@@ -51,8 +55,6 @@ All Nit types that are not primitive to C are represented by an opaque C type. _
 | `Array[String]` | `Array_of_String` | There is a `_of_` between the class name and it's parameter. |
 | `Map[Int, String]` | `Map_of_Int_String` | The parameters are separated only with a `_` |
 | `nullable Array[String]` | `nullable_Array_of_String` | These can get quite long, but they are precise! |
-
-  : Example of equivalent types between Nit and C
 
 # Callbacks to Nit from C
 
