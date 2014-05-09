@@ -34,6 +34,16 @@ Now take a look at the `Makefile`, the android rule is pretty straight forward. 
 
 # Libraries compatible with Android
 
+## Classic Nit libraries
+
+We'll devide the Nit libraries in 3 categories:
+ 
+* All Nit libraries implemented in pure Nit, can be used on Android. This includes most of the standard library, `json`, `serialization`, `a_star`, `pipeline`, `poset`, `template` and `trees`.
+
+* Libraries wrapping external C libraries will work on Android only if they are available in the NDK. As of now, the Nit libraries `glesv2`, `egl` and `jvm` are available. To see what extra libraries are available on Android and could be wrapped, take a look at the available C header in `path_to_your_ndk/platforms/android-{version}/arch-arm/usr/lib/`.
+
+* Other libraries wrapping C libraries that are not available in the Android NDK will not work on Android. This includes `curl`, `gtk`, `curses`, etc. If needed, some of them can be ported to Android. As of now, only libpng is included in the generated projects. It is only used by `mnit_android` and is not directly available as a module.
+
 ## Android specific services in Nit
 
 The Nit library offers a few (but growing) number of libraries for the Android platform.
