@@ -142,26 +142,25 @@ Usage examples:
 
     module gtk3_4 pkgconfig("gtk+-3.0")
 
-### c_compiler_options
+### c_compiler_options and c_linker_options
 
 When you need specialized options or a library unsupported by pkg-config, you can use the annotations `c_compiler_options` and `c_linker_options`. They pass options directly the compiler and linker.
 
-You can use a special function call to `exec` which will use the result of a local program.
+They can be used with a special function call to `exec` which will use the result of a local program instead of a string.
 
-Usage examples:
+Basic usage example:
 
-     # specify the options manually
-     module sdl is c_compiler_options("-I", "/usr/include/SDL")
+    module sdl is
+        c_compiler_options("-I", "/usr/include/SDL")
+        c_linker_options("-l", "SDL")
+    end
 
-     # Use exec instead
-     module sdl is c_compiler_option(exec("sdl-config", "--cflags"))
+Same example with calls to `exec`, where we use the external program `sdl-config`:
 
-
-### c_linker_options
-
-
-     c_linker_options("-l", "SDL")
-     c_linker_option(exec("sdl-config", "--libs"), "-lSDL_image -lSDL_ttf")
+    module sdl is
+        c_compiler_option(exec("sdl-config", "--cflags"))
+        c_linker_option(exec("sdl-config", "--libs"), "-lSDL_image -lSDL_ttf")
+    end
 
 # Example using the FFI
 
