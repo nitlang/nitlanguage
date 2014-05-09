@@ -1,0 +1,27 @@
+You may notice that the FFI with Java is very similar to the [[FFI with C]]. This page highlights the difference and avoids repeating the information present in the documentation of the [[FFI with C]]. For this reason, it is strongly recommanded that you read [[FFI with C]] before this page.
+
+# Extern methods implemented in Java
+
+TODO
+
+# Extern classes in Java
+
+TODO
+
+# Nit objects in Java
+
+TODO
+
+# Java objects in Nit
+
+TODO
+
+# Common use cases
+
+## Sub-class a Java class
+
+TODO
+
+## Java threads
+
+TODO
