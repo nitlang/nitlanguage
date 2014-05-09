@@ -58,6 +58,6 @@ TODO add vibration when integrated
 
 # Frequently Asked Questions and Common Problems
 
-### On installing the application on some devices I get "application package has an incorrect certificate"
+### On installing the application on some devices I get "Package file was not signed correctly"
 
-Usually this error is caused by the version of jarsigner used by the developer. You must use the one from JDK 6, and not 7.
+Usually this error is caused by an incorrect version of jarsigner used by the developer. You must use the one from JDK 6, not 7.
