@@ -49,9 +49,8 @@ All Nit types that are not primitive to C are represented by an opaque C type. _
      
 ## Some equivalent types between Nit and C
 
-| Nit type    | C type | Note |
+| Nit type    | C type | Notes |
 |:------------|:-------|:------------|
-| ... | ... | ... |
 | `Object`    | `Object` | A generated opaque type |
 | `String`    | `String` | A generated opaque type (`NativeString` is more practical in C) |
 | `nullable Object` | `nullable_Object` | Using casts (discussed later on this page) it can be cast to `Object` |
@@ -89,23 +88,33 @@ It is also possible to callback the Nit language for more than methods:
 
 # Extern classes
 
-An extern Nit class is associated ta an equivalent C type. An instance of this class can then be used like other primitives types to C and will have an equivalent representation in both languages.
+A Nit extern class is a special kind of class that are associated to a custom C type. An instance of this class can then be used like other primitives when passed to C where its equivalent type will be used.
 
-An extern class is declared in Nit by replacing the _class_ keyword with _extern_. The C type equivalent is defined in C rigth after the class name.
+An extern class is declared in Nit using the `extern` keyword before `class`. The C type equivalent is defined in C rigth after the class name.
 
-    extern A `{ my_struct* `}
+    # A Nit extern class associated to the C type `my_struct *`
+    extern class MyStruct `{ my_struct* `}
+        # ...
     end
 
-The equivalent C type _must_ be a pointer and the Nit class can only be sublass to other extern classes or interfaces.
+The single value of an instance of an extern class is its value in C, which means that it has no attributes. An extern Nit classes still can have methods (normal and extern) and constructors (but only extern constructors, presented shortly).
 
-The single value of an instance of an extern class is its value in C, because of that it cannot have any attributes. An extern Nit classes still can have methods (normal and extern) but only extern constructors.
+In total, extern classes impose 3 restrictions:
 
-Extern constructors are declared similarly to extern methods, for example:
+* The extern class cannot define attributes.
+* The equivalent C type _must_ be a pointer (it is actually a subclass of `Pointer`)
+* The extern class can only subclass other extern classes and interfaces.
 
-    extern A `{ my_struct* `}
+Instances of extern classes can originate from the C code, or from an extern constructors. Extern constructors are declared using the _new_ keyword and are implemented similarly to extern methods. They must return a value in the equivalent C type.
+
+    extern class MyStruct `{ my_struct* `}
+
+        # Extern anonymous constructor doing a simple malloc
         new `{
             return malloc( sizeof( my_struct) );
         `}
+
+        # Named extern constructor a bit more complexe
         new named `{
             A a = malloc( sizeof( my_struct) );
             a->naming = 1;
@@ -113,11 +122,19 @@ Extern constructors are declared similarly to extern methods, for example:
         `}
     end
 
-You _must_ free any resources you allocated in C code, the Nit system do not manage these.
+You _must_ free any resources you allocate in C code, the Nit system do not manage these.
+
+## Examples of extern classes types in Nit and C
+
+| Nit type     | C type        | Notes |
+|:-------------|:--------------|:------------|
+| `MyStruct`   | `my_struct *` | As declared by the user (in the example above) |
+| `NativeFile` | `FILE *` | A handle to a file, from the standard library |
+| `FileStat`   | `struct stat *` | Informations on a file, from the  standard library |
 
 # Global C references
 
-Nit objects passed as argument to a C implementation function are guaranteed to be valid until the function return. So it is for Nit objects returned from callbacks to Nit code. However, if you need to keep a Nit object between functions, in a global C variable, you have to notify the native interface for it to stay valid.
+Nit objects passed as argument to a C implementation function are guaranteed to be valid until the function return. So it is for Nit objects returned from callbacks to Nit code. However, if you need to keep a Nit object between functions, in a global C variable, you have to notify the native interface for it to sta valid.
 
 For example, before saving an instance of the class A in a global variable, you must call `A_incr_ref( A )` on the instance. From then on, the Nit system will update this reference at each garbage collection so it stays valid, even after the current extern method returns. To free such a reference, call `A_derc_ref( A )`.
 
