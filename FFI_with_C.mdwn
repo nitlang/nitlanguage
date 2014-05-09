@@ -31,26 +31,29 @@ The Nit types considered as primitive to C are converted in the C signature (as 
 
 For easier passage between Nit and C, Nit types that are primitive to C are converted automatically. This conversion works both ways.
 
-* A Nit `Char` is converted to the C `char`.
-* A Nit `Bool` is converted to the C `int__ where 0 is false and everything else is true.
-* A Nit `Int` is converted to the C `long`.
-* A Nit `Pointer` is converted to `void *`.
-* A Nit `NativeString` is converted to the C `char*`. Instances of `String` must be converted to a `NativeString` using the method `String::to_cstring`.
+## Primitive types between Nit and C
+
+| Nit type    | C type | Notes |
+|:------------|:-------|:------------|
+| `Int`       | `long`   | The normal primitive type in C |
+| `Bool`      | `int`    | Where 0 is false and everything else true |
+| `Float`     | `double` |  |
+| `Char`      | `char`   |  |
+| `NativeString` | `char *` | The standard C string |
+| `Pointer`   | `void *`    | A general pointer |
 
 # Nit types in C
 
 All Nit types that are not primitive to C are represented by an opaque C type. _The opaque C type is generated when needed with a name corresponding to the Nit type_. Usually the C type will have the same name as its Nit equivalent, with the exception of nullable types (in which the type name is prefixed with _nullable\__) and generic types (see examples below).
 
      
-## Example of equivalent types between Nit and C
-
+## Some equivalent types between Nit and C
 
 | Nit type    | C type | Note |
 |:------------|:-------|:------------|
+| ... | ... | ... |
 | `Object`    | `Object` | A generated opaque type |
 | `String`    | `String` | A generated opaque type (`NativeString` is more practical in C) |
-| `Int`       | `long`  | The normal primitive type in C |
-| `NativeString` | `char *` | The normal C string |
 | `nullable Object` | `nullable_Object` | Using casts (discussed later on this page) it can be cast to `Object` |
 | `Array[String]` | `Array_of_String` | There is a `_of_` between the class name and it's parameter. |
 | `Map[Int, String]` | `Map_of_Int_String` | The parameters are separated only with a `_` |
