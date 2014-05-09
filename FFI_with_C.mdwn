@@ -160,7 +160,7 @@ Usage examples:
 
     module glesv2 is pkgconfig # Will use the options for the name module `pkg-config glesv2`
 
-    module gtk3_4 pkgconfig("gtk+-3.0")
+    module gtk3_4 is pkgconfig("gtk+-3.0")
 
 ### c_compiler_options and c_linker_options
 
