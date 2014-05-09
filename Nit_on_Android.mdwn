@@ -1,0 +1,29 @@
+Since `mnit` and its Android variant, `mnit_android`, has been added to the language library, Nit support compiling to the Android platform.
+
+# So you want a software product line?
+
+A software product line is a set of applications sharing a commom subset of features (or code when in development). We rely on this idea to create cross-platform applications in Nit with `mnit`. In the case where you target a specific platform (forever), you don't have to bother with it, write a single application and skip this section.
+
+We begin by illustrating an usage of software product line using the  example of the Dino project. It is found in the Nit repository under examples/mnit_dino/.
+
+The Dino project has 5 modules shared across all platforms:
+
+* The higher level modules is `game_logic`, it is completely independent of any platform, graphic framework and application framework. It can be used to test the full logic using command line applications.
+
+* `graphism`, `splash` and `fancy_dino` use class refinement to introduce new services based on the graphic framework of `mnit`. Separating buisness logic from the GUI is a good practice in any software. Class refinement just makes it easier and cleaner.
+
+* `dino` describes the application logic by implementing an `App` from the `mnit` application framework. With its importations, it unites all of the code shared between platforms. By itself, it cannot be compiled to a working application.
+
+As products, the Dino project defines 2 main modules for the actual working applications:
+
+* `dino_linux` is the Linux version of the game. Besides the shared code, it imports only `mnit_linux`.
+
+* `dino_android` is the Android version of the game. It imports `mnit_android` and defines behaviors specific to the Android platform. Most notably, the vibration from `mnit_android::vibration`.
+
+All these 7 modules implement 2 products/applications. Plus, you could test the game logic using only `game_logic`.
+
+# FAQ
+
+## On installing the application on some devices I get "application package has an incorrect certificate"
+
+Usually this error is caused by the version of jarsigner used by the developer. You must use the one from JDK 6, and not 7.
