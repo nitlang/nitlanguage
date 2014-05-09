@@ -32,8 +32,8 @@ To compile `Dino`, run `make android` in the root of the project. It will genera
 
 Now take a look at the `Makefile`, the android rule is pretty straight forward. The Nit compiler detects the target plaform from the imported modules. Including the `mnit_android` modules also import `android`. The last one triggers the compilation to an APK instead of an executable.
 
-# FAQ
+# Frequently Asked Questions and Common Problems
 
-## On installing the application on some devices I get "application package has an incorrect certificate"
+### On installing the application on some devices I get "application package has an incorrect certificate"
 
 Usually this error is caused by the version of jarsigner used by the developer. You must use the one from JDK 6, and not 7.
