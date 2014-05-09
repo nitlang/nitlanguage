@@ -60,21 +60,32 @@ All Nit types that are not primitive to C are represented by an opaque C type. _
 
 # Callbacks to Nit from C
 
-First of all, callbacks from the C code must be declared after the signature of the Nit method. This allows the compiler to further optimize your program and statically check for errors in your C code. In the C implementation, these methods can be called using the class name and method name seperated by an underscore:
+As seen previously, to invoke C code from Nit code, you must use extern methods. But when calling Nit code from C, you must use the callback system of the Nit FFI.
+
+Any callbacks from C to Nit must be declared after the signature of the extern method. In fact, they must be declared on the last Nit extern method on the stack. With this information, the compiler will generate a custom C function implementing the callback and will make it available to the C code implementing the last Nit extern method.
+
+The generated functions are named using the receiver type and the method name.
 
     class A
-        var attr = 1234
-        fun baz( msg : String ) import String::length, String::to_cstring `{
+        var my_attr = 1234
+        
+        fun baz( msg : String ) import String.length, String.to_cstring, my_attr, my_attr= `{
             char *c_msg;
             int msg_len;
 
-            c_msg = String_to_cstring( msg ); /* msg::to_cstring */ 
-            msg_len = String_length( msg ); /* msg::length */
+            /* String_to_cstring isa a allback to msg.to_cstring */ 
+            c_msg = String_to_cstring( msg );
+
+            /* String_length is a callback to msg.length */
+            msg_len = String_length( msg );
         
             printf( "received msg: %s, of length = %d\n", c_msg, msg_len );
 
-            printf( "old attr %d\n", A_attr(recv) ); /* get A::attr */
-            A_attr__assign( recv, msg_len ); /* set A::attr */
+            /* A_my_attr is a callback to the getter of self.my_attr */
+            printf( "old attr %d\n", A_my_attr(recv) );
+            
+            /* A_my_attr is a callback to the setter of self.my_attr= */
+            A_my_attr__assign( recv, msg_len );
         `}
     end
 
