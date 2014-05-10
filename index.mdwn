@@ -44,7 +44,7 @@ Get Nit from its Git repository:
 
 Ensure that dependencies (and recommendations) are installed:
 
-    $ sudo apt-get install build-essential ccache libgc-dev graphviz libunwind7-dev gperf
+    $ sudo apt-get install build-essential ccache libgc-dev graphviz libunwind7-dev
 
 Build the compiler (may be long):
 
