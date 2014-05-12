@@ -36,7 +36,7 @@ Now take a look at the `Makefile`, the android rule is pretty straight forward. 
 
 ## Classic Nit libraries
 
-We'll devide the Nit libraries in 3 categories:
+We'll divide the Nit libraries in 3 categories:
  
 * All Nit libraries implemented in pure Nit, can be used on Android. This includes most of the standard library, `json`, `serialization`, `a_star`, `pipeline`, `poset`, `template` and `trees`.
 
