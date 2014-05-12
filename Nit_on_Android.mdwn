@@ -10,7 +10,7 @@ The Dino project has 5 modules shared across all platforms:
 
 * The higher level modules is `game_logic`, it is completely independent of any platform, graphic framework and application framework. It can be used to test the full logic using command line applications.
 
-* `graphism`, `splash` and `fancy_dino` use class refinement to introduce new services based on the graphic framework of `mnit`. Separating buisness logic from the GUI is a good practice in any software. Class refinement just makes it easier and cleaner.
+* `graphism`, `splash` and `fancy_dino` use class refinement to introduce new services based on the graphic framework of `mnit`. Separating business logic from the GUI is a good practice in any software. Class refinement just makes it easier and cleaner.
 
 * `dino` describes the application logic by implementing an `App` from the `mnit` application framework. With its importations, it unites all of the code shared between platforms. By itself, it cannot be compiled to a working application.
 
