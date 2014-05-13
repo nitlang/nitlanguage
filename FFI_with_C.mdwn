@@ -155,7 +155,7 @@ An extern class is declared in Nit using the `extern` keyword before `class`. Th
 
     # A Nit extern class associated to the C type `my_struct *`
     extern class MyStruct `{ my_struct* `}
-        # ...
+        ...
     end
 
 The single value of an instance of an extern class is its value in C, which means that it has no attributes. An extern Nit classes still can have methods (normal and extern) and constructors (but only extern constructors, presented shortly).
@@ -178,7 +178,7 @@ Instances of extern classes can originate from the C code, or from an extern con
         # Named extern constructor a bit more complexe
         new named `{
             A a = malloc( sizeof( my_struct) );
-            a->naming = 1;
+            (*a).age = 21; // this wiki do not support the standard arrow
             return a;
         `}
     end
