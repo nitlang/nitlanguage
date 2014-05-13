@@ -139,9 +139,10 @@ We will use examples in order to familiarize you to the structure generated call
 | `attr_int=` | `void MyClass_attr_int__assign(MyClass, long)` | Setter of attribute `attr_int` |
 | `MyClass` | `MyClass new_MyClass()` | A call to the anonymous constructor |
 | `MyClass.default` | `MyClass new_MyClass_default()` | A call to the constructor `default` |
-| `NativeString.to_s` | `String NativeString_to_s(char*)` |  |
+| `NativeString.to_s` | `String NativeString_to_s(char*)` | Converts the primitive type `char*` to the Nit class `String` |
+| `String.to_cstring` | `char* String_to_cstring(String)` | Converts the primitive type `char*` to the Nit class `String` |
 | `Int.+` | `long Int__plus(long, long)` | Operators such as `+` use a literal name prefixed by `_` |
-| `Array[String].add` | `void Array_of_String_add(Array_of_String, String` | |
+| `Array[String].add` | `void Array_of_String_add(Array_of_String, String` | Add to a generic array bounded by String |
 | `Array[String].[]` | `String Array_of_String__index(Array_of_String, long)` | Get from an array. |
 | `Array[String].[]=` | `void Array_of_String__index_assign(Array_of_String, long, String)` | Insert into an array. |
 | `HashMap[String, Array[String]].[]` | `Array_of_String HashMap_of_String_Array_of_String__index (HashMap_of_String_Array_of_String, String)` | When the types are too complex like this one, you are better of to write the complex code in Nit. |
