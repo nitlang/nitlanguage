@@ -22,7 +22,7 @@ Nit's goal is to be usable by real programmers for real projects
 
 ## Robustness
 
-Nit will help you to write bug-free programms
+Nit will help you to write bug-free programs
 
 * Strong static typing
 * No more NullPointerException
