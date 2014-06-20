@@ -29,3 +29,10 @@ Install mode package required by libs and pass the tests
 ~~~
 $ sudo port install curl libsdl2 libsdl2_image ncurses pkgconfig 
 ~~~
+
+Run the tests (for fun)
+
+~~~
+$ cd tests
+$ ./testfull.sh
+~~~
