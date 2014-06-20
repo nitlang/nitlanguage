@@ -1,0 +1,23 @@
+# Nit on Mac
+
+Install `xcode` from the [[app store|https://itunes.apple.com/ca/app/xcode/id497799835?mt=12]]
+
+Install `macport` from [[https://distfiles.macports.org/MacPorts/]]
+
+Hack: make `port` usable by the tools
+
+~~~
+$ sudo ln -s /opt/local /usr/
+~~~
+
+Install packages required to compile Nit and its tools
+
+~~~
+$ sudo port install ccache graphviz libunwind-headers
+~~~
+
+Install mode package required by libs and pass the tests
+
+~~~
+$ sudo port install curl libsdl2 libsdl2_image ncurses pkgconfig 
+~~~
