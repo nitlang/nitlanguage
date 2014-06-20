@@ -13,7 +13,15 @@ $ sudo ln -s /opt/local /usr/
 Install packages required to compile Nit and its tools
 
 ~~~
-$ sudo port install ccache graphviz libunwind-headers
+$ sudo port install boehmgc ccache graphviz libunwind-headers
+~~~
+
+Install and compile Nit
+
+~~~
+$ git clone clone http://nitlanguage.org/nit.git
+$ cd nit
+$ make
 ~~~
 
 Install mode package required by libs and pass the tests
