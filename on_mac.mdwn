@@ -19,7 +19,7 @@ $ sudo port install boehmgc ccache graphviz libunwind-headers
 Install and compile Nit
 
 ~~~
-$ git clone clone http://nitlanguage.org/nit.git
+$ git clone http://nitlanguage.org/nit.git
 $ cd nit
 $ make
 ~~~
