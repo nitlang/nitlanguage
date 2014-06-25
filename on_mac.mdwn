@@ -24,7 +24,7 @@ $ cd nit
 $ make
 ~~~
 
-Install mode package required by libs and pass the tests
+Install more package required by libs and to pass more tests
 
 ~~~
 $ sudo port install curl libsdl2 libsdl2_image ncurses pkgconfig 
