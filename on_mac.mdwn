@@ -2,6 +2,8 @@
 
 Install `xcode` from the [[app store|https://itunes.apple.com/ca/app/xcode/id497799835?mt=12]]
 
+## With macport
+
 Install `macport` from [[https://distfiles.macports.org/MacPorts/]]
 
 Hack: make `port` usable by the tools
@@ -35,4 +37,27 @@ Run the tests (for fun)
 ~~~
 $ cd tests
 $ ./testfull.sh
+~~~
+
+## With brew
+
+Install brew
+
+~~~
+$ ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
+$ brew doctor
+~~~
+
+Install packages
+
+~~~
+$ brew install boehmgc ccache graphviz libunwind-headers
+~~~
+
+Install and compile Nit
+
+~~~
+$ git clone http://nitlanguage.org/nit.git
+$ cd nit
+$ make
 ~~~
