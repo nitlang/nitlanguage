@@ -142,7 +142,8 @@ We will use examples in order to familiarize you to the structure generated call
 | `NativeString.to_s` | `String NativeString_to_s(char*)` | Converts the primitive type `char*` to the Nit class `String` |
 | `String.to_cstring` | `char* String_to_cstring(String)` | Converts the primitive type `char*` to the Nit class `String` |
 | `Int.+` | `long Int__plus(long, long)` | Operators such as `+` use a literal name prefixed by `_` |
-| `Array[String].add` | `void Array_of_String_add(Array_of_String, String` | Add to a generic array bounded by String |
+| `Container[Int].item=` | `void Container_of_Int_item__assign(Container_of_Int, long)` | Add to a generic array bounded by String |
+| `Array[String].add` | `void Array_of_String_add(Array_of_String, String)` | Add to a generic array bounded by String |
 | `Array[String].[]` | `String Array_of_String__index(Array_of_String, long)` | Get from an array. |
 | `Array[String].[]=` | `void Array_of_String__index_assign(Array_of_String, long, String)` | Insert into an array. |
 | `HashMap[String, Array[String]].[]` | `Array_of_String HashMap_of_String_Array_of_String__index (HashMap_of_String_Array_of_String, String)` | When the types are too complex like this one, you are better of to write the complex code in Nit. |
