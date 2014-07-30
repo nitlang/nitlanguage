@@ -1,0 +1,11 @@
+# Easy dashboard for developpers
+
+## Alexis
+
+[[!todo user=xymus]]
+
+* [[assigned|https://github.com/privat/nit/pulls?q=is%3Aopen+assignee%3Axymus]]
+* [[need work|https://github.com/privat/nit/issues?q=is%3Aopen+label%3Aneed_work+author%3Axymus]]
+* [[need review|https://github.com/privat/nit/issues?q=is%3Aopen+label%3Aneed_review+-involves%3Axymus+sort%3Aupdated-asc]]
+
+[[templates]]
