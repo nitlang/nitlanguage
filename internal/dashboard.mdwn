@@ -2,7 +2,7 @@
 
 ## Alexandre
 
-[[!template id=todo user=moriar]]
+[[!template id=todo user=morriar]]
 
 ## Alexis
 
