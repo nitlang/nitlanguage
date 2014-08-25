@@ -73,7 +73,7 @@ The generated functions are named using the receiver type and the method name.
             char *c_msg;
             int msg_len;
 
-            /* String_to_cstring isa a allback to msg.to_cstring */ 
+            /* String_to_cstring is a callback to msg.to_cstring */ 
             c_msg = String_to_cstring( msg );
 
             /* String_length is a callback to msg.length */
