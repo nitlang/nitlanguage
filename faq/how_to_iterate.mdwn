@@ -1,7 +1,7 @@
-# How to iterate trough an array (and other things)
+# How to iterate through an array (and other things)
 
 The `for` construction is used to iterate on many structures.
-Thus, the simplest way to iterate trough an `Array` is to use it.
+Thus, the simplest way to iterate through an `Array` is to use it.
 
 ~~~
 var a = [1, 2, 3]
