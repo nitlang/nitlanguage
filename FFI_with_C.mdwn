@@ -233,8 +233,8 @@ They can be used with a special function call to `exec` which will use the resul
 Basic usage example:
 
     module sdl is
-        c_compiler_options("-I", "/usr/include/SDL")
-        c_linker_options("-l", "SDL")
+        c_compiler_option("-I", "/usr/include/SDL")
+        c_linker_option("-l", "SDL")
     end
 
 Same example with calls to `exec`, where we use the external program `sdl-config`:
