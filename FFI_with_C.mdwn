@@ -152,7 +152,7 @@ We will use examples in order to familiarize you to the structure generated call
 
 A Nit extern class is a special kind of class that are associated to a custom C type. An instance of this class can then be used like other primitives when passed to C where its equivalent type will be used.
 
-An extern class is declared in Nit using the `extern` keyword before `class`. The C type equivalent is defined in C rigth after the class name.
+An extern class is declared in Nit using the `extern` keyword before `class`. The C type equivalent is defined in C right after the class name.
 
     # A Nit extern class associated to the C type `my_struct *`
     extern class MyStruct `{ my_struct* `}
@@ -164,7 +164,7 @@ The single value of an instance of an extern class is its value in C, which mean
 In total, extern classes impose 3 restrictions:
 
 * The extern class cannot define attributes.
-* The equivalent C type _must_ be a pointer (it is actually a subclass of `Pointer`)
+* The equivalent C type _must_ be a pointer (it is actually a subclass of `Pointer` in Nit)
 * The extern class can only subclass other extern classes and interfaces.
 
 Instances of extern classes can originate from the C code, or from an extern constructors. Extern constructors are declared using the _new_ keyword and are implemented similarly to extern methods. They must return a value in the equivalent C type.
