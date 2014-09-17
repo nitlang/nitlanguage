@@ -19,7 +19,8 @@ extern class AndroidBundle in "Java" `{ android.os.Bundle `}
 ...
 ~~~~
 
-To maintain the API coherence, the introduction of an extern Java class should declare two things :
+To maintain the API coherence, the introduction of an extern Java class should declare two things:
+
 * That it is subclass to JavaObject if it is not already through other super classes. 
 * it should redefine the virtual type SELF with itself. This type is used by some methods of JavaObject such as...
 
