@@ -92,7 +92,7 @@ The principle it to produce a strict order of the redefinitions of a method (the
 -   A redefinition in a refinement comes before a redefnition in a
 
 -   The order of the declaration of the superclasses is used as the
-    ultimate deabiguization.
+    ultimate disambiguation.
 
 <!-- -->
 
