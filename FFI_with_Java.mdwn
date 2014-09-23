@@ -73,7 +73,7 @@ TODO
 
 # jwrapper
 
-Having read the beginning of this page you know how to wrap Java services in Nit. You may have notice that some of the work is repetitive and that it requires a lot a boilerplate code. With this in mind , Frederic Vachon created the _jwrapper_ tool, a generator of Nit wrappers around Java classes.
+Having read the beginning of this page you know how to wrap Java services in Nit. You may have notice that some of the work is repetitive and that it requires a lot a boilerplate code. With this in mind, Frederic Vachon created the _jwrapper_ tool, a generator of Nit wrappers around Java classes.
 
 ## Installation and setup
 
