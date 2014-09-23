@@ -70,3 +70,32 @@ TODO
 ## Java threads
 
 TODO
+
+## jwrapper
+
+Having read the beginning of this page you know how to wrap Java services in Nit. You may have notice that some of the work is repetitive and that it requires a lot a boilerplate code. With this in mind , Frederic Vachon created the _jwrapper_ tool, a generator of Nit wrappers around Java classes.
+
+### Installation and setup
+
+1. Clone the Nit repository of Nit, install the needed dependencies and run `make` at the root.
+2. Then, go to the folder at `contrib/jwrapper` and run `make`. This will create the executable, within the Nit repository, at `contrib/jsrapper/bin/jwrapper`.
+3. Set the environment variable `NIT_DIR` to the path of your Nit repository. _jwrapper_ will use this variable to find existing wrappers of Java classes and automatically use them when necessary.
+
+### Basic usage
+
+1. Find the compile Java class to wrap, or compile it from source using `javac`. Some classes may need to be extracted from _jar_ archives. For example, classes for the Android library can be found in `platforms/android-*/android.jar` from the SDK.
+
+2. Generate the wrapping code for the class `android.os.Bundle` with a call to:
+
+    `jwrapper Bundle.class android_os_bundle.nit`
+
+    This will create the file `android_os_bundle.nit` with the wrapper around the `Bundle` class. It will also define minimal wrappers around any other Java classes referenced but not already wrapped by the Nit library.
+
+    Alternatively, you can use the `-c` option to _not_ generate those additional minimal wrappers. _jwrapper_ will instead comment the lines of code that are invalid without the referenced classes. They can be activated once the required class has also been wrapped.
+
+3. Review the generated code and adapt it to you needs.
+
+4. Use and import the generated module as you would with any other Nit modules. 
+
+
+For more information, see _jwrapper_'s README file in your repository and available online. 
