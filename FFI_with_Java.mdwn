@@ -97,4 +97,4 @@ Having read the beginning of this page you know how to wrap Java services in Nit
 
 4. Use and import the generated module as you would with any other Nit modules. 
 
-For more information, see _jwrapper_'s README file in your repository and available online. 
+For more information, see _jwrapper_'s README file in your repository and [[available online|https://github.com/privat/nit/blob/master/contrib/jwrapper/README.md]]. 
