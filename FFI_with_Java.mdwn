@@ -98,3 +98,11 @@ Having read the beginning of this page you know how to wrap Java services in Nit
 4. Use and import the generated module as you would with any other Nit modules. 
 
 For more information, see _jwrapper_'s README file in your repository and [[available online|https://github.com/privat/nit/blob/master/contrib/jwrapper/README.md]]. 
+
+# Limitations of the FFI with Java
+
+The Java FFI has been designed with Android in mind and more specifically to be compiled against Android NDK's `jni.h`. For this reason, there is currently some limitations when targetting a desktop environment:
+
+* The inner Java code block does not support adding inner classes.  This is a known missing feature, it can be fixed if there is a need for it. It does work when the target platform is Android. See the issue [[#769|https://github.com/privat/nit/issues/769]].
+
+* There are some gcc warnings to be expected at compilation due to an incompatibility between the `jni.h` of the Android NDK and its desktop counterparts. See the issue [[#770|https://github.com/privat/nit/issues/770]].
