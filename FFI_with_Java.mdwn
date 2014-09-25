@@ -27,17 +27,20 @@ Let's analyse the previous segment of code.
 
 # Namespaces
 
-For such a simple method as the previous `foo`, to call any services you must use the full namespace, as we did in the reference to ``. However, to define specific importations you can add an additional Java extern blocks higher in the Nit module right after the Nit importations.
+For such a simple method as the previous `foo`, to call any services you must use the full namespace, as we did in the reference to `java.util.ArrayList`. However, to define specific importations you can add an additional Java extern blocks higher in the Nit module right after the Nit importations.
 
 ~~~~
+module my_nit_module
+
 import some_nit_module
 import some_other_nit_module
 
 in "Java" `{
+    // Java importations go here
     import java.util.ArrayList;
 `}
 
-...
+# Possibly more Nit code ...
 
 fun bar in "Java" `{
     ArrayList[Object] my_list;
