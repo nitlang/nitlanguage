@@ -93,7 +93,7 @@ Having read the beginning of this page you know how to wrap Java services in Nit
 
     Alternatively, you can use the `-c` option to _not_ generate those additional minimal wrappers. _jwrapper_ will instead comment the lines of code that are invalid without the referenced classes. They can be activated once the required class has also been wrapped.
 
-3. Review the generated code and adapt it to you needs.
+3. Review the generated code and adapt it to your needs.
 
 4. Use and import the generated module as you would with any other Nit modules. 
 
@@ -101,7 +101,7 @@ For more information, see _jwrapper_'s README file in your repository and [[avai
 
 # Limitations of the FFI with Java
 
-The Java FFI has been designed with Android in mind and more specifically to be compiled against Android NDK's `jni.h`. For this reason, there is currently some limitations when targetting a desktop environment:
+The Java FFI has been designed with Android in mind and more specifically to be compiled against Android NDK's `jni.h`. For this reason, there is currently some limitations when targeting a desktop environment:
 
 * The inner Java code block does not support adding inner classes.  This is a known missing feature, it can be fixed if there is a need for it. It does work when the target platform is Android. See the issue [[#769|https://github.com/privat/nit/issues/769]].
 
