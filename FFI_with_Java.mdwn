@@ -1,10 +1,50 @@
-You may notice that the FFI with Java is very similar to the [[FFI with C]]. This page highlights the difference and avoids repeating the information present in the documentation of the [[FFI with C]]. For this reason, it is strongly recommanded that you read [[FFI with C]] before this page.
+You may notice that the FFI with Java is very similar to the [[FFI with C]]. This page highlights the difference and avoids repeating the information present in the documentation of the [[FFI with C]]. For this reason, it is strongly recommended that you read [[FFI with C]] before this page.
 
 # Extern methods implemented in Java
 
-TODO
+The Java FFI main feature is to implement a Nit method in Java. Such a method is declared with a normal Nit signature followed by the callback declaration (more on that later), the language specified as Java, and the body. A Nit method implemented in Java will look like so:
 
-## Custom Java classes
+~~~~
+fun foo(val: Int): Bool in "Java" `{
+    // Java code
+    System.out.println("Hello world from Java");
+
+    java.util.ArrayList<Object> my_java_list;
+
+    return var == 1234;
+`}
+~~~~
+
+Let's analyse the previous segment of code.
+
+* `fun foo(val: Int): Bool` Is the Nit signature it defines the type of the method. This dictates how it can be called from Nit but also the static types of the arguments for the implementation in Java.
+
+    In this case, a Nit int will be a Java long and the expected return type will be a Java boolean.
+
+* `in "Java"` indicates the implementation language, it could also be `in "C"` or `in "C++"`. See the page on the FFI with C for more information.
+
+* The code between `` `{`` and `` `}`` is the implementation in Java. 
+
+# Namespaces
+
+For such a simple method as the previous `foo`, to call any services you must use the full namespace, as we did in the reference to ``. However, to define specific importations you can add an additional Java extern blocks higher in the Nit module right after the Nit importations.
+
+~~~~
+import some_nit_module
+import some_other_nit_module
+
+in "Java" `{
+    import java.util.ArrayList;
+`}
+
+...
+
+fun bar in "Java" `{
+    ArrayList[Object] my_list;
+`}
+~~~~
+
+# Custom Java classes
 
 Most Java API require to implement one or many interfaces with custom Java classes. This is not the most straightforward thing to do with the FFI but it can be done in three different ways. These are normal alternatives in Java but they take a sightly different form with the FFI.
 
