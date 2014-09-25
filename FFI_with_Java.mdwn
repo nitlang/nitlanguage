@@ -4,6 +4,23 @@ You may notice that the FFI with Java is very similar to the [[FFI with C]]. Thi
 
 TODO
 
+## Custom Java classes
+
+Most Java API require to implement one or many interfaces with custom Java classes. This is not the most straightforward thing to do with the FFI but it can be done in three different ways. These are normal alternatives in Java but they take a sightly different form with the FFI.
+
+1. The easiest way, which is not always applicable, is to use anonymous classes. Creating a class from a super-class or an interface directly where it is used.
+
+TODO add exemples
+2. You can also create a static nested class. In fact, all the Java code within a Nit module will be organized within a single Java class. You can add a static nested class to this generated class using an extern code block prefixed by `in "Java Inner"` at the module level.
+
+3. The third alternative is to use a Java class outside of the Nit module. The annotation `extra_java_file` on the module declaration joins the class to the project. Example:
+
+~~~~
+module my_nit_module is
+    extra_java_file("relative_path_to_the_java_source.java")
+end
+~~~~
+
 # Extern classes in Java
 
 Nit extern classes wraps extern types to be used in Nit code. Thay allow pass data in and out of extern methods with ease. The single value of an instance of an extern class is the extern instance that it warps.
