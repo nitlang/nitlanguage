@@ -1,12 +1,19 @@
 # Documentation
 
+## Install and configure
+
+* [[!traillink download]] the tools
+* special documentation for people [[!traillink on_mac]]
+* configure the [[!traillink vim]] text editor
+* install [[!traillink bash_completion]]
+
 ## Developing with Nit
 
 ### Learning the language
 
-The [[manual]] describe the specification of the language.
+The [[!traillink manual]] describe the specification of the language.
 
-The [[FAQ]] contains some cook-book recipes and answers to some other frequent questions.
+The [[!traillink FAQ]] contains some cook-book recipes and answers to some other frequent questions.
 
 You can also look at some [[examples of programs|examples]] written in Nit.
 
