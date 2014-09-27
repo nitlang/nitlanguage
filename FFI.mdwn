@@ -11,3 +11,12 @@ The Nit language currently supports 3 foreign languages: C, C++ and Java.
 | Static types       | x   | x    |      |
 
 Table 1: Supported features in each FFI
+
+
+[[!traillink "FFI with C"]] describes the interface between Nit and C. Which allows to implement Nit methods directly in C code, and more.
+
+There's also a guide to develop Nit [[!traillink "wrapping C libraries" text="wrappers for existing C libraries"]] to access their features through normal Nit modules.
+
+[[!traillink "FFI with Java"]] describes the interface with Java.
+
+[[!traillink "Nit on Android"]] gives some guide lines on how to develop for Android in Nit.
