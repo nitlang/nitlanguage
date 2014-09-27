@@ -24,19 +24,21 @@ The <a href="stdlib">standard library</a> references built-ins and standard clas
 
 ### Foreign Function Interfaces (FFI)
 
-[[FFI Overview]] summarizes the foreign languages supported by Nit and their implemented features.
+[[!traillink native_interface]]
 
-[[FFI with C]] describes the interface between Nit and C. Which allows to implement Nit methods directly in C code, and more.
+[[!traillink "FFI Overview"]] summarizes the foreign languages supported by Nit and their implemented features.
 
-There's also a guide to develop Nit [[wrappers for existing C libraries|wrapping C libraries]] to access their features through normal Nit modules.
+[[!traillink "FFI with C"]] describes the interface between Nit and C. Which allows to implement Nit methods directly in C code, and more.
 
-[[FFI with Java]] describes the interface with Java.
+There's also a guide to develop Nit [[!traillink "wrapping C libraries" text="wrappers for existing C libraries"]] to access their features through normal Nit modules.
 
-[[Nit on Android]] gives some guide lines on how to develop for Android in Nit.
+[[!traillink "FFI with Java"]] describes the interface with Java.
+
+[[!traillink "Nit on Android"]] gives some guide lines on how to develop for Android in Nit.
 
 ## For Contributors
 
-The page [[Get Involved|internal]] includes documentations and other resources.
+The page [[!traillink internal text="Get Involved"]] includes documentations and other resources.
 
 ## For Scientists
 
