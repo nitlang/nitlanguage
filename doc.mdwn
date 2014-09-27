@@ -2,8 +2,7 @@
 
 ## Install and configure
 
-* [[!traillink download]] the tools
-* configure your [[!traillink environment]]
+* [[!traillink download text="download and install"]] the tools
 * special documentation for people [[!traillink on_mac]]
 * configure the [[!traillink vim]] text editor
 
