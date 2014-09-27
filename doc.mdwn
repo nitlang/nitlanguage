@@ -30,8 +30,6 @@ The <a href="stdlib">standard library</a> references built-ins and standard clas
 
 ### Foreign Function Interfaces (FFI)
 
-[[!traillink native_interface]]
-
 [[!traillink "FFI Overview"]] summarizes the foreign languages supported by Nit and their implemented features.
 
 [[!traillink "FFI with C"]] describes the interface between Nit and C. Which allows to implement Nit methods directly in C code, and more.
