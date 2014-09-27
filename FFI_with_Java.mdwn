@@ -1,4 +1,4 @@
-You may notice that the FFI with Java is very similar to the [[FFI with C]]. This page highlights the difference and avoids repeating the information present in the documentation of the [[FFI with C]]. For this reason, it is strongly recommended that you read [[FFI with C]] before this page.
+You may notice that the FFI with Java is very similar to the [[FFI/FFI_with_C]]. This page highlights the difference and avoids repeating the information present in the documentation of the [[FFI/FFI_with_C]]. For this reason, it is strongly recommended that you read [[FFI/FFI_with_C]] before this page.
 
 # Extern methods implemented in Java
 
