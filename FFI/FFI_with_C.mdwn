@@ -2,7 +2,7 @@
 
 The Nit Foreign Function Interface (FFI) allows to nest C code within a Nit file. Doing so, you can implement Nit methods in C, declare the C type equivalent to a Nit class, and write supporting C code (such as imports). This page is an introduction to different aspects of the Nit FFI.
 
-Common use cases of the FFI is to optimize a method or wrap existing C libraries. In case of a wrapper, the C code manages calls to the C library functions and callbacks to Nit. To know more about wrappers using the FFI, see the page [[wrapping C libraries]].
+Common use cases of the FFI is to optimize a method or wrap existing C libraries. In case of a wrapper, the C code manages calls to the C library functions and callbacks to Nit. To know more about wrappers using the FFI, see the page [[FFI/Wrapping_C_libraries]].
 
 # Extern methods
 
