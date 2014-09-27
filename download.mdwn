@@ -1,4 +1,6 @@
-# Download
+# Download and install
+
+## Download
 
 Nit is still in heavy development.
 
@@ -9,3 +11,24 @@ The main way to get to get it from its [[git repository|http://nitlanguage.org/n
 or to download the latest [[snapshot|http://nitlanguage.org/nit.git/snapshot/HEAD.tar.gz]] (tar.gz)
 
 A [[github mirror|http://github.com/privat/nit]] is also available.
+
+## Build
+
+In the `nit` directory, just call `make`
+
+## Install
+
+Currently, there is no official installation process, the tools and lib should just works in place.
+
+It it sill a good idea to have the binaries in your `PATH`
+
+~~~sh
+$ echo 'export PATH=/absolute/path-to-nit/bin:$PATH' >> .profile
+~~~
+
+Also install `bash_completion` for the tools.
+
+~~~sh 
+$ echo 'source /absolute/path-to-nit/misc/bash_completion/nit' >> ~/.bash_completion
+$ source ~/.bash_completion
+~~~
