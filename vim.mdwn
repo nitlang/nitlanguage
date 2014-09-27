@@ -63,15 +63,6 @@ $ git clone https://github.com/scrooloose/syntastic.git
 ~~~
 
 Check that your `$PATH` contains `nitc`.
-If not, the simpliest way is to create a dummy `nitc` script in your personnal `bin` directory:
-
-~~~sh
-$ echo 'exec /full/path/to/nit/bin/nitc "$@"' > ~/bin/nitc
-$ chmod +x ~/bin/nitc
-~~~
-
-Note: replace `/full/path/to/nit` with the real path.  
-Note2: you may require to open a new shell (or update your path, or source your `.profile`, etc.)  
-Note3: do not use a symbolic link to the real `nitc` executable instead of a dummy script.
+If not, the simplest way is add the `bin` directory in your PATH.
 
 Now you should have syntax checking on saving `.nit` files.
