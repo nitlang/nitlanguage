@@ -124,7 +124,9 @@ We will use examples in order to familiarize you to the structure generated call
 
         fun my_c_meth import foo, bar, attr, attr=, attr_int,
                              attr_int=, MyClass, MyClass.default,
-                             NativeString.to_s
+                             NativeString.to_s `{
+            // C implementation code
+        `}
     end
 
 ### Explanation of each Callbacks
