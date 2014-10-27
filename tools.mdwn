@@ -23,6 +23,7 @@ Internally, nitg rely on the presence of a C compiler. Usually [[gcc|http://gcc.
 
 
 
+<a id="nitdoc"/>
 ### The documentation generator `nitdoc`
 
 `nitdoc` takes one or more modules and generate a HTML documentation for these modules and their imported modules.
