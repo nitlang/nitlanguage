@@ -96,7 +96,7 @@ In fact, by default, the setter of an attribute is used as a initializer.
 class FooProduct
 	super Product
 	fun set_xy(x, y: Int) is autoinit do z = x * 10 + y
-	var z: Int is noauto
+	var z: Int is noinit
 end
 var fp = new FooProduct("ABC", "Bla bla", 15.96, 1, 3)
 assert fp.z == 13
