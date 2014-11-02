@@ -15,7 +15,7 @@ $ sudo ln -s /opt/local /usr/
 Install packages required to compile Nit and its tools
 
 ~~~
-$ sudo port install boehmgc ccache graphviz libunwind-headers
+$ sudo port install boehmgc ccache graphviz libunwind-headers pkgconfig
 ~~~
 
 Install and compile Nit
@@ -29,7 +29,7 @@ $ make
 Install more package required by libs and to pass more tests
 
 ~~~
-$ sudo port install curl libsdl2 libsdl2_image ncurses pkgconfig 
+$ sudo port install curl libsdl2 libsdl2_image ncurses libevent
 ~~~
 
 Run the tests (for fun)
@@ -51,7 +51,7 @@ $ brew doctor
 Install packages
 
 ~~~
-$ brew install boehmgc ccache graphviz libunwind-headers
+$ brew install boehmgc ccache graphviz libunwind-headers pkgconfig
 ~~~
 
 Install and compile Nit
