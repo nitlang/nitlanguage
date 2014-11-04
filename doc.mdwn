@@ -8,17 +8,13 @@
 
 ## Developing with Nit
 
-### Learning the language
-
 The [[!traillink manual]] describe the specification of the language.
+
+The [[!traillink tools]] page documents the compiler and the other tools of Nit.
 
 The [[!traillink FAQ]] contains some cook-book recipes and answers to some other frequent questions.
 
 You can also look at some [[examples of programs|examples]] written in Nit.
-
-### Nit Compiler and Other Tools
-
-The [[!traillink tools]] page documents the compiler and the other tools of Nit.
 
 There is also a [[plugin for eclipse|eclipse]] and a [[bundle for vim|vim]].
 
