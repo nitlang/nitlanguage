@@ -6,12 +6,6 @@ Install `xcode` from the [[app store|https://itunes.apple.com/ca/app/xcode/id497
 
 Install `macport` from [[https://distfiles.macports.org/MacPorts/]]
 
-Hack: make `port` usable by the tools
-
-~~~
-$ sudo ln -s /opt/local /usr/
-~~~
-
 Install packages required to compile Nit and its tools
 
 ~~~
