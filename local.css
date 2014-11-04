@@ -37,10 +37,18 @@ h3 {
 
 p {
 	color:				#6C6C6C;
+	margin-top:			1em;
+	margin-bottom:			1em;
 }
 
 ul {
 	list-style-type:		square;
+}
+
+dd {
+	color:				#6C6C6C;
+	margin-top:			1em;
+	margin-bottom:			1em;
 }
 
 pre {
