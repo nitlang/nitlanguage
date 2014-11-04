@@ -8,7 +8,17 @@ It takes the main module of a Nit program as argument and produce an executable 
 * [[nitg manpage|nitg]]
 
 
-<a id="nitdoc"/>
+### The interpreter and debugger [[!traillink nit]]
+
+`nit` is the work-in-progress interpreter.
+
+`nit` can be used as a debugger, it is a work in progress.
+
+See [[debugger]] for more details
+
+* [[nit manpage|nit]]
+
+<a id="nitdoc"></a>
 ### The documentation generator [[!traillink nitdoc]]
 
 `nitdoc` takes one or more modules and generate a HTML documentation for these modules and their imported modules.
@@ -20,16 +30,6 @@ Internally, nitdoc rely on the presence of the `dot' command from the [[graphviz
 The documentation is extracted from the comments found above the definition of modules, classes, and properties.
 
 * [[nitdoc manpage|nitdoc]]
-
-### The interpreter and debugger [[!traillink nit]]
-
-`nit` is the work-in-progress interpreter.
-
-`nit` can be used as a debugger, it is a work in progress.
-
-See [[debugger]] for more details
-
-* [[nit manpage|nit]]
 
 ### The metrics collector [[!traillink nitmetrics]]
 
