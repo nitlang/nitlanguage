@@ -31,6 +31,12 @@ The documentation is extracted from the comments found above the definition of m
 
 * [[nitdoc manpage|nitdoc]]
 
+### The unit tester [[!traillink nitunit]]
+
+`nitunit` executes the unit tests from Nit source files.
+
+* [[nitunit manpage|nitunit]]
+
 ### The metrics collector [[!traillink nitmetrics]]
 
 `nitmetrics` gathers some statistics about a Nit programs or modules.
@@ -39,12 +45,16 @@ It counts various number of entities and generates some graphs (with graphviz)
 
 * [[nitmetrics manpage|nitmetrics]]
 
+### The code highligher [[!traillink nitlight]]
+
+`nitlight`, generates HTML of highlighted code from Nit source files.
+
+* [[nitlight manpage|nitlight]]
+
 ### Other tools
 
-* [[!traillink nitlight]], generates HTML of highlighted code from Nit source files.
 * [[!traillink nitls]], lists project and path of Nit source files.
 * [[!traillink nitpick]], collects potential style and code issues.
 * [[!traillink nitpretty]], pretty prints Nit code from Nit source files.
 * [[!traillink nitserial]], generates serialization support modules.
-* [[!traillink nitunit]], executes the unit tests from Nit source files.
 * [[!traillink nitx]], displays specific pieces of API information from Nit source files.
