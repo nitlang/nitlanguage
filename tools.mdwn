@@ -10,9 +10,7 @@ It takes the main module of a Nit program as argument and produce an executable 
 
 ### The interpreter and debugger [[!traillink nit]]
 
-`nit` is the work-in-progress interpreter.
-
-`nit` can be used as a debugger, it is a work in progress.
+`nit` is the interpreter and can be used as a debugger.
 
 See [[debugger]] for more details
 
