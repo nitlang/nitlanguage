@@ -46,6 +46,7 @@ It counts various number of entities and generates some graphs (with graphviz)
 
 ### Other tools
 
+* [[!traillink nitdbg_client]], network client for remote debugging.
 * [[!traillink nitls]], lists project and path of Nit source files.
 * [[!traillink nitpick]], collects potential style and code issues.
 * [[!traillink nitpretty]], pretty prints Nit code from Nit source files.
