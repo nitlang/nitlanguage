@@ -18,8 +18,6 @@ You can also look at some [[examples of programs|examples]] written in Nit.
 
 There is also a [[plugin for eclipse|eclipse]] and a [[bundle for vim|vim]].
 
-A Debugger is being developed and can be used with the Interpreter (nit.nit). See the [[debugger|debugger]] page for informations on how to use it.
-
 ### Standard Library 
 
 The <a href="stdlib">standard library</a> references built-ins and standard classes.
