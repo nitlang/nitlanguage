@@ -7,6 +7,7 @@
 
 <nav><h3>[[Documentation|doc]]</h3>
 <ul><li>[[Language manual|manual]]</li>
+<li>[[Compiler and tools|http://nitlanguage.org/doc/tools]]</li>
 <li>[[Standard library|http://nitlanguage.org/doc/stdlib]]</li>
 <li>[[FAQ]]</li>
 <li>[[All documentation...|doc]]</li>
