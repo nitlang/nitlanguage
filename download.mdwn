@@ -22,13 +22,17 @@ Currently, there is no official installation process, the tools and lib should j
 
 It it sill a good idea to have the binaries in your `PATH`
 
+Add the following in your `.profile` file.
+
 ~~~sh
-$ echo 'export PATH=/absolute/path-to-nit/bin:$PATH' >> .profile
+export PATH=/absolute/path-to-nit/bin:$PATH
+export MANPATH=/absolute/path-to-nit/share/man:$MANPATH
 ~~~
 
 Also install `bash_completion` for the tools.
 
+Add the following in your `.bash_completion` file (or create it if it does not exist).
+
 ~~~sh 
-$ echo 'source /absolute/path-to-nit/misc/bash_completion/nit' >> ~/.bash_completion
-$ source ~/.bash_completion
+source /absolute/path-to-nit/misc/bash_completion/nit
 ~~~
