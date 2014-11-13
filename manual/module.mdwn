@@ -12,7 +12,7 @@ A module is made of, in order:
 
 ## Module Importation
 
-`import` declares dependencies between modules. By default, a module publicly imports the module `standard`. Dependencies must not produce cycles. By importing a module, the importer module can see and use classes and properties defined in the imported module.
+`import` declares dependencies between modules. By default (that is without any `import` declaration), a module publicly imports the module `standard`. Dependencies must not produce cycles. By importing a module, the importer module can see and use classes and properties defined in the imported module.
 
 -   `import` indicates a public importation. Importers of a given module will also import its publicly imported modules. An analogy is using `#include` in a header file (`.h`) in C/C++.
 
