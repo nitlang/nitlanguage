@@ -2,9 +2,9 @@
 
 Currently, there is now way to define constants or enumerations in Nit.
 
-Various workaround exist but there is no clear really better approaches.
+Various workarounds exist but there is no clear really better approaches.
 
-## Constants as immediate top-level function
+## Constants as immediate top-level functions
 
 Advantages:
 
@@ -25,10 +25,10 @@ print imprecise_pi
 
 ## Constants as attributes of `Sys`
 
-`Sys` in the only global object, so its attributes are global.
-So one can use `Sys` as a big global state.
+`Sys` in the only global object, so its attributes are global,
+so one can use `Sys` as a big global state.
 
-These attributes can also be marked as `lazy` to delay the allocation to the first use.
+These attributes can also be marked as `lazy` to delay the allocations to the first use.
 
 Advantages:
 
@@ -51,21 +51,22 @@ print sys.imprecise_pi
 ~~~
 
 
-## Constants as *onced* top-level function
+## Constants as *onced* top-level functions
 
-`once` is a low-level undocumented facility that evaluate an expression only once (in the live of the program).
+`once` is a low-level undocumented facility that evaluates an expression only once in the live of the program)
 
-Because it is low-level and documented, please do not complain if it broke your programs or your heart.
+Because it is low-level and undocumented, please do not complain if it brakes your programs or your heart.
 
 Advantages:
 
 * works for complex constants
-* do not hijack `Sys`
+* does not hijack `Sys`
 
 Disadvantages:
 
 * bad
 * fragile
+* ugly
 
 ~~~
 # A complex number
@@ -75,14 +76,16 @@ class Complex
 end
 
 # The complex number 0 (0+0i)
-fun cmp_0: Complex do return once new Complex(0.0, 0.0)
+fun cpx_0: Complex do return once new Complex(0.0, 0.0)
 # The complex number 1 (1+0i)
-fun cmp_1: Complex do return once new Complex(1.0, 0.0)
+fun cpx_1: Complex do return once new Complex(1.0, 0.0)
 # The complex number i (0+1i)
-fun cmp_i: Complex do return once new Complex(0.0, 1.0)
+fun cpx_i: Complex do return once new Complex(0.0, 1.0)
 ~~~
 
 ## Enumerations as Int
+
+Just use integers to code the values of the enumerations.
 
 Advantages:
 
@@ -93,7 +96,7 @@ Disadvantages:
 
 * no reification
 * no fine-typing
-* no static control of range.
+* no static control of range
 
 For example, it is used for the `<=>` of comparable tat returns -1, 0 or +1.
 
@@ -120,7 +123,7 @@ Advantages:
 Disadvantage:
 
 * A lot of code
-* Where, when, and by who the values are allocation and initialized is not optimal. See the workarounds for constants.
+* Where, when, and by who the values are allocation and initialized is not optimal. See the workarounds used for constants at the top of this page.
 
 ~~~
 class Node
