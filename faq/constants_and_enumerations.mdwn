@@ -20,7 +20,7 @@ Disadvantages:
 # Or a very good for a Manhatan or Chebyshev geometry.
 fun imprecise_pi: Float do return 4.0
 
-print imprecise_pi #=> 4.0
+print imprecise_pi
 ~~~
 
 ## Constants as attributes of `Sys`
@@ -47,7 +47,7 @@ redef class Sys
     var imprecise_pi = 4.0
 end
 
-print sys.imprecise_pi #=> 4.0
+print sys.imprecise_pi
 ~~~
 
 
