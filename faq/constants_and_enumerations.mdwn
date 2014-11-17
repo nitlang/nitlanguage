@@ -57,6 +57,16 @@ print sys.imprecise_pi
 
 Because it is low-level and documented, please do not complain if it broke your programs or your heart.
 
+Advantages:
+
+* works for complex constants
+* do not hijack `Sys`
+
+Disadvantages:
+
+* bad
+* fragile
+
 ~~~
 # A complex number
 class Complex
