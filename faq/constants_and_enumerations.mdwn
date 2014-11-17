@@ -17,7 +17,7 @@ Disadvantages:
 
 ~~~
 # A bad approximation of pi.
-# Or a very good for a Manhatan or Chebyshev geometry.
+# Or a very good for a Manhatan geometry.
 fun imprecise_pi: Float do return 4.0
 
 print imprecise_pi
@@ -43,7 +43,7 @@ Disadvantages:
 ~~~
 redef class Sys
     # A bad approximation of pi.
-    # Or a very good for a Manhatan or Chebyshev geometry.
+    # Or a very good for a Manhatan geometry.
     var imprecise_pi = 4.0 is readonly
 end
 
