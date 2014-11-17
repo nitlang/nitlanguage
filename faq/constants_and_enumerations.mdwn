@@ -25,7 +25,7 @@ print imprecise_pi
 
 ## Constants as attributes of `Sys`
 
-`Sys` in the only global object, so its attributes are global,
+`Sys` is the only global object, so its attributes are global,
 so one can use `Sys` as a big global state.
 
 These attributes can also be marked as `lazy` to delay the allocations to the first use.
