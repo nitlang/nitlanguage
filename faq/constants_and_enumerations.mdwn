@@ -1,0 +1,151 @@
+# Constants and enumerations
+
+Currently, there is now way to define constants or enumerations in Nit.
+
+Various workaround exist but there is no clear really better approaches.
+
+## Constants as immediate top-level function
+
+Advantages:
+
+* simple
+* should be optimized with --global and --semi-global
+
+Disadvantages:
+
+* does not work if some caching is needed
+
+~~~
+# A bad approximation of pi.
+# Or a very good for a Manhatan or Chebyshev geometry.
+fun imprecise_pi: Float do return 4.0
+
+print imprecise_pi #=> 4.0
+~~~
+
+## Constants as attributes of `Sys`
+
+`Sys` in the only global object, so its attributes are global.
+So one can use `Sys` as a big global state.
+
+These attributes can also be marked as `lazy` to delay the allocation to the first use.
+
+Advantages:
+
+* works for complex constants
+
+Disadvantages:
+
+* ugly
+* broke the isolation of the memory
+* ugly
+
+~~~
+redef class Sys
+    # A bad approximation of pi.
+    # Or a very good for a Manhatan or Chebyshev geometry.
+    var imprecise_pi = 4.0
+end
+
+print sys.imprecise_pi #=> 4.0
+~~~
+
+## Enumerations as Int
+
+Advantages:
+
+* simple
+* fast
+
+Disadvantages:
+
+* no reification
+* no fine-typing
+* no static control of range.
+
+For example, it is used for the `<=>` of comparable tat returns -1, 0 or +1.
+
+~~~
+class Node
+    # Status of the node in the search.
+    # Use:
+    # * 0 for unmarked (not discovered)
+    # * 1 for open (to process)
+    # * 2 for closed (already processed)
+    var mark: Int
+end
+~~~
+
+## Enumerations a singleton objects
+
+Create a class and specific instances to code the enumeration.
+
+Advantages:
+
+* It the nearest form of what reified enumerations should look like.
+* Values of the enumerations are genuine objects instances of genuine classes.
+
+Disadvantage:
+
+* A lot of code
+* Where, when, and by who the values are allocation and initialized is not optimal
+
+~~~
+class Node
+    # Status of the node in the search.
+    var mark: NodeMark
+end
+
+# The status of a `Node` in a search.
+#
+# Available values are
+#
+#   * `sys.unmarked`
+#   * `sys.open`
+#   * `sys.closed`
+class NodeMark
+    # Additional fields and services can be used
+    var value: Int
+end
+
+redef class Sys
+    # unmarked (not discovered)
+    var unmarked = new NodeMark(0) is readonly
+    # open (to process)
+    var open = new NodeMark(1) is readonly
+    # closed (already processed)
+    var closed = new NodeMark(2) is readonly
+end
+~~~
+
+## Enumerations as FFI Int
+
+This use the FFI to create a extern type bounded on `int`.
+
+Advantages:
+
+* type distinct of Int but usable as a C int on the C side.
+
+Disadvantages:
+
+* unusable with the interpreter
+* possible additional work for the GC.
+* abuse of the `new` factories
+
+This is mainly used on wrapper of C libraries that use `int` to code enumerations or flags.
+
+~~~
+class Node
+    # Status of the node in the search.
+   var mark: NodeMark
+end
+
+extern class NodeMark `{ int `}
+    # unmarked (not discovered)
+   new unmarked `{ return 0; `}
+    # open (to process)
+   new open `{ return 1; `}
+    # closed (already processed)
+   new closed `{ return 2; `}
+end
+~~~
