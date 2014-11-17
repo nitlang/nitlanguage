@@ -17,7 +17,7 @@ Disadvantages:
 
 ~~~
 # A bad approximation of pi.
-# Or a very good for a Manhatan geometry.
+# Or a very good for a Manhattan geometry.
 fun imprecise_pi: Float do return 4.0
 
 print imprecise_pi
