@@ -50,6 +50,28 @@ end
 print sys.imprecise_pi #=> 4.0
 ~~~
 
+
+## Constants as *onced* top-level function
+
+`once` is a low-level undocumented facility that evaluate an expression only once (in the live of the program).
+
+Because it is low-level and documented, please do not complain if it broke your programs or your heart.
+
+~~~
+# A complex number
+class Complex
+   var real: Float
+   var imag: Float
+end
+
+# The complex number 0 (0+0i)
+fun cmp_0: Complex do return once new Complex(0.0, 0.0)
+# The complex number 1 (1+0i)
+fun cmp_1: Complex do return once new Complex(1.0, 0.0)
+# The complex number i (0+1i)
+fun cmp_i: Complex do return once new Complex(0.0, 1.0)
+~~~
+
 ## Enumerations as Int
 
 Advantages:
@@ -88,7 +110,7 @@ Advantages:
 Disadvantage:
 
 * A lot of code
-* Where, when, and by who the values are allocation and initialized is not optimal
+* Where, when, and by who the values are allocation and initialized is not optimal. See the workarounds for constants.
 
 ~~~
 class Node
