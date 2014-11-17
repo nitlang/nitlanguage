@@ -43,7 +43,7 @@ Disadvantages:
 ~~~
 redef class Sys
     # A bad approximation of pi.
-    # Or a very good for a Manhatan geometry.
+    # Or a very good for a Manhattan geometry.
     var imprecise_pi = 4.0 is readonly
 end
 
