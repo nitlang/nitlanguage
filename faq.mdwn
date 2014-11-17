@@ -13,3 +13,4 @@
 * [[!traillink How_to_sort_an_array]]
 * [[!traillink private_visibility text="Is there some `friend` or `package` visibility?"]]
 * [[!traillink combined_assignment text="How can I redefine the `+=` operator ?"]]
+* [[!traillink constants_and_enumerations text="How to define constants or enumerations"]]
