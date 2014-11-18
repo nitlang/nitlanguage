@@ -14,9 +14,9 @@ end
 If the index is needed, a alternative is to iterate on the range of the indexes.
 
 ~~~
-var a = ["a", "b", "c"]
-for i in [0..a.length[ do
-    print "{i}:{a[i]}"
+var b = ["a", "b", "c"]
+for i in [0..b.length[ do
+    print "{i}:{b[i]}"
 end
 # outputs 0:a 1:b 2:c
 ~~~
@@ -24,7 +24,7 @@ end
 In fact, all the subclasses for `Collection` can be iterated with the `for` control structure.
 
 ~~~
-var l = new List
+var l = new List[Int]
 l.push(20)
 l.push(30)
 l.unshift(10)

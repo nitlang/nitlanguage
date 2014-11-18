@@ -46,7 +46,7 @@ class OverpricedProduct
 	super Product
 	init
 	do
-		price *= 10.0
+		price = price * 10.0
 	end
 end
 var op = new OverpricedProduct("ABC", "Bla bla", 15.95)
@@ -142,7 +142,7 @@ class Point
 	init polar(r, phi: Float)
 	do
 		var x = r * phi.cos
-		vat y = r * phi.sin
+		var y = r * phi.sin
 		init(x, y)
 	end
 
@@ -176,11 +176,19 @@ abstract class Person
 	var age: Int
 	new(age: Int)
 	do
-		if are >= 18 then
+		if age >= 18 then
 			return new Adult(age)
 		else
 			return new Child(age)
 		end
 	end
+end
+class Adult
+	super Person
+	# ...
+end
+class Child
+	super Person
+	# ...
 end
 ~~~

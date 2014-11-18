@@ -6,7 +6,7 @@
 ~~~
 class Foo
     var i: Int = 5
-    fun dec(x: Int): Int
+    fun dec(x: Int)
     do
         var k = self.i
         if k > x then self.i = k - x else self.i = 0
@@ -31,9 +31,9 @@ additional `writable` keyword.
 class Foo
     var pub_pri: X
     protected var pro_pri: X
-    var pub_pub: X writable
-    private var pri_pro: X protected writable
-    var pub_pri2: X private writable # the default
+    var pub_pub: X is writable
+    private var pri_pro: X is protected writable
+    var pub_pri2: X is private writable # the default
 end
 ~~~
 

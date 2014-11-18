@@ -6,7 +6,8 @@
 fun foo(x, y: Int, s: String): Bool ...
 ~~~
 
-`do` declares the body of methods. Alike control structures, a one-liner version is available. Moreover, a shorter version using the `=` symbol is also available for functional methods. Therefore, the three following methods are equivalent.
+`do` declares the body of methods. Alike control structures, a one-liner version is available.
+Therefore, the two following methods are equivalent.
 
 ~~~
 fun next1(i: Int): Int
@@ -15,8 +16,6 @@ do
 end
 
 fun next2(i: Int): Int do return i + 1
-
-fun next3(i: Int): Int = i + 1
 ~~~
 
 Inside the method body, parameters are considered as variables. They can be assigned and are subject to adaptive typing.

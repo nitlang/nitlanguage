@@ -38,7 +38,7 @@ In programs, the real instantiated classes are always the combination of all the
 
 ~~~
 redef class Int
-    fun fib
+    fun fib: Int
     do
         if self < 2 then return self
         return (self-1).fib + (self-2).fib

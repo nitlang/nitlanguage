@@ -28,5 +28,5 @@ It is not just some automatic boxing (a la Java 1.5).
 var a: Object = 5
 var b: Object = 3 + 2
 print a == b # -> true
-print a is b # -> true
+print a.is_same_instance(b) # -> true
 ~~~

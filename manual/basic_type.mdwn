@@ -39,8 +39,8 @@ Braces has to be escaped.
 `+` is the concatenation operator but is less efficient than the brace form.
 
 ~~~
-var i = 5
-print "i={i}; i+1={i+1}" # outputs "i=5; i+1=6"
+var j = 5
+print "j={j}; j+1={j+1}" # outputs "j=5; j+1=6"
 ~~~
 
 Common escaping sequences are available (`\"`, `\n`, `\t`, etc.) plus the escaped brace `\{`.
@@ -71,7 +71,7 @@ top-level method, `printn`, does not add the newline.
 ~~~
 var x: String
 x = 5.to_s # -> the String "5"
-printn x, 6 # outputs "56"
+print x # outputs "5"
 ~~~
     
 ## Bool
@@ -84,20 +84,20 @@ Common comparison operators are available: `==` and `!=` on all objects;
 `<`, `>`, `<=`, `>=` and `<=>` on `Comparable` objects (which include
 `Int`, `String` and others).
 
--   `==`, `<`, `>`, `<=`, `>=` and `<=>` are standard Nit operators (so they are redefinable).
+- `==`, `<`, `>`, `<=`, `>=` and `<=>` are standard Nit operators (so they are redefinable).
 
--   `and`, `or` and `not` are not standard Nit operators: they are not
-    redefinable, also they are lazy and have adaptive typing flow
-    effects.
+- `and`, `or` and `not` are not standard Nit operators: they are not
+  redefinable, also they are lazy and have adaptive typing flow
+  effects.
 
--   `==` is not for reference equality but for value equality (like
-    `equals` in Java). There is a special reference equality operator,
-    `is`, but it cannot be redefined and its usage is not recommended.
-    Note also that while `==` is redefinable, it has a special adaptive
-    typing flow effect when used with `null`.
+- `==` is not for reference equality but for value equality (like
+  `equals` in Java). There is a special reference equality operator,
+  `is`, but it cannot be redefined and its usage is not recommended.
+  Note also that while `==` is redefinable, it has a special adaptive
+  typing flow effect when used with `null`.
 
--   `!=` is not a standard Nit operator. In fact `x != y` is
-    syntactically equivalent to `not x == y`.
+- `!=` is not a standard Nit operator. In fact `x != y` is
+  syntactically equivalent to `not x == y`.
 
 ## Array
 

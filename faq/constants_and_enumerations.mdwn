@@ -42,12 +42,12 @@ Disadvantages:
 
 ~~~
 redef class Sys
-    # A bad approximation of pi.
-    # Or a very good for a Manhattan geometry.
-    var imprecise_pi = 4.0 is readonly
+    # A very bad approximation of pi.
+    # Or a very good for a Chebyshev geometry.
+    var really_imprecise_pi = 8.0 is readonly
 end
 
-print sys.imprecise_pi
+print sys.really_imprecise_pi
 ~~~
 
 
