@@ -19,7 +19,7 @@ Let's analyse the previous segment of code.
 
 * `fun foo(val: Int): Bool` Is the Nit signature it defines the type of the method. This dictates how it can be called from Nit but also the static types of the arguments for the implementation in Java.
 
-    In this case, a Nit int will be a Java long and the expected return type will be a Java boolean.
+  In this case, a Nit int will be a Java long and the expected return type will be a Java boolean.
 
 * `in "Java"` indicates the implementation language, it could also be `in "C"` or `in "C++"`. See the page on the FFI with C for more information.
 
@@ -53,17 +53,17 @@ Most Java API require to implement one or many interfaces with custom Java class
 
 1. The easiest way, which is not always applicable, is to use anonymous classes. Creating a class from a super-class or an interface directly where it is used.
 
-    TODO add exemples
+  TODO add exemples
 
 2. You can also create a static nested class. In fact, all the Java code within a Nit module will be organized within a single Java class. You can add a static nested class to this generated class using an extern code block prefixed by `in "Java Inner"` at the module level.
 
 3. The third alternative is to use a Java class outside of the Nit module. The annotation `extra_java_file` on the module declaration joins the class to the project. Example:
 
-    ~~~~
-    module my_nit_module is
-        extra_java_file("relative_path_to_the_java_source.java")
-    end
-    ~~~~
+~~~~
+module my_nit_module is
+    extra_java_file("relative_path_to_the_java_source.java")
+end
+~~~~
 
 # Extern classes in Java
 
@@ -77,7 +77,8 @@ An extern Java class is declared like any other extern class, however the extern
 
 ~~~~
 extern class AndroidBundle in "Java" `{ android.os.Bundle `}
-...
+	# ...
+end
 ~~~~
 
 To maintain the API coherence, the introduction of an extern Java class should declare two things:
@@ -148,11 +149,11 @@ Having read the beginning of this page you know how to wrap Java services in Nit
 
 2. Generate the wrapping code for the class `android.os.Bundle` with a call to:
 
-    `jwrapper Bundle.class android_os_bundle.nit`
+  `jwrapper Bundle.class android_os_bundle.nit`
 
-    This will create the file `android_os_bundle.nit` with the wrapper around the `Bundle` class. It will also define minimal wrappers around any other Java classes referenced but not already wrapped by the Nit library.
+  This will create the file `android_os_bundle.nit` with the wrapper around the `Bundle` class. It will also define minimal wrappers around any other Java classes referenced but not already wrapped by the Nit library.
 
-    Alternatively, you can use the `-c` option to _not_ generate those additional minimal wrappers. _jwrapper_ will instead comment the lines of code that are invalid without the referenced classes. They can be activated once the required class has also been wrapped.
+  Alternatively, you can use the `-c` option to _not_ generate those additional minimal wrappers. _jwrapper_ will instead comment the lines of code that are invalid without the referenced classes. They can be activated once the required class has also been wrapped.
 
 3. Review the generated code and adapt it to your needs.
 

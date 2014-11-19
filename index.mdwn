@@ -9,7 +9,7 @@ So, what does the famous hello world program look like, in Nit?
 ~~~
 print "Hello, World!"
 ~~~
-    
+
 # # Feature Highlights
 
 ## Usability
@@ -40,24 +40,34 @@ Nit's guideline is to follow the most powerful OO principles
 
 Get Nit from its Git repository:
 
-    $ git clone http://nitlanguage.org/nit.git
+~~~sh
+$ git clone http://nitlanguage.org/nit.git
+~~~
 
 Ensure that dependencies (and recommendations) are installed:
 
-    $ sudo apt-get install build-essential ccache libgc-dev graphviz libunwind7-dev
+~~~sh
+$ sudo apt-get install build-essential ccache libgc-dev graphviz libunwind7-dev
+~~~
 
 Build the compiler (may be long):
 
-    $ cd nit
-    $ make
+~~~sh
+$ cd nit
+$ make
+~~~
 
 Compile a program:
 
-    $ bin/nitc examples/hello_world.nit
+~~~sh
+$ bin/nitc examples/hello_world.nit
+~~~
 
 Execute the program:
 
-    $ ./hello_world
+~~~sh
+$ ./hello_world
+~~~
 
 And now?
 

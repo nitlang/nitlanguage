@@ -44,24 +44,24 @@ the usage of camelcase is preferred for class identifiers while formal types sho
 While Nit does not enforce any kind of source code formatting, the
 following is encouraged:
 
--   indentation uses the tabulation character and is displayed
-    as 8 spaces;
+- indentation uses the tabulation character and is displayed
+  as 8 spaces;
 
--   lines are less than 80 characters long;
+- lines are less than 80 characters long;
 
--   binary operators have spaces around them: `4 + 5`, `x = 5`;
+- binary operators have spaces around them: `4 + 5`, `x = 5`;
 
--   columns (`:`) and commas (`,`) have a space after them but not
-    before: `var x: X`, `[1, 2, 3]`;
+- columns (`:`) and commas (`,`) have a space after them but not
+  before: `var x: X`, `[1, 2, 3]`;
 
--   parenthesis and brackets do not need spaces around them;
+- parenthesis and brackets do not need spaces around them;
 
--   superfluous parenthesis should be avoided;
+- superfluous parenthesis should be avoided;
 
--   the `do` of methods and the single `do` is on its own line and not
-    indented;
+- the `do` of methods and the single `do` is on its own line and not
+  indented;
 
--   the other `do` are not on a newline.
+- the other `do` are not on a newline.
 
 ## Comments and Documentation
 
@@ -81,6 +81,6 @@ module foo
 # doc. of Bar
 class Bar
    # doc. of baz
-   fun baz ...
+   fun baz do end
 end
 ~~~

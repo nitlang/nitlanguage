@@ -73,7 +73,7 @@ var x: String
 x = 5.to_s # -> the String "5"
 print x # outputs "5"
 ~~~
-    
+
 ## Bool
 
 `true` and `false` are the only two `Bool` values. Standard
@@ -148,7 +148,7 @@ create an empty `HashMap` and the bracket operators are used to store
 and retrieve values.
 
 ~~~
-var h = new HashMap[String, Int] 
+var h = new HashMap[String, Int]
 # h associates strings to integers
 h["six"] = 6
 print h["six"] + 1 # outputs "7"
