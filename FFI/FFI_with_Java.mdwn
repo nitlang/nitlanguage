@@ -125,9 +125,32 @@ TODO
 
 # Common use cases
 
-## Sub-class a Java class
+## Sub-classing a Java class
 
-TODO
+Java APIs often rely on abstract classes that must be extended by the programmer. There are many ways to do so from Nit.
+
+* Use an anonymous class.
+* Create a static nested class. Example:
+
+~~~
+module my_module
+
+in "Java inner" `{
+	static class MyNestedClass {
+		MyNestedClass() {}
+
+		void foo() {
+			System.out.println("Hello World!");
+		}
+	}
+`}
+
+extern class MyNestedClass in "Java" `{ Nit_my_module$MyNestedClass `}
+	fun foo in "Java" `{ return recv.foo(); `}
+end
+~~~
+
+* Use `extra_java_file`
 
 ## Java threads
 
