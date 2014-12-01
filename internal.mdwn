@@ -12,7 +12,7 @@ If you wish to get involved in the project or use Nit as a framework for researc
 
 ## Discuss
 
-Most of the developement and the discussion on the language is done on our [[github repository|https://github.com/privat/nit]].
+Most of the developement and the discussion on the language, tools and projects is done on our [[github repository|https://github.com/privat/nit]].
 
 ## Test
 
