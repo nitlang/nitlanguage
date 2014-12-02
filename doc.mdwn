@@ -8,9 +8,9 @@
 
 ## Developing with Nit
 
-The [[!traillink manual]] describe the specification of the language.
+The [[!traillink manual]] describes the specification of the language.
 
-The [[!traillink tools]] page documents the compiler and the other tools of Nit.
+The [[!traillink tools]] page documents the compiler and other Nit.
 
 The [[!traillink FAQ]] contains some cook-book recipes and answers to some other frequent questions.
 
@@ -28,7 +28,7 @@ The <a href="stdlib">standard library</a> references built-ins and standard clas
 
 ## For Contributors
 
-The page [[!traillink internal text="Get Involved"]] includes documentations and other resources.
+The page [[!traillink internal text="Get Involved"]] includes documentations and other resources for contributors.
 
 ## For Scientists
 
