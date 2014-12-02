@@ -1,6 +1,6 @@
 # Basic Syntax of Nit
 
-The syntax of Nit follows to the Pascal tradition and is
+The syntax of Nit follows the Pascal tradition and is
 inspired by various script languages (especially Ruby). Its main objective is
 readability.
 
@@ -35,7 +35,7 @@ letters, digits, or underscores. However, the usage of uppercase letters
 (and camelcase) is discouraged and the usage of underscore to separate
 words in identifiers is preferred: `some_identifier`.
 
-Identifiers of classes and types must begin with a uppercase letter and
+Identifiers of classes and types must begin with an uppercase letter and
 can be followed by letters, digits, or underscores. However
 the usage of camelcase is preferred for class identifiers while formal types should be written in all uppercase: `SomeClass` and `SOME_VIRTUAL_TYPE`.
 
