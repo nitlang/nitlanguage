@@ -39,7 +39,9 @@ private fun native_sdl_warning_box(title, content: NativeString) `{
 `}
 ~~~
 
-This pattern also apply when calling a Nit method within a normal class and which access instance attributes. An indirection method can gather these attributes and pass them to the native method.
+The native method method can be marked as private since the API should expose only the Nity method. Of course, the returned value can also be converted to Nit in the Nity method.
+
+This pattern also applies when calling a Nit method within a normal class and which access instance attributes. An indirection method can gather these attributes and pass them to the native method.
 
 # Wrapping C Structures
 
