@@ -11,3 +11,9 @@ To install the support for Nit in Sublime-Text, you can just copy the syntax hig
 When you are done with this step, you can enjoy Nit source highlighting on any .nit source file automatically !
 
 Alternatively, when supported, you'll be able to install the support for Nit via [Package-Control](https://sublime.wbond.net/) !
+
+## Contributing
+
+If you have any experience with the development of Sublime-Text plugins, feel free to contribute to the [repository](https://github.com/R4PaSs/Sublime-Nit) for the support of the language anytime !
+
+The rules for contributing are analogous to their equivalent for the nit language itself.
