@@ -17,3 +17,11 @@ Alternatively, when supported, you'll be able to install the support for Nit via
 If you have any experience with the development of Sublime-Text plugins, feel free to contribute to the [repository](https://github.com/R4PaSs/Sublime-Nit) for the support of the language anytime !
 
 The rules for contributing are analogous to their equivalent for the nit language itself.
+
+## TextMate
+
+Note that any lexer compatible with Sublime-Text should be compatible with [TextMate](http://macromates.com/).
+
+As for the procedure for installing it, you'll have to figure it out yourself since none of the members of the Nit team works on TextMate.
+
+However if you are interested in contributing to this page to explain future users of the language how to install a TextMate syntax support, feel free to ask on github or via e-mail to the team.
