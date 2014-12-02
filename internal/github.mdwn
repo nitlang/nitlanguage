@@ -1,0 +1,21 @@
+# The github repository
+
+Our [[workflow]] heavily rely on the Nit [[https://github.com/privat/nit/]] repository.
+
+Here some details.
+
+## [[Labels|https://github.com/privat/nit/labels]]
+
+Issues and Pull Requests use specific labeled for specific meaning
+
+* API: Bug or discussion about the API of a library
+* bug: An identified bug (in library, tools, or elsewhere)
+* need_review: the PR need new/additional reviews
+* need_work: more work is required by the submitter. Usually is is set after the tests or the reviews shows problems. Sometime the submitter set the label himself to warn reviewers that work is in progress.
+* newcomer: the issue is open to newcomers that just begin the Nit project. Such issues are selected to be a nice entry point to new contributors.
+* nitdoc: the issue targets specifically the nitdoc tool and infrastructure.
+* ok_will_merge: the PR passed tests and reviews. The big integration tests are runnig (or are planned).If any reviewver has reasons why the PR should not be merged, he has to speak now or forever hold its peace.
+* request_for_comments: the issue need more information or insight from concerned people.
+* sepc: Bug or discussion abour the Nit language specification.
+* stalled: Old bug or issue that is still open but whose participants lack motivation or have identified a probems without nice solution. Maybe will be renamed as `need_help`
+* todo: task that need to be done, by the assignee or else a volunteer.
