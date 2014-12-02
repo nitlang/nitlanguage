@@ -22,6 +22,25 @@ Here we use the Int class, as a FFI primitive, its instances are automatically c
 
 Besides the primitive types of the FFI, we often need to use the `String` type. Only the `NativeString` type is converted to `char*`. When writing the low-level layer of the interface wrapper, you can use the `NativeString` to simplify the code. Higher-level layers can often convert from `String` to `NativeString`. Otherwise, it is also common to declare the callback to `String::to_cstring` and `String::from_cstring` to manage the conversion from the C code.
 
+## Nity and Native Methods Pattern
+
+When the C method expects many arguments, lets say many `NativeString`, you can use an extra indirection method to convert `String` into `NativeString`. We call this indirection method _Nity_, in comparaison to the _native_ method in C.
+
+~~~
+# The Nity indirection method
+fun sdl_warning_box(title, content: String)
+do
+    native_sdl_warning_box(title.to_cstring, content.to_cstring)
+end
+
+# The native C method
+private fun native_sdl_warning_box(title, content: NativeString) `{
+    SDL_ShowSimpleMessageBox(SDL_MESSAGEBOX_WARNING, title, content, NULL);
+`}
+~~~
+
+This pattern also apply when calling a Nit method within a normal class and which access instance attributes. An indirection method can gather these attributes and pass them to the native method.
+
 # Wrapping C Structures
 
 Extern classes define a Nit class which only value is available in C. These can be used to wrap a C structure in a C class.
