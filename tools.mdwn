@@ -8,7 +8,7 @@ It takes the main module of a Nit program as argument and produce an executable 
 * [[nitg manpage|nitc]]
 
 
-### The interpreter and debugger [[!traillink nit]]
+### The Interpreter and Debugger [[!traillink nit]]
 
 `nit` is the current official interpreter.
 It takes the main module of a program as the first arguments then the option and commands of the program.
@@ -18,19 +18,19 @@ It takes the main module of a program as the first arguments then the option and
 * [[nit manpage|nit]]
 
 <a id="nitdoc"></a>
-### The documentation generator [[!traillink nitdoc]]
+### The Documentation Generator [[!traillink nitdoc]]
 
 `nitdoc` takes one or more modules and generate HTML pages of API documentation for these modules and their imported modules.
 
 * [[nitdoc manpage|nitdoc]]
 
-### The unit tester [[!traillink nitunit]]
+### The Unit Tester [[!traillink nitunit]]
 
 `nitunit` executes the unit tests from Nit source files.
 
 * [[nitunit manpage|nitunit]]
 
-### The metrics collector [[!traillink nitmetrics]]
+### The Metrics Collector [[!traillink nitmetrics]]
 
 `nitmetrics` gathers some statistics about a Nit programs or modules.
 
@@ -38,13 +38,13 @@ It counts various number of entities and generates some graphs (with graphviz)
 
 * [[nitmetrics manpage|nitmetrics]]
 
-### The code highligher [[!traillink nitlight]]
+### The Code Highligher [[!traillink nitlight]]
 
 `nitlight`, generates HTML of highlighted code from Nit source files.
 
 * [[nitlight manpage|nitlight]]
 
-### Other tools
+### Other Tools
 
 * [[!traillink nitdbg_client]], network client for remote debugging.
 * [[!traillink nitls]], lists project and path of Nit source files.
