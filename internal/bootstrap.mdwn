@@ -8,21 +8,21 @@ During the make, the original Nit compiler is compiled from C code (in `/c_src`)
     $ cd nit
     $ make
     $ cd src
-    $ ./ngall.sh
+    $ ./ncall.sh
 
-`ngall.sh` performs a full bootstrap of the compiler (the original `make` does only two passes).
-More specifically, `ngall.sh`:
+`ncall.sh` performs a full bootstrap of the compiler (the original `make` does only two passes).
+More specifically, `ncall.sh`:
 
-* compiles nitg.nit with the compiler `c_src/nitg` so we get `src/nitg`
-* compiles nitg.nit with `src/nitg` and we get `src/nitg_2`
-* compiles nitg.nit with `src/nitg_2` and we get `src/nitg_3`
-* compiles nitg.nit with `src/nitg_3` and we get `src/nitg_4`
-* compile `examples/hello_world.nit` with `src/nitg_4` and run it to verify that `src/nitg_4` is minimally functionnal.
+* compiles nitc.nit with the compiler `c_src/nitg` so we get `src/nitc`
+* compiles nitc.nit with `src/nitc` and we get `src/nitc_2`
+* compiles nitc.nit with `src/nitc_2` and we get `src/nitc_3`
+* compiles nitc.nit with `src/nitc_3` and we get `src/nitc_4`
+* compile `examples/hello_world.nit` with `src/nitc_4` and run it to verify that `src/nitc_4` is minimally functionnal.
 
 Note that the Nit code of the compiler is written with some legagy Nit: all modern functionnalities of Nit are not always usable since it is the primitive compiler (`c_src/nitg`) that is used.
 
 One of the standard error of the nit tool developper is to break the bootstrap, it means that the Nit compiler is written in an incompatible way with the primitive compiler.
-Regulary executing `./ngall.sh` helps to check that the bootstrap is not broken.
+Regulary executing `./ncall.sh` helps to check that the bootstrap is not broken.
 
 On some occations, the C-code in `c_src` is updated.
-The script `src/mkcsrc` is then used to regenerate a new `c_src` file by running a special compilation of nitg.
+The script `src/mkcsrc` is then used to regenerate a new `c_src` file by running a special compilation of nitc.
