@@ -1,3 +1,0 @@
-When I tried to clic on the collection item in the UML tree, 
-there might was a display bug because the link is next to the word Collection, 
-so I had to click on the blank.
