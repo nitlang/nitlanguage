@@ -5,7 +5,7 @@
 `nitc` is the current official Nit compiler.
 It takes the main module of a Nit program as argument and produce an executable file.
 
-* [[nitg manpage|nitc]]
+* [[nitc manpage|nitc]]
 
 
 ### The Interpreter and Debugger [[!traillink nit]]
