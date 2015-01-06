@@ -2,27 +2,27 @@
 
 Nit is a target framework for novel compilation techniques and object-oriented research. Currently, the compiler and others tools are actively developed.
 
-<!--
-## Discuss
 
-The Nit project has a [[mailing list|nitlanguage@googlegroups.com]] where users and developers can discuss various issues and help each other. Archive and instricption is available at the [[list page|https://groups.google.com/d/forum/nitlanguage]].
-
-If you wish to get involved in the project or use Nit as a framework for research, please contact the mailing list.
--->
-
-## Discuss
-
-Most of the developement and the discussion on the language, tools and projects is done on our [[github repository|https://github.com/privat/nit]].
-
-## Test
-
-Try to use Nit and [[report problems|https://github.com/privat/nit/issues]] with the language, the libraries or the tools.
-
-## Code
+## Get the Code
 
 The source code of all Nit tools are freely available, see the [[download]] page.
 
-### General documentation
+
+## Watch and Discuss
+
+Most of the developement and the discussion on the language, tools and projects is done on our [[github repository|https://github.com/privat/nit]].
+
+Subscribe to [[Nitération|https://groups.google.com/d/forum/nit-fr]] is the monthly newsletter (only in french)
+
+
+## Program, Test, and Report Issues
+
+Try to use Nit and [[report problems|https://github.com/privat/nit/issues]] with the language, the libraries or the tools.
+
+Look at some [[newcommer issues|https://github.com/privat/nit/issues?q=is%3Aopen+is%3Aissue+label%3Anewcomer]], targeted to beginer in the Nit language (but not necesearely in programmati*n)
+
+
+### Devel documentation
 
 * The [[NOTICE|http://nitlanguage.org/nit.git/blob/master:/NOTICE]] file that states authorship and licences.
 * The [[documentation|http://nitlanguage.org/doc/nitc/]] of the source-code (generated with nitdoc).
@@ -38,4 +38,3 @@ The source code of all Nit tools are freely available, see the [[download]] page
 * [[!traillink continuous_integration]]
 * [[!traillink parser]]
 * [[!traillink dashboard]]
-
