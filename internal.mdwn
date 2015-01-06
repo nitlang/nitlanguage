@@ -12,14 +12,14 @@ The source code of all Nit tools are freely available, see the [[download]] page
 
 Most of the developement and the discussion on the language, tools and projects is done on our [[github repository|https://github.com/privat/nit]].
 
-Subscribe to [[Nitération|https://groups.google.com/d/forum/nit-fr]] is the monthly newsletter (only in french)
+Subscribe to [[Nitération|https://groups.google.com/d/forum/nit-fr]], the monthly newsletter of ne Nit project (only in french).
 
 
 ## Program, Test, and Report Issues
 
 Try to use Nit and [[report problems|https://github.com/privat/nit/issues]] with the language, the libraries or the tools.
 
-Look at some [[newcommer issues|https://github.com/privat/nit/issues?q=is%3Aopen+is%3Aissue+label%3Anewcomer]], targeted to beginer in the Nit language (but not necesearely in programmati*n)
+Look at some [[newcommer tasks|https://github.com/privat/nit/issues?q=is%3Aopen+is%3Aissue+label%3Anewcomer]], targeted to beginer in the Nit language (but not necessarily in programmation)
 
 
 ### Devel documentation
