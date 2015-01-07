@@ -47,7 +47,7 @@ $ git clone http://nitlanguage.org/nit.git
 Ensure that dependencies (and recommendations) are installed:
 
 ~~~sh
-$ sudo apt-get install build-essential ccache libgc-dev graphviz libunwind7-dev
+$ sudo apt-get install build-essential ccache libgc-dev graphviz libunwind7-dev pkg-config
 ~~~
 
 Build the compiler (may be long):
