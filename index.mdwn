@@ -39,13 +39,14 @@ Nit will help you write bug-free programs
 * Strong static typing
 * No more NullPointerException
 
-# # Real world projects and examples
+# # Published projects using Nit
 
-* [[Opportunity|http://xymus.net/opportunity/]], an event planner
+* [[Opportunity|http://xymus.net/opportunity/]], a [[free|https://github.com/privat/nit/tree/master/contrib/opportunity]] event planner
 * [[Brewnit|https://github.com/R4PaSs/brewnit]], a tool for home brewers
 * [[A simple calculator|https://github.com/privat/nit/tree/master/examples/calculator]] using GTK for desktop and the native UI for Android while sharing the business logic
 * [[Hunted Dino|https://github.com/privat/nit/tree/master/examples/mnit_dino]], a simple game for desktop and [[Android|http://nitlanguage.org/fdroid/dino_01.apk]] using class refinement to cleanly separate preoccupations in the code
 * [[Chainz of Friendz|https://github.com/privat/nit/tree/master/contrib/friendz]], a puzzle game for desktop and [[Android|http://nitlanguage.org/fdroid/friendz_01.apk]]
+* [[OpenGL ES 2.0|https://github.com/privat/nit/tree/master/lib/glesv2]], [[SDL 2.0|https://github.com/privat/nit/tree/master/lib/sdl2]], [[GTK 3|https://github.com/privat/nit/tree/master/lib/gtk]] and [[sqlite3|https://github.com/privat/nit/tree/master/lib/sqlite3]] wrappers
 
 # # Getting Started
 
