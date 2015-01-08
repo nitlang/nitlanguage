@@ -22,8 +22,7 @@ Install [[pathogen|https://github.com/tpope/vim-pathogen]] with
 
 ~~~sh
 $ mkdir -p ~/.vim/autoload ~/.vim/bundle
-$ curl -so ~/.vim/autoload/pathogen.vim \
-  https://raw.github.com/tpope/vim-pathogen/master/autoload/pathogen.vim
+$ curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 ~~~
 
 Modify you `.virmrc` to activate pathogen
