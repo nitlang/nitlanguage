@@ -7,7 +7,7 @@ All kind of classes (including concrete classes) can specialize one or more supe
 
 ### But multiple inheritance is too complex for my mind, isn't it?
 
-In Nit, inheritance (ans especially multiple inheritance) is done right:
+In Nit, inheritance (and especially multiple inheritance) is done right:
 
 * No repeated inheritance: inheritance is only based on a principle of specialization. Therefore, a class is either inherited or is not inherited. A Cow is an Animal, there is no point to even ask "how many time a Cow is an Animal?"
 
