@@ -1,3 +1,3 @@
-* [[assigned|https://github.com/privat/nit/pulls?q=is%3Aopen+assignee%3A<TMPL_VAR user>]]
-* [[need work|https://github.com/privat/nit/issues?q=is%3Aopen+label%3Aneed_work+author%3A<TMPL_VAR user>]]
-* [[need review|https://github.com/privat/nit/issues?q=is%3Aopen+label%3Aneed_review+-involves%3A<TMPL_VAR user>+sort%3Aupdated-asc]]
+* [[assigned|https://github.com/privat/nit/issues?q=is%3Aopen+assignee%3A<TMPL_VAR user>]]
+* [[need work|https://github.com/privat/nit/pulls?q=is%3Aopen+label%3Aneed_work+author%3A<TMPL_VAR user>]]
+* [[need review|https://github.com/privat/nit/pulls?q=is%3Aopen+label%3Aneed_review+-involves%3A<TMPL_VAR user>+sort%3Aupdated-asc]]
