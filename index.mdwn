@@ -10,6 +10,12 @@ So, what does the famous hello world program look like, in Nit?
 print "Hello, World!"
 ~~~
 
+# # Development
+
+The Nit project is currently in alpha stage, at v0.7. It is in active development, moving fast and the APIs are still evolving.
+
+You can follow the development on [[Github|https://github.com/privat/nit/]].
+
 # # Feature Highlights
 
 ## Usability
