@@ -3,24 +3,28 @@
 Nit is a target framework for novel compilation techniques and object-oriented research. Currently, the compiler and others tools are actively developed.
 
 
-## Get the Code
+## Checklist for the New (Potential) Contributor
 
-The source code of all Nit tools are freely available, see the [[download]] page.
+* **Get the code.**
+  The source code of all Nit tools are freely available, see the [[download]] page.
+  If you plan to contribute, it is easier to **[[fork on Github|https://github.com/privat/nit/fork]]**
 
+* **Watch and Discuss.**
+  Most of the development and the discussion on the language, tools and projects is done on our [[github repository|https://github.com/privat/nit]].
 
-## Watch and Discuss
+* **Keep you informed.**
+  Subscribe to [[Nitération|https://groups.google.com/d/forum/nit-fr]], the monthly newsletter of ne Nit project (only in french currently).
 
-Most of the developement and the discussion on the language, tools and projects is done on our [[github repository|https://github.com/privat/nit]].
+* **Show your support.**
+  Do not forget to [[star|https://github.com/privat/nit/stargazers]] the project. It is always a nice gesture.
 
-Subscribe to [[Nitération|https://groups.google.com/d/forum/nit-fr]], the monthly newsletter of ne Nit project (only in french).
+* **Program Things.**
+  Try to use Nit.
+  Look at some **[[newcommer tasks|https://github.com/privat/nit/issues?q=is%3Aopen+is%3Aissue+label%3Anewcomer]]**, targeted to beginner in the Nit language (but not necessarily in programming)
 
-
-## Program, Test, and Report Issues
-
-Try to use Nit and [[report problems|https://github.com/privat/nit/issues]] with the language, the libraries or the tools.
-
-Look at some [[newcommer tasks|https://github.com/privat/nit/issues?q=is%3Aopen+is%3Aissue+label%3Anewcomer]], targeted to beginer in the Nit language (but not necessarily in programmation)
-
+* **Ask and Report.**
+  If you fine some, [[report problems|https://github.com/privat/nit/issues]] with the language, the libraries or the tools.
+  The [[pseudo-forum|https://github.com/privat/nit/issues?q=label%3Aforum]] can be used to ask any kind of question.
 
 ### Devel documentation
 
