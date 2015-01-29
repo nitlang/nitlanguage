@@ -22,7 +22,7 @@ Nit's workflow is inspired by [[Github's|http://scottchacon.com/2011/08/31/githu
 * Automatically, one superficial continuous integration test phase is run on the new code
 * Once the aforementioned tests pass, a deeper test routine is launched against the commits introduced by the PR. If it passes, the branch is then merged into master, and the PR is closed.
 
-Since a lot of programmers already posess a Github account, it is very easy and efficient for anyone to contribute either via reviewing or submitting code to the project.
+Since a lot of programmers already possess a Github account, it is very easy and efficient for anyone to contribute either via reviewing or submitting code to the project.
 
 The main difference with the original Github workflow is that we often ask for rebasing/rewritting patches as we require individual commits to be cohesive.
 
