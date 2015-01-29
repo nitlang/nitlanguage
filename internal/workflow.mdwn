@@ -1,63 +1,58 @@
 TODO: translate
 
-## Dépots et branches
+## Repos and Branches
 
-Le dépôt officiel est [[http://nitlanguage.org/nit.git]].
-Un [[miroir github|https://github.com/privat/nit]] permet un meilleur développement social (*social coding*).
+The official Nit repository is [[http://nitlanguage.org/nit.git]].
+A [[Github mirror|https://github.com/privat/nit]] is also available for social coding.
 
-La branche **master** du dépôt est la version fiable, stable et à jour :
+The **master** branch is the most stable, up-to-date and trustworthy :
 
-* Fiable car elle passe les gros [[tests d'intégration|continuous integration]] : tout doit fonctionner, aucune régression n'est acceptée.
-* Stable car cette banche n'est jamais rebasée (réecrite) : tout nouveau développement devrait partir d'une version de master (de préférence la plus récente) 
-* À jour car ce qui n'est pas disponible dans master n’existe pas officiellement et on essaye d'intégrer les nouveautés aussi vite que possible.
+* Reliable since it passes every [[continuous integration test|continuous integration]]: everything must pass at all times, no regression is allowed
+* Stable since it is never rebased/rewritten: we encourage new development projects in Nit to be based on master (the newer, the better)
+* Up-to-date since everything that has not been integrated in master has no official existence and we try to integrate novelties as fast as we can
 
-Discussion. De nombreux projets libres/universitaire échouent car la base de code ne respecte pas ces critères. Le roulement des étudiants et des développeurs occasionnels fait que, malheureusement, au bout de quelques années le code de tels projets est rarement fiable, stable ou à jour. Le seul moyen de s'en sortir dans la durée est d'avoir un processus de développement qui garantit un code toujours stable et à jour.
+A lot of free software or academic projects tend to fail since they do not apply these criteria. The continuous flow of students or casual developers make the code base hard to maintain up to a point that the project itself is neither reliable, stable nor up-to-date. The only way to keep the head out of the sand in this case is to have a development process that guarantees a stable and up-to-date code.
 
-Les autres branches sont des branches en cours de développement, donc non fiables, non stables et temporaires.
+Other development branches are not for public use and are to be deleted once merged into master.
 
-* Non fiable car on ne garantit pas que ça marche ou ne casse rien
-* Non stable car les commits peuvent être réécrits
-* Temporaire car soit le code est abandonné et la branche disparaît, soit le code est intégré dans master et la branche disparaît aussi.
+## Development workflow
 
-## Workflow de développement
+Nit's workflow is inspired by [[Github's|http://scottchacon.com/2011/08/31/github-flow.html]].
 
-Le workflow de Nit s'inspire de [[celui préconisé par github|http://scottchacon.com/2011/08/31/github-flow.html]].
+* [[Pull-Requests|https://github.com/privat/nit/pulls]] (PR) are submitted
+* A code-review phase follows, and comments are issued on the code
+* Automatically, one superficial continuous integration test phase is run on the new code
+* Once the aforementioned tests pass, a deeper test routine is launched against the commits introduced by the PR. If it passes, the branch is then merged into master, and the PR is closed.
 
-* Des [[pull request|https://github.com/privat/nit/pulls]] (PR) sont proposées
-* Des commentaires sont effectués (relecture de code)
-* L'intégration continue fait un test superficiel (automatique)
-* Quand tout est beau : des tests d'intégration profonds sont effectués et la branche et intégrée (merge) dans master
+Since a lot of programmers already posess a Github account, it is very easy and efficient for anyone to contribute either via reviewing or submitting code to the project.
 
-Discussion. github semble avoir gagné son pari. De nombreux programmeurs possèdent déjà un compte et le site web ainsi que l'API permettent de contribuer facilement et efficacement (malgré de nombreuses imperfections).
+The main difference with the original Github workflow is that we often ask for rebasing/rewritting patches as we require individual commits to be cohesive.
 
-La différence avec le workflow standard de github : on demande souvent que les séries de patchs soient réécrites afin que les commits individuels d'une branche soient cohérents et de qualité.
+* A branch should only undertake one task (bugfix, addition of a functionality, etc.)
+* A branch is composed a few commits (if a branch unnecessarily contains too much commits, we might ask to split it in several PRs)
+* Each commit needs to be cohesive, self explanatory and well documented
 
-* la branche se préoccupe d'un seul problème (buxfix, fonctionnalité, etc.)
-* une branche est composée d'un petit nombre de commits (éventuellement une trop grosse branche devrait être scindée et faire l'objet de plusieurs requêtes)
-* chaque commit doit être cohérent, auto-suffisant et bien documenté
+Projects like the Linux kernel or git itself consider that the best way to ensure code quality is to only integrate patches that have been reviewed and approved by an independent third-party. Having a history of cohesive and documented patches has a positive impact on maintenance since modifications can be traced back, and the reasons of their introduction are easily found. In the case of Nit, being a new language and due to its academic nature, contributors to the language are mostly students. Because of that, patches often require several iterations before their final integration.
 
-Discussion. les projets comme le noyau linux ou git lui-même considèrent que le meilleur moyen de garantir une bonne qualité du code global est de n'intégrer que des patchs qui sont indépendamment relus et de bonne qualité.
-De plus, avoir un historique composé uniquement de patchs cohérents et documentés permet facilement de se sortir du pétrin dans les problèmes de maintenance ("Qui à ajouté telle ligne et pourquoi?").
-Dans le cadre de Nit, le langage étant nouveau et les contributeurs, pour la plupart encore en formation, les patchs nécessitent plusieurs itérations pour avoir un bon niveau de qualité.
+## Code reviewing
 
-## Relecture de code
+Code reviews are mainly done through Github.
+Submitted PRs are tagged as [[need_review|https://github.com/privat/nit/issues?direction=desc&labels=need_review&page=1&sort=updated&state=open]].
 
-Le relecture de code se fait principalement via github.
-La PR en attente de commentaires sont étiquetées [[need_review|https://github.com/privat/nit/issues?direction=desc&labels=need_review&page=1&sort=updated&state=open]].
+Contributors are then strongly advised to review the submitted code for several reasons:
 
-Les contributeurs sont fortement encouragés à relire le code des autres :
+* Code review helps understanding the language, libraries and tools
+* It makes clearer everyone's undergoing tasks and specialities
+* It helps the reviewer becoming more proficient with Nit, since good practices of other contributors are visible in this context
+* The more reviewed, the faster a branch is integrated
 
-* La relecture de code permet de comprendre le langage, les bibliothèques et les outils.
-* Cela permet aux divers participants de savoir ce que chacun fait
-* Cela permet aussi de s'améliorer en apprenant des bonnes pratiques des autres participants
-* Cela accélère l'intégration des branches
+A review of well-documented and clean code is often signified by a "+1" which might be interpreted as "I read the diff, nothing seems wrong with it".
 
-Une bonne relecture se contente dire « +1 » (ou *ACK*) qui signifie « j'ai lu le diff et rien de louche ou de choquant ne m'a sauté aux yeux »
+## Integration
 
-## Intégration
+Once a consensus has been reached within reviewers of the code, the branch is ready to be merged into master, it is then tagged [[ok_will_merge|https://github.com/privat/nit/issues?direction=desc&labels=ok_will_merge&page=1&sort=updated&state=open]].
+Deep integration tests are then launched to ensure nothing is broken by the newly submitted code.
 
-Lorsque le consensus des relecteurs est d’accepté une requête d'intégration, les tests d'intégration lourds sont exécutés (les PR en test ou en attende de test sont étiquetées [[ok_will_merge|https://github.com/privat/nit/issues?direction=desc&labels=ok_will_merge&page=1&sort=updated&state=open]])
+If tests are passing, the PR is then integrated in master by merging.
 
-En fonction des résultats des tests, la PR est intégrée dans la branche principale via un merge.
-
-Discussion: Ce schéma d'intégration bar branche permet à tous les commits *first parent* ancêtre de *master* de respecter les critères de qualité de *master*. `gitk --first-parent master`
+This integration scheme by branches has the benefit of having every commit  respect the quality criteria of *master*.
