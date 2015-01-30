@@ -24,8 +24,8 @@ For some generic information about contributing to a project that uses Git, [[Pr
 
 * Clean the white spaces:
 
-    $ git log --online --check my_branch
-    $ git rebase --whitespaces=fix my_base my_branch
+      $ git log --online --check my_branch
+      $ git rebase --whitespaces=fix my_base my_branch
 
 * Check the style with [[nitpretty|tools/nitpretty]]
 
