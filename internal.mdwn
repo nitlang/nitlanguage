@@ -40,5 +40,4 @@ Nit is a target framework for novel compilation techniques and object-oriented r
 * [[!traillink bootstrap]]
 * [[!traillink regression]]
 * [[!traillink continuous_integration]]
-* [[!traillink parser]]
 * [[!traillink dashboard]]
