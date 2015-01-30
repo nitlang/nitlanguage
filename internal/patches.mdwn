@@ -16,11 +16,19 @@ You can communicate patches by the way you prefer including: merge request on so
 
 For some generic information about contributing to a project that uses Git, [[ProGit|http://git-scm.com/book/ch5-2.html]] has a dedicated section.
 
-# Check list
+## Check list
 
-Each patch have a proper signed-off-by tag.
+* Each patch have a proper signed-off-by tag.
 
-Clean the white spaces:
+* Each patch have a proper description
+
+* Clean the white spaces:
 
     $ git log --online --check my_branch
     $ git rebase --whitespaces=fix my_base my_branch
+
+* Check the style with [[nitpretty|tools/nitpretty]]
+
+* Check warnings with [[nitpick -W|tools/nitpick]]
+
+* Run unit-tests with [[nitunit|tools/nitunit]]
