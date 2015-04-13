@@ -232,24 +232,24 @@ or
 
     module gtk3_4 is pkgconfig("gtk+-3.0")
 
-### c_compiler_options and c_linker_options
+### cflags and ldflags
 
-When you need specialized options or a library unsupported by pkg-config, you can use the annotations `c_compiler_options` and `c_linker_options`. They pass options directly the compiler and linker.
+When you need specialized options or a library unsupported by pkg-config, you can use the annotations `cflags` and `ldflags`. They pass options directly the compiler and linker.
 
 They can be used with a special function call to `exec` which will use the result of a local program instead of a string.
 
 Basic usage example:
 
     module sdl is
-        c_compiler_option("-I", "/usr/include/SDL")
-        c_linker_option("-l", "SDL")
+        cflags("-I", "/usr/include/SDL")
+        ldflags("-l", "SDL")
     end
 
 Same example with calls to `exec`, where we use the external program `sdl-config`:
 
     module sdl is
-        c_compiler_option(exec("sdl-config", "--cflags"))
-        c_linker_option(exec("sdl-config", "--libs"), "-lSDL_image -lSDL_ttf")
+        cflags(exec("sdl-config", "--cflags"))
+        ldflags(exec("sdl-config", "--libs"), "-lSDL_image -lSDL_ttf")
     end
 
 # Example using the FFI
