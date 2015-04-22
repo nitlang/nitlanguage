@@ -19,9 +19,11 @@ For some generic information about contributing to a project that uses Git, [[Pr
 
 ## Check list
 
-* Each patch have a proper signed-off-by tag.
+* Each commit have a proper signed-off-by tag.
 
-* Each patch have a proper description
+* Each commit have a proper description
+
+* Each source file has a proper header license
 
 * Clean the white spaces:
 
