@@ -1,0 +1,36 @@
+<div>
+<nav><h3>[[Download]]</h3>
+<ul><li>[[Git repository|http://nitlanguage.org/nit.git]]</li>
+<li>[[Snapshot (tar.gz)|http://nitlanguage.org/nit.git/snapshot/HEAD.tar.gz]]</li>
+<li>[[All download...|download]]</li>
+</ul></nav>
+
+<nav><h3>[[Documentation|doc]]</h3>
+<ul><li>[[Language manual|manual]]</li>
+<li>[[Compiler and tools|http://nitlanguage.org/tools]]</li>
+<li>[[Standard library|http://nitlanguage.org/doc/stdlib]]</li>
+<li>[[FAQ]]</li>
+<li>[[All documentation...|doc]]</li>
+</ul></nav>
+
+<nav><h3>[[Get Involved|internal]]</h3>
+<ul>
+<li>[[Github|https://github.com/privat/nit/]]</li>
+<li>[[User Forum|https://github.com/privat/nit/issues?q=label%3Aforum]]</li>
+<li>[[French mailing list|https://groups.google.com/d/forum/nit-fr]]</li>
+<li>[[Continuous integration|http://gresil.org/jenkins]]</li>
+<li>[[Bugs|https://github.com/privat/nit/labels/bug]]</li>
+<li>[[Other things...|internal]]</li>
+</ul></nav>
+
+<nav><h3>Sponsors</h3>
+<ul><li>[[Grésil|http://gresil.org]]</li>
+<li>[[LATECE|http://www.latece.uqam.ca]]</li>
+<li>[[NSERC|http://www.nserc.ca]]</li>
+<li>[[UQAM|http://www.uqam.ca]]</li>
+<li>[[LIRMM|http://www.lirmm.fr]]</li>
+<li>[[Université Montpellier II|http://www.univ-montp2.fr/]]</li>
+<li>[[CNRS|http://www.cnrs.fr]]</li>
+<li>[[Région Languedoc-Roussillon|http://www.cr-languedocroussillon.fr]]</li>
+</ul></nav>
+</div>
