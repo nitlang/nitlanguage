@@ -39,6 +39,3 @@ sorter.sort(array) # Use the sorter to sort the array
     
 print array #abc
 ~~~
-
-
-[[!tag array]]

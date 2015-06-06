@@ -124,8 +124,6 @@ print b.join(", ") # outputs "10, 30, 2, 3, 4, 20"
 Note that the type of literal arrays is deduced using the static type
 combination rule.
 
-[[!template id=related name=arrays tag=array]]
-
 ## Range
 
 `Range` is also a generic class but accepts only `Discrete`

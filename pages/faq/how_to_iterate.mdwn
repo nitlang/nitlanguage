@@ -55,5 +55,3 @@ for x in mymap.values do print x
 ~~~
 
 The `for` structure can be used on all collections and all classes that provide an `iterate` method.
-
-[[!tag array]]
