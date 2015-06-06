@@ -4,16 +4,16 @@ This document attempts to be as short as possible while covering all
 features of the language in depth. It is not a real manual to learn the
 language since concepts are covered only when required.
 
-* [[!traillink syntax]]
-* [[!traillink "basic type" text="basic types"]]
-* [[!traillink structure text="control structures"]]
-* [[!traillink variable text="local variables and static typing"]]
-* [[!traillink module]]
-* [[!traillink class]]
-* [[!traillink method]]
-* [[!traillink attribute]]
-* [[!traillink constructor]]
-* [[!traillink genericity]]
-* [[!traillink virtual_type]]
+* [[syntax]]
+* [[basic types|basic type]]
+* [[control structures|structure]]
+* [[local variables and static typing|variable]]
+* [[module]]
+* [[class]]
+* [[method]]
+* [[attribute]]
+* [[constructor]]
+* [[genericity]]
+* [[virtual_type]]
 
-Also available as a [[pdf document|nitreference.pdf]] and an [[epub document|nitreference.epub]].
+Also available as a [pdf document](nitreference.pdf) and an [epub document](nitreference.epub).

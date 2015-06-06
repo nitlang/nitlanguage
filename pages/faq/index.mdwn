@@ -2,15 +2,15 @@
 
 ## Installing, Configuring and Using Nit
 
-* [[!traillink operating_systems text="On what operating systems Nit is available?"]]
-* [[!traillink ide text="Support for common IDE"]]
-* [[!traillink optimizing text="Executables are really big and really slow!"]]
-* [[!traillink fast_compilation text="The compiler is slow to compile"]]
+* [[On what operating systems Nit is available?|operating_systems]]
+* [[Support for common IDE|ide]]
+* [[Executables are really big and really slow!|optimizing]]
+* [[The compiler is slow to compile|fast_compilation]]
 
 ## Developing with the Nit Language
 
-* [[!traillink How_to_iterate]]
-* [[!traillink How_to_sort_an_array]]
-* [[!traillink private_visibility text="Is there some `friend` or `package` visibility?"]]
-* [[!traillink combined_assignment text="How can I redefine the `+=` operator ?"]]
-* [[!traillink constants_and_enumerations text="How to define constants or enumerations"]]
+* [[How to iterate]]
+* [[How to sort an array]]
+* [[Is there some `friend` or `package` visibility?|private_visibility]]
+* [[How can I redefine the `+=` operator ?|combined_assignment]]
+* [[How to define constants or enumerations|constants_and_enumerations]]
