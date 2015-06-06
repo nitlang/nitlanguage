@@ -1,4 +1,0 @@
-<div class="related">
-FAQ related<TMPL_IF name> to <TMPL_VAR name></TMPL_IF>:
-[[!map pages="faq/* and tagged(<TMPL_VAR tag>)"]]
-</div>
