@@ -210,4 +210,4 @@ print sum(4, 5)
 
 The body of `intern` methods is provided by the compiler itself for performance or bootstrap reasons. For the same reasons, some intern methods, like `+` in `Int` are not redefinable.
 
-The body of `extern` methods is provided by libraries written in C; for instance, the system libraries required for input/output. Extern methods are always redefinable. See [[native interface]] for more information on `extern` methods.
+The body of `extern` methods is provided by libraries written in C; for instance, the system libraries required for input/output. Extern methods are always redefinable. See [[FFI]] for more information on `extern` methods.

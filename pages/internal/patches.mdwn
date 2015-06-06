@@ -2,7 +2,7 @@
 
 Here the rules for contributing
 
-Use the coding style described in [[the manual|manual/syntax]].
+Use the coding style described in [[the manual|/manual/syntax]].
 
 Describe your patches in English with a one-liner summary, a blank line, then an explanation of the problem and the advantages of the solution implemented by the patch.
 
@@ -30,8 +30,8 @@ For some generic information about contributing to a project that uses Git, [[Pr
       $ git log --online --check my_branch
       $ git rebase --whitespaces=fix my_base my_branch
 
-* Check the style with [[nitpretty|tools/nitpretty]]
+* Check the style with [[nitpretty|/tools/nitpretty]]
 
-* Check warnings with [[nitpick -W|tools/nitpick]]
+* Check warnings with [[nitpick -W|/tools/nitpick]]
 
-* Run unit-tests with [[nitunit|tools/nitunit]]
+* Run unit-tests with [[nitunit|/tools/nitunit]]
