@@ -1,5 +1,3 @@
-[[!sidebar]]
-
 # # What is Nit?
 
 Nit is an object-oriented programming language. The goal of Nit is to propose a robust statically typed programming language where structure is not a pain.

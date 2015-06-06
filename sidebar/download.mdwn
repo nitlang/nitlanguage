@@ -1,0 +1,5 @@
+### [[Download]]
+
+* [Git repository](http://nitlanguage.org/nit.git)
+* [Snapshot (tar.gz)](http://nitlanguage.org/nit.git/snapshot/HEAD.tar.gz)
+* [[All download...|download]]

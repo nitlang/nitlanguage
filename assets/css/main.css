@@ -92,6 +92,37 @@ a.toptitle:hover {
 	color:				#0D8921;
 }
 
+.sidebar nav {
+	margin:				20px;
+	width:				208px;
+	border:				1px solid #CCC;
+}
+
+.sidebar h3 {
+	margin: 0;
+	padding: 5px;
+	background: #CCC;
+	font-size: 1em;
+	border-bottom: none;
+	font-weight: bold;
+}
+
+.sidebar a {
+  display: block;
+  color: #0D8921;
+  text-decoration: none;
+}
+
+#searchform input {
+  background: url("../images/search-bg.png") transparent no-repeat;
+  background-position: 100%;
+  padding-left: 5px;
+  width: 100%;
+  padding-right: 17px;
+  height: 25px;
+  border: 0px;
+}
+
 footer {
 	margin-top:			20px;
 }
