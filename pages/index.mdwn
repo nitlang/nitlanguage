@@ -1,0 +1,94 @@
+# # What is Nit?
+
+Nit is an object-oriented programming language. The goal of Nit is to propose a robust statically typed programming language where structure is not a pain.
+
+So, what does the famous hello world program look like, in Nit?
+
+~~~
+print "Hello, World!"
+~~~
+
+# # Development
+
+The Nit project is currently in alpha stage, at v0.7. It is in active development, moving fast and the APIs are still evolving.
+
+You can follow the development on [[Github|https://github.com/privat/nit/]].
+
+# # Feature Highlights
+
+## Usability
+Nit's goal is to be usable by real programmers for real projects
+
+* [[KISS|http://en.wikipedia.org/wiki/KISS_principle]] principle
+* Script-like language without verbosity nor cryptic statements
+* Painless static types: static typing should help programmers
+* Efficient development, efficient execution, efficient evolution
+* Easy bindings with C, C++, Java and Objective-C using the [[FFI|FFI]]
+* [[Android|http://nitlanguage.org/doc/stdlib/module_android__android.html]] support in the compiler
+* Smart autodoc, [[nitdoc|http://nitlanguage.org/tools/nitdoc/]], used to document the [[standard lib|http://nitlanguage.org/doc/stdlib/module_android__android.html]]
+
+## Object-Oriented
+
+Nit's guideline is to follow the most powerful OO principles
+
+* [[Everything is an object]]
+* [[Multiple inheritance]]
+* [[Static open classes|refinement]]
+* [[Virtual types]]
+
+## Robustness
+
+Nit will help you write bug-free programs
+
+* Strong static typing
+* No more NullPointerException
+
+# # Published projects using Nit
+
+* [[Opportunity|http://xymus.net/opportunity/]], a [[free|https://github.com/privat/nit/tree/master/contrib/opportunity]] event planner
+* [[Brewnit|https://github.com/R4PaSs/brewnit]], a tool for home brewers
+* [[A simple calculator|https://github.com/privat/nit/tree/master/examples/calculator]] using GTK for desktop and the native UI for Android while sharing the business logic
+* [[Hunted Dino|https://github.com/privat/nit/tree/master/examples/mnit_dino]], a simple game for desktop and [[Android|http://nitlanguage.org/fdroid/dino_01.apk]] using class refinement to cleanly separate preoccupations in the code
+* [[Chainz of Friendz|https://github.com/privat/nit/tree/master/contrib/friendz]], a puzzle game for desktop and [[Android|http://nitlanguage.org/fdroid/friendz_01.apk]]
+* Bindings for [[OpenGL ES 2.0|https://github.com/privat/nit/tree/master/lib/glesv2]], [[SDL 2.0|https://github.com/privat/nit/tree/master/lib/sdl2]], [[GTK 3|https://github.com/privat/nit/tree/master/lib/gtk]] and [[sqlite3|https://github.com/privat/nit/tree/master/lib/sqlite3]]
+
+# # Getting Started
+
+Get Nit from its Git repository:
+
+~~~sh
+$ git clone http://nitlanguage.org/nit.git
+~~~
+
+Ensure that dependencies (and recommendations) are installed:
+
+~~~sh
+# Eg. for Debian Jessie (8.0)
+$ sudo apt-get install build-essential ccache libgc-dev graphviz libunwind-dev pkg-config
+# Older versions of Debian or Ubuntu need `libunwind8-dev` or `libunwind7-dev`
+~~~
+
+Build the compiler (may be long):
+
+~~~sh
+$ cd nit
+$ make
+~~~
+
+Compile a program:
+
+~~~sh
+$ bin/nitc examples/hello_world.nit
+~~~
+
+Execute the program:
+
+~~~sh
+$ ./hello_world
+~~~
+
+And now?
+
+* Install plugins for your [[editor or IDE|ide]] to works with Nit
+* Read the language [[manual]]
+* Browse the bundled [[libraries|http://nitlanguage.org/doc/stdlib]]

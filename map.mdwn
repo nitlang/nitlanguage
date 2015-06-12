@@ -1,5 +1,0 @@
-# Site Map
-
-Select a link to get more information
-
-[[!map pages="page(*) and !ikiwiki* and !bugs/* and !templates* and !examples/*"]]

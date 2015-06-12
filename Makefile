@@ -1,5 +1,5 @@
 refresh:
-	ikiwiki --setup ikiwiki.setup --refresh
+	nitiwiki --render
 
 rebuild:
-	ikiwiki --setup ikiwiki.setup --rebuild
+	nitiwiki --render --force

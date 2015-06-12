@@ -1,0 +1,19 @@
+# The Nit Language Reference
+
+This document attempts to be as short as possible while covering all
+features of the language in depth. It is not a real manual to learn the
+language since concepts are covered only when required.
+
+* [[syntax]]
+* [[basic types|basic type]]
+* [[control structures|structure]]
+* [[local variables and static typing|variable]]
+* [[module]]
+* [[class]]
+* [[method]]
+* [[attribute]]
+* [[constructor]]
+* [[genericity]]
+* [[virtual_type]]
+
+Also available as a [pdf document](nitreference.pdf) and an [epub document](nitreference.epub).
