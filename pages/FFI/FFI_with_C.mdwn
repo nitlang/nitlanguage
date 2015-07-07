@@ -40,9 +40,27 @@ For easier passage between Nit and C, Nit types that are primitive to C are conv
 | `Int`       | `long`   | The normal primitive type in C |
 | `Bool`      | `int`    | Where 0 is false and everything else true |
 | `Float`     | `double` |  |
-| `Char`      | `char`   |  |
+| `Char`      | `uint32_t` |  |
+| `Byte`      | `unsigned char` |  |
 | `NativeString` | `char *` | The standard C string |
 | `Pointer`   | `void *`    | A general pointer |
+
+## Note on NativeString
+
+NativeString being a pointer, it is allocated and deallocated automatically via the Garbage Collector.
+
+Because of this, it is primordial to take special care when dealing with such entitites, especially to avoid memory leaks or painful-to-debug segmentation faults.
+
+As long as the manipulations on NativeString are exclusively done within pure Nit code, no problem should arise.
+
+However, once you start going back and forth between Nit and C code is when errors may arise.
+
+To avoid any memory problems when dealing with NativeString, there are a set of basic rules:
+
+* Never forget you're dealing with extern classes, hence allocation should always be done through Boehm
+* Be particularly careful when modifying a NativeString as they might be shared by several instances, a general rule would be not to modify directly the received char*, but a copy of it
+* Because Boehm keeps no trace of what happens in extern code, be careful when giving a pointer of a managed resource to a long-lived extern resource as it might be destroyed anytime, triggering the crash of the program on the next dereferencing
+* When returning extern resources, allocate NativeStrings through `new_NativeString` in C or use `to_s_with_copy` to return a Nit String properly allocated via the Garbage Collector
 
 # Nit types in C
 
