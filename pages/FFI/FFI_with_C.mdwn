@@ -35,6 +35,7 @@ For easier passage between Nit and C, Nit types that are primitive to C are conv
 
 ## Primitive types between Nit and C
 
+~~~pandoc
 | Nit type    | C type | Notes |
 |:------------|:-------|:------------|
 | `Int`       | `long`   | The normal primitive type in C |
@@ -44,6 +45,7 @@ For easier passage between Nit and C, Nit types that are primitive to C are conv
 | `Byte`      | `unsigned char` |  |
 | `NativeString` | `char *` | The standard C string |
 | `Pointer`   | `void *`    | A general pointer |
+~~~
 
 ## Note on NativeString
 
@@ -64,6 +66,7 @@ All Nit types that are not primitive to C are represented by an opaque C type. _
 
 ## Some equivalent types between Nit and C
 
+~~~pandoc
 | Nit type    | C type | Notes |
 |:------------|:-------|:------------|
 | `Object`    | `Object` | A generated opaque type |
@@ -72,6 +75,7 @@ All Nit types that are not primitive to C are represented by an opaque C type. _
 | `Array[String]` | `Array_of_String` | There is a `_of_` between the class name and it's parameter. |
 | `Map[Int, String]` | `Map_of_Int_String` | The parameters are separated only with a `_` |
 | `nullable Array[String]` | `nullable_Array_of_String` | These can get quite long, but they are precise! |
+~~~
 
 # Callbacks to Nit from C
 
@@ -146,6 +150,7 @@ We will use examples in order to familiarize you to the structure generated call
 
 ### Explanation of each Callbacks
 
+~~~pandoc
 | Importation in Nit | C Function Signature | Note |
 |:-------------------|:---------------------|:-----|
 | `foo` | `void MyClass_foo(MyClass)` | The single argument is the receiver |
@@ -164,6 +169,7 @@ We will use examples in order to familiarize you to the structure generated call
 | `Array[String].[]` | `String Array_of_String__index(Array_of_String, long)` | Get from an array. |
 | `Array[String].[]=` | `void Array_of_String__index_assign(Array_of_String, long, String)` | Insert into an array. |
 | `HashMap[String, Array[String]].[]` | `Array_of_String HashMap_of_String_Array_of_String__index (HashMap_of_String_Array_of_String, String)` | When the types are too complex like this one, you are better of to write the complex code in Nit. |
+~~~
 
 # Extern classes
 
@@ -205,11 +211,13 @@ You _must_ free any resources you allocate in C code, the Nit system do not mana
 
 ## Examples of extern classes types in Nit and C
 
+~~~pandoc
 | Nit type     | C type        | Notes |
 |:-------------|:--------------|:------------|
 | `MyStruct`   | `my_struct *` | As declared by the user (in the example above) |
 | `NativeFile` | `FILE *` | A handle to a file, from the standard library |
 | `FileStat`   | `struct stat *` | Informations on a file, from the  standard library |
+~~~
 
 # Global C references
 
