@@ -2,7 +2,7 @@
 
 * [Github](https://github.com/privat/nit/)
 * [User Forum](https://github.com/privat/nit/issues?q=label%3Aforum)
-* [French mailing list](https://groups.google.com/d/forum/nit-fr)
+* [Newsletter](https://groups.google.com/d/forum/nitlanguage)
 * [Continuous integration](http://gresil.org/jenkins)
 * [Bugs](https://github.com/privat/nit/labels/bug)
 * [[Other things...|internal]]
