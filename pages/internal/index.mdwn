@@ -13,7 +13,7 @@ Nit is a target framework for novel compilation techniques and object-oriented r
   If you plan to contribute, it is easier to **[[fork it on Github|https://github.com/privat/nit/fork]]**
 
 * **Keep you informed.**
-  Subscribe to **[[Nitération|https://groups.google.com/d/forum/nit-fr]]**, the monthly newsletter of the Nit project (only in french currently).
+  Subscribe to **[[Niteration|https://groups.google.com/d/forum/nitlanguage]]**, the monthly newsletter of the Nit project.
 
 * **Show your support.**
   Do not forget to **[[star|https://github.com/privat/nit/stargazers]]** the project. It is always a nice gesture.
