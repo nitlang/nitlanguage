@@ -46,6 +46,8 @@ Nit will help you write bug-free programs
 # # Published projects using Nit
 
 * [[Opportunity|http://xymus.net/opportunity/]], a [[free|https://github.com/privat/nit/tree/master/contrib/opportunity]] event planner
+* [Nitiwiki](https://github.com/privat/nit/tree/master/contrib/nitiwiki), the wiki engine used for the current website
+* [Nitrpg](https://github.com/privat/nit/tree/master/contrib/nitrpg), the gamification of Nit development where contributors are rewarded by nitcoins
 * [[Brewnit|https://github.com/R4PaSs/brewnit]], a tool for home brewers
 * [[A simple calculator|https://github.com/privat/nit/tree/master/examples/calculator]] using GTK for desktop and the native UI for Android while sharing the business logic
 * [[Hunted Dino|https://github.com/privat/nit/tree/master/examples/mnit_dino]], a simple game for desktop and [[Android|http://nitlanguage.org/fdroid/dino_01.apk]] using class refinement to cleanly separate preoccupations in the code
