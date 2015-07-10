@@ -20,7 +20,7 @@ Nit is a target framework for novel compilation techniques and object-oriented r
 
 * **Program Things.**
   Try to use Nit.
-  Look at some **[[newcommer tasks|https://github.com/privat/nit/issues?q=is%3Aopen+is%3Aissue+label%3Anewcomer]]**, targeted to beginner in the Nit language (but not necessarily in programming)
+  Look at some **[[newcomer tasks|https://github.com/privat/nit/issues?q=is%3Aopen+is%3Aissue+label%3Anewcomer]]**, targeted to beginner in the Nit language (but not necessarily in programming)
 
 * **Ask and Report.**
   If you fine some, **[[report problems|https://github.com/privat/nit/issues]]** with the language, the libraries or the tools.
