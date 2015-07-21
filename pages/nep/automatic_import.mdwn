@@ -41,7 +41,7 @@ import foo
 import baz
 ~~~
 
-Conditional importations are never imported directly by the module that declare them but are deferred to the clients.
+Conditional importations are never imported directly by the module that declares them but are deferred to the clients.
 It means that a module who declares conditional importations is statically analysed (and possibly compiled) without taking in account the conditional importations nor the associated conditions.
 It also means that clients are statically analyzed (and possibly compiled) after having applied all the conditional importations of its imported modules.
 
