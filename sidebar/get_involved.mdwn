@@ -5,4 +5,5 @@
 * [Newsletter](https://groups.google.com/d/forum/nitlanguage)
 * [Continuous integration](http://gresil.org/jenkins)
 * [Bugs](https://github.com/privat/nit/labels/bug)
+* [NitRPG](http://nitlanguage.org/rpg/games/privat/nit)
 * [[Other things...|internal]]
