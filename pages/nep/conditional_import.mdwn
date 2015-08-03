@@ -4,6 +4,7 @@ The problem, independently identified by contributors, is to allow the variation
 
 * Status: Proposal
 * Discussion: <https://github.com/privat/nit/issues/1579>
+* Implementation: merged <https://github.com/privat/nit/pull/1580>
 
 ## Goals of the proposal
 
