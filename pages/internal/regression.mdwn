@@ -6,12 +6,17 @@ The directory `tests` contains various small Nit programs used to check that the
 
 To run the full regression test-suite, run:
 
-    cd tests
-    make
+
+~~~sh
+cd tests
+make
+~~~
 
 Individual tests can also be run independently:
 
-    ./tests.sh some_nit_programs.nit...
+~~~sh
+./tests.sh some_nit_programs.nit...
+~~~
 
 Each time some feature are added by a developer, he should:
 
