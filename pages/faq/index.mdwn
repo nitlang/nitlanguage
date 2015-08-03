@@ -10,7 +10,6 @@
 ## Developing with the Nit Language
 
 * [[How to iterate]]
-* [[How to sort an array]]
 * [[Is there some `friend` or `package` visibility?|private_visibility]]
 * [[How can I redefine the `+=` operator ?|combined_assignment]]
 * [[How to define constants or enumerations|constants_and_enumerations]]
