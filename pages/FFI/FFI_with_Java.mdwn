@@ -4,7 +4,7 @@ You may notice that the FFI with Java is very similar to the [[FFI/FFI_with_C]].
 
 The Java FFI main feature is to implement a Nit method in Java. Such a method is declared with a normal Nit signature followed by the callback declaration (more on that later), the language specified as Java, and the body. A Nit method implemented in Java will look like so:
 
-~~~~
+~~~~nitish
 fun foo(val: Int): Bool in "Java" `{
     // Java code
     System.out.println("Hello world from Java");
@@ -29,7 +29,7 @@ Let's analyse the previous segment of code.
 
 For such a simple method as the previous `foo`, to call any services you must use the full namespace, as we did in the reference to `java.util.ArrayList`. However, to define specific importations you can add an additional Java extern blocks higher in the Nit module right after the Nit importations.
 
-~~~~
+~~~~nitish
 module my_nit_module
 
 import some_nit_module
@@ -59,7 +59,7 @@ Most Java API require to implement one or many interfaces with custom Java class
 
 3. The third alternative is to use a Java class outside of the Nit module. The annotation `extra_java_file` on the module declaration joins the class to the project. Example:
 
-~~~~
+~~~~nitish
 module my_nit_module is
     extra_java_file("relative_path_to_the_java_source.java")
 end
@@ -75,7 +75,7 @@ When the extern type of an extern class is in Java you get what we call a extern
 
 An extern Java class is declared like any other extern class, however the extern type declarations must be preceded by `in "Java"`. It will thus look like this:
 
-~~~~
+~~~~nitish
 extern class AndroidBundle in "Java" `{ android.os.Bundle `}
 	# ...
 end
@@ -88,7 +88,7 @@ To maintain the API coherence, the introduction of an extern Java class should d
 
 A simple but complete extern Java class should look like this:
 
-~~~~
+~~~~nitish
 extern class AndroidBundle in "Java" `{ android.os.Bundle `}
 	super JavaObject
 	redef type SELF: AndroidBundle
@@ -132,7 +132,7 @@ Java APIs often rely on abstract classes that must be extended by the programmer
 * Use an anonymous class.
 * Create a static nested class. Example:
 
-~~~
+~~~nitish
 module my_module
 
 in "Java inner" `{
