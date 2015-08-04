@@ -27,13 +27,13 @@ $ curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 
 Modify you `.virmrc` to activate pathogen
 
-~~~
+~~~vim
 call pathogen#infect()
 ~~~
 
 If you're brand new to Vim and lacking a `.vimrc`, `vim ~/.vimrc` and paste in the following super-minimal example:
 
-~~~
+~~~vim
 call pathogen#infect()
 syntax on
 filetype plugin indent on
