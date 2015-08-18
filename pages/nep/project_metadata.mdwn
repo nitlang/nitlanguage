@@ -1,0 +1,142 @@
+# Project Meta-data
+
+In Nit, the *project* is the unit of distribution and versioning of software.
+A project is made of coherent modules that are developed and should be used together.
+
+Nit tools need information to associate a module to its projects and be able to look for dependencies inter-projects.
+These information are given in a project description file, called `project.ini` located in the root directory of the project.
+
+An example of a `project.ini` file is
+
+~~~ini
+[project]
+name=foo
+version=0.1
+tags=lib,datastructure,android
+author=John Doe <doe@example.com> (http://example.com/~doe)
+license=GPL
+[source]
+include=src
+[upstream]
+homepage=http://example.com/foo
+git=https://git.example.com/doe/foo.git
+~~~
+
+## project
+
+The project section describe core information about the project, as listed in a catalog of projects
+
+### project.name
+
+The name of the project, should be a valid identifier.
+
+By default, it is the name of the root directory.
+
+### project.version
+
+The version number of the project.
+Free-style for the moment but will be used latter.
+
+By default it is the empty string
+
+### project.tags
+
+Comma-separated list of tags used to categorize the project.
+Tools like auto-documentation and archive networks may use them to classify the project.
+
+By default it is the empty list
+
+### project.author
+
+List of the main authors that is responsible of the project.
+
+By default it is the empty string
+
+### project.license
+
+The main license of the software.
+Free-style, feel free to use the identifier of license listed by SPDX <https://spdx.org/licenses>
+
+By default it is the empty string
+
+## source
+
+The source section describe files in the directory of the project
+
+### source.include
+
+The list of directories to scan to find Nit source files.
+Paths are relative to the root directory of the project.
+
+By default it is "."
+
+### source.exclude
+
+The list of directories excluded from the scan of files for the project.
+
+Unless specific conditions, there is no reason to set it.
+
+By default, it is the empty list
+
+### source.bin
+
+Where executable are compiled if any.
+
+By default, it is "`bin/`"
+
+### source.assets
+
+For libraries `mnit` and `app.nit`, the directory contained assets.
+On some platform like `android` it is used to locate and bundle assets in the generated `.apk` files
+
+By default, it is "`assets/`"
+
+### sources.po
+
+The directory containing translation files used by the module `gettext`.
+
+By default, it is "`po/`"
+
+## upstream
+
+The section `upstream` groups information about accessing resources about the software and its development on the Internet
+
+### upstream.git
+
+An URL to the git repository of the project
+
+By default it is the empty string
+
+### upstream.git.branch
+
+The git branch of the project
+
+By default is is `master`
+
+### upstream.git.directory
+
+The subdirectory of the repository that is the root directory of the project.
+
+While it is expected that each project is developed in its own repository, a project could be located is a subdirectory. 
+
+By default is is `.`
+
+### upstream.homepage
+
+The URL of the public homepage of the project
+
+By default it is the empty string
+
+### upstream.contact
+
+Which person, mailing list, forum, to send e-mail messages in the first place.
+
+By default it is the email of the first author (see `project.autor`)
+
+### upstream.issues
+
+A URL to the list of known bugs and issues for the project.
+
+### upstream.browse
+
+An URL to browse the repository containing the sources.
