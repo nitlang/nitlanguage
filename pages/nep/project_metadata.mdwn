@@ -35,7 +35,7 @@ By default, it is the name of the root directory.
 ### project.version
 
 The version number of the project.
-Free-style for the moment but will be used latter.
+Free-style for the moment but will be used latter with a semantic versioning approach <http://semver.org/>
 
 By default it is the empty string
 
