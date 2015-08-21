@@ -1,7 +1,7 @@
 ## Repos and Branches
 
 The official Nit repository is [[http://nitlanguage.org/nit.git]].
-A [[Github mirror|https://github.com/privat/nit]] is also available for social coding.
+A [[Github mirror|https://github.com/nitlang/nit]] is also available for social coding.
 
 The **master** branch is the most stable, up-to-date and trustworthy :
 
@@ -17,7 +17,7 @@ Other development branches are not for public use and are to be deleted once mer
 
 Nit's workflow is inspired by [[Github's|http://scottchacon.com/2011/08/31/github-flow.html]].
 
-* [[Pull-Requests|https://github.com/privat/nit/pulls]] (PR) are submitted
+* [[Pull-Requests|https://github.com/nitlang/nit/pulls]] (PR) are submitted
 * A code-review phase follows, and comments are issued on the code
 * Automatically, one superficial continuous integration test phase is run on the new code
 * Once the aforementioned tests pass, a deeper test routine is launched against the commits introduced by the PR. If it passes, the branch is then merged into master, and the PR is closed.
@@ -35,7 +35,7 @@ Projects like the Linux kernel or git itself consider that the best way to ensur
 ## Code reviewing
 
 Code reviews are mainly done through Github.
-Submitted PRs are tagged as [[need_review|https://github.com/privat/nit/issues?direction=desc&labels=need_review&page=1&sort=updated&state=open]].
+Submitted PRs are tagged as [[need_review|https://github.com/nitlang/nit/issues?direction=desc&labels=need_review&page=1&sort=updated&state=open]].
 
 Contributors are then strongly advised to review the submitted code for several reasons:
 
@@ -48,7 +48,7 @@ A review of well-documented and clean code is often signified by a "+1" which mi
 
 ## Integration
 
-Once a consensus has been reached within reviewers of the code, the branch is ready to be merged into master, it is then tagged [[ok_will_merge|https://github.com/privat/nit/issues?direction=desc&labels=ok_will_merge&page=1&sort=updated&state=open]].
+Once a consensus has been reached within reviewers of the code, the branch is ready to be merged into master, it is then tagged [[ok_will_merge|https://github.com/nitlang/nit/issues?direction=desc&labels=ok_will_merge&page=1&sort=updated&state=open]].
 Deep integration tests are then launched to ensure nothing is broken by the newly submitted code.
 
 If tests are passing, the PR is then integrated in master by merging.

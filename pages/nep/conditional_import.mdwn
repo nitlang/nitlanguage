@@ -3,8 +3,8 @@
 The problem, independently identified by contributors, is to allow the variation of a module according to a specific platform. Eg sound on linux vs sound on android.
 
 * Status: Proposal
-* Discussion: <https://github.com/privat/nit/issues/1579>
-* Implementation: merged <https://github.com/privat/nit/pull/1580>
+* Discussion: <https://github.com/nitlang/nit/issues/1579>
+* Implementation: merged <https://github.com/nitlang/nit/pull/1580>
 
 ## Goals of the proposal
 

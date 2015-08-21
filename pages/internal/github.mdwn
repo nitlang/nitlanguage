@@ -1,10 +1,10 @@
 # The github repository
 
-Our [[workflow]] heavily rely on the Nit [[https://github.com/privat/nit/]] repository.
+Our [[workflow]] heavily rely on the Nit [[https://github.com/nitlang/nit/]] repository.
 
 Here some details.
 
-## [[Labels|https://github.com/privat/nit/labels]]
+## [[Labels|https://github.com/nitlang/nit/labels]]
 
 Issues and Pull Requests use specific labels for specific meaning
 

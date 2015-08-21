@@ -12,7 +12,7 @@ $ git clone http://nitlanguage.org/nit.git
 
 or to download the latest [[snapshot|http://nitlanguage.org/nit.git/snapshot/HEAD.tar.gz]] (tar.gz)
 
-A [[github mirror|http://github.com/privat/nit]] is also available.
+A [[github mirror|http://github.com/nitlang/nit]] is also available.
 
 ## Build
 

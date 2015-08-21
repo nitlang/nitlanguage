@@ -1,1 +1,1 @@
-We moved to [[github issues|https://github.com/privat/nit/issues]] to manage bugs.
+We moved to [[github issues|https://github.com/nitlang/nit/issues]] to manage bugs.

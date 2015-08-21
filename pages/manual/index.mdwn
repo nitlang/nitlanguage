@@ -5,7 +5,7 @@ features of the language in depth. It is not a real manual to learn the
 language since concepts are covered only when required.
 
 Warning: The manual is not up to date with the current language implementation and features.
-See [Issue #761](https://github.com/privat/nit/issues/761)
+See [Issue #761](https://github.com/nitlang/nit/issues/761)
 
 * [[syntax]]
 * [[basic types|basic type]]
