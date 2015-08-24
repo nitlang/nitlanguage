@@ -1,8 +1,8 @@
 # Project Meta-data
 
-Status: proposal
-Discussion: https://github.com/nitlang/nit/issues/1655
-Implementation: none yet
+* Status: proposal
+* Discussion: https://github.com/nitlang/nit/issues/1655
+* Implementation: none yet
 
 In Nit, the *project* is the unit of distribution and versioning of software.
 A project is made of coherent modules that are developed and should be used together.
