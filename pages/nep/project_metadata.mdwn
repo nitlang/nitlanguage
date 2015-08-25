@@ -52,9 +52,15 @@ By default it is the empty list
 
 ### project.author
 
-List of the main authors that is responsible of the project.
+List of the main authors that started the project.
 
 By default it is the empty string
+
+### project.maintainer
+
+List of the persoss that are responsible for the project.
+
+By default it is the same as `project.author`
 
 ### project.license
 
