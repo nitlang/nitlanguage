@@ -2,7 +2,10 @@
 
 * Status: proposal
 * Discussion: https://github.com/nitlang/nit/issues/1655
-* Implementation: none yet
+* Implementation:
+  * Association between a project and its .ini file https://github.com/nitlang/nit/pull/1654
+  * Filling metadata: work in progress
+  * Using metadata: work in progress
 
 In Nit, the *project* is the unit of distribution and versioning of software.
 A project is made of coherent modules that are developed and should be used together.
@@ -50,17 +53,22 @@ Tools like auto-documentation and archive networks may use them to classify the 
 
 By default it is the empty list
 
-### project.author
-
-List of the main authors that started the project.
-
-By default it is the empty string
-
 ### project.maintainer
 
-List of the persoss that are responsible for the project.
+List of the persons that are responsible for the project.
 
-By default it is the same as `project.author`
+By default it is the empty list
+
+Note that there is no `author` field.
+
+### project.more_contributors
+
+List of additionnal contributors.
+
+The final list of contributors is computed and include the maitainers, authors collected by the vcs (`git shortlog`) and persons.
+This field is expected to hold contributors thal falled trought the cracks of the vcs (e.g. non programmer contributors, bad csv history, etc.)
+
+By default it is the empty list
 
 ### project.license
 
