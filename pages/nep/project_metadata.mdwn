@@ -54,6 +54,38 @@ Tools like auto-documentation and archive networks may use them to classify the 
 
 By default it is the empty list
 
+Some tags:
+
+* ai: artificial intelligence
+* algo: data structure and algorithms
+* cli: command line interface
+* crypto: cryptography
+* database: database
+* debug: debugging, profiling, testing, logging
+* devel: development and software engineering
+* educ: education
+* embedded: embedded system
+* encoding: encoding, decoding, conversion
+* example: example of code, proof of concepts
+* format: read, write and manipulation of file formats
+* game: video games
+* graphics: graphics and display
+* i18n: internationalization and localization
+* io: input-output
+* java: Java related
+* language: related to other programming language
+* lib: library and frameworks
+* network: networking
+* parallelism: parallelism, threads, clusters
+* platform: special platforms
+* sound: sound, audio, music
+* terminal: terminal, console
+* text: manipulation of text
+* ui: user interface
+* web: web, http
+* wrapper: wrapping of third-party software
+* xml: manipulation of XML
+
 ### project.maintainer
 
 List of the persons that are responsible for the project.
