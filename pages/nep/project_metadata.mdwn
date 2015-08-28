@@ -6,6 +6,7 @@
   * Association between a project and its .ini file https://github.com/nitlang/nit/pull/1654
   * Filling metadata: work in progress
   * Using metadata: work in progress
+* Preview: http://nitlanguage.org/catalog/index.html
 
 In Nit, the *project* is the unit of distribution and versioning of software.
 A project is made of coherent modules that are developed and should be used together.
