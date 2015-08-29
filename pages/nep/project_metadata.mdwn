@@ -20,8 +20,8 @@ An example of a `project.ini` file is
 [project]
 name=foo
 version=0.1
-tags=lib,datastructure,android
-author=John Doe <doe@example.com> (http://example.com/~doe)
+tags=algo,android
+maintainer=John Doe <doe@example.com> (http://example.com/~doe)
 license=GPL
 [source]
 include=src
