@@ -25,7 +25,7 @@ Nit's goal is to be usable by real programmers for real projects
 * Efficient development, efficient execution, efficient evolution
 * Easy bindings with C, C++, Java and Objective-C using the [[FFI|FFI]]
 * [Android](http://nitlanguage.org/doc/stdlib/module_android__android.html) support in the compiler
-* Smart autodoc, [[nitdoc|http://nitlanguage.org/tools/nitdoc/]], used to document the [[standard lib|http://nitlanguage.org/doc/stdlib/module_android__android.html]]
+* Smart autodoc, [[nitdoc|tools/nitdoc]], used to document the [[standard lib|http://nitlanguage.org/doc/stdlib/module_android__android.html]]
 
 ## Object-Oriented
 
