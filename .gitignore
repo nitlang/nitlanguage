@@ -1,3 +1,11 @@
 /target/
 /pages/tools/nit*
 *.swp
+
+pages/manual/blank
+pages/manual/nitreference-main.md
+pages/manual/nitreference-main.tex
+pages/manual/nitreference.aux
+pages/manual/nitreference.epub
+pages/manual/nitreference.log
+pages/manual/nitreference.pdf

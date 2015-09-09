@@ -1,5 +1,9 @@
 refresh:
-	nitiwiki --render
+	make -C pages/manual
+	git pull
+	nitiwiki --render -v
 
 rebuild:
-	nitiwiki --render --force
+	make -C pages/manual
+	git pull
+	nitiwiki --render --force -v
