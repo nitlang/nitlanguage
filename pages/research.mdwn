@@ -1,7 +1,7 @@
 <h1>Publications and Technical Reports</h1>
 
 <p>
-Some Nit team members has been working for more than 15 years on object-oriented languages and compilation techniques.
+Some Nit team members has been working for more than 15 years on object-oriented languages and comlpilation techniques.
 This page gathers works related to Nit (and previously to PRM, the ancestor of Nit).
 </p>
 
@@ -164,7 +164,7 @@ ACM,
 Jean Privat &amp; Roland Ducournau.
 «&nbsp;Intégration d'optimisations globales en compilation séparée des langages à objets&nbsp;».
 In <i>Langages et Modèles à Objets</i>
-(<a href="http://www.lifl.fr/lmo2004/">LMO'04</a>), 
+(LMO'04), 
 Volume&nbsp;10(2-3) de 
 L'objet, 
 pp.&nbsp;61&mdash;74.
