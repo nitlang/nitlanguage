@@ -6,7 +6,7 @@ Nit is a target framework for novel compilation techniques and object-oriented r
 ## Checklist for the New (Potential) Contributor
 
 * **Watch and Discuss.**
-  Most of the development and the discussion on the language, tools and projects is done on our **[[github repository|https://github.com/nitlang/nit]]**.
+  Most of the development and the discussion on the language, tools and packages is done on our **[[github repository|https://github.com/nitlang/nit]]**.
 
 * **Get the code.**
   The source code of all Nit tools are freely available, see the [[download]] page.

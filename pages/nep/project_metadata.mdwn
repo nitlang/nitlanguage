@@ -1,23 +1,23 @@
-# Project Meta-data
+# Package Meta-data
 
 * Status: proposal
 * Discussion: <https://github.com/nitlang/nit/issues/1655>
 * Implementation:
-   * Association between a project and its .ini file: <https://github.com/nitlang/nit/pull/1654>
+   * Association between a package and its .ini file: <https://github.com/nitlang/nit/pull/1654>
    * Filling metadata: <https://github.com/nitlang/nit/pull/1675>
    * Using metadata: work in progress
 * Preview: <http://nitlanguage.org/catalog/index.html>
 
-In Nit, the *project* is the unit of distribution and versioning of software.
-A project is made of coherent modules that are developed and should be used together.
+In Nit, the *package* is the unit of distribution and versioning of software.
+A package is made of coherent modules that are developed and should be used together.
 
-Nit tools need information to associate a module to its projects and be able to look for dependencies inter-projects.
-These information are given in a project description file, called `project.ini` located in the root directory of the project.
+Nit tools need information to associate a module to its packages and be able to look for dependencies inter-packages.
+These information are given in a package description file, called `package.ini` located in the root directory of the package.
 
-An example of a `project.ini` file is
+An example of a `package.ini` file is
 
 ~~~ini
-[project]
+[package]
 name=foo
 version=0.1
 tags=algo,android
@@ -30,27 +30,27 @@ homepage=http://example.com/foo
 git=https://git.example.com/doe/foo.git
 ~~~
 
-## project
+## package
 
-The project section describe core information about the project, as listed in a catalog of projects
+The package section describe core information about the package, as listed in a catalog of packages
 
-### project.name
+### package.name
 
-The name of the project, should be a valid identifier.
+The name of the package, should be a valid identifier.
 
 By default, it is the name of the root directory.
 
-### project.version
+### package.version
 
-The version number of the project.
+The version number of the package.
 Free-style for the moment but will be used latter with a semantic versioning approach <http://semver.org/>
 
 By default it is the empty string
 
-### project.tags
+### package.tags
 
-Comma-separated list of tags used to categorize the project.
-Tools like auto-documentation and archive networks may use them to classify the project.
+Comma-separated list of tags used to categorize the package.
+Tools like auto-documentation and archive networks may use them to classify the package.
 
 By default it is the empty list
 
@@ -86,15 +86,15 @@ Some tags:
 * wrapper: wrapping of third-party software
 * xml: manipulation of XML
 
-### project.maintainer
+### package.maintainer
 
-List of the persons that are responsible for the project.
+List of the persons that are responsible for the package.
 
 By default it is the empty list
 
 Note that there is no `author` field.
 
-### project.more_contributors
+### package.more_contributors
 
 List of additionnal contributors.
 
@@ -103,7 +103,7 @@ This field is expected to hold contributors thal falled trought the cracks of th
 
 By default it is the empty list
 
-### project.license
+### package.license
 
 The main license of the software.
 Free-style, feel free to use the identifier of license listed by SPDX <https://spdx.org/licenses>
@@ -112,18 +112,18 @@ By default it is the empty string
 
 ## source
 
-The source section describe files in the directory of the project
+The source section describe files in the directory of the package
 
 ### source.include
 
 The list of directories to scan to find Nit source files.
-Paths are relative to the root directory of the project.
+Paths are relative to the root directory of the package.
 
 By default it is "."
 
 ### source.exclude
 
-The list of directories excluded from the scan of files for the project.
+The list of directories excluded from the scan of files for the package.
 
 Unless specific conditions, there is no reason to set it.
 
@@ -154,27 +154,27 @@ The section `upstream` groups information about accessing resources about the so
 
 ### upstream.git
 
-An URL to the git repository of the project
+An URL to the git repository of the package
 
 By default it is the empty string
 
 ### upstream.git.branch
 
-The git branch of the project
+The git branch of the package
 
 By default is is `master`
 
 ### upstream.git.directory
 
-The subdirectory of the repository that is the root directory of the project.
+The subdirectory of the repository that is the root directory of the package.
 
-While it is expected that each project is developed in its own repository, a project could be located is a subdirectory. 
+While it is expected that each package is developed in its own repository, a package could be located is a subdirectory. 
 
 By default is is `.`
 
 ### upstream.homepage
 
-The URL of the public homepage of the project
+The URL of the public homepage of the package
 
 By default it is the empty string
 
@@ -182,11 +182,11 @@ By default it is the empty string
 
 Which person, mailing list, forum, to send e-mail messages in the first place.
 
-By default it is the email of the first author (see `project.autor`)
+By default it is the email of the first author (see `package.autor`)
 
 ### upstream.issues
 
-A URL to the list of known bugs and issues for the project.
+A URL to the list of known bugs and issues for the package.
 
 ### upstream.browse
 

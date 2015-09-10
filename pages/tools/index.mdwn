@@ -47,7 +47,7 @@ It counts various number of entities and generates some graphs (with graphviz)
 ### Other Tools
 
 * [[nitdbg_client]], network client for remote debugging.
-* [[nitls]], lists project and path of Nit source files.
+* [[nitls]], lists package and path of Nit source files.
 * [[nitpick]], collects potential style and code issues.
 * [[nitpretty]], pretty prints Nit code from Nit source files.
 * [[nitserial]], generates serialization support modules.

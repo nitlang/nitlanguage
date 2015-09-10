@@ -43,7 +43,7 @@ Nit will help you write bug-free programs
 * Strong static typing
 * No more NullPointerException
 
-# # Published projects using Nit
+# # Published packages using Nit
 
 * [[Opportunity|http://xymus.net/opportunity/]], a [[free|https://github.com/nitlang/nit/tree/master/contrib/opportunity]] event planner
 * [Nitiwiki](https://github.com/nitlang/nit/tree/master/contrib/nitiwiki), the wiki engine used for the current website
