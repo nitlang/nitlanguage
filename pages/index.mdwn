@@ -50,8 +50,8 @@ Nit will help you write bug-free programs
 * [Nitrpg](https://github.com/nitlang/nit/tree/master/contrib/nitrpg), the gamification of Nit development where contributors are rewarded by nitcoins
 * [[Brewnit|https://github.com/R4PaSs/brewnit]], a tool for home brewers
 * [[A simple calculator|https://github.com/nitlang/nit/tree/master/examples/calculator]] using GTK for desktop and the native UI for Android while sharing the business logic
-* [[Hunted Dino|https://github.com/nitlang/nit/tree/master/examples/mnit_dino]], a simple game for desktop and [[Android|http://nitlanguage.org/fdroid/dino_01.apk]] using class refinement to cleanly separate preoccupations in the code
-* [[Chainz of Friendz|https://github.com/nitlang/nit/tree/master/contrib/friendz]], a puzzle game for desktop and [[Android|http://nitlanguage.org/fdroid/friendz_01.apk]]
+* [[Hunted Dino|https://github.com/nitlang/nit/tree/master/examples/mnit_dino]], a simple game for desktop and [[Android|http://nitlanguage.org/fdroid/apk/dino_debug.apk]] using class refinement to cleanly separate preoccupations in the code
+* [[Chainz of Friendz|https://github.com/nitlang/nit/tree/master/contrib/friendz]], a puzzle game for desktop and [[Android|http://nitlanguage.org/fdroid/apk/friendz_android_debug.apk]]
 * Bindings for [[OpenGL ES 2.0|https://github.com/nitlang/nit/tree/master/lib/glesv2]], [[SDL 2.0|https://github.com/nitlang/nit/tree/master/lib/sdl2]], [[GTK 3|https://github.com/nitlang/nit/tree/master/lib/gtk]] and [[sqlite3|https://github.com/nitlang/nit/tree/master/lib/sqlite3]]
 
 # # Getting Started
