@@ -45,14 +45,15 @@ Nit will help you write bug-free programs
 
 # # Published packages using Nit
 
-* [[Opportunity|http://xymus.net/opportunity/]], a [[free|https://github.com/nitlang/nit/tree/master/contrib/opportunity]] event planner
-* [Nitiwiki](https://github.com/nitlang/nit/tree/master/contrib/nitiwiki), the wiki engine used for the current website
-* [Nitrpg](https://github.com/nitlang/nit/tree/master/contrib/nitrpg), the gamification of Nit development where contributors are rewarded by nitcoins
-* [[Brewnit|https://github.com/R4PaSs/brewnit]], a tool for home brewers
-* [[A simple calculator|https://github.com/nitlang/nit/tree/master/examples/calculator]] using GTK for desktop and the native UI for Android while sharing the business logic
-* [[Hunted Dino|https://github.com/nitlang/nit/tree/master/examples/mnit_dino]], a simple game for desktop and [[Android|http://nitlanguage.org/fdroid/apk/dino_debug.apk]] using class refinement to cleanly separate preoccupations in the code
-* [[Chainz of Friendz|https://github.com/nitlang/nit/tree/master/contrib/friendz]], a puzzle game for desktop and [[Android|http://nitlanguage.org/fdroid/apk/friendz_android_debug.apk]]
-* Bindings for [[OpenGL ES 2.0|https://github.com/nitlang/nit/tree/master/lib/glesv2]], [[SDL 2.0|https://github.com/nitlang/nit/tree/master/lib/sdl2]], [[GTK 3|https://github.com/nitlang/nit/tree/master/lib/gtk]] and [[sqlite3|https://github.com/nitlang/nit/tree/master/lib/sqlite3]]
+* [Opportunity](catalog/p/opportunity.html), a free event planner
+* [Nitiwiki](catalog/p/nitiwiki.html), the wiki engine used for the current website
+* [Nitrpg](catalog/p/nitrpg.html), the gamification of Nit development where contributors are rewarded by nitcoins
+* [Brewnit](catalog/p/brewnit.html), a tool for home brewers
+* [A simple calculator](catalog/p/calculator.html) using GTK for desktop and the native UI for Android while sharing the business logic
+* [Hunted Dino](catalog/p/mnit_dino.html), a simple game for desktop and Android using class refinement to cleanly separate preoccupations in the code
+* [Chainz of Friendz](catalog/p/friendz.html), a puzzle game for desktop and Android
+* Bindings for [OpenGL ES 2.0](catalog/p/glesv2.html), [SDL 2.0](catalog/p/sdl2.html), [GTK 3](catalog/p/gtk.html), [sqlite3](catalog/p/sqlite3.html)
+* Many libraries and program like the [webserver nitcorn](catalog/p/nitcorn.html), the [portable applications framework app.nit](catalog/p/app.html), and many other available in the [catalog](catalog/)
 
 # # Getting Started
 
