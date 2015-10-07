@@ -1,6 +1,6 @@
 # # What is Nit?
 
-Nit is an object-oriented programming language. The goal of Nit is to propose a robust statically typed programming language where structure is not a pain.
+Nit is an expressive language with a script-like syntax, a friendly type-system and aims at elegance, simplicity and intuitiveness.
 
 So, what does the famous hello world program look like, in Nit?
 
@@ -14,7 +14,7 @@ The Nit project is currently in alpha stage, at v0.7. It is in active developmen
 
 You can follow the development on [Github](https://github.com/nitlang/nit/).
 
-# # Feature Highlights
+# # Why Nit?
 
 ## Usability
 Nit's goal is to be usable by real programmers for real projects
