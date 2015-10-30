@@ -7,6 +7,14 @@
 * Thème: Nitcorn et applications web
 * Nourriture et boisson fournis
 
+### Qu'est-ce que c'est?
+
+Il s'agit d'un évémenent d'une journée consacré au développement et à l'amélioartion de technologies et d'applications web écrites en Nit.
+
+L'objectif et de faire se rencontrer les développeurs intéressés au projet Nit, ou simplement curieux, en leur premettant de faire ce qu'ils préfèrent faire dans la vie: coder, manger et boire.
+
+Nit est un langage de programmation à objets qui tente de concilier la robustesse des langages statiquement typés à la souplesse des langages dynamiquement typés. Les outils (compilateur et compagnie) sont diffusés sous licence libre et disponibles via Github. Le langage est encore en plein développement actif mais possède déjà plus de 100 paquets (pour plus de 9000 classes et de 50000 méthodes).
+
 ### Qui peut participer?
 
 * Gratuit et ouvert à tous: que vous soyez expert en programmation Nit, débutant ou simple curieux
