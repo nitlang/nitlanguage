@@ -1,0 +1,34 @@
+# Nit coding party #2 - Nitcorn
+
+## En bref
+
+* Date: Samedi 21 novembre 2015, à partie de 10h
+* Lieu: Shopify, 490 Rue de la Gauchetière Ouest, Montréal, Canada [carte](https://goo.gl/maps/EnvYQXAPPv32)
+* Thème: Nitcorn et applications web
+* Nourriture et boisson fournis
+
+### Qui peut participer?
+
+* Gratuit et ouvert à tous: que vous soyez expert en programmation Nit, débutant ou simple curieux
+* La connaissance de git et github serait un plus
+
+Inscriptions: *bientôt*
+
+### Quoi apporter?
+
+* Laptop sous unix (Debia, Ubuntu, MacOSX, ou autre)
+* Compte github
+* Bonne humeur et envie de programmer
+
+## Et voila ce qui va se passer...
+
+Projets principaux visés
+
+* [nitcorn](http://nitlanguage.org/catalog/p/nitcorn.html) le framework leger d'application web
+* [opportunity](http://nitlanguage.org/catalog/p/opportunity.html) planification de rencontres, de sondages et de pizzas 
+* [nitiwiki](http://nitlanguage.org/catalog/p/nitiwiki.html) moteur wiki efficace et léger
+
+Les taches à réaliser et en cours de réalisation sont regroupés via github en issues et pull request:
+
+* [lien waffle.io](https://waffle.io/nitlang/nit?milestone=Nit%20Coding%20Party%20%232%20-%20Nitcorn)
+* [lien github](https://github.com/nitlang/nit/milestones/Nit%20Coding%20Party%20%232%20-%20Nitcorn)
