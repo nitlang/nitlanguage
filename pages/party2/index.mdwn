@@ -24,8 +24,9 @@ Inscriptions: *bientôt*
 
 ### Quoi apporter?
 
-* Laptop sous unix (Debia, Ubuntu, MacOSX, ou autre)
-* Compte github
+* Laptop sous Unix (Debian, Ubuntu, MacOSX, ou autre)
+* Logiciel git et compte github
+* Chaîne d'outils et bibliothèques de développement installées (cf [page d'acceuil](http://nitlanguage.org/))
 * Bonne humeur et envie de programmer
 
 ## Et voila ce qui va se passer...
