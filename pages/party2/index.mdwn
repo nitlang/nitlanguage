@@ -2,10 +2,9 @@
 
 ## En bref
 
-* Date: Samedi 21 novembre 2015, à partie de 10h
+* Date: Samedi 21 novembre 2015, à partir de 10h
 * Lieu: Shopify, 490 Rue de la Gauchetière Ouest, Montréal, Canada [carte](https://goo.gl/maps/EnvYQXAPPv32)
 * Thème: Nitcorn et applications web
-* Nourriture et boisson fournis
 
 ### Qu'est-ce que c'est?
 
@@ -20,7 +19,9 @@ Nit est un langage de programmation à objets qui tente de concilier la robustes
 * Gratuit et ouvert à tous: que vous soyez expert en programmation Nit, débutant ou simple curieux
 * La connaissance de git et github serait un plus
 
-Inscriptions: *bientôt*
+### Inscriptions
+
+*bientôt*
 
 ### Quoi apporter?
 
@@ -28,6 +29,14 @@ Inscriptions: *bientôt*
 * Logiciel git et compte github
 * Chaîne d'outils et bibliothèques de développement installées (cf [page d'acceuil](http://nitlanguage.org/))
 * Bonne humeur et envie de programmer
+
+### Qu'est-ce qui est fourni?
+
+* Espace de travail convivial
+* Electricité et bonne connexion internet
+* Nourriture et boisson (dont café)
+* Les développeurs principaux du projet Nit pour aider en tout temp
+* Bonne humeur
 
 ## Et voila ce qui va se passer...
 
