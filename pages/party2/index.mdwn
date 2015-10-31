@@ -1,52 +1,60 @@
-# Nit coding party #2 - Nitcorn
+# Nit coding party #2
 
 ## En bref
 
 * Date: Samedi 21 novembre 2015, à partir de 10h
-* Lieu: Shopify, 490 Rue de la Gauchetière Ouest, Montréal, Canada [carte](https://goo.gl/maps/EnvYQXAPPv32)
+* Lieu: Shopify, 490 Rue de la Gauchetière Ouest, Montréal, Canada. [Carte](https://goo.gl/maps/EnvYQXAPPv32)
 * Thème: Nitcorn et applications web
 
-### Qu'est-ce que c'est?
+## Qu'est-ce que c'est?
 
-Il s'agit d'un évémenent d'une journée consacré au développement et à l'amélioartion de technologies et d'applications web écrites en Nit.
+Il s'agit d'un événement d'une journée consacré au développement et à l'amélioration de technologies et d'applications web écrites en Nit.
 
-L'objectif et de faire se rencontrer les développeurs intéressés au projet Nit, ou simplement curieux, en leur premettant de faire ce qu'ils préfèrent faire dans la vie: coder, manger et boire.
+L'objectif et de faire se rencontrer les développeurs intéressés au projet Nit, ou simplement curieux, en leur permettant de faire ce qu'ils préfèrent faire dans la vie: coder, manger et boire.
 
-Nit est un langage de programmation à objets qui tente de concilier la robustesse des langages statiquement typés à la souplesse des langages dynamiquement typés. Les outils (compilateur et compagnie) sont diffusés sous licence libre et disponibles via Github. Le langage est encore en plein développement actif mais possède déjà plus de 100 paquets (pour plus de 9000 classes et de 50000 méthodes).
+[Nit](http://nitlanguage.org) est un langage de programmation à objets qui tente de concilier la robustesse des langages statiquement typés à la souplesse des langages dynamiquement typés. Les outils (compilateur et compagnie) sont diffusés sous licence libre et disponibles via [Github](http://github.com/nitlang/nit/). Le langage est encore en plein développement actif mais possède déjà plus de 100 paquets (pour plus de 9000 classes et de 50000 méthodes).
 
-### Qui peut participer?
+[Nitcorn](http://nitlanguage.org/catalog/p/nitcorn.html) est un framework leger d'application web développé en Nit, parmi lesquelles
+[Opportunity](http://nitlanguage.org/catalog/p/opportunity.html) est un planification de rencontres, de sondages et de pizzas, et [NitRPG](http://nitlanguage.org/catalog/p/nitrpg.html), une ludification du developpement libre où les contributions de projets hébergés par github s'affrontent pour gagner des nitcoins.
 
-* Gratuit et ouvert à tous: que vous soyez expert en programmation Nit, débutant ou simple curieux
-* La connaissance de git et github serait un plus
+Un autre projet  [nitiwiki](http://nitlanguage.org/catalog/p/nitiwiki.html) qui est un compilateur de site-web wiki, efficace et léger.
 
-### Inscriptions
+
+## Qui peut participer?
+
+* L'événement est gratuit et ouvert à tous: que vous soyez expert en programmation Nit, débutant ou simple curieux
+* La connaissance du logiciel git et du workflow de Github serait un plus.
+
+## Inscriptions
 
 *bientôt*
 
-### Quoi apporter?
+## Quoi apporter?
 
 * Laptop sous Unix (Debian, Ubuntu, MacOSX, ou autre)
 * Logiciel git et compte github
 * Chaîne d'outils et bibliothèques de développement installées (cf [page d'acceuil](http://nitlanguage.org/))
 * Bonne humeur et envie de programmer
 
-### Qu'est-ce qui est fourni?
+## Qu'est-ce qui est fourni?
 
 * Espace de travail convivial
-* Electricité et bonne connexion internet
+* Électricité et bonne connexion Internet
 * Nourriture et boisson (dont café)
-* Les développeurs principaux du projet Nit pour aider en tout temp
+* Les développeurs principaux du projet Nit pour aider en tout temps
 * Bonne humeur
 
-## Et voila ce qui va se passer...
-
-Projets principaux visés
-
-* [nitcorn](http://nitlanguage.org/catalog/p/nitcorn.html) le framework leger d'application web
-* [opportunity](http://nitlanguage.org/catalog/p/opportunity.html) planification de rencontres, de sondages et de pizzas 
-* [nitiwiki](http://nitlanguage.org/catalog/p/nitiwiki.html) moteur wiki efficace et léger
+## Déroulement de la journée
 
 Les taches à réaliser et en cours de réalisation sont regroupés via github en issues et pull request:
 
 * [lien waffle.io](https://waffle.io/nitlang/nit?milestone=Nit%20Coding%20Party%20%232%20-%20Nitcorn)
 * [lien github](https://github.com/nitlang/nit/milestones/Nit%20Coding%20Party%20%232%20-%20Nitcorn)
+
+Durant la journée, les participants pourront:
+
+* choisir des taches à réaliser (seul ou en petit groupe) et proposer des modifications
+* créer de nouvelles tache et les organiser
+* relire des modifications proposées
+
+La progression de chacun sera suivi en temps réel grâce à [NitRPG](http://nitlanguage.org/rpg/games/nitlang/nit)
