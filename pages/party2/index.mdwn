@@ -80,4 +80,4 @@ La progression de chacun sera suivi en temps réel grâce à [NitRPG](http://ni
 
 * [Shopify](https://www.shopify.ca/) 
 * [Latece](http://www.latece.uqam.ca/) Laboratoire de recherche sur les technologies du commerce électronique
-* [UQAM] Université du Qubec à Montreal
+* [UQAM](http://www.uqam.ca/) Université du Qubec à Montreal
