@@ -42,9 +42,9 @@ Les participants pourront choisir d'améliorer des logiciels qui les intéressen
 
 * L'événement est gratuit et ouvert à tous: que vous soyez expert en programmation Nit, débutant ou simple curieux
 * La connaissance du logiciel git et du workflow de Github serait un plus.
-* L'événement à lieu au nouveau local de Shopyfy, les places sont limités à une cinquantaine de participants.
+* L'événement à lieu au nouveau local de Shopify, les places sont limitées à une cinquantaine de participants.
 
-Forlaire d'inscription: *bientôt*
+Formulaire d'inscription: *bientôt*
 
 ## Quoi apporter?
 
@@ -63,15 +63,15 @@ Forlaire d'inscription: *bientôt*
 
 ## Déroulement de la journée
 
-Les taches à réaliser et en cours de réalisation sont regroupés via github en issues et pull request:
+Les taches à réaliser et en cours de réalisation sont regroupées via github en issues et pull request:
 
 * [lien waffle.io](https://waffle.io/nitlang/nit?milestone=Nit%20Coding%20Party%20%232%20-%20Nitcorn)
 * [lien github](https://github.com/nitlang/nit/milestones/Nit%20Coding%20Party%20%232%20-%20Nitcorn)
 
 Durant la journée, les participants pourront:
 
-* choisir des taches à réaliser (seul ou en petit groupe) et proposer des modifications
-* créer de nouvelles tache et les organiser
+* choisir des tâches à réaliser (seul ou en petit groupe) et proposer des modifications
+* créer de nouvelles tâches et les organiser
 * relire des modifications proposées
 
 La progression de chacun sera suivi en temps réel grâce à [NitRPG](http://nitlanguage.org/rpg/games/nitlang/nit)
