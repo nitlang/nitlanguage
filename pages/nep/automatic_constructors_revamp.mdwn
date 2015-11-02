@@ -1,7 +1,7 @@
 # Revamp of automatic constructors.
 
 * Status: Dicussion
-* Discussion: todo
+* Discussion: [#1800](https://github.com/nitlang/nit/issues/1800)
 * Implementation: todo
 
 ## Summary of the previous proposal
