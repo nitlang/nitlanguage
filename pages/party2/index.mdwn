@@ -2,13 +2,13 @@
 
 ## En bref
 
-* Date: Samedi 21 novembre 2015, à partir de 10h
+* Date: Samedi 28 novembre 2015, de 10h du matin à 22h (et plus)
 * Lieu: Shopify, 490 Rue de la Gauchetière Ouest, Montréal, Canada. [Carte](https://goo.gl/maps/EnvYQXAPPv32)
 * Thème: Nitcorn et applications web
 
 ## Qu'est-ce que c'est?
 
-Il s'agit d'un événement d'une journée consacré au développement et à l'amélioration de technologies et d'applications web écrites en Nit.
+Il s'agit d'un événement d'une demi-journée (12h) consacré au développement et à l'amélioration de technologies et d'applications web écrites en Nit.
 
 L'objectif et de faire se rencontrer les développeurs intéressés au projet Nit, ou simplement curieux, en leur permettant de faire ce qu'ils préfèrent faire dans la vie: coder, manger et boire.
 
@@ -20,14 +20,13 @@ L'objectif et de faire se rencontrer les développeurs intéressés au projet Ni
 Un autre projet  [nitiwiki](http://nitlanguage.org/catalog/p/nitiwiki.html) qui est un compilateur de site-web wiki, efficace et léger.
 
 
-## Qui peut participer?
+## Qui peut participer? et Inscriptions
 
 * L'événement est gratuit et ouvert à tous: que vous soyez expert en programmation Nit, débutant ou simple curieux
 * La connaissance du logiciel git et du workflow de Github serait un plus.
+* L'événement à lieu au nouveau local de Shopyfy, les places sont limités à une cinquantaine de participants.
 
-## Inscriptions
-
-*bientôt*
+Forlaire d'inscription: *bientôt*
 
 ## Quoi apporter?
 
@@ -58,3 +57,9 @@ Durant la journée, les participants pourront:
 * relire des modifications proposées
 
 La progression de chacun sera suivi en temps réel grâce à [NitRPG](http://nitlanguage.org/rpg/games/nitlang/nit)
+
+## Sponsors
+
+* [Shopify](https://www.shopify.ca/) 
+* [Latece](http://www.latece.uqam.ca/) Laboratoire de recherche sur les technologies du commerce électronique
+* [UQAM] Université du Qubec à Montreal
