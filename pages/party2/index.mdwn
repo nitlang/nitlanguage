@@ -14,11 +14,29 @@ L'objectif et de faire se rencontrer les développeurs intéressés au projet Ni
 
 [Nit](http://nitlanguage.org) est un langage de programmation à objets qui tente de concilier la robustesse des langages statiquement typés à la souplesse des langages dynamiquement typés. Les outils (compilateur et compagnie) sont diffusés sous licence libre et disponibles via [Github](http://github.com/nitlang/nit/). Le langage est encore en plein développement actif mais possède déjà plus de 100 paquets (pour plus de 9000 classes et de 50000 méthodes).
 
-[Nitcorn](http://nitlanguage.org/catalog/p/nitcorn.html) est un framework leger d'application web développé en Nit, parmi lesquelles
-[Opportunity](http://nitlanguage.org/catalog/p/opportunity.html) est un planification de rencontres, de sondages et de pizzas, et [NitRPG](http://nitlanguage.org/catalog/p/nitrpg.html), une ludification du developpement libre où les contributions de projets hébergés par github s'affrontent pour gagner des nitcoins.
+Plus concrètement, les participants son invités à faire du développement selon plusieurs axes:
 
-Un autre projet  [nitiwiki](http://nitlanguage.org/catalog/p/nitiwiki.html) qui est un compilateur de site-web wiki, efficace et léger.
+### Amélioration du framework d'application web de Nit, Nitcorn.
 
+[Nitcorn](http://nitlanguage.org/catalog/p/nitcorn.html) est un framework léger d'applications web développé en Nit.
+
+Bien que simple, nitcorn permet déjà de gérer, statiquement et dynamiquement, des hôtes virtuels et des routes (en fonction de l'IP, du nom de domaine et chemin de la page demandée), ainsi que les sessions utilisateurs et les cookies.
+
+Plusieurs points d'amélioration sont proposés comme la gestion du HTTPS, l'amélioration du support REST ou la compatibilité CGI.
+
+### Développement de nouvelles application web
+
+Les participants pourront choisir de développer, seul ou en groupe, de nouvelles applications Web basées sur les technologies de Nit.
+
+En particulier, cela permettra au développeur débutant en Nit d'expérimenter le développement concret d'applications web avec le langage Nit et les bibliothèques tout en étant soutenu par des experts du langage.
+
+### Amélioration d'application web existantes
+
+Quelques applications utilisant Nit et ses technologies existent, par exemple [Opportunity](http://nitlanguage.org/catalog/p/opportunity.html) qui est un planification de rencontres, de sondages et de pizzas, et [NitRPG](http://nitlanguage.org/catalog/p/nitrpg.html), une ludification du développement libre où les contributions de projets hébergés par github s'affrontent pour gagner des nitcoins.
+
+Un autre projet connexe, [nitiwiki](http://nitlanguage.org/catalog/p/nitiwiki.html), est un compilateur de site-web wiki, efficace et léger.
+
+Les participants pourront choisir d'améliorer des logiciels qui les intéressent, et discuter avec les mainteneurs de ces applications.
 
 ## Qui peut participer? et Inscriptions
 
