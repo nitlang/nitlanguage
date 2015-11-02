@@ -14,7 +14,7 @@ L'objectif et de faire se rencontrer les développeurs intéressés au projet Ni
 
 [Nit](http://nitlanguage.org) est un langage de programmation à objets qui tente de concilier la robustesse des langages statiquement typés à la souplesse des langages dynamiquement typés. Les outils (compilateur et compagnie) sont diffusés sous licence libre et disponibles via [Github](http://github.com/nitlang/nit/). Le langage est encore en plein développement actif mais possède déjà plus de 100 paquets (pour plus de 9000 classes et de 50000 méthodes).
 
-Plus concrètement, les participants son invités à faire du développement selon plusieurs axes:
+Plus concrètement, les participants sont invités à faire du développement selon plusieurs axes:
 
 ### Amélioration du framework d'application web de Nit, Nitcorn.
 
@@ -32,7 +32,7 @@ En particulier, cela permettra au développeur débutant en Nit d'expérimenter 
 
 ### Amélioration d'application web existantes
 
-Quelques applications utilisant Nit et ses technologies existent, par exemple [Opportunity](http://nitlanguage.org/catalog/p/opportunity.html) qui est un planification de rencontres, de sondages et de pizzas, et [NitRPG](http://nitlanguage.org/catalog/p/nitrpg.html), une ludification du développement libre où les contributions de projets hébergés par github s'affrontent pour gagner des nitcoins.
+Quelques applications utilisant Nit et ses technologies existent, par exemple [Opportunity](http://nitlanguage.org/catalog/p/opportunity.html) qui est un planificateur de rencontres, de sondages et de pizzas, et [NitRPG](http://nitlanguage.org/catalog/p/nitrpg.html), une ludification du développement libre où les contributeurs à des projets hébergés par github s'affrontent pour gagner des nitcoins.
 
 Un autre projet connexe, [nitiwiki](http://nitlanguage.org/catalog/p/nitiwiki.html), est un compilateur de site-web wiki, efficace et léger.
 
