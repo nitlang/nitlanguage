@@ -3,7 +3,7 @@
 ## En bref
 
 * Date: Samedi 28 novembre 2015, de 10h du matin à 22h (et plus)
-* Lieu: Shopify, 490 Rue de la Gauchetière Ouest, Montréal, Canada. [Carte](https://goo.gl/maps/EnvYQXAPPv32)
+* Lieu: Shopify, 500 Rue de la Gauchetière Ouest, Montréal, Canada. [Carte](https://goo.gl/maps/EnvYQXAPPv32)
 * Thème: Nitcorn et applications web
 
 ## Qu'est-ce que c'est?
@@ -42,7 +42,7 @@ Les participants pourront choisir d'améliorer des logiciels qui les intéressen
 
 * L'événement est gratuit et ouvert à tous: que vous soyez expert en programmation Nit, débutant ou simple curieux
 * La connaissance du logiciel git et du workflow de Github serait un plus.
-* L'événement à lieu au nouveau local de Shopify, les places sont limitées à une cinquantaine de participants.
+* L'événement à lieu au nouveau bureau de Shopify, les places sont limitées à une cinquantaine de participants.
 
 [Formulaire d'inscription](https://docs.google.com/forms/d/14cVJZwB6JXrSFnGvBFH9ZU4EN0aNECMXk1cCJPndVAQ/viewform)
 
@@ -78,6 +78,6 @@ La progression de chacun sera suivi en temps réel grâce à [NitRPG](http://ni
 
 ## Sponsors
 
-* [Shopify](https://www.shopify.ca/) 
+* [Shopify](https://www.shopify.com/)
 * [Latece](http://www.latece.uqam.ca/) Laboratoire de recherche sur les technologies du commerce électronique
 * [UQAM](http://www.uqam.ca/) Université du Qubec à Montreal
