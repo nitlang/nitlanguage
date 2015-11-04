@@ -14,27 +14,35 @@ or to download the latest [[snapshot|http://nitlanguage.org/nit.git/snapshot/HEA
 
 A [[github mirror|https://github.com/nitlang/nit]] is also available.
 
+## Get dependencies
+
+~~~sh
+# Eg. for Debian Jessie (8.0)
+$ sudo apt-get install build-essential ccache libgc-dev graphviz libunwind-dev pkg-config
+# Older versions of Debian or Ubuntu need `libunwind8-dev` or `libunwind7-dev`
+~~~
+
 ## Build
 
 In the `nit` directory, just call `make`
+
+~~~sh
+$ cd nit
+$ make
+~~~
 
 ## Install
 
 Currently, there is no official installation process, the tools and lib should just works in place.
 
-It it sill a good idea to have the binaries in your `PATH`
-
-Add the following in your `.profile` file.
+It is possible to configure your shell environment (`PATH`, `MANPATH`, bash completion) with the script `misc/nit-env.sh`.
 
 ~~~sh
-export PATH=/absolute/path-to-nit/bin:$PATH
-export MANPATH=/absolute/path-to-nit/share/man:$MANPATH
+$ source misc/nit_env.sh
 ~~~
 
-Also install `bash_completion` for the tools.
+It can also register itself in the user's `.profile` for future sessions with:
 
-Add the following in your `.bash_completion` file (or create it if it does not exist).
-
-~~~sh 
-source /absolute/path-to-nit/misc/bash_completion/nit
+~~~sh
+$ source misc/nit_env.sh install
 ~~~
