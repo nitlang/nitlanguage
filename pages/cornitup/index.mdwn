@@ -1,10 +1,10 @@
-# Nit coding party #2
+# Seconde Coding Party Nit: « CORN IT UP »
 
 ## En bref
 
-* Date: Samedi 28 novembre 2015, de 10h du matin à 22h (et plus)
-* Lieu: Shopify, 500 Rue de la Gauchetière Ouest, Montréal, Canada. [Carte](https://goo.gl/maps/EnvYQXAPPv32)
-* Thème: Nitcorn et applications web
+* Quand: Samedi 28 novembre 2015, de 10h du matin à 22h (et plus)
+* Où: Shopify, 500 Rue de la Gauchetière Ouest, Montréal, Canada. [Carte](https://goo.gl/maps/EnvYQXAPPv32)
+* Quoi: Nitcorn et applications web
 
 ## Qu'est-ce que c'est?
 
@@ -75,6 +75,10 @@ Durant la journée, les participants pourront:
 * relire des modifications proposées
 
 La progression de chacun sera suivie en temps réel grâce à [NitRPG](http://nitlanguage.org/rpg/games/nitlang/nit)
+
+## Contact et information
+
+Pour toute demande d'information, contactez <privat.jean@uqam.ca>
 
 ## Sponsors
 
