@@ -10,17 +10,17 @@
 
 Il s'agit d'un événement d'une demi-journée (12h) consacré au développement et à l'amélioration de technologies et d'applications web écrites en Nit.
 
-L'objectif et de faire se rencontrer les développeurs intéressés au projet Nit, ou simplement curieux, en leur permettant de faire ce qu'ils préfèrent faire dans la vie: coder, manger et boire.
+L'objectif est de faire se rencontrer les développeurs intéressés au projet Nit, ou simplement curieux, en leur permettant de faire ce qu'ils préfèrent faire dans la vie: coder, manger et boire.
 
-[Nit](http://nitlanguage.org) est un langage de programmation à objets qui tente de concilier la robustesse des langages statiquement typés à la souplesse des langages dynamiquement typés. Les outils (compilateur et compagnie) sont diffusés sous licence libre et disponibles via [Github](http://github.com/nitlang/nit/). Le langage est encore en plein développement actif mais possède déjà plus de 100 paquets (pour plus de 9000 classes et de 50000 méthodes).
+[Nit](http://nitlanguage.org) est un langage de programmation à objets qui tente de concilier la robustesse des langages statiquement typés à la souplesse des langages dynamiquement typés. Les outils (compilateur et compagnie) sont diffusés sous licence libre et disponibles via [Github](http://github.com/nitlang/nit/). Le langage est encore en plein développement mais possède déjà plus de 100 paquets (avec plus de 9000 classes et 50000 méthodes).
 
-Plus concrètement, les participants sont invités à faire du développement selon plusieurs axes:
+Plus concrètement, les participants sont invités à faire du développement selon plusieurs axes, décrits ci-bas.
 
 ### Amélioration du framework d'application web de Nit, Nitcorn.
 
 [Nitcorn](http://nitlanguage.org/catalog/p/nitcorn.html) est un framework léger d'applications web développé en Nit.
 
-Bien que simple, nitcorn permet déjà de gérer, statiquement et dynamiquement, des hôtes virtuels et des routes (en fonction de l'IP, du nom de domaine et chemin de la page demandée), ainsi que les sessions utilisateurs et les cookies.
+Bien que simple, nitcorn permet déjà de gérer, statiquement et dynamiquement, des hôtes virtuels et des routes (en fonction de l'IP, du nom de domaine et chemin de la page demandée), ainsi que des sessions utilisateurs et des cookies.
 
 Plusieurs points d'amélioration sont proposés comme la gestion du HTTPS, l'amélioration du support REST ou la compatibilité CGI.
 
@@ -38,11 +38,11 @@ Un autre projet connexe, [nitiwiki](http://nitlanguage.org/catalog/p/nitiwiki.ht
 
 Les participants pourront choisir d'améliorer des logiciels qui les intéressent, et discuter avec les mainteneurs de ces applications.
 
-## Qui peut participer? et Inscriptions
+## Qui peut participer et comment s'inscrire?
 
-* L'événement est gratuit et ouvert à tous: que vous soyez expert en programmation Nit, débutant ou simple curieux
+* L'événement est gratuit et ouvert à tous: que vous soyez expert en programmation Nit, débutant ou simple curieux.
 * La connaissance du logiciel git et du workflow de Github serait un plus.
-* L'événement à lieu au nouveau bureau de Shopify, les places sont limitées à une cinquantaine de participants.
+* L'événement a lieu au nouveau bureau de Shopify, les places sont limitées à une cinquantaine de participants.
 
 [Formulaire d'inscription](https://docs.google.com/forms/d/14cVJZwB6JXrSFnGvBFH9ZU4EN0aNECMXk1cCJPndVAQ/viewform)
 
@@ -50,7 +50,7 @@ Les participants pourront choisir d'améliorer des logiciels qui les intéressen
 
 * Laptop sous Unix (Debian, Ubuntu, MacOSX, ou autre)
 * Logiciel git et compte github
-* Chaîne d'outils et bibliothèques de développement installées (cf [page d'acceuil](http://nitlanguage.org/))
+* Chaîne d'outils et bibliothèques de développement installées (cf. [page d'acceuil](http://nitlanguage.org/))
 * Bonne humeur et envie de programmer
 
 ## Qu'est-ce qui est fourni?
@@ -74,7 +74,7 @@ Durant la journée, les participants pourront:
 * créer de nouvelles tâches et les organiser
 * relire des modifications proposées
 
-La progression de chacun sera suivi en temps réel grâce à [NitRPG](http://nitlanguage.org/rpg/games/nitlang/nit)
+La progression de chacun sera suivie en temps réel grâce à [NitRPG](http://nitlanguage.org/rpg/games/nitlang/nit)
 
 ## Sponsors
 
