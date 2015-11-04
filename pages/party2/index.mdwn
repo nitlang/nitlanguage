@@ -12,7 +12,7 @@ Il s'agit d'un événement d'une demi-journée (12h) consacré au développement
 
 L'objectif est de faire se rencontrer les développeurs intéressés au projet Nit, ou simplement curieux, en leur permettant de faire ce qu'ils préfèrent faire dans la vie: coder, manger et boire.
 
-[Nit](http://nitlanguage.org) est un langage de programmation à objets qui tente de concilier la robustesse des langages statiquement typés à la souplesse des langages dynamiquement typés. Les outils (compilateur et compagnie) sont diffusés sous licence libre et disponibles via [Github](http://github.com/nitlang/nit/). Le langage est encore en plein développement mais possède déjà plus de 100 paquets (avec plus de 9000 classes et 50000 méthodes).
+[Nit](http://nitlanguage.org) est un langage de programmation à objets qui tente de concilier la robustesse des langages statiquement typés à la souplesse des langages dynamiquement typés. Les outils (compilateur et compagnie) sont diffusés sous licence libre et disponibles via [Github](http://github.com/nitlang/nit/). Le langage est encore en plein développement mais possède déjà plus de [100 paquets](http://nitlanguage.org/catalog/) (avec plus de 9000 classes et 50000 méthodes).
 
 Plus concrètement, les participants sont invités à faire du développement selon plusieurs axes, décrits ci-bas.
 
