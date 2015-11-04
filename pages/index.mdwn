@@ -87,7 +87,7 @@ $ source misc/nit_env.sh
 Compile a program:
 
 ~~~sh
-$ bin/nitc examples/hello_world.nit
+$ nitc examples/hello_world.nit
 ~~~
 
 Execute the program:
