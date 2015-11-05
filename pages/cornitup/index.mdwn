@@ -86,3 +86,9 @@ Pour toute demande d'information, contactez <privat.jean@uqam.ca>
 * [Shopify](https://www.shopify.com/)
 * [Latece](http://www.latece.uqam.ca/) Laboratoire de recherche sur les technologies du commerce électronique
 * [UQAM](http://www.uqam.ca/) Université du Qubec à Montreal
+
+## Matériel graphique
+
+* [Icône carrée](cornitup_icon.jpg)
+* [Affiche en français](cornitup_fr.jpg)
+* [Affiche en anglais](cornitup_en.jpg)
