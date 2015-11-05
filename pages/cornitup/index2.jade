@@ -34,14 +34,15 @@ html
 			br
 			br
 			p
-				a(href='https://goo.gl/maps/EnvYQXAPPv32')
+				a(href='http://goo.gl/maps/EnvYQXAPPv32')
 					| 500 Rue de la Gauchetière Ouest
 					br
 					| Montréal, Canada.
 			br
-			br
-			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2796.378526379064!2d-73.5661076842925!3d45.50245823891051!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cc91a5b18c4dd67%3A0x90e5ab686bacfea0!2s500+Rue+de+la+Gaucheti%C3%A8re+O%2C+Montr%C3%A9al%2C+QC+H2Z+1E3!5e0!3m2!1sfr!2sca!4v1446705100162" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
-			br
+
+			p
+				a(href='http://goo.gl/maps/EnvYQXAPPv32')
+					img(src='images/map.png', alt='Carte')
 			br
 
 		.container-fluid.slide.slide-green
@@ -95,6 +96,9 @@ html
 			hr
 
 			p Les participants pourront choisir de développer, seul ou en groupe, de nouvelles applications Web basées sur les technologies de Nit.
+
+			p
+				span.glyphicon.glyphicon-star-empty.bigicon
 
 			p En particulier, cela permettra au développeur débutant en Nit d'expérimenter le développement concret d'applications web avec le langage Nit et les bibliothèques tout en étant soutenu par des experts du langage.
 
@@ -152,9 +156,9 @@ html
 			.col-md-3
 			.col-md-6.col-xs-12
 				.container-fluid
-					.col-xs-3
+					.col-sm-3
 						span.glyphicon.glyphicon-briefcase.bigicon
-					.col-xs-9.text-left
+					.col-sm-9.text-left
 						p
 							span.glyphicon.glyphicon-check
 							|  Laptop sous Unix (Debian, Ubuntu, MacOSX...)
@@ -179,7 +183,7 @@ html
 			.col-md-3
 			.col-md-6.col-xs-12
 				.container-fluid
-					.col-xs-9.text-left
+					.col-sm-9.text-left
 						p
 							span.glyphicon.glyphicon-check
 							|  Espace de travail convivial
@@ -196,7 +200,7 @@ html
 							span.glyphicon.glyphicon-check
 							|  Bonne humeur
 							br
-					.col-xs-3
+					.col-sm-3
 						span.glyphicon.glyphicon-ice-lolly-tasted.bigicon
 			.col-md-3
 
@@ -207,20 +211,36 @@ html
 			p Les taches à réaliser et en cours de réalisation sont regroupées via github en issues et pull requests.
 
 			p
+				img(src='logos/github-logo.png', width='50px')
+				| &nbsp;
 				a(href='https://waffle.io/nitlang/nit?milestone=Nit%20Coding%20Party%20%232%20-%20Nitcorn') waffle.io
 				| &nbsp;|&nbsp;
 				a(href='https://github.com/nitlang/nit/milestones/Nit%20Coding%20Party%20%232%20-%20Nitcorn') github
+				| &nbsp;
+				img(src='logos/waffle-logo.png', width='50px')
 
 			p
 				| Durant la journée, les participants pourront:
 				br
-				| choisir des tâches à réaliser (seul ou en groupe)
 				br
-				| créer de nouvelles tâches et les organiser
+				span.glyphicon.glyphicon-th-list
 				br
-				| proposer des modifications
+				| Choisir des tâches à réaliser (seul ou en groupe).
 				br
-				| relire et approuver des modifications proposées
+				br
+				span.glyphicon.glyphicon-edit
+				br
+				| Créer de nouvelles tâches et les organiser.
+				br
+				br
+				span.glyphicon.glyphicon-gift
+				br
+				| Proposer des modifications.
+				br
+				br
+				span.glyphicon.glyphicon-ok-circle
+				br
+				| Relire et approuver des modifications proposées.
 
 			p
 				| La progression de chacun sera suivie en temps réel grâce à&nbsp;
@@ -267,5 +287,16 @@ html
 				a(href='cornitup_icon.jpg')
 					img(src='cornitup_icon_s.jpg', alt='Image d\'article', width='100')
 
+		footer.container-fluid
+			p Copyright &copy; 2015
+			p
+				| Proudly powered by&nbsp;
+				a(href='https://github.com/nitlang/nit/tree/master/contrib/nitiwiki') nitiwiki
+				| !
+
+
+		script(type="text/javascript", defer="", async="", src="http://pratchett.info.uqam.ca/piwik/piwik.js")
 		script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js')
 		script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js')
+
+		include piwik.html
