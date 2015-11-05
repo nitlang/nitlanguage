@@ -1,0 +1,267 @@
+html
+	head
+		title CORN IT UP!
+		meta(charset='utf-8')
+		link(href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css', rel='stylesheet')
+		link(href='main.css', rel='stylesheet')
+
+	body
+
+		header.container.header
+			.pageheader
+				a#toptitle_first.toptitle(href="..") the
+				a#toptitle_second.toptitle(href="..") Nit
+				a#toptitle_third.toptitle(href="..") Programming Language
+			.topsubtitle
+				p a fun language for serious programming
+
+		.container-fluid.slide.slide-green.slide-first
+			h1 CORN IT UP!
+
+			h2 Seconde Coding Party Nit
+			hr
+
+			h3
+				b Samedi 28 novembre 2015
+			p de 10h du matin à 22h (et plus)
+
+		.container-fluid.slide
+			h3 Où?
+			hr
+			h1
+				a(href='https://www.shopify.com/', title='Shopify', style='color:black;') @Shopify
+			br
+			br
+			p
+				a(href='https://goo.gl/maps/EnvYQXAPPv32')
+					| 500 Rue de la Gauchetière Ouest
+					br
+					| Montréal, Canada.
+			br
+			br
+			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2796.378526379064!2d-73.5661076842925!3d45.50245823891051!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cc91a5b18c4dd67%3A0x90e5ab686bacfea0!2s500+Rue+de+la+Gaucheti%C3%A8re+O%2C+Montr%C3%A9al%2C+QC+H2Z+1E3!5e0!3m2!1sfr!2sca!4v1446705100162" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+			br
+			br
+
+		.container-fluid.slide.slide-green
+			br
+			p Gratuit |&nbsp;
+				a(href='https://docs.google.com/forms/d/14cVJZwB6JXrSFnGvBFH9ZU4EN0aNECMXk1cCJPndVAQ/viewform') inscription obligatoire
+
+		.container-fluid.slide#slide2
+			h3 Qu'est-ce que c'est?
+			hr
+			p Il s'agit d'un événement d'une demi-journée (12h) consacré au développement et à l'amélioration de technologies et d'applications web libres écrites en Nit.
+
+			p L'objectif est de faire se rencontrer les développeurs intéressés au projet Nit, ou simplement curieux, en leur permettant de faire ce qu'ils préfèrent faire dans la vie: coder, manger et boire.
+
+			p
+				img(src='logos/nit-logo.png', alt='Image d\'article', width='100px')
+
+			p
+				a(href='http://nitlanguage.org', title='Nit homepage') Nit
+				|  est un langage de programmation à objets qui tente de concilier la robustesse
+				| des langages statiquement typés à la souplesse des langages dynamiquement typés.
+				| Les outils (compilateur et compagnie) sont diffusés sous licence libre et disponibles via&nbsp;
+				a(href='http://github.com/nitlang/nit/', title='Nit sur Github') Github
+				| .
+				| Le langage est encore en plein développement mais possède déjà plus d'une&nbsp;
+				a(htref='http://nitlanguage.org/catalog/', title='Nit Catalog') centaine de programmes et de bibliothèques
+				| .
+
+		.container-fluid.slide.slide-green
+			h3
+				| Amélioration du framework Nitcorn
+				br
+				| pour d'application web de Nit
+			hr
+
+			p
+				a(href='http://nitlanguage.org/catalog/p/nitcorn.html', title='Nitcorn project') Nitcorn
+				|  est un framework léger d'applications web développé en Nit.
+
+			p
+				span.glyphicon.glyphicon-grain.bigicon.text-yellow
+
+			p Bien que simple, nitcorn permet déjà de gérer, statiquement et dynamiquement, des hôtes virtuels et des routes (en fonction de l'IP, du nom de domaine et chemin de la page demandée), ainsi que des sessions utilisateurs et des cookies.
+
+			p Plusieurs points d'amélioration sont proposés comme la gestion du HTTPS, l'amélioration du support REST ou la compatibilité CGI.
+
+		.container-fluid.slide#slide2
+			h3 Développement de nouvelles application web
+			hr
+
+			p Les participants pourront choisir de développer, seul ou en groupe, de nouvelles applications Web basées sur les technologies de Nit.
+
+			p En particulier, cela permettra au développeur débutant en Nit d'expérimenter le développement concret d'applications web avec le langage Nit et les bibliothèques tout en étant soutenu par des experts du langage.
+
+		.container-fluid.slide.slide-green
+			h3 Amélioration d'application web existantes
+			hr
+
+			p
+				a(href='http://nitlanguage.org/catalog/p/opportunity.html', title='Opportunity project')  Opportunity
+				| : un planificateur de rencontres, de sondages et de pizzas.
+
+			p
+				a(href='http://nitlanguage.org/catalog/p/opportunity.html')
+					img(src='screenshots/opportunity.png', alt='Screenshort Opportunity', width='300px')
+
+			p
+				a(href='http://nitlanguage.org/catalog/p/nitrpg.html', title='NitRPG') NitRPG
+				| : une ludification du développement libre où les contributeurs à des projets hébergés par github s'affrontent pour gagner des nitcoins.
+
+			p
+				a(href='http://nitlanguage.org/catalog/p/nitrpg.html')
+					img(src='screenshots/nitrpg.png', alt='Screenshort NitRPG', width='300px')
+
+
+			p
+				a(href='http://nitlanguage.org/catalog/p/nitiwiki.html', title='nitiwiki') nitiwiki
+				| : un compilateur de site-web wiki, efficace et léger.
+
+			p
+				a(href='http://nitlanguage.org/catalog/p/nitiwiki.html')
+					img(src='screenshots/nitiwiki.png', alt='Screenshort nitiwiki', width='300px')
+
+
+			p Les participants pourront choisir d'améliorer des logiciels qui les intéressent, et discuter avec les mainteneurs de ces applications.
+
+		.container-fluid.slide#slide2
+			h3 Qui peut participer et comment s'inscrire?
+			hr
+
+			p
+				| L'événement est gratuit et ouvert à tous.
+				|  Que vous soyez expert en programmation Nit, débutant ou simple curieux,
+				|  vous êtes le bienvenu!
+			p
+				a.btn.btn-lg.btn-success(href='https://docs.google.com/forms/d/14cVJZwB6JXrSFnGvBFH9ZU4EN0aNECMXk1cCJPndVAQ/viewform')
+					b Formulaire d'inscription
+
+			p
+				| L'événement a lieu au nouveau bureau de Shopify
+				|  les places sont limitées à une cinquantaine de participants.
+
+		.container-fluid.slide.slide-green
+			h3 Quoi apporter?
+			hr
+			.col-md-3
+			.col-md-6.col-xs-12
+				.container-fluid
+					.col-xs-3
+						span.glyphicon.glyphicon-briefcase.bigicon
+					.col-xs-9.text-left
+						p
+							span.glyphicon.glyphicon-check
+							|  Laptop sous Unix (Debian, Ubuntu, MacOSX...)
+							br
+							span.glyphicon.glyphicon-check
+							|  Logiciel&nbsp;
+							a(href='http://git-scm.com/') git
+							|  et compte&nbsp;
+							a(href='http://github.com/') github
+							br
+							span.glyphicon.glyphicon-check
+							|  Outils et bibliothèques&nbsp;
+							a(href='http://nitlanguage.org/', title='Page d\'accueil') installées
+							br
+							span.glyphicon.glyphicon-check
+							|  Bonne humeur et envie de programmer
+			.col-md-3
+
+		.container-fluid.slide#slide2
+			h3 Qu'est-ce qui est fourni?
+			hr
+			.col-md-3
+			.col-md-6.col-xs-12
+				.container-fluid
+					.col-xs-9.text-left
+						p
+							span.glyphicon.glyphicon-check
+							|  Espace de travail convivial
+							br
+							span.glyphicon.glyphicon-check
+							|  Électricité et bonne connexion Internet
+							br
+							span.glyphicon.glyphicon-check
+							|  Nourriture et boisson (dont café)
+							br
+							span.glyphicon.glyphicon-check
+							|  Les développeurs du projet Nit pour vous aider
+							br
+							span.glyphicon.glyphicon-check
+							|  Bonne humeur
+							br
+					.col-xs-3
+						span.glyphicon.glyphicon-ice-lolly-tasted.bigicon
+			.col-md-3
+
+		.container-fluid.slide.slide-green
+			h3 Déroulement de la journée
+			hr
+
+			p Les taches à réaliser et en cours de réalisation sont regroupées via github en issues et pull requests.
+
+			p
+				a(href='https://waffle.io/nitlang/nit?milestone=Nit%20Coding%20Party%20%232%20-%20Nitcorn') waffle.io
+				| &nbsp;|&nbsp;
+				a(href='https://github.com/nitlang/nit/milestones/Nit%20Coding%20Party%20%232%20-%20Nitcorn') github
+
+			p
+				| Durant la journée, les participants pourront:
+				br
+				| choisir des tâches à réaliser (seul ou en groupe)
+				br
+				| créer de nouvelles tâches et les organiser
+				br
+				| proposer des modifications
+				br
+				| relire et approuver des modifications proposées
+
+			p
+				| La progression de chacun sera suivie en temps réel grâce à&nbsp;
+				a(href='http://nitlanguage.org/rpg/games/nitlang/nit') NitRPG
+				| .
+
+		.container-fluid.slide
+			h3 Sponsors
+			hr
+			p
+				a(href='https://www.shopify.com/', title='Shopify')
+					img(src='logos/shopify-logo.png', alt='Shopify logo', width='600px')
+			p
+				a(href='http://www.uqam.ca/', title='UQAM')
+					img(src='logos/uqam-logo.png', alt='UQAM logo', width='500px')
+			p
+				a(href='http://www.latece.uqam.ca/', title='Latece')
+					img(src='logos/latece-logo.png', alt='Latece logo')
+
+		.container-fluid.slide.slide-green
+			h3 Contact et information
+			hr
+			p
+				span.glyphicon.glyphicon-envelope.bigicon
+				br
+				br
+			p Pour toute demande d'information, contactez:&nbsp;
+				a(href='mailto:privat.jean@uqam.ca') Jean Privat
+
+		.container-fluid.slide#slide2
+			h3 Matériel graphique
+			hr
+			.col-xs-3
+				a(href='posters/cornitup_FR.jpg')
+					img(src='posters/cornitup_FR.jpg', alt='Affiche fr', width='100px')
+			.col-xs-3
+				a(href='posters/cornitup_EN.jpg')
+					img(src='posters/cornitup_EN.jpg', alt='Affiche en', width='100px')
+			.col-xs-3
+				a(href='posters/ecrans.jpg')
+					img(src='posters/ecrans.jpg', alt='Affiche diffusée sur les écrans', width='100px')
+			.col-xs-3
+				a(href='posters/article.jpg')
+					img(src='posters/article.jpg', alt='Image d\'article', width='100px')
+
+		script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js')
+		script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js')
