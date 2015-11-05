@@ -26,6 +26,7 @@ p {
 
 a {
 	color: #0D8921;
+	text-decoration: underline;
 }
 
 a:hover {
@@ -37,6 +38,13 @@ header {
 	margin-bottom: 50px;
 }
 
+footer {
+	margin-top:	25px;
+	text-align: center;
+	color: #888;
+	font-size: 17px;
+}
+
 .toptitle {
 	color:                          #6c6c6c;
 	letter-spacing:                 0.05cm;
@@ -44,7 +52,7 @@ header {
 	float:				left;
 }
 
-a.toptitle:hover {
+a.toptitle, a.toptitle:hover {
 	text-decoration: none;
 	color: #6c6c6c;
 }
@@ -94,10 +102,9 @@ a.toptitle:hover {
 }
 
 .slide-first {
-	background-image: url('images/sun.png'), url('images/corn.png');
-	background-position: 0px 0px, 0px 0px;
-	background-repeat: repeat, no-repeat;
-	background-attachment: fixed, fixed;
+	background-image: url('images/corn.png'), url('images/sun.png');
+	background-position: 0px 0px, -43px 0px;
+	background-repeat: no-repeat, no-repeat;
 }
 
 .slide-first h1 {
