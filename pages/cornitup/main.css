@@ -26,7 +26,6 @@ p {
 
 a {
 	color: #0D8921;
-	text-decoration: underline;
 }
 
 a:hover {
@@ -93,8 +92,7 @@ a.toptitle, a.toptitle:hover {
 }
 
 .slide-green a {
-	color: white;
-	font-weight: bold;
+	color: yellow;
 }
 
 .slide-green hr {
