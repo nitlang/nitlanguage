@@ -1,6 +1,6 @@
 # Repository of Android Applications
 
-Android users can use the <http://fdroid.org> client, add the official Nit-Droid repository and benefit bleeding-edge state of the art of mobile Nit applications.
+Android users can use the <http://fdroid.org> client, add the official Nit-Droid repository and benefit experimental and bleeding-edge state of the art of mobile Nit applications.
 
 0. Download and install the [F-Droid client](https://f-droid.org/FDroid.apk)
 1. Manage repository (in the menu)
