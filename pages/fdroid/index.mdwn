@@ -10,7 +10,7 @@ Android users can use the <http://fdroid.org> client, add the official Nit-Droid
 
 Note: A new F-Droid category `Nit` contains all the applications.
 
-The source code of the applications in the F-Droid repository is available in the [`examples`](http://nitlanguage.org/nit.git/tree/HEAD:/examples) and [`contrib`](http://nitlanguage.org/nit.git/tree/HEAD:/contrib) directories.
+The source code of the applications in the F-Droid repository is available in the catalog under the [apk tag](http://nitlanguage.org/catalog/index.html#tag_apk).
 
 These applications are compiled by the Nit tools thanks to the [[mnit support|/FFI/Nit_on_Android]].
 
