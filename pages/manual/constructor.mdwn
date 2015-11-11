@@ -1,3 +1,5 @@
+# Constructors
+
 Constructors in Nit behave differently.
 
 Their objective is double :
