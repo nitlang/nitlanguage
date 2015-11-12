@@ -191,3 +191,15 @@ A URL to the list of known bugs and issues for the package.
 ### upstream.browse
 
 An URL to browse the repository containing the sources.
+
+### upstream.apk
+
+An URL that points to a dry apk, or an install page on some store, for the main Android application offered by the package.
+
+When set, an implicit tag `apk` is added to the list of tags.
+
+### upstream.tryit
+
+An URL that points to an aofficial demo version or the official live version of the main web service offered by the package.
+
+When set, an implicit tag `tryit` is added to the list of tags.
