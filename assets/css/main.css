@@ -127,6 +127,21 @@ footer {
 	margin-top:			20px;
 }
 
+.trail {
+	padding: 0;
+	text-align: center;
+	list-style: none;
+	color: #838183;
+}
+
+.trail li {
+	display: inline-block;
+}
+
+.trail li+li:before{
+	content: "\00a0|\00a0";
+}
+
 /* HIGHLIGHT */
 
 .hl.num { color:#b07e00; }
