@@ -24,7 +24,7 @@ Nit is a target framework for novel compilation techniques and object-oriented r
 
 * **Ask and Report.**
   If you fine some, **[[report problems|https://github.com/nitlang/nit/issues]]** with the language, the libraries or the tools.
-  The **[[pseudo-forum|https://github.com/nitlang/nit/issues?q=label%3Aforum]]** can be used to ask any kind of question.
+  The **[[chatroom|https://gitter.im/nitlang/nit]]** or the **[[pseudo-forum|https://github.com/nitlang/nit/issues?q=label%3Aforum]]** can be used to ask any kind of question.
 
 ## Devel documentation
 
