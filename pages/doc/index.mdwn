@@ -4,7 +4,7 @@
 
 * [[download and install|download]] the tools
 * special documentation for people [[on_mac]]
-* configure the [[vim]] text editor
+* configure the [[vim]] text editor or another [[IDE|ide]]
 
 ## Developing with Nit
 
