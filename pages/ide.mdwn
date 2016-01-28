@@ -2,10 +2,11 @@
 
 Supports (plugins/bundle/etc.) for IDE are developed by volunteers.
 
-Currently, there is 5 supported externals tools (not necessary IDE)
+Currently, there is supported externals tools (not necessary IDE)
 
 * [[eclipse]]
 * [[vim]]
+* [[emacs|https://github.com/martinez/nit-mode]]
 * [[sublime-text]]
 * [[textmate|sublime-text]]
 * [[Atom|https://atom.io/packages/language-nit]]
