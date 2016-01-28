@@ -30,7 +30,7 @@ Fell free to report
 4.  If there is heap size errors, enlarge the heap of `nitc.exe` with:
 
    ~~~
-   peflags --cygwin-heap 4096 c_src/nitc.exe`
+   peflags --cygwin-heap=4096 c_src/nitc.exe`
    ~~~
 
    and run `make` again.
