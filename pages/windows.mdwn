@@ -1,7 +1,7 @@
 # Nit on windows
 
 The support on windows is more than experimental.
-Fell free to report
+Fell free to report your attempts.
 
 ## With Cygwin
 
@@ -19,13 +19,11 @@ Fell free to report
    ~~~
 
    It will complain about the "very bad name" test file. This file cannot be represented on a Windows FS. Ignore this message, all other thousands of files should have unpacked successfully.
-   You should run:
+   To clear the repository and have a nice working dir status (if you care), you should run:
    
    ~~~
    git chechout -f HEAD
    ~~~
-   
-   To clear the repository and have a nice working dir status (if you care).
 
 4.  If there is heap size errors, enlarge the heap of `nitc.exe` with:
 
@@ -72,5 +70,4 @@ src/git-gen-version.sh: line 2: $'\r': command not found
 
 It is because you checked out the Nit repository with the config set to `core.autocrlf true`.
 Some `git` tools on Windows activate this flag by default.
-The `git` command from the Cygwin package does not do that. 
-
+The `git` command from the Cygwin package does not that. 
