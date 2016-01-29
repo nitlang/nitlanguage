@@ -25,16 +25,6 @@ Fell free to report your attempts.
    git chechout -f HEAD
    ~~~
 
-4.  If there is heap size errors, enlarge the heap of `nitc.exe` with:
-
-   ~~~
-   peflags --cygwin-heap=4096 c_src/nitc.exe`
-   ~~~
-
-   and run `make` again.
-
-   You may have to apply this command to all the bootstrap stages: `c_src/nitc.exe, src/nitc_0.exe, bin/nitc.exe`.
-
 5. As proposed by the output of the make, setup your envorment with
 
    ~~~
@@ -71,3 +61,11 @@ src/git-gen-version.sh: line 2: $'\r': command not found
 It is because you checked out the Nit repository with the config set to `core.autocrlf true`.
 Some `git` tools on Windows activate this flag by default.
 The `git` command from the Cygwin package does not that. 
+
+###  Heap size errors
+
+Tools or compiled programs crash with heap size errors, you should enlarge the heap of the executable with `peflag` (that comes with Cygwin):
+
+~~~
+peflags --cygwin-heap=4096 c_src/nitc.exe`
+~~~
