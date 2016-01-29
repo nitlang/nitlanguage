@@ -67,5 +67,5 @@ The `git` command from the Cygwin package does not that.
 If tools or compiled programs crash with heap size errors, you should enlarge the heap of the executable with `peflag` (that comes with Cygwin):
 
 ~~~
-peflags --cygwin-heap=4096 c_src/nitc.exe`
+peflags --cygwin-heap=4096 prog.exe`
 ~~~
