@@ -75,6 +75,7 @@ Some tags:
 * java: Java related
 * language: related to other programming language
 * lib: library and frameworks
+* mobile: cellphones and tablets
 * network: networking
 * parallelism: parallelism, threads, clusters
 * platform: special platforms
