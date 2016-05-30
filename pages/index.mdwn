@@ -98,6 +98,7 @@ $ ./hello_world
 
 And now?
 
-* Install plugins for your [[editor or IDE|ide]] to works with Nit
+* Install plugins for your [[editor or IDE|ide]] to work with Nit
 * Read the language [[manual]]
 * Browse the [[catalog of packages, programs and libraries|http://nitlanguage.org/catalog]]
+* Try [[contributing|internal]] to the project

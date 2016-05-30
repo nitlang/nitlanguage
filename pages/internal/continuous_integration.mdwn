@@ -1,15 +1,15 @@
 # Continuous integration
 
-A jenkins instance is running on [[http://gresil.org/jenkins]].
+A Jenkins instance is running on [[http://gresil.org/jenkins]].
 
-It is mainly used for 3 things.
+It is mainly used for 3 purposes:
 
 * Automatic tests for feature development and proposal of code. Especially trough the integration with github to validate pull requests.
-Thez are the CI* jobs, especially [[CIGithub|http://gresil.org/jenkins/job/CI_github/]]
+These are the CI* jobs, especially [[CIGithub|http://gresil.org/jenkins/job/CI_github/]]
 * Big integration tests run on the merge of new code in the master branch.
-It is the job [[nitnext|http://gresil.org/jenkins/job/nit_next/]] and its subjobs
-* Deployment of artefacts (eg. nitdoc) when the master branch is updated. 
-It is the job [[nit|http://gresil.org/jenkins/job/nit/]] 
+It is the [[nitnext|http://gresil.org/jenkins/job/nit_next/]] job and its subjobs
+* Deployment of artefacts (eg. nitdoc) when the master branch is updated.
+It is the [[nit|http://gresil.org/jenkins/job/nit/]] job
 
 Interesting things are :
 
