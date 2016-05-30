@@ -18,7 +18,7 @@ Individual tests can also be run independently:
 ./tests.sh some_nit_programs.nit...
 ~~~
 
-Each time some feature are added by a developer, he should:
+Each time some feature is added by a developer, he should:
 
 * bootstrap the compiler in src/ : `cd src/ ; ./ncall.sh`
 * run the full regression test-suite : `cd tests/ ; make`

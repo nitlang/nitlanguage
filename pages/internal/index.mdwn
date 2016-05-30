@@ -9,7 +9,7 @@ Nit is a target framework for novel compilation techniques and object-oriented r
   Most of the development and the discussion on the language, tools and packages is done on our **[[github repository|https://github.com/nitlang/nit]]**.
 
 * **Get the code.**
-  The source code of all Nit tools are freely available, see the [[download]] page.
+  The source code of all Nit tools is freely available, see the [[download]] page.
   If you plan to contribute, it is easier to **[[fork it on Github|https://github.com/nitlang/nit/fork]]**
 
 * **Keep you informed.**
@@ -20,7 +20,7 @@ Nit is a target framework for novel compilation techniques and object-oriented r
 
 * **Program Things.**
   Try to use Nit.
-  Look at some **[[newcomer tasks|https://github.com/nitlang/nit/issues?q=is%3Aopen+is%3Aissue+label%3Anewcomer]]**, targeted to beginner in the Nit language (but not necessarily in programming)
+  Look at some **[[newcomer tasks|https://github.com/nitlang/nit/issues?q=is%3Aopen+is%3Aissue+label%3Anewcomer]]**, targeted to beginners in Nit.
 
 * **Ask and Report.**
   If you find some, **[[report problems|https://github.com/nitlang/nit/issues]]** with the language, the libraries or the tools.
