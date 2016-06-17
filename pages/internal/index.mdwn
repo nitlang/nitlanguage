@@ -10,7 +10,8 @@ Nit is a target framework for novel compilation techniques and object-oriented r
 
 * **Get the code.**
   The source code of all Nit tools is freely available, see the [[download]] page.
-  If you plan to contribute, it is easier to **[[fork it on Github|https://github.com/nitlang/nit/fork]]**
+  If you plan to contribute, it is easier to **[[fork it on Github|https://github.com/nitlang/nit/fork]]**.
+  To know how to submit a patch, see the links at the end of this page.
 
 * **Keep you informed.**
   Subscribe to **[[Niteration|https://groups.google.com/d/forum/nitlanguage]]**, the monthly newsletter of the Nit project.
@@ -32,7 +33,7 @@ Nit is a target framework for novel compilation techniques and object-oriented r
 * The [[documentation|http://nitlanguage.org/doc/nitc/]] of the source-code (generated with nitdoc).
 * The main [[README|http://nitlanguage.org/nit.git/blob/master:/README.md]] of the source-code.
 
-## How-to and specific documentation
+## How-tos and specific documentation
 
 * [[workflow]]
 * [[github]]
