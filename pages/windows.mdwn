@@ -46,6 +46,12 @@ msys2 and mingw-w64 package tools and services to compile native Windows applica
    C:\msys64\mingw64\bin\libwinpthread-1.dll
    ~~~
 
+### Issues
+
+*  You can use libboost to replace the GNU regex library, this requires to tweak the included header and the ldflags.
+
+   `pacman -S mingw-w64-x86_64-boost`
+
 ## Using Cygwin
 
 1. Download Cygwin from <https://cygwin.com/>
