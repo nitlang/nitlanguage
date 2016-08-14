@@ -5,7 +5,7 @@ Fell free to report your attempts.
 
 ## Using msys2
 
-msys2 and mingw-w64 packages tools and services to compile native Windows applications using GCC and the GNU toolchain.
+msys2 and mingw-w64 package tools and services to compile native Windows applications using GCC and the GNU toolchain.
 
 *This process is a work in progress, it may not work with the current nit source tree.*
 
@@ -91,9 +91,9 @@ Additional notes:
 
 * I didn't find libunwind for cygwin, but I didn't search much either.
 
-## FAQ/issues
+### Cygwin FAQ/issues
 
-### The initial make does not work
+#### The initial make does not work
 
 If you have something like:
 
