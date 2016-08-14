@@ -93,22 +93,22 @@ Additional notes:
 
 ### Cygwin FAQ/issues
 
-#### The initial make does not work
+*  The initial make does not work
+   
+   If you have something like:
+   
+   ~~~
+   src/git-gen-version.sh: line 2: $'\r': command not found
+   ~~~
+   
+   It is because you checked out the Nit repository with the config set to `core.autocrlf true`.
+   Some `git` tools on Windows activate this flag by default.
+   The `git` command from the Cygwin package does not that. 
 
-If you have something like:
+*  Heap size errors
 
-~~~
-src/git-gen-version.sh: line 2: $'\r': command not found
-~~~
-
-It is because you checked out the Nit repository with the config set to `core.autocrlf true`.
-Some `git` tools on Windows activate this flag by default.
-The `git` command from the Cygwin package does not that. 
-
-###  Heap size errors
-
-If tools or compiled programs crash with heap size errors, you should enlarge the heap of the executable with `peflag` (that comes with Cygwin):
-
-~~~
-peflags --cygwin-heap=4096 prog.exe`
-~~~
+   If tools or compiled programs crash with heap size errors, you should enlarge the heap of the executable with `peflag` (that comes with Cygwin):
+   
+   ~~~
+   peflags --cygwin-heap=4096 prog.exe
+   ~~~
