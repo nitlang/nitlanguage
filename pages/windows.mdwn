@@ -16,7 +16,7 @@ msys2 and mingw-w64 package tools and services to compile native Windows applica
 3.  Install the minimum required package to download and compile nit:
 
     ~~~
-    pacman -S make ccache pkg-config libgc-devel mingw-w64-x86_64-gc mingw-w64-x86_64-libunwind git
+    pacman -S make git ccache pkg-config libgc-devel mingw-w64-x86_64-gc mingw-w64-x86_64-libunwind mingw-w64-x86_64-pcre
     ~~~
 
 3.  Then, from the msys2 (or mingw64) command line, clone the Nit repo as usual:
@@ -27,7 +27,13 @@ msys2 and mingw-w64 package tools and services to compile native Windows applica
 
     It will complain about the "very bad name" test file. This file cannot be represented on a Windows FS. Ignore this message, all other thousands of files should have unpacked successfully.
 
-5.  As proposed by the output of the make, setup your environment with
+4.  A full `make` would fail on the socket module. Use instead the following command to build nitc only:
+
+    ~~~
+    make -C c_src && c_src/nitc.exe -o bin/nith src/nith.nit && bin/nith.exe -o bin/nitc src/nitc.nit
+    ~~~
+
+5.  Setup your environment with
 
     ~~~
     source misc/nit_env.sh
@@ -44,13 +50,17 @@ msys2 and mingw-w64 package tools and services to compile native Windows applica
     ~~~
     C:\msys64\mingw64\bin\libgc-1.dll
     C:\msys64\mingw64\bin\libwinpthread-1.dll
+    C:\msys64\mingw64\bin\libpcreposix-0.dll
     ~~~
 
 ### Issues
 
-*   You can use libboost to replace the GNU regex library, this requires to tweak the included header and the ldflags.
+*   If the compiled Nit program hangs, it may be an issue with libgc.
+    A workaround is to set the env var `GC_MARKER` to 1, which prevents a deadlock between the many GC threads.
 
-    `pacman -S mingw-w64-x86_64-boost`
+    `GC_MARKERS=1 bin/nitc examples/hello_world.nit`
+    
+    See: https://github.com/Alexpux/MINGW-packages/issues/1110
 
 ## Using Cygwin
 
