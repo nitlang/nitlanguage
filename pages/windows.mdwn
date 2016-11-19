@@ -16,7 +16,7 @@ msys2 and mingw-w64 package tools and services to compile native Windows applica
 3.  Install the minimum required package to download and compile nit:
 
     ~~~
-    pacman -S make git ccache pkg-config libgc-devel mingw-w64-x86_64-gc mingw-w64-x86_64-libunwind mingw-w64-x86_64-pcre
+    pacman -S make git ccache pkg-config libgc-devel mingw-w64-x86_64-gc mingw-w64-x86_64-libunwind mingw-w64-x86_64-pcre mingw-w64-x86_64-dlfcn
     ~~~
 
 3.  Then, from the msys2 (or mingw64) command line, clone the Nit repo as usual:
