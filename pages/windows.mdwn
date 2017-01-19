@@ -125,6 +125,66 @@ Additional notes:
 
     If tools or compiled programs crash with heap size errors, you should enlarge the heap of the executable with `peflag` (that comes with Cygwin):
    
-    ~~~
-    peflags --cygwin-heap=4096 prog.exe
-    ~~~
+   ~~~
+   peflags --cygwin-heap=4096 prog.exe
+   ~~~
+
+## Using Bash on Windows 10
+
+### Requirements:
+
+1.  You need to be running the Windows 10 Anniversary Update on your machine.
+
+2.  The second requirement is to be running the 64-bit version of Windows 10. If you're running a 32-bit version of the operating system, you can use this guide to move to the 64-bit version.
+
+### Bash Installation
+
+1. Open **Settings**.
+
+2. Click on **Update & security**.
+
+3. Click on **For Developers**.
+
+4. Under "Use developer features", select the **Developer mode** option to setup the environment to install Bash.
+
+![alt text](../assets/images/developer-mode-windows10.jpg)
+
+5. On the message box, click **Yes** to turn on developer mode.
+
+![alt text](../assets/images/turnon-developer-mode-win10.jpg)
+
+6. After the necessary components install, you'll need to restart your computer.
+
+7. Once your computer reboots, open **Control Panel**.
+
+8. Click on **Programs**.
+
+9. Click on **Turn Windows features on or off**.
+
+![alt text](../assets/images/programs-features-control-panel.jpg)
+
+10. Check the **Windows Subsystem for Linux (beta)** option.
+
+11. Click **OK**.
+
+![alt text](../assets/images/windows-subsystem-linux.jpg)
+
+12. Once the components installed on your computer, click the Restart now button to complete the task.
+
+_After your computer restarts, you will notice that Bash will not appear in the "Recently added" list of apps, this is because Bash isn't actually installed yet. Now that you have setup the necessary components, use the following steps to complete the installation of Bash:_
+
+1. Open Start, do a search for **bash.exe**, and press **Enter**.
+
+2. On the command prompt, type **y** and press **Enter** to download and install Bash from the Windows Store.
+
+![alt text](../assets/images/install-bash-ubuntu-windows10.jpg)
+
+3. Then you'll need to create a default UNIX user account. This account doesn't have to be the same as your Windows account. Enter the username in the required field and press **Enter** (you can't use the username "admin").
+
+4. Close the "bash.exe" command prompt.
+
+_Now that you completed the installation and setup, you can open the Bash tool from the Start menu like you would with any other app._
+
+_It's important to note that unlike the real Bash shell you'll find in Linux, the version of the command line utility has some limitations with Windows._
+
+**Now bash on windows 10 is installed, you can now continue with the standard nit install.**
