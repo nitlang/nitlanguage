@@ -7,17 +7,15 @@ Fell free to report your attempts.
 
 msys2 and mingw-w64 package tools and services to compile native Windows applications using GCC and the GNU toolchain.
 
-*This process is a work in progress, it may not work with the current nit source tree.*
+1. Download and install msys2 by following the instructions at https://msys2.github.io/.
 
-1.  Download and install msys2 available at <https://msys2.github.io/>.
-
-2.  Update the package list by following the instructions at <https://sourceforge.net/p/msys2/wiki/MSYS2%20installation/>.
-
-3.  Install the minimum required package to download and compile nit:
+2. Install the minimum required package to download and compile Nit:
 
     ~~~
-    pacman -S make git ccache pkg-config libgc-devel mingw-w64-x86_64-gc mingw-w64-x86_64-libunwind mingw-w64-x86_64-pcre mingw-w64-x86_64-dlfcn
+    pacman -S make git ccache pkg-config libgc-devel mingw-w64-x86_64-gc mingw-w64-x86_64-libunwind mingw-w64-x86_64-pcre mingw-w64-x86_64-libsystre mingw-w64-x86_64-dlfcn
     ~~~
+
+    We use two regex related packages, `-pcre` provides `libpcreposix.so` and `-libsystre` provides `regex.h`. It is not ideal, but it works.
 
 3.  Then, from the msys2 (or mingw64) command line, clone the Nit repo as usual:
 
@@ -25,28 +23,27 @@ msys2 and mingw-w64 package tools and services to compile native Windows applica
     git clone https://github.com/nitlang/nit.git
     ~~~
 
-    It will complain about the "very bad name" test file. This file cannot be represented on a Windows FS. Ignore this message, all other thousands of files should have unpacked successfully.
-
-4.  A full `make` would fail on the socket module. Use instead the following command to build nitc only:
+4. Compile the Nit tools with:
 
     ~~~
-    make -C c_src && c_src/nitc.exe -o bin/nith src/nith.nit && bin/nith.exe -o bin/nitc src/nitc.nit
+    GC_MARKERS=1 make
     ~~~
 
-5.  Setup your environment with
+5. As suggested by the previous make `call`, setup your environment with:
 
     ~~~
-    source misc/nit_env.sh
+    source misc/nit_env.sh install
     ~~~
 
-5.  When you finally have a `bin/nitc.exe`, compile and execute hello_world with:
+6. To test the compiler at `bin/nitc.exe`, compile and execute `hello_world.exe` with:
 
     ~~~
     nitc examples/hello_world.nit
     ./hello_world.exe
     ~~~
 
-5.  To distribute a program, copy the libgc and libwinpthread DLLs with the executable. More DLLs may be needed for programs using native libraries, but for `hello_world.exe` only the following libraries are needed:
+7. To distribute a program, copy the required DLL files local to mingw64. For `hello_world.exe`, a call to `ldd hello_world.exe` lists the following files which must be copied:
+
     ~~~
     C:\msys64\mingw64\bin\libgc-1.dll
     C:\msys64\mingw64\bin\libwinpthread-1.dll
