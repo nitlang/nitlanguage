@@ -12,7 +12,7 @@ msys2 and mingw-w64 package tools and services to compile native Windows applica
 2. Install the minimum required package to download and compile Nit:
 
     ~~~
-    pacman -S make git ccache pkg-config libgc-devel mingw-w64-x86_64-gc mingw-w64-x86_64-libunwind mingw-w64-x86_64-pcre mingw-w64-x86_64-libsystre mingw-w64-x86_64-dlfcn
+    pacman -S make git ccache pkg-config libgc-devel diffutils mingw-w64-x86_64-gc mingw-w64-x86_64-libunwind mingw-w64-x86_64-pcre mingw-w64-x86_64-libsystre mingw-w64-x86_64-dlfcn
     ~~~
 
     We use two regex related packages, `-pcre` provides `libpcreposix.so` and `-libsystre` provides `regex.h`. It is not ideal, but it works.
