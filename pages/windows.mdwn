@@ -58,6 +58,9 @@ msys2 and mingw-w64 package tools and services to compile native Windows applica
     `GC_MARKERS=1 bin/nitc examples/hello_world.nit`
     
     See: https://github.com/Alexpux/MINGW-packages/issues/1110
+    
+*   Some modules, including `glesv2` and `egl`, do not need the `pkgconfig` annotation on Windows.
+    You may have to remove the line `pkgconfig` from these modules to compile them and their clients.
 
 ## Using Cygwin
 
