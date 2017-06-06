@@ -47,7 +47,6 @@ Nit will help you write bug-free programs
 
 * [Opportunity](catalog/p/opportunity.html), a free event planner
 * [Nitiwiki](catalog/p/nitiwiki.html), the wiki engine used for the current website
-* [Nitrpg](catalog/p/nitrpg.html), the gamification of Nit development where contributors are rewarded by nitcoins
 * [Brewnit](catalog/p/brewnit.html), a tool for home brewers
 * [A simple calculator](catalog/p/calculator.html) using GTK for desktop and the native UI for Android while sharing the business logic
 * [Hunted Dino](catalog/p/mnit_dino.html), a simple game for desktop and Android using class refinement to cleanly separate preoccupations in the code

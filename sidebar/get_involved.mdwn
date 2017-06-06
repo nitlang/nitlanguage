@@ -7,5 +7,4 @@
 * [Newsletter](https://groups.google.com/d/forum/nitlanguage)
 * [Continuous integration](http://gresil.org/jenkins)
 * [Bugs](https://github.com/nitlang/nit/labels/bug)
-* [NitRPG](http://nitlanguage.org/rpg/games/nitlang/nit)
 * [[Other things...|internal]]
