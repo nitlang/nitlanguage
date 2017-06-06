@@ -18,6 +18,6 @@ Issues and Pull Requests use specific labels for specific meanings
 * [[nitdoc|https://github.com/nitlang/nit/labels/nitdoc]]: The issue targets specifically the nitdoc tool and infrastructure.
 * [[ok_will_merge|https://github.com/nitlang/nit/labels/ok_will_merge]]: The PR passed the tests and reviews. The big integration tests are running (or are planned). If any reviewer has reasons why the PR should not be merged, he has to speak now or forever hold its peace.
 * [[request_for_comments|https://github.com/nitlang/nit/labels/request_for_comments]]: The issue needs more information or insight from concerned people.
-* [[spec|request_for_comments]]: Bug or discussion about the Nit language specification.
+* [[spec|https://github.com/nitlang/nit/labels/spec]]: Bug or discussion about the Nit language specification.
 * [[stalled|https://github.com/nitlang/nit/labels/stalled]]: Old bug or issue that is still open but whose participants lack motivation or have identified a problem which remains without a nice solution. Might be renamed as `need_help`.
 * [[todo|https://github.com/nitlang/nit/labels/todo]]: Task that needs to be done, by the assignee or a volunteer.
