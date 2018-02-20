@@ -61,7 +61,13 @@ $ cd ~/.vim/bundle
 $ git clone https://github.com/scrooloose/syntastic.git
 ~~~
 
-Check that your `$PATH` contains `nitc`.
+Add the following line to your `~/.vimrc`
+
+~~~vim
+let g:syntastic_nit_checkers = ['nitpick']
+~~~
+
+Check that your `$PATH` contains `nitpick`.
 If not, the simplest way is add the `bin` directory in your PATH.
 
 Now you should have syntax checking on saving `.nit` files.
