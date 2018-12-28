@@ -6,6 +6,8 @@ Use the coding style described in [[the manual|/manual/syntax]].
 
 Describe your patches in English with a one-liner summary, a blank line, then an explanation of the problem and the advantages of the solution implemented by the patch.
 
+The one-liner summary should start with the name of the unit affected by the patch followed by a semicolon.
+
 Sign-off all your patches by including the line "`signed-off-by: Your Name <your.email@example.com>`" at the end of each patch description. By the signed-off-by tag, you state that you agree with the [[contribution policy]].
 
 Keep patches as clean as possible: have only one concern by patch, do not include unrelated changes in a patch, patch series is not about *how* you developed your solution but about the best way to present your changes.
