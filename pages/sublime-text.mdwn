@@ -6,7 +6,7 @@ As of now, the bundle for supporting Nit in Sublime-Text only supports syntax hi
 
 ## How to install
 
-To install the support for Nit in Sublime-Text, you can either use [Pacakge-Control](https://sublime.wbond.net/) and look for [NitSyntaxHighlighter](https://github.com/itsWill/NitSyntaxHighlighter) or  you can just copy the syntax highlighter property list file (available [here](https://raw.githubusercontent.com/R4PaSs/Sublime-Nit/master/Nit.tmLanguage), and copy it in your Packages folder (~/.config/sublime-text-version/Packages/).
+To install the support for Nit in Sublime-Text, you can either use [Package-Control](https://packagecontrol.io/installation) and look for [NitSyntaxHighlighter](https://github.com/itsWill/NitSyntaxHighlighter) or  you can just copy the syntax highlighter property list file (available [here](https://raw.githubusercontent.com/R4PaSs/Sublime-Nit/master/Nit.tmLanguage), and copy it in your Packages folder (~/.config/sublime-text-version/Packages/).
 
 When you are done with this step, you can enjoy Nit source highlighting on any .nit source file automatically !
 
