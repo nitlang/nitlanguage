@@ -49,8 +49,6 @@ Nit will help you write bug-free programs
 * [Nitiwiki](catalog/p/nitiwiki.html), the wiki engine used for the current website
 * [Brewnit](catalog/p/brewnit.html), a tool for home brewers
 * [A simple calculator](catalog/p/calculator.html) using GTK for desktop and the native UI for Android while sharing the business logic
-* [Hunted Dino](catalog/p/mnit_dino.html), a simple game for desktop and Android using class refinement to cleanly separate preoccupations in the code
-* [Chainz of Friendz](catalog/p/friendz.html), a puzzle game for desktop and Android
 * Bindings for [OpenGL ES 2.0](catalog/p/glesv2.html), [SDL 2.0](catalog/p/sdl2.html), [GTK 3](catalog/p/gtk.html), [sqlite3](catalog/p/sqlite3.html)
 * Many libraries and program like the [webserver nitcorn](catalog/p/nitcorn.html), the [portable applications framework app.nit](catalog/p/app.html), and many other available in the [catalog](catalog/)
 
