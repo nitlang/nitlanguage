@@ -1,16 +1,16 @@
 echo > blank
 cat \
-	syntax.mdwn blank\
-	basic_type.mdwn blank\
-	structure.mdwn blank\
-	variable.mdwn blank\
-	module.mdwn blank\
-	class.mdwn blank\
-	method.mdwn blank\
-	attribute.mdwn blank\
-	constructor.mdwn blank\
-	genericity.mdwn blank\
-	virtual_type.mdwn\
+	syntax.md blank\
+	basic_type.md blank\
+	structure.md blank\
+	variable.md blank\
+	module.md blank\
+	class.md blank\
+	method.md blank\
+	attribute.md blank\
+	constructor.md blank\
+	genericity.md blank\
+	virtual_type.md\
 	| sed -e '/\[\[!template/d' \
 	-e 's/\[\[\([^|]*\)|\([^]]*\)\]\]/\1 \\goto{\2}/g' \
        	-e 's/\[\[\([^]]*\)\]\]/\1 \\goto{\1}/g' \

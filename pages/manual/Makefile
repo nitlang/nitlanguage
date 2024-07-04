@@ -1,2 +1,2 @@
-nitreference.pdf: *.mdwn
+nitreference.pdf: *.md
 	./makedoc.sh
