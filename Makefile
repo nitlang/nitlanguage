@@ -9,10 +9,12 @@ rebuild:
 	nitiwiki --render --force -v
 
 deploy: doc.zip man.zip catalog.zip
+	unzip -o doc.zip -d tmp
+	cp -r tmp/manual pages/
+	chmod +x pages/manual/makedoc.sh
 	make -C pages/manual
 	unzip -o man.zip -d pages/tools
 	nitiwiki --render --force -v
-	unzip -o doc.zip -d tmp
 	mv tmp/nitc tmp/stdlib target/doc/
 	unzip -o catalog.zip -d target/catalog/
 
