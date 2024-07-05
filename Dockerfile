@@ -8,7 +8,7 @@ ENV PATH /nit/bin/:$PATH
 RUN make -C nit/contrib/nitiwiki
 
 FROM ubuntu:24.04
-RUN apt-get update && apt-get install -y git libunwind8 libgc1 highlight pandoc wget unzip make texlive-latex-base lmodern texlive-latex-recommended texlive-latex-extra --no-install-recommends
+RUN apt-get update && apt-get install -y git ca-certificates libunwind8 libgc1 highlight pandoc wget unzip make texlive-latex-base lmodern texlive-latex-recommended texlive-latex-extra --no-install-recommends && apt-get clean
 COPY --from=0 /nit/contrib/nitiwiki/bin/nitiwiki /bin/nitiwiki
 COPY --from=0 /nit/misc/highlight/nit.lang /usr/share/highlight/langDefs
 RUN /bin/nitiwiki --help
