@@ -4,7 +4,7 @@ body {
 }
 
 a {
-	color:				#0D8921;
+	color:				#3E8632;
 	text-decoration:		none;
 }
 
@@ -15,7 +15,7 @@ a:hover {
 
 h1 {
 	font-weight:			bold;
-	color:                          #0D8921;
+	color:                          #3E8632;
 	font-size:			22px;
 }
 
@@ -73,7 +73,7 @@ a.toptitle:hover {
 }
 
 #toptitle_second {
-	color:				#0D8921;
+	color:				#3E8632;
 	font-size:			11em;
 	line-height:			80%;
 }
@@ -89,7 +89,7 @@ a.toptitle:hover {
 	margin-left:			10%;
 	font-style:			italic;
 	clear:				both;
-	color:				#0D8921;
+	color:				#3E8632;
 }
 
 .sidebar nav {
@@ -109,7 +109,7 @@ a.toptitle:hover {
 
 .sidebar a {
   display: block;
-  color: #0D8921;
+  color: #3E8632;
   text-decoration: none;
 }
 
@@ -140,6 +140,18 @@ footer {
 
 .trail li+li:before{
 	content: "\00a0|\00a0";
+}
+
+.nit-name-logo-container {
+	width: 200px;
+	height: 100px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding-left: 20px;
+}
+.nit-name-logo-container img {
+	width: 100%;
 }
 
 /* HIGHLIGHT */
