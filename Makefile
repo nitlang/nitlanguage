@@ -21,3 +21,6 @@ doc.zip:
 man.zip:
 	wget https://nightly.link/nitlang/nit/workflows/master/test-ci/man.zip
 
+clean:
+	rm -r tmp/
+	rm -r target/

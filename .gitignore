@@ -2,6 +2,11 @@
 /pages/tools/nit*
 *.swp
 
+# Build artifacts
+/tmp/
+doc.zip
+man.zip
+
 pages/manual/blank
 pages/manual/nitreference-main.md
 pages/manual/nitreference-main.tex
