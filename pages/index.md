@@ -63,9 +63,8 @@ $ git clone https://github.com/nitlang/nit.git
 Ensure that dependencies (and recommendations) are installed:
 
 ~~~sh
-# Eg. for Debian Jessie (8.0)
-$ sudo apt-get install build-essential ccache libgc-dev graphviz libunwind-dev libreadline-dev pkg-config
-# Older versions of Debian or Ubuntu need `libunwind8-dev` or `libunwind7-dev`
+# Eg. for Debian or Ubuntu
+$ sudo apt-get install build-essential ccache libgc-dev libunwind-dev libreadline-dev pkg-config
 ~~~
 
 Build the compiler (may be long):
