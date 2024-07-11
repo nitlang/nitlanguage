@@ -15,7 +15,7 @@ $ sudo port install boehmgc ccache graphviz libunwind-headers pkgconfig
 Install and compile Nit
 
 ~~~sh
-$ git clone http://nitlanguage.org/nit.git
+$ git clone https://github.com/nitlang/nit.git
 $ cd nit
 $ make
 ~~~
@@ -51,7 +51,7 @@ $ brew install boehmgc ccache graphviz libunwind-headers pkgconfig
 Install and compile Nit
 
 ~~~sh
-$ git clone http://nitlanguage.org/nit.git
+$ git clone https://github.com/nitlang/nit.git
 $ cd nit
 $ make
 ~~~

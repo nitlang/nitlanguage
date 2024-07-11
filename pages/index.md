@@ -57,7 +57,7 @@ Nit will help you write bug-free programs
 Get Nit from its Git repository:
 
 ~~~sh
-$ git clone http://nitlanguage.org/nit.git
+$ git clone https://github.com/nitlang/nit.git
 ~~~
 
 Ensure that dependencies (and recommendations) are installed:

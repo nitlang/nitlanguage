@@ -13,4 +13,4 @@ Currently, there is supported externals tools (not necessary IDE)
 * gtksourceview (used by gedit, Anjuta and several other projects)
 * gnu source-highlight
 
-For the last ones, see the [[misc/|http://nitlanguage.org/nit.git/tree/master:/misc/]] directory of the archive for installation directives.
+For the last ones, see the [[misc/|https://github.com/nitlang/nit/tree/HEAD/misc/]] directory of the archive for installation directives.

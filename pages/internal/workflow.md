@@ -1,6 +1,6 @@
 ## Repos and Branches
 
-The official Nit repository is [[http://nitlanguage.org/nit.git]].
+The official Nit repository is [[https://github.com/nitlang/nit.git]].
 A [[Github mirror|https://github.com/nitlang/nit]] is also available for social coding.
 
 The **master** branch is the most stable, up-to-date and trustworthy :

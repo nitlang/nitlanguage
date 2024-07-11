@@ -1,6 +1,6 @@
 # Nit for Vim
 
-Nit comes with a support for the editor [[vim|http://www.vim.org/]] in the directory [[misc/vim|http://nitlanguage.org/nit.git/tree/HEAD:/misc/vim]].
+Nit comes with a support for the editor [[vim|http://www.vim.org/]] in the directory [[misc/vim|https://github.com/nitlang/nit/tree/HEAD/misc/vim]].
 
 <div style="text-align:center">
 <img src="screenshot.png" title="screenshot" alt="Preview of the Nit bundde for vim"/>

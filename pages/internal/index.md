@@ -29,9 +29,9 @@ Nit is a target framework for novel compilation techniques and object-oriented r
 
 ## Devel documentation
 
-* The [[NOTICE|http://nitlanguage.org/nit.git/blob/master:/NOTICE]] file that states authorship and licences.
+* The [[NOTICE|https://github.com/nitlang/nit/blob/HEAD/NOTICE]] file that states authorship and licences.
 * The [[documentation|http://nitlanguage.org/doc/nitc/]] of the source-code (generated with nitdoc).
-* The main [[README|http://nitlanguage.org/nit.git/blob/master:/README.md]] of the source-code.
+* The main [[README|https://github.com/nitlang/nit/blob/HEAD/README.md]] of the source-code.
 
 ## How-tos and specific documentation
 

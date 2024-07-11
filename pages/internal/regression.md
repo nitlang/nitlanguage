@@ -2,7 +2,7 @@
 
 The directory `tests` contains various small Nit programs used to check that the compiler is not broken.
 
-* [[tests/README|http://nitlanguage.org/nit.git/blob/master:/tests/README.md]]
+* [[tests/README|https://github.com/nitlang/nit/blob/HEAD/tests/README.md]]
 
 To run the full regression test-suite, run:
 

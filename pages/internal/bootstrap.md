@@ -5,7 +5,7 @@ The Nit tools are written in Nit, it means you need a Nit compiler in order to c
 During the make, the original Nit compiler is compiled from C code (in `/c_src`).
 
 ~~~sh
-$ git clone http://nitlanguage.org/nit.git
+$ git clone https://github.com/nitlang/nit.git
 $ cd nit
 $ make
 $ cd src

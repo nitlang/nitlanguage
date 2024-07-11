@@ -278,7 +278,7 @@ Same example with calls to `exec`, where we use the external program `sdl-config
 
 The example extern_methods.nit illustrates a normal use of the Nit FFI.
 
-* [[examples/extern_methods.nit|http://nitlanguage.org/nit.git/blob/HEAD:/examples/extern_methods.nit]] (not yet updated)
+* [[examples/extern_methods.nit|https://github.com/nitlang/nit/blob/HEAD/examples/extern_methods.nit]] (not yet updated)
 --->
 
 # References

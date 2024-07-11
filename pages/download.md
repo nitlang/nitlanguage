@@ -4,15 +4,14 @@
 
 Nit is still in heavy development.
 
-The main way to get to get it from its [[git repository|http://nitlanguage.org/nit.git]]
+The main way to get to get it from its [[git repository|https://github.com/nitlang/nit.git]]
 
 ~~~sh
-$ git clone http://nitlanguage.org/nit.git
+$ git clone https://github.com/nitlang/nit.git
 ~~~sh
 
-or to download the latest [[snapshot|http://nitlanguage.org/nit.git/snapshot/HEAD.tar.gz]] (tar.gz)
+or to download the latest [[snapshot|https://github.com/nitlang/nit/archive/refs/heads/master.tar.gz]] (tar.gz)
 
-A [[github mirror|https://github.com/nitlang/nit]] is also available.
 
 ## Get dependencies
 
