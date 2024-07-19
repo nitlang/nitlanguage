@@ -31,10 +31,10 @@ Nit's goal is to be usable by real programmers for real projects
 
 Nit's guideline is to follow the most powerful OO principles
 
-* [[Everything is an object]]
-* [[Multiple inheritance]]
-* [[Static open classes|refinement]]
-* [[Virtual types]]
+* [[Everything is an object|object_oriented_principles#Everything_is_an_Object]]
+* [[Multiple inheritance|object_oriented_principles#Multiple_Inheritance]]
+* [[Static open classes|object_oriented_principles#Class_Refinement]]
+* [[Virtual types|object_oriented_principles#Virtual_Types]]
 
 ## Robustness
 
